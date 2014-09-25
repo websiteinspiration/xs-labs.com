@@ -19,3 +19,5 @@ RewriteRule .*/index.php /index.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-l
 RewriteRule .* /index.php
+
+RewriteRule \.(?:jpe?g|gif|png)$ /retina.php [L]
