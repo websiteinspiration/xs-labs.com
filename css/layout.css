@@ -181,4 +181,26 @@
     color:                      #999999;
 }
 
+.marketing {
+    text-align:                 center;
+}
+
+.marketing h3 {
+    border:                     none;
+    padding:                    0px;
+    font-weight:                400;
+}
+
+.marketing a {
+    color:                      #333333;
+}
+
+.marketing h3 a {
+    font-weight:                400;
+}
+
+.marketing p {
+    color:                      #999999;
+}
+
 /* ]]> */
