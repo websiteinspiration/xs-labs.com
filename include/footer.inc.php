@@ -13,8 +13,28 @@
             </div>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+    <script src="/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/js/highlight.pack.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        // <![CDATA[
+        
+        $( document ).ready
+        (
+            function()
+            {
+                $( 'div.code-block' ).each
+                (
+                    function( i, block )
+                    {
+                        hljs.highlightBlock( block );
+                    }
+                );
+            }
+        );
+        
+        // ]]>
+    </script>
     <script src="/js/shadowbox.js" type="text/javascript"></script>
     <script type="text/javascript">
         // <![CDATA[
