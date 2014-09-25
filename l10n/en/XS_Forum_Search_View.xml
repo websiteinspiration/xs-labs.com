@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<noSearchWord>You did not enter a search word.</noSearchWord>
+	<noResult>The search word you entered was not found in the public discussions.</noResult>
+	<titleResults>Search results:</titleResults>
+	<author>Author: %s</author>
+	<date>Date: %s</date>
+	<previous>Previous</previous>
+	<next>Next</next>
+</labels>

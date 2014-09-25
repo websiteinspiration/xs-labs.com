@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<firstname>First name:</firstname>
+	<lastname>Last name:</lastname>
+	<username>Desired username:</username>
+	<password>Password:</password>
+	<email>E-mail:</email>
+	<company>Company:</company>
+	<www>Website:</www>
+	<show_full_name>Display my full name in the public discussions</show_full_name>
+	<titleRegister>Please fill the form below in order to register:</titleRegister>
+	<submit>Create account</submit>
+	<errorRequired>Error: this field is required</errorRequired>
+	<errorInvalidEmail>Error: invalid email address</errorInvalidEmail>
+	<errorUsernameNotUnique>Sorry, someone is already using this username</errorUsernameNotUnique>
+	<errorEmailNotUnique>Sorry, someone is already registered with this email address</errorEmailNotUnique>
+	<titleRegisterSuccess>Registration successfull</titleRegisterSuccess>
+	<titleRegisterSuccessText>You can now login to the public discussions.</titleRegisterSuccessText>
+</labels>

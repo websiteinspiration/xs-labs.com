@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<titleCreateComment>Add a comment:</titleCreateComment>
+	<author>Name:</author>
+	<email>Email:</email>
+	<comment>Comment:</comment>
+	<captcha>Anti-Spam:</captcha>
+	<submit>Add comment</submit>
+	<errorRequired>Error: this field is required</errorRequired>
+	<errorInvalidEmail>Error: invalid email address</errorInvalidEmail>
+	<errorInvalidCaptcha>Error: please write the text contained in the image</errorInvalidCaptcha>
+	<createConfirm>Your comment was sucessfully added.</createConfirm>
+</labels>

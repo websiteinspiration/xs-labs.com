@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<comments>Comments:</comments>
+	<author>Author: %s</author>
+	<date>Date: %s</date>
+	<deleteComment>Delete comment</deleteComment>
+</labels>

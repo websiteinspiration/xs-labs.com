@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<error>Sorry, an error occured (code %s)</error>
+	<login>Login</login>
+	<logout>Logout</logout>
+	<register>register</register>
+	<connectionStatusNotConnected>You are not connected. Please %s or %s to be able to post messages.</connectionStatusNotConnected>
+	<connectionStatusConnected>Connected as «%s». %s</connectionStatusConnected>
+</labels>

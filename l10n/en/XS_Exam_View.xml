@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<noExam>Sorry, we couldn't find that exam...</noExam>
+	<noQuestion>Error: no such question...</noQuestion>
+	<next>Next question</next>
+	<end>View quizz results</end>
+	<resultScore>You scored %s</resultScore>
+	<twitterShare>Share this result on Twitter</twitterShare>
+	<twitterShareText>I scored %s%% at @eosgarden %s: %s</twitterShareText>
+	<details>Details about your mistakes</details>
+	<yourAnswered>You answered:</yourAnswered>
+	<explaination>Explaination</explaination>
+</labels>

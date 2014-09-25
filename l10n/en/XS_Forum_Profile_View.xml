@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<firstname>First name:</firstname>
+	<lastname>Last name:</lastname>
+	<username>Desired username:</username>
+	<password>Password:</password>
+	<email>E-mail:</email>
+	<company>Company:</company>
+	<www>Website:</www>
+	<show_fullname>Display my full name in the public discussions</show_fullname>
+	<titleProfile>User profile:</titleProfile>
+	<submit>Update my profile</submit>
+	<errorRequired>Error: this field is required</errorRequired>
+	<errorInvalidEmail>Error: invalid email address</errorInvalidEmail>
+	<errorUsernameNotUnique>Sorry, someone is already using this username</errorUsernameNotUnique>
+	<errorEmailNotUnique>Sorry, someone is already registered with this email address</errorEmailNotUnique>
+	<titleProfileUpdateSuccess>Update successfull</titleProfileUpdateSuccess>
+	<titleProfileUpdateSuccessText>Your informations were successfully updated.</titleProfileUpdateSuccessText>
+</labels>

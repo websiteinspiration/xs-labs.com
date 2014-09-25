@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<titleReply>Post a reply:</titleReply>
+	<message>Message:</message>
+	<submit>Reply</submit>
+	<replyConfirm>You reply was successfully posted to this thread.</replyConfirm>
+	<replyConfirmError>You need to enter a message in order to reply to this thread.</replyConfirmError>
+</labels>

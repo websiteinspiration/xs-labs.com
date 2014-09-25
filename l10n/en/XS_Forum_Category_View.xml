@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<author>Author: %s</author>
+	<date>Date: %s</date>
+	<repliesCount>Replies: %s</repliesCount>
+	<previous>Previous</previous>
+	<next>Next</next>
+	<noThread>There is currently no thread in the current category.</noThread>
+	<createThread>Create a new thread</createThread>
+	<deleteThread>Delete thread</deleteThread>
+</labels>
