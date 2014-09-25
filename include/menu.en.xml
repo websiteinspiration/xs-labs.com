@@ -124,7 +124,8 @@
 	    </sub>
 	</projects>
 	<about>
-	    <title>About</title>
+	    <navTitle>About</navTitle>
+	    <title>About XS-Labs</title>
 	</about>
 	<contact>
 		<title>Contact</title>

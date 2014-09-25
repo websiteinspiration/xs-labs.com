@@ -109,9 +109,13 @@ final class XS_Menu
                 return $rootline;
             }
             
-            $menu      = $menu->$page;
+            $menu = $menu->$page;
             
-            if( isset( $menu->title ) && !empty( $menu->title ) )
+            if( isset( $menu->navTitle ) && !empty( $menu->navTitle ) )
+            {
+                $rootline .= $sep . htmlentities( $menu->navTitle );
+            }
+            else if( isset( $menu->title ) && !empty( $menu->title ) )
             {
                 $rootline .= $sep . htmlentities( $menu->title );
             }
@@ -158,7 +162,14 @@ final class XS_Menu
             $link[ 'href' ]  = $path;
             $link[ 'title' ] = htmlentities( $menu->title );
             
-            $link->addTextData(  htmlentities( $menu->title ) );
+            if( isset( $menu->navTitle ) )
+            {
+                $link->addTextData( htmlentities( $menu->navTitle ) );
+            }
+            else
+            {
+                $link->addTextData( htmlentities( $menu->title ) );
+            }
             
             $menu = $menu->sub;
         }
