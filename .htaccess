@@ -1,0 +1,21 @@
+RewriteEngine On
+
+# Amazon S3
+#RewriteRule ^(downloads/foo.*.pkg)$ /s3.php?download=$1 [R,L]
+
+# Downloads
+RewriteRule ^downloads/([^/]+)/?([^/]*).*$ /downloads/?app=$1&file=$2 [R,L]
+
+# Hosts
+RewriteCond %{HTTP_HOST} ^xs-labs\.com
+RewriteRule ^(.*)$ http://www.xs-labs.com/$1 [R=permanent,L]
+
+# Main
+RewriteRule ^downloads/.*$ - [L]
+RewriteRule ^fever/.*$ - [L]
+RewriteRule ^doc/xs/PHP/.*$ - [L]
+RewriteRule ^stats/.*$ - [L]
+RewriteRule .*/index.php /index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule .* /index.php
