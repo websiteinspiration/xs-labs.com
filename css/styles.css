@@ -22,4 +22,79 @@
     touch-action:           none;
 }
 
+.xs-github-repository-commits .panel-heading {
+    font-size:              10px;
+    overflow:               hidden;
+    height:                 100%;
+    padding:                10px;
+}
+
+.xs-github-repository-commits .panel-heading .xs-github-repository-commit-author-image {
+    float:                  left;
+    margin-right:           10px;
+    border:                 solid 1px #E7E7E7;
+}
+
+ul.xs-status-items {
+    overflow:               hidden;
+    height:                 100%;
+    margin-left:            10px;
+    margin-top:             10px;
+    margin-right:           0px;
+    margin-bottom:          0px;
+    padding:                0px;
+    list-style:             none;
+}
+
+ul.xs-status-items-description {
+    margin-left:            10px;
+    margin-top:             0px;
+    margin-right:           0px;
+    margin-bottom:          10px;
+    padding:                0px;
+    list-style:             none;
+}
+
+ul.xs-status-items-description li {
+    margin:                 5px;
+    font-size:              12px;
+}
+
+ul.xs-status-items li {
+    float:                  left;
+    width:                  150px;
+    margin:                 5px;
+    font-size:              12px;
+}
+
+ul.xs-status-items-description li.xs-status-item-off,
+ul.xs-status-items li.xs-status-item-off {
+    background-image:       url( "image/xs-status-off.png" );
+    background-size:        22px;
+    background-repeat:      no-repeat;
+    padding-left:           28px;
+    padding-top:            4px;
+    padding-bottom:         2px;
+}
+
+ul.xs-status-items-description li.xs-status-item-dev,
+ul.xs-status-items li.xs-status-item-dev {
+    background-image:       url( "image/xs-status-dev.png" );
+    background-size:        22px;
+    background-repeat:      no-repeat;
+    padding-left:           28px;
+    padding-top:            4px;
+    padding-bottom:         2px;
+}
+
+ul.xs-status-items-description li.xs-status-item-ok,
+ul.xs-status-items li.xs-status-item-ok {
+    background-image:       url( "image/xs-status-ok.png" );
+    background-size:        22px;
+    background-repeat:      no-repeat;
+    padding-left:           28px;
+    padding-top:            4px;
+    padding-bottom:         2px;
+}
+
 /* ]]> */

@@ -67,13 +67,30 @@ class XS_GitHub_Repository
         }
         else
         {
+            $i = 0;
+            
             foreach( $this->_data as $key => $value )
             {
-                $commit             = $commits->div;
-                $commit[ 'class' ]  = 'xs-github-repository-commit';
+                if( $i == 0 )
+                {
+                    $row            = $commits->div;
+                    $row[ 'class' ] = 'row';
+                    
+                    $i = 1;
+                }
+                else
+                {
+                    $i = 0;
+                }
+                
+                $col                = $row->div;
+                $col[ 'class' ]     = 'col-sm-6';
+                
+                $commit             = $col->div;
+                $commit[ 'class' ]  = 'panel panel-default';
             
                 $details            = $commit->div;
-                $details[ 'class' ] = 'xs-github-repository-commit-details';
+                $details[ 'class' ] = 'panel-heading';
             
                 $div                = $details->div;
                 $div[ 'class' ]     = 'xs-github-repository-commit-author-image';
@@ -108,7 +125,7 @@ class XS_GitHub_Repository
                 $link->addTextData( $value->sha );
             
                 $div                = $commit->div;
-                $div[ 'class' ]     = 'xs-github-repository-commit-message';
+                $div[ 'class' ]     = 'panel-body';
             
                 $div->addTextData( $value->commit->message );
             }
