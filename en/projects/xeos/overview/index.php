@@ -11,13 +11,13 @@
 </p>
 <h3>Screenshots</h3>
 <div class="row">
-    <div class="col-sm-4">
+    <div class="col-xs-4">
         <a href="/uploads/image/xeos/screenshots/Boot-2-Full.png" class="lightbox"><img src="/uploads/image/xeos/screenshots/Boot-2.png" alt="" width="200" height="123" class="img-thumbnail" /></a>
     </div>
-    <div class="col-sm-4">
+    <div class="col-xs-4">
         <a href="/uploads/image/xeos/screenshots/Kernel-1-Full.png" class="lightbox"><img src="/uploads/image/xeos/screenshots/Kernel-1.png" alt="" width="200" height="123" class="img-thumbnail" /></a>
     </div>
-    <div class="col-sm-4">
+    <div class="col-xs-4">
         <a href="/uploads/image/xeos/screenshots/Kernel-2-Full.png" class="lightbox"><img src="/uploads/image/xeos/screenshots/Kernel-2.png" alt="" width="200" height="123" class="img-thumbnail" /></a>
     </div>
 </div>
