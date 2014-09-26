@@ -14,52 +14,83 @@
 <p>
     XSFoundation can be used on POSIX compliant systems (Mac OS X, Unix, Linux) as well as on Windows.
 </p>
-<h2 class="clearer">Highlights</h2>
-<div class="project-box-group">
-    <div class="project-box-left">
-        <h3 class="project-icons-chest-of-drawers">
-            Object oriented
-        </h3>
-        <p>
-            While pure C code, XSFoundation is an object-oriented library.<br />
-            It provides a complete runtime to manage classes and instances, providing many core classes to ease development in C, and allowing developers to create their own classes.
-         </p>
+<h2>Highlights</h2>
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="project-icons-chest-of-drawers">
+                    Object oriented
+                </h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    While pure C code, XSFoundation is an object-oriented library.<br />
+                    It provides a complete runtime to manage classes and instances, providing many core classes to ease development in C, and allowing developers to create their own classes.
+                 </p>
+            </div>
+        </div>
     </div>
-    <div class="project-box-right">
-        <h3 class="project-icons-ram">
-            Reference counting
-        </h3>
-        <p>
-            XSFoundation manages memory and resources using reference counting, allowing easier memory allocation.<br />
-            It also provides auto-release capabilities, to handle automatically the release of allocated objects.
-        </p>
-    </div>
-</div>
-<div class="project-box-group">
-    <div class="project-box-left">
-        <h3 class="project-icons-chalkboard">
-            Reflection
-        </h3>
-        <p>
-            XSFoundation provides basic reflection for classes and objects, allowing runtime introspection of code components.
-         </p>
-    </div>
-    <div class="project-box-right">
-        <h3 class="project-icons-ui-debug">
-            Debugger
-        </h3>
-        <p>
-            XSFoundation includes an integrated debugger, helping developers to easily spot runtime faults, like standard crashes, memory leaks, buffer overflows, etc.
-        </p>
+    <div class="col-sm-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="project-icons-ram">
+                    Reference counting
+                </h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    XSFoundation manages memory and resources using reference counting, allowing easier memory allocation.<br />
+                    It also provides auto-release capabilities, to handle automatically the release of allocated objects.
+                 </p>
+            </div>
+        </div>
     </div>
 </div>
-<div class="project-box-group">
-    <div class="project-box-left">
-        <h3 class="project-icons-os-mac-os-x">
-            Cross-platform
-        </h3>
-        <p>
-            While the purpose of XSFoundation is to be used in the <?php print XS_MENU::getInstance()->getPageLink( "/projects/xeos/", "XEOS Operating System" ); ?>, it can be used as a standalone, cross-platform library. Mac OS X, Linux, Unix and Windows are currently fully supported.
-        </p>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="project-icons-chalkboard">
+                    Reflection
+                </h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    XSFoundation provides basic reflection for classes and objects, allowing runtime introspection of code components.
+                 </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="project-icons-ui-debug">
+                    Debugger
+                </h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    XSFoundation includes an integrated debugger, helping developers to easily spot runtime faults, like standard crashes, memory leaks, buffer overflows, etc.
+                 </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="project-icons-os-mac-os-x">
+                    Cross-platform
+                </h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    While the purpose of XSFoundation is to be used in the <?php print XS_MENU::getInstance()->getPageLink( "/projects/xeos/", "XEOS Operating System" ); ?>, it can be used as a standalone, cross-platform library. Mac OS X, Linux, Unix and Windows are currently fully supported.
+                 </p>
+            </div>
+        </div>
     </div>
 </div>

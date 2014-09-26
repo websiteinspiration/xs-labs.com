@@ -23,12 +23,15 @@
 	                </documentation>
 	                <status>
 	                    <title>Status</title>
+	                    <subtitle>Project status</subtitle>
 	                </status>
 	                <roadmap>
 	                    <title>Roadmap</title>
+	                    <subtitle>Active sub-projects</subtitle>
 	                </roadmap>
 	                <download>
 	                    <title>Download</title>
+	                    <subtitle>Downloading XEOS</subtitle>
 	                </download>
 	            </sub>
 	        </xeos>
@@ -44,6 +47,7 @@
 	                </documentation>
 	                <download>
 	                    <title>Download</title>
+	                    <subtitle>Downloading XSFoundation</subtitle>
 	                </download>
 	            </sub>
 	        </xsfoundation>

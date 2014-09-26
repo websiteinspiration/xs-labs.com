@@ -20,9 +20,9 @@
     From a terminal window, you need to cd to XEOS trunk's directory.<br />
     Then, type the following command:
 </p>
-    <div class="code">
-        <code class="source">make toolchain</code>
-    </div>
+<div class="code-block">
+make toolchain
+</div>
 <p>
     It will download the LLVM sources and build everything that's needed to compile XEOS.<br />
     Everything will be installed in the «/usr/local/xeos/» directory, so you can easily clean everything up when needed.
@@ -35,8 +35,9 @@
     Compiling XEOS is a very simple task.<br />
     From the trunk's directory, simple type the following command:
 </p>
-<div class="code">
-    <code class="source">make</code>
+
+<div class="code-block">
+make
 </div>
 <p>
     It will generate a FAT-12 floppy disk image containing the full OS, that you can run on any x86 or x86_64 machine or emulator.
