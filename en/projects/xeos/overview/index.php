@@ -1,6 +1,3 @@
-<div>
-    <img src="/uploads/image/xeos/icon.png" alt="XEOS" width="200" height="200" class="pull-right" />
-</div>
 <p>
     XEOS is an experimental 32/64 bits Operating System for x86 platforms, written from scratch in Assembly and C.<br />
     It includes a C99 Standard Library, and aims at POSIX/SUS2 compatibility.
@@ -12,19 +9,15 @@
 <p>
     The project is available on <a href="https://github.com/macmade/XEOS/">GitHub</a>.
 </p>
-<h2 class="clearer">Screenshots</h2>
-<div class="gallery">
-    <div>
-         <a href="/uploads/image/xeos/screenshots/Boot-2-Full.png" rel="shadowbox"><img src="/uploads/image/xeos/screenshots/Boot-2.png" alt="" width="200" height="123" /></a><br />
-        XEOS Bootloader
+<h3>Screenshots</h3>
+<div class="row">
+    <div class="col-sm-4">
+        <a href="/uploads/image/xeos/screenshots/Boot-2-Full.png" class="lightbox"><img src="/uploads/image/xeos/screenshots/Boot-2.png" alt="" width="200" height="123" class="img-thumbnail" /></a>
     </div>
-    <div>
-         <a href="/uploads/image/xeos/screenshots/Kernel-1-Full.png" rel="shadowbox"><img src="/uploads/image/xeos/screenshots/Kernel-1.png" alt="" width="200" height="123" /></a><br />
-        XEOS Kernel
+    <div class="col-sm-4">
+        <a href="/uploads/image/xeos/screenshots/Kernel-1-Full.png" class="lightbox"><img src="/uploads/image/xeos/screenshots/Kernel-1.png" alt="" width="200" height="123" class="img-thumbnail" /></a>
     </div>
-    <div>
-         <a href="/uploads/image/xeos/screenshots/Kernel-2-Full.png" rel="shadowbox"><img src="/uploads/image/xeos/screenshots/Kernel-2.png" alt="" width="200" height="123" /></a><br />
-        XEOS Kernel
+    <div class="col-sm-4">
+        <a href="/uploads/image/xeos/screenshots/Kernel-2-Full.png" class="lightbox"><img src="/uploads/image/xeos/screenshots/Kernel-2.png" alt="" width="200" height="123" class="img-thumbnail" /></a>
     </div>
 </div>
-

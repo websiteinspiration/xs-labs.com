@@ -15,6 +15,20 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
     <script src="/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/js/imagelightbox.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        // <![CDATA[
+        
+        $( document ).ready
+        (
+            function()
+            {
+                $( 'a.lightbox' ).imageLightbox();
+            }
+        );
+        
+        // ]]>
+    </script>
     <script src="/js/highlight.pack.js" type="text/javascript"></script>
     <script type="text/javascript">
         // <![CDATA[
@@ -33,23 +47,6 @@
             }
         );
         
-        // ]]>
-    </script>
-    <script src="/js/shadowbox.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        // <![CDATA[
-        $( document ).ready
-        (
-            function()
-            {
-                Shadowbox.init
-                (
-                    {
-                        overlayOpacity: 0.9
-                    }
-                );
-            }
-        );
         // ]]>
     </script>
 </body>

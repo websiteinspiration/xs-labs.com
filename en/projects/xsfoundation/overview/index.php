@@ -1,7 +1,3 @@
-<div>
-    <img src="/uploads/image/xsfoundation/icon.png" alt="XSFoundation" width="200" height="200" class="img-right" />
-</div>
-<h2>XEOS C Foundation Library</h2>
 <h3>About XEOS</h3>
 <p>
     <?php print XS_MENU::getInstance()->getPageLink( "/projects/xeos/", "XEOS" ); ?> is an experimental 32/64 bits Operating System for x86 platforms, written from scratch in Assembly and C, including a C99 Standard Library, and aiming at POSIX/SUS2 compatibility.

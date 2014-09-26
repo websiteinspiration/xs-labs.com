@@ -25,7 +25,6 @@ $css->import( 'layout.css' );
 $css->import( 'styles.css' );
 $css->import( 'resume.css' );
 $css->import( 'project-icons.css' );
-$css->import( 'shadowbox.css' );
 $css->import( 'highlightjs.css' );
 
 $css->setComment
