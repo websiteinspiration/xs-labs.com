@@ -23,7 +23,6 @@ $css->import( '../bootstrap/css/bootstrap.min.css' );
 $css->import( 'base.css' );
 $css->import( 'layout.css' );
 $css->import( 'styles.css' );
-$css->import( 'resume.css' );
 $css->import( 'project-icons.css' );
 $css->import( 'highlightjs.css' );
 
