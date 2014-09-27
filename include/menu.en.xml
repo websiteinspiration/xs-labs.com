@@ -8,7 +8,6 @@
 >
 	<projects>
 	    <title>Projects</title>
-	    <subtitle>XS-Labs active OpenSource projects</subtitle>
 	    <sub>
 	        <xeos>
 	            <title>XEOS Operating System</title>
@@ -56,12 +55,15 @@
 	            <sub>
 	                <overview>
 	                    <title>Overview</title>
+	                    <subtitle>C / C++ / Objective-C code editor</subtitle>
 	                </overview>
 	                <screenshots>
 	                    <title>Screenshots</title>
+	                    <subtitle>Screenshots</subtitle>
 	                </screenshots>
 	                <download>
 	                    <title>Download</title>
+	                    <subtitle>Downloading Codeine</subtitle>
 	                </download>
 	            </sub>
 	        </codeine>
@@ -70,9 +72,11 @@
 	            <sub>
 	                <documentation>
 	                    <title>Documentation</title>
+	                    <subtitle>Documentation</subtitle>
 	                </documentation>
 	                <download>
 	                    <title>Download</title>
+	                    <subtitle>Downloading CoreFoundation++</subtitle>
 	                </download>
 	            </sub>
 	        </cfpp>
@@ -81,12 +85,14 @@
 	            <sub>
 	                <overview>
 	                    <title>Overview</title>
+	                    <subtitle>Objective-C (Foundation) frontend to LibClang</subtitle>
 	                </overview>
 	                <documentation>
 	                    <title>Documentation</title>
 	                </documentation>
 	                <download>
 	                    <title>Download</title>
+	                    <subtitle>Downloading ClangKit</subtitle>
 	                </download>
 	            </sub>
 	        </clang-kit>
@@ -95,12 +101,14 @@
 	            <sub>
 	                <overview>
 	                    <title>Overview</title>
+	                    <subtitle>About FileSystem</subtitle>
 	                </overview>
 	                <screenshots>
 	                    <title>Screenshots</title>
 	                </screenshots>
 	                <download>
 	                    <title>Download</title>
+	                    <subtitle>Downloading FileSystem</subtitle>
 	                </download>
 	            </sub>
 	        </filesystem>
@@ -109,12 +117,15 @@
 	            <sub>
 	                <overview>
 	                    <title>Overview</title>
+	                    <subtitle>About</subtitle>
 	                </overview>
 	                <terms>
 	                    <title>License Terms</title>
+	                    <subtitle>XEOS Software License - Version 1.0 - December 21, 2012</subtitle>
 	                </terms>
 	                <contribute>
 	                    <title>Contributing</title>
+	                    <subtitle>Contributing to the XEOS Software License</subtitle>
 	                </contribute>
 	            </sub>
 	        </xeos-software-license>
@@ -123,6 +134,7 @@
 	            <sub>
 	                <overview>
 	                    <title>Overview</title>
+	                    <subtitle>About</subtitle>
 	                </overview>
 	            </sub>
 	        </coding-style-guide>
