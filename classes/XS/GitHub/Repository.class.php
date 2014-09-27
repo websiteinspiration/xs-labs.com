@@ -91,25 +91,37 @@ class XS_GitHub_Repository
             
                 $details            = $commit->div;
                 $details[ 'class' ] = 'panel-heading';
-            
-                $div                = $details->div;
-                $div[ 'class' ]     = 'xs-github-repository-commit-author-image';
-                $img                = $div->img;
-                $img[ 'src' ]       = $value->author->avatar_url;
-                $img[ 'alt' ]       = $value->commit->author->name;
-                $img[ 'width' ]     = 50;
-                $img[ 'height' ]    = 50;
-            
+                
+                if( isset( $value->author->avatar_url ) )
+                {
+                    $div                = $details->div;
+                    $div[ 'class' ]     = 'xs-github-repository-commit-author-image';
+                    
+                    $img                = $div->img;
+                    $img[ 'src' ]       = $value->author->avatar_url;
+                    $img[ 'alt' ]       = $value->commit->author->name;
+                    $img[ 'width' ]     = 50;
+                    $img[ 'height' ]    = 50;
+                }
+                
                 $infos              = $details->div;
                 $infos[ 'class' ]   = 'xs-github-repository-commit-infos';
             
                 $div                = $infos->div;
                 $div[ 'class' ]     = 'xs-github-repository-commit-author';
-                $link               = $div->a;
-                $link[ 'href' ]     = $value->author->html_url;
+                
+                if( isset( $value->author->html_url ) )
+                {
+                    $link               = $div->a;
+                    $link[ 'href' ]     = $value->author->html_url;
             
-                $link->addTextData( $value->commit->author->name );
-            
+                    $link->addTextData( $value->commit->author->name );
+                }
+                else
+                {
+                    $div->addTextData( $value->commit->author->name );
+                }
+                
                 $div                = $infos->div;
                 $div[ 'class' ]     = 'xs-github-repository-commit-date';
             
