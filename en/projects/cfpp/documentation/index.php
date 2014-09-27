@@ -1,8 +1,6 @@
 <div>
-    <img src="/uploads/image/xsfoundation/icon.png" alt="XSFoundation" width="200" height="200" class="img-right" />
+    <img src="/uploads/image/cfpp/icon-circle.png" alt="CoreFoundation++" width="140" height="140" class="pull-right" />
 </div>
-<h2>Documentation</h2>
 <p>
     The whole project's documentation is <a href="https://github.com/macmade/CFPP" title="CoreFoudation++">available on GitHub</a>.
 </p>
-<div class="clearer"></div>
