@@ -1,7 +1,6 @@
 <div>
-    <a href="https://github.com/macmade/Codeine"><img src="/uploads/image/github.png" alt="GitHub" width="200" height="200" class="img-right" /></a>
+    <a href="https://github.com/macmade/Codeine"><img src="/uploads/image/github.png" alt="GitHub" width="200" height="200" class="pull-right" /></a>
 </div>
-<h2>Downloading Codeine</h2>
 <p>
     Codeine source code is freely available ont <a href="https://github.com/macmade/Codeine">GitHub</a>.
 </p>
@@ -13,7 +12,7 @@
     While a lot of features are not implemented yet, you may use this release to see what the project looks like.<br />
     Note that the project uses the <a href="http://sparkle.andymatuschak.org">Sparkle framework</a> to automatically provide updates, even for development versions.
 </p>
-<h2 class="clearer">Latest commits</h2>
+<h3 class="clearer">Latest commits</h3>
 <?php
     $GIT = new XS_GitHub_Repository( 'macmade', 'Codeine' );
     
