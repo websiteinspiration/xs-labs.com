@@ -18,7 +18,7 @@
 <h2>Apple - Pre-Macintosh</h2>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-monitor">1983 - Apple //e &amp; Monitor <span class="small">(2 items)</span></h3>
+        <h3 class="project-icons project-icons-monitor">1983 - Apple //e &amp; Monitor <span class="small">(2 items)</span></h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/apple-IIe-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/apple-IIe.png" alt="" width="128" height="128" class="img-right" />
@@ -48,7 +48,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-monitor">1984 - Apple //c &amp; Monitor</h3>
+        <h3 class="project-icons project-icons-monitor">1984 - Apple //c &amp; Monitor</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/apple-IIc-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/apple-IIc.png" alt="" width="128" height="128" class="img-right" />
@@ -80,7 +80,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-monitor">1986 - Apple //gs</h3>
+        <h3 class="project-icons project-icons-monitor">1986 - Apple //gs</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/apple-IIgs-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/apple-IIgs.png" alt="" width="128" height="128" class="img-right" />
@@ -114,7 +114,7 @@
 <h2>Apple - Macintosh (Old World)</h2>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-monitor">1987 - Macintosh SE</h3>
+        <h3 class="project-icons project-icons-monitor">1987 - Macintosh SE</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/mac-se-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/mac-se.png" alt="" width="128" height="128" class="img-right" />
@@ -144,7 +144,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-monitor">1989 - Macintosh Portable <span class="small">(2 items)</span></h3>
+        <h3 class="project-icons project-icons-monitor">1989 - Macintosh Portable <span class="small">(2 items)</span></h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/mac-portable-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/mac-portable.png" alt="" width="128" height="128" class="img-right" />
@@ -176,7 +176,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-monitor">1992 - PowerBook 160</h3>
+        <h3 class="project-icons project-icons-monitor">1992 - PowerBook 160</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/pb-160-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/pb-160.png" alt="" width="128" height="128" class="img-right" />
@@ -206,7 +206,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-monitor">1993 - Macintosh Color Classic</h3>
+        <h3 class="project-icons project-icons-monitor">1993 - Macintosh Color Classic</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/mac-colorclassic-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/mac-colorclassic.png" alt="" width="128" height="128" class="img-right" />
@@ -238,7 +238,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-monitor">1993 - Macintosh LCIII</h3>
+        <h3 class="project-icons project-icons-monitor">1993 - Macintosh LCIII</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/mac-lcIII-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/mac-lcIII.png" alt="" width="128" height="128" class="img-right" />
@@ -268,7 +268,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-monitor">1993 - Macintosh Performa 450</h3>
+        <h3 class="project-icons project-icons-monitor">1993 - Macintosh Performa 450</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/mac-lcIII-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/mac-lcIII.png" alt="" width="128" height="128" class="img-right" />
@@ -300,7 +300,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-monitor">1993 - Macintosh Color Classic II <span class="small">(motherboard only)</span></h3>
+        <h3 class="project-icons project-icons-monitor">1993 - Macintosh Color Classic II <span class="small">(motherboard only)</span></h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/mac-colorclassic-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/mac-colorclassic.png" alt="" width="128" height="128" class="img-right" />
@@ -330,7 +330,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-monitor">1994 - Power Macintosh 6100/66</h3>
+        <h3 class="project-icons project-icons-monitor">1994 - Power Macintosh 6100/66</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/pm-6100-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/pm-6100.png" alt="" width="128" height="128" class="img-right" />
@@ -362,7 +362,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-monitor">1994 - Power Macintosh 7100/80</h3>
+        <h3 class="project-icons project-icons-monitor">1994 - Power Macintosh 7100/80</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/pm-7100-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/pm-7100.png" alt="" width="128" height="128" class="img-right" />
@@ -392,7 +392,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-monitor">1994 - PowerBook 520</h3>
+        <h3 class="project-icons project-icons-monitor">1994 - PowerBook 520</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/pb-520-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/pb-520.png" alt="" width="128" height="128" class="img-right" />
@@ -424,7 +424,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-monitor">1994 - Macintosh Performa 631 CD</h3>
+        <h3 class="project-icons project-icons-monitor">1994 - Macintosh Performa 631 CD</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/pm-631CD-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/pm-631CD.png" alt="" width="128" height="128" class="img-right" />
@@ -454,7 +454,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-monitor">1994 - PowerBook 150 <span class="small">(2 items)</span></h3>
+        <h3 class="project-icons project-icons-monitor">1994 - PowerBook 150 <span class="small">(2 items)</span></h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/pb-150-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/pb-150.png" alt="" width="128" height="128" class="img-right" />
@@ -486,7 +486,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-monitor">1995 - Power Macintosh Performa 5200 <span class="small">(3 items)</span></h3>
+        <h3 class="project-icons project-icons-monitor">1995 - Power Macintosh Performa 5200 <span class="small">(3 items)</span></h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/pm-5200-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/pm-5200.png" alt="" width="128" height="128" class="img-right" />
@@ -516,7 +516,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-monitor">1996 - PowerBook 1400/CS <span class="small">(motherboard only)</span></h3>
+        <h3 class="project-icons project-icons-monitor">1996 - PowerBook 1400/CS <span class="small">(motherboard only)</span></h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/pb-1400-cs-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/pb-1400-cs.png" alt="" width="128" height="128" class="img-right" />
@@ -550,7 +550,7 @@
 <h2>Macintosh Clones</h2>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-monitor">1996 - Power Computing Power Tower 225</h3>
+        <h3 class="project-icons project-icons-monitor">1996 - Power Computing Power Tower 225</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/powertower-225-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/powertower-225.png" alt="" width="128" height="128" class="img-right" />
@@ -584,7 +584,7 @@
 <h2>Apple - Macintosh (New World)</h2>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-monitor">1998 - iMac (rev. A) / Bondy Blue</h3>
+        <h3 class="project-icons project-icons-monitor">1998 - iMac (rev. A) / Bondy Blue</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/imac-a-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/imac-a.png" alt="" width="128" height="128" class="img-right" />
@@ -614,7 +614,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-monitor">1999 - iMac (rev. C) / Blueberry</h3>
+        <h3 class="project-icons project-icons-monitor">1999 - iMac (rev. C) / Blueberry</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/imac-c-blueberry-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/imac-c-blueberry.png" alt="" width="128" height="128" class="img-right" />
@@ -646,7 +646,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-monitor">1999 - iMac (rev. C) / Lime <span class="small">(+ one additional motherboard)</span></h3>
+        <h3 class="project-icons project-icons-monitor">1999 - iMac (rev. C) / Lime <span class="small">(+ one additional motherboard)</span></h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/imac-c-lime-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/imac-c-lime.png" alt="" width="128" height="128" class="img-right" />
@@ -676,7 +676,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-monitor">1999 - iBook (Clamshell) / Blueberry <span class="small">(2 items)</span></h3>
+        <h3 class="project-icons project-icons-monitor">1999 - iBook (Clamshell) / Blueberry <span class="small">(2 items)</span></h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/ibook-shell-blueberry-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/ibook-shell-blueberry.png" alt="" width="128" height="128" class="img-right" />
@@ -708,7 +708,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-monitor">1999 - Power Macintosh G4 (AGP Graphics)</h3>
+        <h3 class="project-icons project-icons-monitor">1999 - Power Macintosh G4 (AGP Graphics)</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/pm-g4-agp-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/pm-g4-agp.png" alt="" width="128" height="128" class="img-right" />
@@ -738,7 +738,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-monitor">2000 - PowerBook G3 / Pismo (FireWire)</h3>
+        <h3 class="project-icons project-icons-monitor">2000 - PowerBook G3 / Pismo (FireWire)</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/pb-g3-pismo-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/pb-g3-pismo.png" alt="" width="128" height="128" class="img-right" />
@@ -770,7 +770,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-monitor">2000 - iMac DV / Indigo</h3>
+        <h3 class="project-icons project-icons-monitor">2000 - iMac DV / Indigo</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/imac-dv-indigo-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/imac-dv-indigo.png" alt="" width="128" height="128" class="img-right" />
@@ -800,7 +800,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-monitor">2000 - iMac DV SE / Graphite</h3>
+        <h3 class="project-icons project-icons-monitor">2000 - iMac DV SE / Graphite</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/imac-dv-se-graphite-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/imac-dv-se-graphite.png" alt="" width="128" height="128" class="img-right" />
@@ -832,7 +832,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-monitor">2000 - iMac DV SE / Snow <span class="small">(+ one additional motherboard)</span></h3>
+        <h3 class="project-icons project-icons-monitor">2000 - iMac DV SE / Snow <span class="small">(+ one additional motherboard)</span></h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/imac-dv-se-snow-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/imac-dv-se-snow.png" alt="" width="128" height="128" class="img-right" />
@@ -862,7 +862,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-monitor">2000 - Power Macintosh G4 Cube <span class="small">(2 items)</span></h3>
+        <h3 class="project-icons project-icons-monitor">2000 - Power Macintosh G4 Cube <span class="small">(2 items)</span></h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/pm-g4-cube-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/pm-g4-cube.png" alt="" width="128" height="128" class="img-right" />
@@ -894,7 +894,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-monitor">2005 - eMac</h3>
+        <h3 class="project-icons project-icons-monitor">2005 - eMac</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/emac-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/emac.png" alt="" width="128" height="128" class="img-right" />
@@ -924,7 +924,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-monitor">2005 - Power Macintosh G5</h3>
+        <h3 class="project-icons project-icons-monitor">2005 - Power Macintosh G5</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/pm-g5-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/pm-g5.png" alt="" width="128" height="128" class="img-right" />
@@ -956,7 +956,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-monitor">2005 - Mac Mini</h3>
+        <h3 class="project-icons project-icons-monitor">2005 - Mac Mini</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/mac-mini-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/mac-mini.png" alt="" width="128" height="128" class="img-right" />
@@ -990,7 +990,7 @@
 <h2>Apple - Intel</h2>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-monitor">2006 - MacBook Pro 15''</h3>
+        <h3 class="project-icons project-icons-monitor">2006 - MacBook Pro 15''</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/mbpro-15-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/mbpro-15.png" alt="" width="128" height="128" class="img-right" />
@@ -1020,7 +1020,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-monitor">2009 - MacBook Pro 17''</h3>
+        <h3 class="project-icons project-icons-monitor">2009 - MacBook Pro 17''</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/mbpro-17-2009-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/mbpro-17-2009.png" alt="" width="128" height="128" class="img-right" />
@@ -1052,7 +1052,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-monitor">2011 - MacBook Pro 17''</h3>
+        <h3 class="project-icons project-icons-monitor">2011 - MacBook Pro 17''</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/mbpro-17-2011-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/mbpro-17-2011.png" alt="" width="128" height="128" class="img-right" />
@@ -1086,7 +1086,7 @@
 <h2>Apple - iDevices</h2>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-iphone">2008 - iPhone 3G / Black</h3>
+        <h3 class="project-icons project-icons-iphone">2008 - iPhone 3G / Black</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/iphone-3G-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/iphone-3G.png" alt="" width="128" height="128" class="img-right" />
@@ -1116,7 +1116,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-iphone">2009 - iPhone 3GS / Black</h3>
+        <h3 class="project-icons project-icons-iphone">2009 - iPhone 3GS / Black</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/iphone-3GS-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/iphone-3GS.png" alt="" width="128" height="128" class="img-right" />
@@ -1148,7 +1148,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-iphone">2010 - iPhone 4 / Black</h3>
+        <h3 class="project-icons project-icons-iphone">2010 - iPhone 4 / Black</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/iphone-4-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/iphone-4.png" alt="" width="128" height="128" class="img-right" />
@@ -1178,7 +1178,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-iphone">2010 - iPad 1</h3>
+        <h3 class="project-icons project-icons-iphone">2010 - iPad 1</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/ipad-1-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/ipad-1.png" alt="" width="128" height="128" class="img-right" />
@@ -1210,7 +1210,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-iphone">2011 - iPad 2 / Black</h3>
+        <h3 class="project-icons project-icons-iphone">2011 - iPad 2 / Black</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/ipad-2-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/ipad-2.png" alt="" width="128" height="128" class="img-right" />
@@ -1240,7 +1240,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-iphone">2011 - iPhone 4S / Black</h3>
+        <h3 class="project-icons project-icons-iphone">2011 - iPhone 4S / Black</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/iphone-4S-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/iphone-4S.png" alt="" width="128" height="128" class="img-right" />
@@ -1272,7 +1272,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-iphone">2012 - iPad 3 (Retina) / Black</h3>
+        <h3 class="project-icons project-icons-iphone">2012 - iPad 3 (Retina) / Black</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/ipad-3-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/ipad-3.png" alt="" width="128" height="128" class="img-right" />
@@ -1302,7 +1302,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-iphone">2012 - iPhone 5 / Black</h3>
+        <h3 class="project-icons project-icons-iphone">2012 - iPhone 5 / Black</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/iphone-5-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/iphone-5.png" alt="" width="128" height="128" class="img-right" />
@@ -1334,7 +1334,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-iphone">2012 - iPad Mini / Black</h3>
+        <h3 class="project-icons project-icons-iphone">2012 - iPad Mini / Black</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/ipad-mini-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/ipad-mini.png" alt="" width="128" height="128" class="img-right" />
@@ -1364,7 +1364,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-iphone">2013 - iPhone 5S / Space Gray</h3>
+        <h3 class="project-icons project-icons-iphone">2013 - iPhone 5S / Space Gray</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/iphone-5S-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/iphone-5S.png" alt="" width="128" height="128" class="img-right" />
@@ -1396,7 +1396,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-iphone">2013 - iPad Mini Retina / Space Gray</h3>
+        <h3 class="project-icons project-icons-iphone">2013 - iPad Mini Retina / Space Gray</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/ipad-mini-retina-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/ipad-mini-retina.png" alt="" width="128" height="128" class="img-right" />
@@ -1430,7 +1430,7 @@
 <h2>Apple - Displays</h2>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-monitor">2000 - Apple Studio Display 17''</h3>
+        <h3 class="project-icons project-icons-monitor">2000 - Apple Studio Display 17''</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/apple-studio-display-17-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/apple-studio-display-17.png" alt="" width="128" height="128" class="img-right" />
@@ -1460,7 +1460,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-monitor">Apple Studio Display 15''</h3>
+        <h3 class="project-icons project-icons-monitor">Apple Studio Display 15''</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/apple-studio-display-15-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/apple-studio-display-15.png" alt="" width="128" height="128" class="img-right" />
@@ -1494,7 +1494,7 @@
 <h2>Apple - Miscellaneous</h2>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-monitor">1994 - Apple QuickTake 100</h3>
+        <h3 class="project-icons project-icons-monitor">1994 - Apple QuickTake 100</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/apple-quicktake-100-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/apple-quicktake-100.png" alt="" width="128" height="128" class="img-right" />
@@ -1524,7 +1524,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-monitor">1995 - Apple QuickTake 150</h3>
+        <h3 class="project-icons project-icons-monitor">1995 - Apple QuickTake 150</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/apple-quicktake-150-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/apple-quicktake-150.png" alt="" width="128" height="128" class="img-right" />
@@ -1556,7 +1556,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-monitor">1995 - Apple Bandai Pippin</h3>
+        <h3 class="project-icons project-icons-monitor">1995 - Apple Bandai Pippin</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/apple-pippin-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/apple-pippin.png" alt="" width="128" height="128" class="img-right" />
@@ -1586,7 +1586,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-monitor">1997 - Apple QuickTake 200</h3>
+        <h3 class="project-icons project-icons-monitor">1997 - Apple QuickTake 200</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/apple-quicktake-200-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/apple-quicktake-200.png" alt="" width="128" height="128" class="img-right" />
@@ -1618,7 +1618,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-monitor">1997 - eMate 300</h3>
+        <h3 class="project-icons project-icons-monitor">1997 - eMate 300</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/apple-emate-300-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/apple-emate-300.png" alt="" width="128" height="128" class="img-right" />
@@ -1648,7 +1648,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-jewel-case-cd">2000 - Mac OS X Public Beta</h3>
+        <h3 class="project-icons project-icons-jewel-case-cd">2000 - Mac OS X Public Beta</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/osx-beta-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/osx-beta.png" alt="" width="128" height="128" class="img-right" />
@@ -1676,7 +1676,7 @@
 <h2>Other Computers</h2>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-monitor">Fujitsu Siemens Jetson@home</h3>
+        <h3 class="project-icons project-icons-monitor">Fujitsu Siemens Jetson@home</h3>
         <div style="float: right;" class="photo-credit">
             <img src="/uploads/image/archives/museum/jetson.png" alt="" width="128" height="128" class="img-right" /><br />
             Photo: Unknown
@@ -1704,7 +1704,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-monitor">Fujitsu Siemens Primergy L200 (1U)</h3>
+        <h3 class="project-icons project-icons-monitor">Fujitsu Siemens Primergy L200 (1U)</h3>
         <div style="float: right;" class="photo-credit">
             <img src="/uploads/image/archives/museum/primergy-l200.png" alt="" width="128" height="128" class="img-right" /><br />
             Photo: Unknown
@@ -1734,7 +1734,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-monitor">Fujitsu Siemens Primergy E200 (4U)</h3>
+        <h3 class="project-icons project-icons-monitor">Fujitsu Siemens Primergy E200 (4U)</h3>
         <div style="float: right;" class="photo-credit">
             <img src="/uploads/image/archives/museum/primergy-e200.png" alt="" width="128" height="128" class="img-right" /><br />
             Photo: Unknown
@@ -1762,7 +1762,7 @@
         </p>
     </div>
     <div class="project-box-left">
-        <h3 class="project-icons-monitor">Dell PowerEdge SC 1425 (1U)</h3>
+        <h3 class="project-icons project-icons-monitor">Dell PowerEdge SC 1425 (1U)</h3>
         <div style="float: right;" class="photo-credit">
             <img src="/uploads/image/archives/museum/poweredge-sc1425.png" alt="" width="128" height="128" class="img-right" /><br />
             Photo: Unknown
@@ -1793,7 +1793,7 @@
 
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-monitor">HP Mini</h3>
+        <h3 class="project-icons project-icons-monitor">HP Mini</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/hp-mini-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/hp-mini.png" alt="" width="128" height="128" class="img-right" />
@@ -1827,7 +1827,7 @@
 <h2>Computer Parts - Rare Stuff</h2>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-chip">Cray 1 Memory Board</h3>
+        <h3 class="project-icons project-icons-chip">Cray 1 Memory Board</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/cray-1-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/cray-1.png" alt="" width="128" height="128" class="img-right" />
@@ -1845,7 +1845,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-chip">Cray X-MP Memory Board</h3>
+        <h3 class="project-icons project-icons-chip">Cray X-MP Memory Board</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/cray-xmp-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/cray-xmp.png" alt="" width="128" height="128" class="img-right" />
@@ -1865,7 +1865,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-chip">Cray 2 Memory Board</h3>
+        <h3 class="project-icons project-icons-chip">Cray 2 Memory Board</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/cray-2-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/cray-2.png" alt="" width="128" height="128" class="img-right" />
@@ -1883,7 +1883,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-chip">Cray-2 Power Supply</h3>
+        <h3 class="project-icons project-icons-chip">Cray-2 Power Supply</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/cray-power-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/cray-power.png" alt="" width="128" height="128" class="img-right" />
@@ -1905,7 +1905,7 @@
 <h2>Computer Parts - Processors</h2>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-chip">Intel 4004</h3>
+        <h3 class="project-icons project-icons-chip">Intel 4004</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/cpu-4004-1-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/cpu-4004-1.png" alt="" width="128" height="128" class="img-right" />
@@ -1938,7 +1938,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-chip">Intel 4004</h3>
+        <h3 class="project-icons project-icons-chip">Intel 4004</h3>
         <p>
             <div class="row">
                 <div class="col-35">Model:</div>
@@ -1967,7 +1967,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-chip">Intel 8008</h3>
+        <h3 class="project-icons project-icons-chip">Intel 8008</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/cpu-8008-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/cpu-8008.png" alt="" width="128" height="128" class="img-right" />
@@ -2000,7 +2000,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-chip">Intel 8080</h3>
+        <h3 class="project-icons project-icons-chip">Intel 8080</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/cpu-8080-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/cpu-8080.png" alt="" width="128" height="128" class="img-right" />
@@ -2035,7 +2035,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-chip">Intel 8086</h3>
+        <h3 class="project-icons project-icons-chip">Intel 8086</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/cpu-8086-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/cpu-8086.png" alt="" width="128" height="128" class="img-right" />
@@ -2068,7 +2068,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-chip">Intel 80186</h3>
+        <h3 class="project-icons project-icons-chip">Intel 80186</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/cpu-80186-1-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/cpu-80186-1.png" alt="" width="128" height="128" class="img-right" />
@@ -2103,7 +2103,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-chip">Intel 80186</h3>
+        <h3 class="project-icons project-icons-chip">Intel 80186</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/cpu-80186-2-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/cpu-80186-2.png" alt="" width="128" height="128" class="img-right" />
@@ -2136,7 +2136,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-chip">Intel 80286</h3>
+        <h3 class="project-icons project-icons-chip">Intel 80286</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/cpu-80286-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/cpu-80286.png" alt="" width="128" height="128" class="img-right" />
@@ -2171,7 +2171,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-chip">Intel 80386</h3>
+        <h3 class="project-icons project-icons-chip">Intel 80386</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/cpu-80386-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/cpu-80386.png" alt="" width="128" height="128" class="img-right" />
@@ -2204,7 +2204,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-chip">Intel 80486</h3>
+        <h3 class="project-icons project-icons-chip">Intel 80486</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/cpu-80486-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/cpu-80486.png" alt="" width="128" height="128" class="img-right" />
@@ -2239,7 +2239,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-chip">Motorola PowerPC 603e</h3>
+        <h3 class="project-icons project-icons-chip">Motorola PowerPC 603e</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/cpu-603e-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/cpu-603e.png" alt="" width="128" height="128" class="img-right" />
@@ -2272,7 +2272,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-chip">Motorola PowerPC G3</h3>
+        <h3 class="project-icons project-icons-chip">Motorola PowerPC G3</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/cpu-xpc750-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/cpu-xpc750.png" alt="" width="128" height="128" class="img-right" />
@@ -2307,7 +2307,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-chip">PowerPC G4</h3>
+        <h3 class="project-icons project-icons-chip">PowerPC G4</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/cpu-xpc7455-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/cpu-xpc7455.png" alt="" width="128" height="128" class="img-right" />
@@ -2340,7 +2340,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-chip">PowerPC G4</h3>
+        <h3 class="project-icons project-icons-chip">PowerPC G4</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/cpu-xsc7400-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/cpu-xsc7400.png" alt="" width="128" height="128" class="img-right" />
@@ -2375,7 +2375,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-chip">AMD Athlon</h3>
+        <h3 class="project-icons project-icons-chip">AMD Athlon</h3>
         <div style="float: right;" class="photo-credit">
             <a href="/uploads/image/archives/museum/cpu-athlon-big.png" rel="shadowbox">
                 <img src="/uploads/image/archives/museum/cpu-athlon.png" alt="" width="128" height="128" class="img-right" />
@@ -2412,7 +2412,7 @@
 <h2>Other Accessories</h2>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-chest-of-drawers-open">Printers</h3>
+        <h3 class="project-icons project-icons-chest-of-drawers-open">Printers</h3>
         <p>
             <ul>
                 <li>Apple - LaserWriter</li>
@@ -2425,7 +2425,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-chest-of-drawers-open">Floppy Drives</h3>
+        <h3 class="project-icons project-icons-chest-of-drawers-open">Floppy Drives</h3>
         <p>
             <ul>
                 <li>Apple - 3.5 Drive</li>
@@ -2441,7 +2441,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-chest-of-drawers-open">Miscellaneous</h3>
+        <h3 class="project-icons project-icons-chest-of-drawers-open">Miscellaneous</h3>
         <p>
             <ul>
                 <li>Apple - Joystick IIe / IIc</li>

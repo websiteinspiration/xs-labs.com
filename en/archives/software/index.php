@@ -8,7 +8,7 @@
 </p>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-ui-sidebar">
+        <h3 class="project-icons project-icons-ui-sidebar">
             WebStart
         </h3>
         <p>
@@ -19,7 +19,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-ui-sidebar">
+        <h3 class="project-icons project-icons-ui-sidebar">
             PropEdit
         </h3>
         <p>
@@ -32,7 +32,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-ui-sidebar">
+        <h3 class="project-icons project-icons-ui-sidebar">
             Manual
         </h3>
         <p>
@@ -43,7 +43,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-ui-sidebar">
+        <h3 class="project-icons project-icons-ui-sidebar">
             Host Manager
         </h3>
         <p>
@@ -55,7 +55,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-ui-sidebar">
+        <h3 class="project-icons project-icons-ui-sidebar">
             Process Renicer
         </h3>
         <p>
@@ -65,7 +65,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-ui-sidebar">
+        <h3 class="project-icons project-icons-ui-sidebar">
             Application State Cleaner
         </h3>
         <p>

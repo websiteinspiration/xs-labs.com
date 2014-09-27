@@ -9,7 +9,7 @@
 <h2>Articles</h2>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-pen">
+        <h3 class="project-icons project-icons-pen">
             <?php print XS_Menu::getInstance()->getPageLink( '/archives/articles/c-reference-counting' ); ?>
         </h3>
         <p>
@@ -18,7 +18,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-pen">
+        <h3 class="project-icons project-icons-pen">
             <?php print XS_Menu::getInstance()->getPageLink( '/archives/articles/gdb-tutorial' ); ?>
         </h3>
         <p>
@@ -29,7 +29,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-pen">
+        <h3 class="project-icons project-icons-pen">
             <?php print XS_Menu::getInstance()->getPageLink( '/archives/articles/iokit-idle-time' ); ?>
         </h3>
         <p>
@@ -38,7 +38,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-pen">
+        <h3 class="project-icons project-icons-pen">
             <?php print XS_Menu::getInstance()->getPageLink( '/archives/articles/xcode-static-libraries' ); ?>
         </h3>
         <p>
@@ -49,7 +49,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-pen">
+        <h3 class="project-icons project-icons-pen">
             <?php print XS_Menu::getInstance()->getPageLink( '/archives/articles/c-bool' ); ?>
         </h3>
         <p>
@@ -58,7 +58,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-pen">
+        <h3 class="project-icons project-icons-pen">
             <?php print XS_Menu::getInstance()->getPageLink( '/archives/articles/objc-blocks' ); ?>
         </h3>
         <p>
@@ -69,7 +69,7 @@
 </div>
 <div class="project-box-group">
     <div class="project-box-left">
-        <h3 class="project-icons-pen">
+        <h3 class="project-icons project-icons-pen">
             <?php print XS_Menu::getInstance()->getPageLink( '/archives/articles/cocoa-delegate-chain' ); ?>
         </h3>
         <p>
@@ -78,7 +78,7 @@
         </p>
     </div>
     <div class="project-box-right">
-        <h3 class="project-icons-pen">
+        <h3 class="project-icons project-icons-pen">
             <?php print XS_Menu::getInstance()->getPageLink( '/archives/articles/float' ); ?>
         </h3>
         <p>
