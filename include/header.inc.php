@@ -53,6 +53,9 @@ if( isset( $_SERVER[ 'HTTP_USER_AGENT' ] ) && ( strpos( $_SERVER[ 'HTTP_USER_AGE
     <meta name="rating" content="General" />
     <meta name="robots" content="all" />
     <meta name="generator" content="BBEdit 10.5" />
+    <!--[if IE]><link rel="shortcut icon" href="/favicon.ico"><![endif]-->
+    <link rel="icon" href="/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="/favicon-apple-touch.png">
     <script type="text/javascript">
         // <![CDATA[
         
