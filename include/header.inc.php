@@ -63,7 +63,7 @@ if( isset( $_SERVER[ 'HTTP_USER_AGENT' ] ) && ( strpos( $_SERVER[ 'HTTP_USER_AGE
         
         // ]]>
     </script>
-    <?php if( $_SERVER[ 'SERVER_NAME' ] !== 'xs-labs.localhost' ): ?>
+    <?php if( $_SERVER[ 'SERVER_NAME' ] !== 'xs-labs.localhost' && $_SERVER[ 'SERVER_NAME' ] !== 'dev.xs-labs.com' ): ?>
     <script type="text/javascript">
         // <![CDATA[
         
