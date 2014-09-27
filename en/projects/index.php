@@ -1,3 +1,4 @@
+<h2 class="text-center">XS-Labs active OpenSource projects</h2>
 <div class="alert alert-info text-center">
     All OpenSource projects are currently hosted on <a href="http://github.com/macmade">GitHub</a>.<br />
     <a href="http://github.com/macmade">Feel free to fork!</a>
