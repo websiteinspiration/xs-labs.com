@@ -1,10 +1,20 @@
-<h2>Using static libraries with XCode</h2><hr />
+<h2>Using static libraries with XCode</h2>
 <p>
-    <strong>Author:</strong> Jean-David Gadina<br />
-    <strong>Copyright:</strong> &copy; <?php print date( 'Y', time() ); ?> Jean-David Gadina - www.xs-labs.com - All Rights Reserved<br />
-    <strong>License:</strong> This article is published under the terms of the <?php print  XS_Menu::getInstance()->getPageLink( '/licenses/freebsd-documentation' ); ?><br />
+    <dl class="dl-horizontal">
+        <dt>Author</dt>
+        <dd>
+            Jean-David Gadina
+        </dd>
+        <dt>Copyright</dt>
+        <dd>
+            &copy; <?php print date( 'Y', time() ); ?> Jean-David Gadina - www.xs-labs.com - All Rights Reserved
+        </dd>
+        <dt>License</dt>
+        <dd>
+            This article is published under the terms of the <?php print  XS_Menu::getInstance()->getPageLink( '/licenses/freebsd-documentation' ); ?>
+        </dd>
+    </dl>
 </p>
-<hr />
 <p>
     It's often usefull to split an XCode project in several parts: the UI related code, and the code that's not related to the UI (tools, libraries, etc).<br />
     Such a split has many advantages. It allows different compilation settings for each part and a better compilation time, as each part is built separately, if needed.<br />
@@ -49,50 +59,50 @@
 <p>
     We are now going to implement a static method named «doSomething».
 </p>
-<div class="code">
-    <code class="source"><span class="code-comment">/* MethodProvider.h */</span></code><br />
-    <code class="source"><span class="code-pre">#import</span> <span class="code-string">&lt;UIKit/UIKit.h&gt;</span></code><br />
-    <code class="source"></code><br />
-    <code class="source"><span class="code-keyword">@interface</span> MethodProvider: <span class="code-predefined">NSObject</span></code><br />
-    <code class="source">{}</code><br />
-    <code class="source"></code><br />
-    <code class="source">+ ( <span class="code-keyword">void</span> )doSomething;</code><br />
-    <code class="source"></code><br />
-    <code class="source"><span class="code-keyword">@end</span></code><br />
-    <code class="source"></code><br />
-    <code class="source"><span class="code-comment">/* MethodProvider.m */</span></code><br />
-    <code class="source"><span class="code-pre">#import</span> <span class="code-string">"MethodProvider.h"</span></code><br />
-    <code class="source"></code><br />
-    <code class="source"><span class="code-keyword">@implementation</span> MethodProvider</code><br />
-    <code class="source"></code><br />
-    <code class="source">+ ( <span class="code-keyword">void</span> )doSomething</code><br />
-    <code class="source">{</code><br />
-    <code class="source">    <span class="code-predefined">NSLog</span>( <span class="code-string">@"Method 'doSomething' called..."</span> );</code><br />
-    <code class="source">}</code><br />
-    <code class="source"></code><br />
-    <code class="source"><span class="code-keyword">@end</span></code><br />
+<div class="code-block language-objc">
+/* MethodProvider.h */
+#import &lt;UIKit/UIKit.h&gt;
+
+@interface MethodProvider: NSObject
+{}
+
++ ( void )doSomething;
+
+@end
+
+/* MethodProvider.m */
+#import "MethodProvider.h"
+
+@implementation MethodProvider
+
++ ( void )doSomething
+{
+    NSLog( @"Method 'doSomething' called..." );
+}
+
+@end
 </div>
 <p>
     We are going to call that method from our application, when it's loaded. We'll add the call on the «application: didFinishLaunchingWithOptions:» method of the «MyAppAppDelegate» class.
 </p>
-<div class="code">
-    <code class="source">- ( <span class="code-keyword">BOOL</span> )application: ( <span class="code-predefined">UIApplication</span> * )application didFinishLaunchingWithOptions: ( <span class="code-predefined">NSDictionary</span> * )launchOptions</code><br />
-    <code class="source">{</code><br />
-    <code class="source">    [ <span class="code-ctag">_window</span> <span class="code-predefined">addSubview</span>: <span class="code-ctag">_viewController</span>.<span class="code-predefined">view</span> ];</code><br />
-    <code class="source">    [ <span class="code-ctag">_window</span> <span class="code-predefined">makeKeyAndVisible</span> ];</code><br />
-    <code class="source">    </code><br />
-    <code class="source">    [ <span class="code-ctag">MethodProvider</span> <span class="code-ctag">doSomething</span> ];</code><br />
-    <code class="source">    </code><br />
-    <code class="source">    <span class="code-keyword">return YES</span>;</code><br />
-    <code class="source">}</code><br />
+<div class="code-block language-objc">
+- ( BOOL )application: ( UIApplication * )application didFinishLaunchingWithOptions: ( NSDictionary * )launchOptions
+{
+    [ _window addSubview: _viewController.view ];
+    [ _window makeKeyAndVisible ];
+    
+    [ MethodProvider doSomething ];
+    
+    return YES;
+}
 </div>
 <p>
     Do not forget to include the header file for the method provider class in the «MyAppAppController.m» file:
 </p>
-<div class="code">
-    <code class="source"><span class="code-pre">#import</span> <span class="code-string">"MyAppAppDelegate.h"</span></code><br />
-    <code class="source"><span class="code-pre">#import</span> <span class="code-string">"MyAppViewController.h"</span></code><br />
-    <code class="source"><strong><span class="code-pre">#import</span> <span class="code-string">"MethodProvider.h"</span></strong></code><br />
+<div class="code-block language-objc">
+#import "MyAppAppDelegate.h"
+#import "MyAppViewController.h"
+#import "MethodProvider.h"
 </div>
 <p>
     Now, the «MethodProvider» class is compiled at the same time as other project files. We are now going to change that.
@@ -106,11 +116,11 @@
 <p>
     From now on, the class won't be compiled with other source files. The application build process will now fail, with the following message:
 </p>
-<div class="code">
-        <code class="source">_OBJC_CLASS_$_MethodProvider", referenced from:</code><br />
-        <code class="source">objc-class-ref-to-MethodProvider in MyAppAppDelegate.o</code><br />
-        <code class="source">ld: symbol(s) not found</code><br />
-        <code class="source">collect2: ld returned 1 exit status</code>
+<div class="code-block nohighlight">
+_OBJC_CLASS_$_MethodProvider", referenced from:
+objc-class-ref-to-MethodProvider in MyAppAppDelegate.o
+ld: symbol(s) not found
+collect2: ld returned 1 exit status
 </div>
 <p>
     It tells that the linker has not found the symbol corresponding to our class, even if it's used from the «MyAppAppDelegate» class.
@@ -195,55 +205,55 @@
 <p>
     We are going to add a category on the «UIApplication» class, in our library's target:
 </p>
-<div class="code">
-    <code class="source"><span class="code-comment">/* MyUIApp.h */</span></code><br />
-    <code class="source"><span class="code-pre">#import</span> <span class="code-string">&lt;UIKit/UIKit.h&gt;</span></code><br />
-    <code class="source"></code><br />
-    <code class="source"><span class="code-keyword">@interface</span> UIApplication( MyUIApp )</code><br />
-    <code class="source"></code><br />
-    <code class="source">- ( <span class="code-keyword">void</span> )sayHello;</code><br />
-    <code class="source"></code><br />
-    <code class="source"><span class="code-keyword">@end</span></code><br />
-    <code class="source"></code><br />
-    <code class="source"><span class="code-comment">/* MyUIApp.m */</span></code><br />
-    <code class="source"><span class="code-pre">#import</span> <span class="code-string">"MyUIApp.h"</span></code><br />
-    <code class="source"></code><br />
-    <code class="source"><span class="code-keyword">@implementation</span> UIApplication( MyUIApp )</code><br />
-    <code class="source"></code><br />
-    <code class="source">- ( <span class="code-keyword">void</span> )sayHello</code><br />
-    <code class="source">{</code><br />
-    <code class="source">    <span class="code-predefined">NSLog</span>( <span class="code-string">@"Hello"</span> );</code><br />
-    <code class="source">}</code><br />
-    <code class="source"></code><br />
-    <code class="source"><span class="code-keyword">@end</span></code><br />
+<div class="code-block language-objc">
+/* MyUIApp.h */
+#import &lt;UIKit/UIKit.h&gt;
+
+@interface UIApplication( MyUIApp )
+
+- ( void )sayHello;
+
+@end
+
+/* MyUIApp.m */
+#import "MyUIApp.h"
+
+@implementation UIApplication( MyUIApp )
+
+- ( void )sayHello
+{
+    NSLog( @"Hello" );
+}
+
+@end
 </div>
 <p>
     Let's use the method in our application:
 </p>
-<div class="code">
-    <code class="source"><span class="code-comment">/* MyAppAppDelegate.m */</span></code><br />
-    <code class="source">- ( <span class="code-keyword">BOOL</span> )application: ( <span class="code-predefined">UIApplication</span> * )application didFinishLaunchingWithOptions: ( <span class="code-predefined">NSDictionary</span> * )launchOptions</code><br />
-    <code class="source">{</code><br />
-    <code class="source">    [ <span class="code-ctag">window</span> <span class="code-predefined">addSubview</span>: <span class="code-ctag">viewController</span>.<span class="code-predefined">view</span> ];</code><br />
-    <code class="source">    [ <span class="code-ctag">window</span> <span class="code-predefined">makeKeyAndVisible</span> ];</code><br />
-    <code class="source">    </code><br />
-    <code class="source">    [ <span class="code-ctag">MethodProvider</span> <span class="code-ctag">doSomething</span> ];</code><br />
-    <code class="source">    [ application <span class="code-ctag">sayHello</span> ];</code><br />
-    <code class="source">    </code><br />
-    <code class="source">    <span class="code-keyword">return YES</span>;</code><br />
-    <code class="source">}</code><br />
+<div class="code-block language-objc">
+/* MyAppAppDelegate.m */
+- ( BOOL )application: ( UIApplication * )application didFinishLaunchingWithOptions: ( NSDictionary * )launchOptions
+{
+    [ window addSubview: viewController.view ];
+    [ window makeKeyAndVisible ];
+    
+    [ MethodProvider doSomething ];
+    [ application sayHello ];
+    
+    return YES;
+}
 </div>
 <p>
     Do not forget to include the header file:
 </p>
-<div class="code">
-    <code class="source"><span class="code-pre">#import</span> <span class="code-string">"MyUIApp.h"</span></code><br />
+<div class="code-block language-objc">
+#import "MyUIApp.h"
 </div>
 <p>
     Compilation will be successfull, but the application will crash, with the following message, displayed in the console:
 </p>
-<div class="code">
-    <code class="source">- [ UIApplication sayHello ]: unrecognized selector sent to instance 0x5911700</code>
+<div class="code-block nohighlight">
+- [ UIApplication sayHello ]: unrecognized selector sent to instance 0x5911700
 </div>
 <p>
     This particular case is caused by the dynamic aspect of the Objective-C language (symbol resolution occures at run-time), and by the linker that does not generate symbols for categories.
@@ -251,8 +261,8 @@
 <p>
     To solve the problem, we have to fix the linker parameters, in the informations of the application's target, and add, in the «Other Linker Flags» section:
 </p>
-<div class="code">
-    <code class="source">-ObjC -all_load</code>
+<div class="code-block nohighlight">
+-ObjC -all_load
 </div>
 <p>
     <img src="/uploads/image/archives/articles/xcode-static-libraries/objc-lib-14.png" />

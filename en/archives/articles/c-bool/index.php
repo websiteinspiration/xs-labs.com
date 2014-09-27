@@ -1,11 +1,20 @@
 <h2>Using boolean data-types with ANSI-C</h2>
-<hr />
 <p>
-    <strong>Author:</strong> Jean-David Gadina<br />
-    <strong>Copyright:</strong> &copy; <?php print date( 'Y', time() ); ?> Jean-David Gadina - www.xs-labs.com - All Rights Reserved<br />
-    <strong>License:</strong> This article is published under the terms of the <?php print  XS_Menu::getInstance()->getPageLink( '/licenses/freebsd-documentation' ); ?><br />
+    <dl class="dl-horizontal">
+        <dt>Author</dt>
+        <dd>
+            Jean-David Gadina
+        </dd>
+        <dt>Copyright</dt>
+        <dd>
+            &copy; <?php print date( 'Y', time() ); ?> Jean-David Gadina - www.xs-labs.com - All Rights Reserved
+        </dd>
+        <dt>License</dt>
+        <dd>
+            This article is published under the terms of the <?php print  XS_Menu::getInstance()->getPageLink( '/licenses/freebsd-documentation' ); ?>
+        </dd>
+    </dl>
 </p>
-<hr />
 <p>
     Boolean data types are certainly the most often used data-type in any programming language.<br />
     They are the root of any programming logic.<br />
@@ -17,8 +26,8 @@
 <p>
     Before this, it was up to each programmer to define its own boolean type, usually an enum, like the following one:
 </p>
-<div class="code">
-    <code class="source"><span class="code-keyword">typedef enum</span> { false = <span class="code-num">0</span>, true  = <span class="code-num">1</span> } bool;</code>
+<div class="code-block language-c">
+typedef enum { false = 0, true  = 1 } bool;
 </div>
 <p>
     Of course, unless using prefixes, such declarations may cause many problems, especially when using libraries, in which each programmer defined a boolean datatype.
@@ -38,15 +47,15 @@
 <p>
     The final declaration may look like this, to ensure a maximum portability and compatibility:
 </p>
-<div class="code">
-    <code class="source"><span class="code-keyword">#ifndef</span> __bool_true_false_are_defined</code><br />
-    <code class="source"><span class="code-keyword">    #ifdef</span> _Bool</code><br />
-    <code class="source"><span class="code-keyword">        #define</span> bool                        _Bool</code><br />
-    <code class="source"><span class="code-keyword">    #else</span></code><br />
-    <code class="source"><span class="code-keyword">        #define</span> bool                        <span class="code-keyword">int</span></code><br />
-    <code class="source"><span class="code-keyword">    #endif</span></code><br />
-    <code class="source"><span class="code-keyword">    #define</span> true                            <span class="code-num">1</span></code><br />
-    <code class="source"><span class="code-keyword">    #define</span> false                           <span class="code-num">0</span></code><br />
-    <code class="source"><span class="code-keyword">    #define</span> __bool_true_false_are_defined   <span class="code-num">1</span></code><br />
-    <code class="source"><span class="code-keyword">#endif</span></code>
+<div class="code-block language-c">
+#ifndef __bool_true_false_are_defined
+    #ifdef _Bool
+        #define bool                        _Bool
+    #else
+        #define bool                        int
+    #endif
+    #define true                            1
+    #define false                           0
+    #define __bool_true_false_are_defined   1
+#endif
 </div>

@@ -20,7 +20,7 @@
     From a terminal window, you need to cd to XEOS trunk's directory.<br />
     Then, type the following command:
 </p>
-<div class="code-block">
+<div class="code-block nohighlight">
 make toolchain
 </div>
 <p>
@@ -36,7 +36,7 @@ make toolchain
     From the trunk's directory, simple type the following command:
 </p>
 
-<div class="code-block">
+<div class="code-block nohighlight">
 make
 </div>
 <p>

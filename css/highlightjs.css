@@ -11,11 +11,13 @@
 ##################################################
 */
 
+@import url( "http://fonts.googleapis.com/css?family=Inconsolata" );
+
 .code-block {
     white-space:                pre;
-    line-height:                12px;
-    font-size:                  10px;
-    font-family:                monospace;
+    line-height:                14px;
+    font-size:                  12px;
+    font-family:                'Inconsolata', monospace;
     margin-left:                0px;
     margin-top:                 10px;
     margin-right:               0px;
@@ -24,43 +26,46 @@
     padding-top:                0px;
     padding-right:              10px;
     padding-bottom:             10px;
-    color:                      #BFBFBF;
-    background-color:           #1D2327;
+    color:                      rgb( 191, 191, 191 );
+    background-color:           rgb( 29, 35, 39 );
     border-radius:              5px;
 }
 
-
-
-
-/*
-
-XCode style (c) Angel Garcia <angelgarcia.mail@gmail.com>
-
-*/
-
-
-
-/*
 .hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  background: #fff;
-  color: black;
-  -webkit-text-size-adjust: none;
+    display:                    block;
+    overflow-x:                 auto;
+    color:                      rgb( 191, 191, 191 );
+    -webkit-text-size-adjust:   none;
 }
 
 .hljs-comment,
 .hljs-template_comment,
 .hljs-javadoc {
-  color: #006a00;
+    color:                      rgb( 127, 127, 127 );;
 }
 
 .hljs-keyword,
 .hljs-literal,
 .nginx .hljs-title {
-  color: #aa0d91;
+  color:                        rgb( 103, 140, 177 );
 }
+
+.hljs-string {
+    color:                      rgb( 179, 125, 73 );
+}
+
+.hljs-variable {
+    color:                      rgb( 160, 130, 189 );
+}
+
+.hljs-function .hljs-title {
+    color:                      rgb( 160, 130, 189 );
+}
+
+.hljs-params {
+    color:                      rgb( 191, 191, 191 );
+}
+
 .method,
 .hljs-list .hljs-title,
 .hljs-tag .hljs-title,
@@ -76,10 +81,6 @@ XCode style (c) Angel Garcia <angelgarcia.mail@gmail.com>
 .hljs-envvar,
 .tex .hljs-special {
   color: #660;
-}
-
-.hljs-string {
-  color: #c41a16;
 }
 .hljs-tag .hljs-value,
 .hljs-cdata,
@@ -103,11 +104,13 @@ XCode style (c) Angel Garcia <angelgarcia.mail@gmail.com>
 .hljs-rules .hljs-value,
 .hljs-symbol,
 .hljs-symbol .hljs-string,
-.hljs-number,
 .css .hljs-function,
-.hljs-function .hljs-title,
 .coffeescript .hljs-attribute {
   color: #1c00cf;
+}
+
+.hljs-number {
+  color: rgb( 108, 136, 77 );
 }
 
 .hljs-class .hljs-title,
@@ -123,14 +126,10 @@ XCode style (c) Angel Garcia <angelgarcia.mail@gmail.com>
 .hljs-class .hljs-id,
 .hljs-built_in,
 .setting,
-.hljs-params,
 .clojure .hljs-attribute {
-  color: #5c2699;
+  color: rgb( 111, 175, 175 );
 }
 
-.hljs-variable {
- color: #3f6e74;
-}
 .css .hljs-tag,
 .hljs-rules .hljs-property,
 .hljs-pseudo,
@@ -161,7 +160,7 @@ XCode style (c) Angel Garcia <angelgarcia.mail@gmail.com>
 .hljs-preprocessor,
 .hljs-preprocessor *,
 .hljs-pragma {
-  color: #643820;
+  color: rgb( 174, 109, 166 );
 }
 
 .tex .hljs-formula {
@@ -194,5 +193,4 @@ XCode style (c) Angel Garcia <angelgarcia.mail@gmail.com>
 .method .hljs-id {
   color: #000;
 }
-*/
 

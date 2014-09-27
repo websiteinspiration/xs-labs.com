@@ -52,4 +52,20 @@ h3 {
     padding-bottom:         10px;
 }
 
+dl dt {
+    font-weight:            500;
+}
+
+code {
+    font-size:              12px;
+}
+
+pre {
+    font-size:              12px;
+    line-height:            8px;
+    border:                 none;
+    color:                  #C7254E;
+    background-color:       #F9F2F4;
+}
+
 /* ]]> */

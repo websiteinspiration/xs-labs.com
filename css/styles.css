@@ -11,12 +11,12 @@
 ##################################################
 */
 
-dl dt {
-    font-weight:            500;
-}
-
 .clearer {
     clear:                  both;
+}
+
+.power {
+    vertical-align:         super;
 }
 
 #imagelightbox {
