@@ -83,7 +83,7 @@ class XS_GitHub_Repository_List
                 }
                 
                 $repos              = $group->div;
-                $repos[ 'class' ]   = 'col-xs-4';
+                $repos[ 'class' ]   = 'col-sm-4';
                 
                 $panel              = $repos->div;
                 $panel[ 'class' ]   = 'panel panel-default';
