@@ -71,10 +71,10 @@ class XS_GitHub_Repository_List
             
             foreach( $this->_data as $key => $value )
             {
-                if( $i % 2 == 0 )
+                if( $i % 3 == 0 )
                 {
                     $group            = $list->div;
-                    $group[ 'class' ] = 'xs-github-repository-list-group';
+                    $group[ 'class' ] = 'row';
                 }
                 
                 if( in_array( $value->name, $this->_ignored ) )
@@ -82,17 +82,29 @@ class XS_GitHub_Repository_List
                     continue;
                 }
                 
-                $repos            = $group->div;
-                $repos[ 'class' ] = ( $i % 2 == 0 ) ? 'xs-github-repository-list-item-left' : 'xs-github-repository-list-item-right';
+                $repos              = $group->div;
+                $repos[ 'class' ]   = 'col-xs-4';
                 
-                $link           = $repos->h3->a;
-                $link[ 'href' ] = $value->html_url;
+                $panel              = $repos->div;
+                $panel[ 'class' ]   = 'panel panel-default';
+                
+                $heading            = $panel->div;
+                $heading[ 'class' ] = 'panel-heading';
+                
+                $body               = $panel->div;
+                $body[ 'class' ]    = 'panel-body';
+                
+                $link               = $heading->h3->a;
+                $link[ 'href' ]     = $value->html_url;
                 
                 $link->addTextData( $value->name );
                 
-                $repos->p       = ( strlen( $value->description ) ) ? $value->description : $this->_lang->noDesc;
-                $show           = $repos->p->a;
-                $show[ 'href' ] = $value->html_url;
+                $body->p            = ( strlen( $value->description ) ) ? $value->description : $this->_lang->noDesc;
+                $button             = $body->p;
+                $button[ 'class' ]  = 'text-center';
+                $show               = $button->a;
+                $show[ 'href' ]     = $value->html_url;
+                $show[ 'class' ]    = 'btn btn-default';
                 
                 $show->addTextData( $this->_lang->showRepos );
                 
