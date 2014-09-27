@@ -26,3 +26,16 @@ RewriteRule \.(?:jpe?g|gif|png)$ /retina.php [L]
     ExpiresActive on
     ExpiresDefault "access plus 1 week"
 </ifmodule>
+
+AuthName "XS-Labs - Development" 
+AuthType Basic 
+AuthUserFile .htpasswd
+require valid-user
+
+SetEnvIf Host dev.xs-labs.com xs_dev
+
+Order Allow,Deny
+Allow from all
+Deny from env=xs_dev
+
+Satisfy Any
