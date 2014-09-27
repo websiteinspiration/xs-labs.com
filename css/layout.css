@@ -34,11 +34,19 @@
     padding-right:              20px;
 }
 
+.navbar-right li {
+    float:                      left;
+}
+
 .navbar-right li a {
     padding-left:               10px;
     padding-top:                10px;
     padding-right:              0px;
     padding-bottom:             0px;
+}
+
+.navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+    max-height:                 400px;
 }
 
 .footer {
