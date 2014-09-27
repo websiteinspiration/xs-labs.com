@@ -1,8 +1,7 @@
-<p>
+<div class="well">
     Copyright (c) <?php print date( 'Y', time() ); ?>, Jean-David Gadina - www.xs-labs.com<br />
     All rights reserved.
-</p>
-<h2>XEOS Software License - Version 1.0 - December 21, 2012</h2>
+</div>
 <p>
     Permission is hereby granted, free of charge, to any person or organisation
     obtaining a copy of the software and accompanying documentation covered by

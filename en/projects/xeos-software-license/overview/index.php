@@ -1,7 +1,6 @@
 <div>
-    <img src="/uploads/image/xeos-software-license/icon.png" alt="XEOS Software License" width="200" height="200" class="img-right" />
+    <img src="/uploads/image/xeos-software-license/icon-circle.png" alt="XEOS Software License" width="140" height="140" class="pull-right" />
 </div>
-<h2>About</h2>
 <p>
     The XEOS Software License is an OpenSource/Free software license attempting to address issues found in other licenses of the same kind.
 </p>
