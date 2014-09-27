@@ -1,7 +1,6 @@
 <div>
-    <img src="/uploads/image/clang-kit/icon.png" alt="ClangKit" width="200" height="200" class="img-right" />
+    <img src="/uploads/image/clang-kit/icon-circle.png" alt="ClangKit" width="140" height="140" class="pull-right" />
 </div>
-<h2>Objective-C (Foundation) frontend to LibClang</h2>
 <p>
     ClangKit provides an Objective-C frontend to LibClang.<br />
     Source tokenization, diagnostics and fix-its are actually implemented.
