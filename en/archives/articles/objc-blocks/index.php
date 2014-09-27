@@ -202,7 +202,7 @@ gcc -Wall -framework Cocoa -o test test.m
             To launch the executable:
         </p>
         <div class="code-block nohighlight">
-        ./test
+./test
         </div>
         <p>
             The declaration of a block prototype can be ommited if the block is not assigned to a variable. For instance, if it's passed directly as a parameter.
