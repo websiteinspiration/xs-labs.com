@@ -21,3 +21,8 @@ RewriteCond %{REQUEST_FILENAME} !-l
 RewriteRule .* /index.php
 
 RewriteRule \.(?:jpe?g|gif|png)$ /retina.php [L]
+
+<ifmodule mod_expires.c>
+    ExpiresActive on
+    ExpiresDefault "access plus 1 week"
+</ifmodule>
