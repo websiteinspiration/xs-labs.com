@@ -1,3 +1,6 @@
+<div>
+    <img src="/uploads/image/xeos/icon-circle.png" alt="XEOS" width="140" height="140" class="pull-right" />
+</div>
 <p>
     XEOS is an experimental 32/64 bits Operating System for x86 platforms, written from scratch in Assembly and C.<br />
     It includes a C99 Standard Library, and aims at POSIX/SUS2 compatibility.

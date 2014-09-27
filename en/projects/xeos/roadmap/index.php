@@ -7,7 +7,7 @@
     <div class="col-sm-6">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="project-icons-ram">
+                <h3 class="project-icons project-icons-ram">
                     Memory allocator
                 </h3>
             </div>
@@ -23,7 +23,7 @@
     <div class="col-sm-6">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="project-icons-stoplight">
+                <h3 class="project-icons project-icons-stoplight">
                     Scheduler
                 </h3>
             </div>
@@ -40,7 +40,7 @@
     <div class="col-sm-6">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="project-icons-library">
+                <h3 class="project-icons project-icons-library">
                     C99 library
                 </h3>
             </div>
@@ -56,7 +56,7 @@
     <div class="col-sm-6">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="project-icons-gear">
+                <h3 class="project-icons project-icons-gear">
                     ACPI
                 </h3>
             </div>
@@ -73,7 +73,7 @@
     <div class="col-sm-6">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="project-icons-disk-hard-disk">
+                <h3 class="project-icons project-icons-disk-hard-disk">
                     Filesystem
                 </h3>
             </div>
@@ -88,7 +88,7 @@
     <div class="col-sm-6">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="project-icons-os-mac-os-x">
+                <h3 class="project-icons project-icons-os-mac-os-x">
                     POSIX/SUS2
                 </h3>
             </div>
@@ -104,7 +104,7 @@
     <div class="col-sm-6">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="project-icons-preferences-panel">
+                <h3 class="project-icons project-icons-preferences-panel">
                     EFI boot
                 </h3>
             </div>
@@ -119,7 +119,7 @@
     <div class="col-sm-6">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="project-icons-chip">
+                <h3 class="project-icons project-icons-chip">
                     ARM support
                 </h3>
             </div>

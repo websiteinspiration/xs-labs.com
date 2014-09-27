@@ -6,7 +6,7 @@
 <hr />
 <div class="panel panel-default">
     <div class="panel-heading">
-        <h3 class="project-icons-preferences-panel">Boot</h3>
+        <h3 class="project-icons project-icons-preferences-panel">Boot</h3>
     </div>
     <div class="panel-body">
         <ul class ="xs-status-items">
@@ -20,7 +20,7 @@
 </div>
 <div class="panel panel-default">
     <div class="panel-heading">
-        <h3 class="project-icons-stoplight">Kernel</h3>
+        <h3 class="project-icons project-icons-stoplight">Kernel</h3>
     </div>
     <div class="panel-body">
         <ul class ="xs-status-items">
@@ -42,7 +42,7 @@
 </div>
 <div class="panel panel-default">
     <div class="panel-heading">
-        <h3 class="project-icons-library">C99 library</h3>
+        <h3 class="project-icons project-icons-library">C99 library</h3>
     </div>
     <div class="panel-body">
         <ul class ="xs-status-items">
@@ -75,7 +75,7 @@
 </div>
 <div class="panel panel-default">
     <div class="panel-heading">
-        <h3 class="project-icons-os-mac-os-x">POSIX library</h3>
+        <h3 class="project-icons project-icons-os-mac-os-x">POSIX library</h3>
     </div>
     <div class="panel-body">
         <ul class ="xs-status-items">
