@@ -138,4 +138,32 @@ dl.dl-horizontal ul {
     margin-bottom:          0px;
     padding:                0px;
 }
+
+.xs-museum .panel-body dl.dl-horizontal dd {
+    margin-top:             0px;
+    margin-bottom:          0px;
+    padding-top:            0px;
+    padding-bottom:         0px;
+}
+
+.xs-museum .panel-body dl.dl-horizontal dt {
+    margin-top:             0px;
+    margin-bottom:          0px;
+    padding-top:            3px;
+    padding-bottom:         0px;
+    font-size:              10px;
+}
+
+.xs-museum-photo {
+    font-size:              10px;
+    text-align:             center;
+    margin-bottom:          20px;
+}
+
+#imagelightbox {
+    border:                 solid 1px #999999;
+    padding:                10px;
+    background-color:       #FFFFFF;
+}
+
 /* ]]> */
