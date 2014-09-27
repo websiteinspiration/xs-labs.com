@@ -1,7 +1,6 @@
 <div>
-    <img src="/uploads/image/filesystem/icon.png" alt="FileSystem" width="200" height="200" class="img-right" />
+    <img src="/uploads/image/filesystem/icon-circle.png" alt="FileSystem" width="140" height="140" class="pull-right" />
 </div>
-<h2>About</h2>
 <p>
     FileSystem is an application that allows you to browse the content of your iPhone disk, displaying file and folders, files contents, and detailed informations about file and folder permissions.<br />
     No file editing nor folder creation can be done through this application. <br />
