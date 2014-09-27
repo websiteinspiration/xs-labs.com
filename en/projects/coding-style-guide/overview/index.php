@@ -1,7 +1,6 @@
 <div>
-    <img src="/uploads/image/coding-style-guide/icon.png" alt="Coding Style Guide" width="200" height="200" class="img-right" />
+    <img src="/uploads/image/coding-style-guide/icon-circle.png" alt="Coding Style Guide" width="140" height="140" class="pull-right" />
 </div>
-<h2>About</h2>
 <p>
     <a href="https://github.com/macmade/XS-Labs-Style-Guide">These are the coding conventions</a> used at XS-Labs for C, C++, Objective-C and x86 assembly projects.<br />
     All XS-Labs contributors are required to stick with those guidelines.
