@@ -1,4 +1,4 @@
-<p>
+<p class="well">
     Copyright (c) <?php print date( 'Y', time() ); ?>, Jean-David Gadina - www.xs-labs.com<br />
     Distributed under the Boost Software License, Version 1.0.
 </p>
