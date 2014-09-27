@@ -10,65 +10,47 @@
     Research &amp; Development engineer
 </h2>
 <div class="row">
-    <div class="col-md-9">
+    <div class="col-md-10">
         <h3 class="project-icons project-icons-contact-card">Personal information</h3>
-        <div class="row">
-            <div class="col-xs-2 text-right">
-                <strong>Address</strong>
-            </div>
-            <div class="col-xs-10">
+        <dl class="dl-horizontal">
+            <dt>Address</dt>
+            <dd>
                 Rue Des Echelettes 4, Lausanne - Switzerland
-            </div>
-            <div class="col-xs-2 text-right">
-                <strong>Telephone</strong>
-            </div>
-            <div class="col-xs-10">
+            </dd>
+            <dt>Telephone</dt>
+            <dd>
                 +41 (79) 944-7441 mobile
-            </div>
-            <div class="col-xs-2 text-right">
-                <strong>Web</strong>
-            </div>
-            <div class="col-xs-10">
+            </dd>
+            <dt>Web</dt>
+            <dd>
                 <a href="http://www.xs-labs.com/" title="eosgarden">www.xs-labs.com</a>
-            </div>
-            <div class="col-xs-2 text-right">
-                <strong>Twitter</strong>
-            </div>
-            <div class="col-xs-10">
+            </dd>
+            <dt>Twitter</dt>
+            <dd>
                 <a href="http://twitter.com/macmade" title="macmade">@macmade</a>
-            </div>
-            <div class="col-xs-2 text-right">
-                <strong>LinkedIn</strong>
-            </div>
-            <div class="col-xs-10">
+            </dd>
+            <dt>LinkedIn</dt>
+            <dd>
                 <a href="http://ch.linkedin.com/in/macmade" title="macmade">ch.linkedin.com/in/macmade</a>
-            </div>
-            <div class="col-xs-2 text-right">
-                <strong>GitHub</strong>
-            </div>
-            <div class="col-xs-10">
+            </dd>
+            <dt>GitHub</dt>
+            <dd>
                 <a href="http://github.com/macmade" title="macmade">github.com/macmade</a>
-            </div>
-            <div class="col-xs-2 text-right">
-                <strong>StackOverflow</strong>
-            </div>
-            <div class="col-xs-10">
+            </dd>
+            <dt>StackOverflow</dt>
+            <dd>
                 <a href="http://careers.stackoverflow.com/macmade" title="macmade">careers.stackoverflow.com/macmade</a><br />
                 <a href="http://stackoverflow.com/users/182676/macmade" title="macmade">stackoverflow.com/users/182676/macmade</a>
-            </div>
-            <div class="col-xs-2 text-right">
-                <strong>Nationality</strong>
-            </div>
-            <div class="col-xs-10">
+            </dd>
+            <dt>Nationality</dt>
+            <dd>
                 Swiss
-            </div>
-            <div class="col-xs-2 text-right">
-                <strong>Date of birth</strong>
-            </div>
-            <div class="col-xs-10">
+            </dd>
+            <dt>Date of birth</dt>
+            <dd>
                 05/17/82
-            </div>
-        </div>
+            </dd>
+        </dl>
         <h2>Resume - January 2013</h2>
         <a name="resume-language"></a>
         <h3 class="project-icons project-icons-dictionary">Language</h3>
@@ -1640,7 +1622,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-2">
         <div data-spy="affix" data-offset-top="60" data-offset-bottom="200">
             <ul class="hidden-xs">
                 <li>
