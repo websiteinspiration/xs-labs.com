@@ -121,4 +121,21 @@ ul.xs-status-items li.xs-status-item-ok {
     padding:                0px;
 }
 
+dl.dl-horizontal dd {
+    margin-bottom:          10px;
+}
+
+dl.dl-horizontal dt {
+    margin-bottom:          10px;
+    padding-bottom:         2px;
+    border-bottom:          solid 1px #E7E7E7;
+}
+
+dl.dl-horizontal ul {
+    margin-left:            10px;
+    margin-top:             0px;
+    margin-right:           0px;
+    margin-bottom:          0px;
+    padding:                0px;
+}
 /* ]]> */

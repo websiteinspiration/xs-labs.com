@@ -139,406 +139,325 @@
         </div>
         <a name="resume-work"></a>
         <h3 class="project-icons project-icons-calendar-blue">Work experience</h3>
-        <div class="resume-box">
-            <h4>Research &amp; development engineer</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Dates
-                </div>
-                <div class="resume-col-right">
-                    2011/06 - Today
-                </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>Research &amp; development engineer</h4>
             </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Name of employer
-                </div>
-                <div class="resume-col-right">
-                    <a href="http://www.digidna.net/">DigiDNA Sàrl</a>, Geneva - Switzerland / Geraldton - Western Australia
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Type of business
-                </div>
-                <div class="resume-col-right">
-                    Software Development (Mobile, Mac, Windows)
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Main activities and responsibilities
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Full rewrite and project lead for iOS applications (<a href="http://itunes.apple.com/us/app/fileapp-documents-files-reader/id297804694?mt=8">FileApp</a> &amp; <a href="http://itunes.apple.com/us/app/fileapp-pro/id359580470?mt=8">FileApp Pro</a>).
-                        </li>
-                        <li>
-                            Full rewrite of <a href="http://www.digidna.net/diskaid">DiskAid</a>, iPhone file transfer utility, for Mac and Windows.
-                        </li>
-                        <li>
-                            Cross-platform development.
-                        </li>
-                        <li>
-                            Applied research &amp; development on iOS and Mac OS technologies.
-                        </li>
-                        <li>
-                            Reverse engineering.
-                        </li>
-                    </ul>
-                </div>
+            <div class="panel-body">
+                <dl class="dl-horizontal">
+                    <dt>Dates</dt>
+                    <dd>
+                        2011/06 - Today
+                    </dd>
+                    <dt>Name of employer</dt>
+                    <dd>
+                        <a href="http://www.digidna.net/">DigiDNA Sàrl</a>, Geneva - Switzerland / Geraldton - Western Australia
+                    </dd>
+                    <dt>Type of business</dt>
+                    <dd>
+                        Software Development (Mobile, Mac, Windows)
+                    </dd>
+                    <dt>Main activities<br />and responsibilities</dt>
+                    <dd>
+                        <ul>
+                            <li>
+                                Full rewrite and project lead for iOS applications (<a href="http://itunes.apple.com/us/app/fileapp-documents-files-reader/id297804694?mt=8">FileApp</a> &amp; <a href="http://itunes.apple.com/us/app/fileapp-pro/id359580470?mt=8">FileApp Pro</a>).
+                            </li>
+                            <li>
+                                Full rewrite of <a href="http://www.digidna.net/diskaid">DiskAid</a>, iPhone file transfer utility, for Mac and Windows.
+                            </li>
+                            <li>
+                                Cross-platform development.
+                            </li>
+                            <li>
+                                Applied research &amp; development on iOS and Mac OS technologies.
+                            </li>
+                            <li>
+                                Reverse engineering.
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
             </div>
         </div>
-        <div class="resume-box">
-            <h4>CTO Mobile &amp; Web / Development engineer</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Dates
-                </div>
-                <div class="resume-col-right">
-                    2009/08 - 2011/01
-                </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>CTO Mobile &amp; Web / Development engineer</h4>
             </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Name of employer
-                </div>
-                <div class="resume-col-right">
-                    <a href="http://www.netinfluence.com/">netinfluence Sàrl</a>, Lausanne - Switzerland
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Type of business
-                </div>
-                <div class="resume-col-right">
-                    IT &amp; IT Consulting
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Main activities and responsibilities
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Development within a team of 9 people.
-                        </li>
-                        <li>
-                            Development of iOS applications (iPhone / iPad).
-                        </li>
-                        <li>
-                            Development of PHP web applications (Zend Framework, TYPO3, FLOW3).
-                        </li>
-                        <li>
-                            Consulting in web technologies.
-                        </li>
-                    </ul>
-                </div>
+            <div class="panel-body">
+                <dl class="dl-horizontal">
+                    <dt>Dates</dt>
+                    <dd>
+                        2009/08 - 2011/01
+                    </dd>
+                    <dt>Name of employer</dt>
+                    <dd>
+                        <a href="http://www.netinfluence.com/">netinfluence Sàrl</a>, Lausanne - Switzerland
+                    </dd>
+                    <dt>Type of business</dt>
+                    <dd>
+                        IT &amp; IT Consulting
+                    </dd>
+                    <dt>Main activities<br />and responsibilities</dt>
+                    <dd>
+                        <ul>
+                            <li>
+                                Development within a team of 9 people.
+                            </li>
+                            <li>
+                                Development of iOS applications (iPhone / iPad).
+                            </li>
+                            <li>
+                                Development of PHP web applications (Zend Framework, TYPO3, FLOW3).
+                            </li>
+                            <li>
+                                Consulting in web technologies.
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
             </div>
         </div>
-        <div class="resume-box">
-            <h4>CEO &amp; Founder / Development engineer</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Dates
-                </div>
-                <div class="resume-col-right">
-                    2006/09 - 2009/08
-                </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>CEO &amp; Founder / Development engineer</h4>
             </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Name of employer
-                </div>
-                <div class="resume-col-right">
-                    <a href="http://www.eosgarden.com/">eosgarden</a>, Lausanne - Switzerland
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Type of business
-                </div>
-                <div class="resume-col-right">
-                    IT &amp; IT Consulting
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Main activities and responsibilities
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Development of web applications within a team of 3 people, plus an apprentice.
-                        </li>
-                        <li>
-                            TYPO3 development and consulting for large accounts (development of custom extensions, system administration and installation, training for users and developers, software integration, etc).
-                        </li>
-                        <li>
-                            Development of a ticketing system, with online payment through YellowPay for a Swiss music festival.
-                        </li>
-                        <li>
-                            Specialized PHP and TYPO3 trainer in partnership with training companies (Digicomp, Net4All) or for private clients.
-                        </li>
-                        <li>
-                            Linux server consulting (Debian, RedHat Enterprise).
-                        </li>
-                        <li>
-                            Legal expertise for FLOSS (Free Libre &amp; OpenSource Software) projects.
-                        </li>
-                    </ul>
-                </div>
+            <div class="panel-body">
+                <dl class="dl-horizontal">
+                    <dt>Dates</dt>
+                    <dd>
+                        2006/09 - 2009/08
+                    </dd>
+                    <dt>Name of employer</dt>
+                    <dd>
+                        <a href="http://www.eosgarden.com/">eosgarden</a>, Lausanne - Switzerland
+                    </dd>
+                    <dt>Type of business</dt>
+                    <dd>
+                        IT &amp; IT Consulting
+                    </dd>
+                    <dt>Main activities<br />and responsibilities</dt>
+                    <dd>
+                        <ul>
+                            <li>
+                                Development of web applications within a team of 3 people, plus an apprentice.
+                            </li>
+                            <li>
+                                TYPO3 development and consulting for large accounts (development of custom extensions, system administration and installation, training for users and developers, software integration, etc).
+                            </li>
+                            <li>
+                                Development of a ticketing system, with online payment through YellowPay for a Swiss music festival.
+                            </li>
+                            <li>
+                                Specialized PHP and TYPO3 trainer in partnership with training companies (Digicomp, Net4All) or for private clients.
+                            </li>
+                            <li>
+                                Linux server consulting (Debian, RedHat Enterprise).
+                            </li>
+                            <li>
+                                Legal expertise for FLOSS (Free Libre &amp; OpenSource Software) projects.
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
             </div>
         </div>
-        <div class="resume-box">
-            <h4>Community leader for the TYPO3 french community</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Dates
-                </div>
-                <div class="resume-col-right">
-                    2006/05 - 2008/01
-                </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>Community leader for the TYPO3 french community</h4>
             </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Name of employer
-                </div>
-                <div class="resume-col-right">
-                    <a href="http://www.typo3.org/">TYPO3 France</a>
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Type of business
-                </div>
-                <div class="resume-col-right">
-                    OpenSource community
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Main activities and responsibilities
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Great involvement in the organization and development of the TYPO3 french community from its beginning.
-                        </li>
-                        <li>
-                            Organization of the TYPO3 Summer Universities in 2005 and 2006 (one week seminars).
-                        </li>
-                        <li>
-                            Many conferences and technical workshops at the french community meetings.
-                        </li>
-                        <li>
-                            Moderation and technical assistance on the forums and mailing lists of the French community.
-                        </li>
-                        <li>
-                            Development of several public and documented extensions (~70) for the TYPO3 CMS.
-                        </li>
-                    </ul>
-                </div>
+            <div class="panel-body">
+                <dl class="dl-horizontal">
+                    <dt>Dates</dt>
+                    <dd>
+                        2006/05 - 2008/01
+                    </dd>
+                    <dt>Name of employer</dt>
+                    <dd>
+                        <a href="http://www.typo3.org/">TYPO3 France</a>
+                    </dd>
+                    <dt>Type of business</dt>
+                    <dd>
+                        OpenSource community
+                    </dd>
+                    <dt>Main activities<br />and responsibilities</dt>
+                    <dd>
+                        <ul>
+                            <li>
+                                Great involvement in the organization and development of the TYPO3 french community from its beginning.
+                            </li>
+                            <li>
+                                Organization of the TYPO3 Summer Universities in 2005 and 2006 (one week seminars).
+                            </li>
+                            <li>
+                                Many conferences and technical workshops at the french community meetings.
+                            </li>
+                            <li>
+                                Moderation and technical assistance on the forums and mailing lists of the French community.
+                            </li>
+                            <li>
+                                Development of several public and documented extensions (~70) for the TYPO3 CMS.
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
             </div>
         </div>
-        <div class="resume-box">
-            <h4>Vice-president / Independent consultant</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Dates
-                </div>
-                <div class="resume-col-right">
-                    2004/11 - 2006/09
-                </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>Vice-president / Independent consultant</h4>
             </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Name of employer
-                </div>
-                <div class="resume-col-right">
-                    Gad Lab Bros, Crisser - Switzerland
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Type of business
-                </div>
-                <div class="resume-col-right">
-                    IT &amp; IT Consulting
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Main activities and responsibilities
-                </div>
-                <div class="resume-col-right">
-                    <div>
-                        The Gad Lab Bros. network was composed of multimedia professionals, all independent and managing their own clients. The goals of this association were:
-                    </div>
-                    <ul>
-                        <li>
-                            The promotion of open source software in the sectors of industry, politics and education.
-                        </li>
-                        <li>
-                            The promotion of the knowledge sharing and the expertise within its own structure.
-                        </li>
-                        <li>
-                            The sharing of its professional knowledge to the general public.
-                        </li>
-                        <li>
-                            The organization events to educate users about open source software usage.
-                        </li>
-                    </ul>
-                </div>
+            <div class="panel-body">
+                <dl class="dl-horizontal">
+                    <dt>Dates</dt>
+                    <dd>
+                        2004/11 - 2006/09
+                    </dd>
+                    <dt>Name of employer</dt>
+                    <dd>
+                        Gad Lab Bros, Crisser - Switzerland
+                    </dd>
+                    <dt>Type of business</dt>
+                    <dd>
+                        IT &amp; IT Consulting
+                    </dd>
+                    <dt>Main activities<br />and responsibilities</dt>
+                    <dd>
+                        <div>
+                            The Gad Lab Bros. network was composed of multimedia professionals, all independent and managing their own clients. The goals of this association were:
+                        </div>
+                        <ul>
+                            <li>
+                                The promotion of open source software in the sectors of industry, politics and education.
+                            </li>
+                            <li>
+                                The promotion of the knowledge sharing and the expertise within its own structure.
+                            </li>
+                            <li>
+                                The sharing of its professional knowledge to the general public.
+                            </li>
+                            <li>
+                                The organization events to educate users about open source software usage.
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
             </div>
         </div>
-        <div class="resume-box">
-            <h4>Independent worker</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Dates
-                </div>
-                <div class="resume-col-right">
-                    2002/09 - 2004/11
-                </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>Independent worker</h4>
             </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Name of employer
-                </div>
-                <div class="resume-col-right">
-                    macmade.net, Morges - Switzerland
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Type of business
-                </div>
-                <div class="resume-col-right">
-                    IT &amp; IT Consulting
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Main activities and responsibilities
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            PHP, ActionScript and JavaScript development (data management, e-commerce, boards, instant messaging, etc).
-                        </li>
-                        <li>
-                            3D modeling works (mechanical and organic), animation (COFFEE).
-                        </li>
-                        <li>
-                            Design of several promotional posters (A0).
-                        </li>
-                        <li>
-                            Moderation and technical assistance on the forums and mailing lists of the French community.
-                        </li>
-                        <li>
-                            Use of the «RedHat Interchange» software for e-commerce solutions (installation. configuration, personalization, etc).
-                        </li>
-                    </ul>
-                </div>
+            <div class="panel-body">
+                <dl class="dl-horizontal">
+                    <dt>Dates</dt>
+                    <dd>
+                        2002/09 - 2004/11
+                    </dd>
+                    <dt>Name of employer</dt>
+                    <dd>
+                        macmade.net, Morges - Switzerland
+                    </dd>
+                    <dt>Type of business</dt>
+                    <dd>
+                        IT &amp; IT Consulting
+                    </dd>
+                    <dt>Main activities<br />and responsibilities</dt>
+                    <dd>
+                        <ul>
+                            <li>
+                                PHP, ActionScript and JavaScript development (data management, e-commerce, boards, instant messaging, etc).
+                            </li>
+                            <li>
+                                3D modeling works (mechanical and organic), animation (COFFEE).
+                            </li>
+                            <li>
+                                Design of several promotional posters (A0).
+                            </li>
+                            <li>
+                                Moderation and technical assistance on the forums and mailing lists of the French community.
+                            </li>
+                            <li>
+                                Use of the «RedHat Interchange» software for e-commerce solutions (installation. configuration, personalization, etc).
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
             </div>
         </div>
-        <div class="resume-box">
-            <h4>Web Developer</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Dates
-                </div>
-                <div class="resume-col-right">
-                    2001/05 - 2002/09
-                </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>Web Developer</h4>
             </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Name of employer
-                </div>
-                <div class="resume-col-right">
-                    <a href="http://www.ringier.com/">Ringier Romandie SA</a>, Lausanne - Switzerland
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Type of business
-                </div>
-                <div class="resume-col-right">
-                    Media
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Main activities and responsibilities
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Web development work within a team of 15 people.
-                        </li>
-                        <li>
-                            Supervision and training of the web-publishing team in charge of the weekly publication of the dimanche.ch newspaper.
-                        </li>
-                        <li>
-                            Development of a new automated production workflow: data export from QuarkXPress (XML), control and validation by XSD schemas, formatting and web publication through XSLT.
-                        </li>
-                        <li>
-                            Development of a Content Management System (CMS) for the web publishing of the newspapers.
-                        </li>
-                        <li>
-                            Development of all the websites scripts (JavaScript).
-                        </li>
-                        <li>
-                            Development of an experimental Flash player for the newspapers articles formatted in XML (Flash 3 / 4).
-                        </li>
-                        <li>
-                            Design of promotional campaigns and actions.
-                        </li>
-                        <li>
-                            Various Flash developments, including specific development for kiosk devices.
-                        </li>
-                        <li>
-                            Deep analysis of the company websites in the perspective of a complete overhaul.
-                        </li>
-                    </ul>
-                </div>
+            <div class="panel-body">
+                <dl class="dl-horizontal">
+                    <dt>Dates</dt>
+                    <dd>
+                        2001/05 - 2002/09
+                    </dd>
+                    <dt>Name of employer</dt>
+                    <dd>
+                        <a href="http://www.ringier.com/">Ringier Romandie SA</a>, Lausanne - Switzerland
+                    </dd>
+                    <dt>Type of business</dt>
+                    <dd>
+                        Media
+                    </dd>
+                    <dt>Main activities<br />and responsibilities</dt>
+                    <dd>
+                        <ul>
+                            <li>
+                                Web development work within a team of 15 people.
+                            </li>
+                            <li>
+                                Supervision and training of the web-publishing team in charge of the weekly publication of the dimanche.ch newspaper.
+                            </li>
+                            <li>
+                                Development of a new automated production workflow: data export from QuarkXPress (XML), control and validation by XSD schemas, formatting and web publication through XSLT.
+                            </li>
+                            <li>
+                                Development of a Content Management System (CMS) for the web publishing of the newspapers.
+                            </li>
+                            <li>
+                                Development of all the websites scripts (JavaScript).
+                            </li>
+                            <li>
+                                Development of an experimental Flash player for the newspapers articles formatted in XML (Flash 3 / 4).
+                            </li>
+                            <li>
+                                Design of promotional campaigns and actions.
+                            </li>
+                            <li>
+                                Various Flash developments, including specific development for kiosk devices.
+                            </li>
+                            <li>
+                                Deep analysis of the company websites in the perspective of a complete overhaul.
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
             </div>
         </div>
-        <div class="resume-box">
-            <h4>Junior Web Developer</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Dates
-                </div>
-                <div class="resume-col-right">
-                    2000/01 - 2001/05
-                </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>Junior Web Developer</h4>
             </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Name of employer
-                </div>
-                <div class="resume-col-right">
-                    <a href="http://www.ringier.com/">Ringier Romandie SA</a>, Lausanne - Switzerland
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Type of business
-                </div>
-                <div class="resume-col-right">
-                    Media
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Main activities and responsibilities
-                </div>
-                <div class="resume-col-right">
+            <div class="panel-body">
+                <dl class="dl-horizontal">
+                    <dt>Dates</dt>
+                    <dd>
+                        2000/01 - 2001/05
+                    </dd>
+                    <dt>Name of employer</dt>
+                    <dd>
+                        <a href="http://www.ringier.com/">Ringier Romandie SA</a>, Lausanne - Switzerland
+                    </dd>
+                    <dt>Type of business</dt>
+                    <dd>
+                        Media
+                    </dd>
+                    <dt>Main activities<br />and responsibilities</dt>
+                    <dd>
                     <ul>
                         <li>
                             Weekly web publishing of the dimanche.ch newspaper, in HTML then through an Access database.
@@ -547,1078 +466,1011 @@
                             Graphics editing for the Ringier SA newspapers.
                         </li>
                     </ul>
-                </div>
+                    </dd>
+                </dl>
             </div>
         </div>
         <a name="resume-education"></a>
         <h3 class="project-icons project-icons-chalkboard">Education / Certifications</h3>
-        <div class="resume-box">
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    2010/10
-                </div>
-                <div class="resume-col-right">
-                    <strong>Zend PHP 5 Engineer Certification (ZCE) / PHP 5.3</strong>
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    2009/11
-                </div>
-                <div class="resume-col-right">
-                    <strong>C Programming Certification (ExpertRating)</strong>
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    2009/11
-                </div>
-                <div class="resume-col-right">
-                    <strong>Objective-C Programming Certification (ExpertRating)</strong>
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    2009/09
-                </div>
-                <div class="resume-col-right">
-                    <strong>TYPO3 integrator certification</strong>
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    2009/09
-                </div>
-                <div class="resume-col-right">
-                    <strong>Zend PHP 5 Engineer Certification (ZCE)</strong>
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    2002/02
-                </div>
-                <div class="resume-col-right">
-                    <strong>XML - Content Management System (CMS)</strong><br />
-                    Schule für Medienintegration (SMI Academy), Zofingen - Switzerland
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    2002/01
-                </div>
-                <div class="resume-col-right">
-                    <strong>Extensible Markup Language (XML)</strong><br />
-                    Schule für Medienintegration (SMI Academy), Zofingen - Switzerland
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    2002/01
-                </div>
-                <div class="resume-col-right">
-                    <strong>Visual Arts / Biology</strong> - Swiss maturity diploma<br />
-                    Academic High School, Morges - Switzerland<br />
-                    <span class="italic">Voluntary termination at the end of last year</span>
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    2002/01
-                </div>
-                <div class="resume-col-right">
-                    <strong>Latin / Modern languages</strong> - Pro-gymnasium B type certificate<br />
-                    Secondary school, Morges - Switzerland
-                </div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <dl class="dl-horizontal">
+                    <dt><em>2010/10</em></dt>
+                    <dd>
+                        <strong>Zend PHP 5 Engineer Certification (ZCE) / PHP 5.3</strong>
+                    </dd>
+                    <dt><em>2009/11</em></dt>
+                    <dd>
+                        <strong>C Programming Certification (ExpertRating)</strong>
+                    </dd>
+                    <dt><em>2009/11</em></dt>
+                    <dd>
+                        <strong>Objective-C Programming Certification (ExpertRating)</strong>
+                    </dd>
+                    <dt><em>2009/09</em></dt>
+                    <dd>
+                        <strong>TYPO3 integrator certification</strong>
+                    </dd>
+                    <dt><em>2009/09</em></dt>
+                    <dd>
+                        <strong>Zend PHP 5 Engineer Certification (ZCE)</strong>
+                    </dd>
+                    <dt><em>2002/02</em></dt>
+                    <dd>
+                        <strong>XML - Content Management System (CMS)</strong><br />
+                        Schule für Medienintegration (SMI Academy), Zofingen - Switzerland
+                    </dd>
+                    <dt><em>2002/01</em></dt>
+                    <dd>
+                        <strong>Extensible Markup Language (XML)</strong><br />
+                        Schule für Medienintegration (SMI Academy), Zofingen - Switzerland
+                    </dd>
+                    <dt><em>2002/01</em></dt>
+                    <dd>
+                        <strong>Visual Arts / Biology</strong> - Swiss maturity diploma<br />
+                        Academic High School, Morges - Switzerland<br />
+                        <span class="italic">Voluntary termination at the end of last year</span>
+                    </dd>
+                    <dt><em>2002/01</em></dt>
+                    <dd>
+                        <strong>Latin / Modern languages</strong> - Pro-gymnasium B type certificate<br />
+                        Secondary school, Morges - Switzerland
+                    </dd>
+                </dl>
             </div>
         </div>
         <a name="resume-skills"></a>
         <a name="resume-skills-programming"></a>
         <h3 class="project-icons project-icons-chip">Computing skills - Programming languages</h3>
-        <div class="resume-box">
-            <h4>Objective-C</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Excellent - Certified (11/2009)
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Experience
-                </div>
-                <div class="resume-col-right">
-                    6 years
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Informations
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Development of Mac OS X applications, using the Core Foundation and Cocoa frameworks.
-                        </li>
-                        <li>
-                            Development of iPhone and iPad applications, using the CocoaTouch framework.
-                        </li>
-                        <li>
-                            Integration of several libraries (C and C++).
-                        </li>
-                        <li>
-                            Excellent knowledge of the Objective-C runtime.
-                        </li>
-                    </ul>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>Objective-C</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Excellent - Certified (11/2009)
+                            </dd>
+                            <dt>Experience</dt>
+                            <dd>
+                                6 years
+                            </dd>
+                            <dt>Informations</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        Development of Mac OS X applications, using the Core Foundation and Cocoa frameworks.
+                                    </li>
+                                    <li>
+                                        Development of iPhone and iPad applications, using the CocoaTouch framework.
+                                    </li>
+                                    <li>
+                                        Integration of several libraries (C and C++).
+                                    </li>
+                                    <li>
+                                        Excellent knowledge of the Objective-C runtime.
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="resume-box">
-            <h4>C - ANSI/ISO99</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Good - Certified (11/2009)
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Experience
-                </div>
-                <div class="resume-col-right">
-                    6 years
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Informations
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Development of command-line application and libraries on Mac OS X, Linux and Windows.
-                        </li>
-                        <li>
-                            Development of a memory allocation debug library.
-                        </li>
-                        <li>
-                            Development of a Standard C Library (C99) for a home-made Operating System.
-                        </li>
-                        <li>
-                            In-depth study of the Huffman and LZW compression algorithms.
-                        </li>
-                    </ul>
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>C - ANSI/ISO99</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Good - Certified (11/2009)
+                            </dd>
+                            <dt>Experience</dt>
+                            <dd>
+                                6 years
+                            </dd>
+                            <dt>Informations</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        Development of command-line application and libraries on Mac OS X, Linux and Windows.
+                                    </li>
+                                    <li>
+                                        Development of a memory allocation debug library.
+                                    </li>
+                                    <li>
+                                        Development of a Standard C Library (C99) for a home-made Operating System.
+                                    </li>
+                                    <li>
+                                        In-depth study of the Huffman and LZW compression algorithms.
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="resume-box">
-            <h4>C++</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Good
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Informations
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Cross-platform development for libraries (Windows, Mac OS X, Linux).
-                        </li>
-                        <li>
-                            Development of a credit card payment solution for an ECR terminal (Hypercom - ZVT)
-                        </li>
-                        <li>
-                            Integration of several libraries for different platforms (Mac, Windows, iOS).
-                        </li>
-                        <li>
-                            Usage of several libraries (OpenFrameworks, OpenCV, etc).
-                        </li>
-                        <li>
-                            Basic knowledge of QT.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="resume-box">
-            <h4>x86 Assembly</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Good
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>C++</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Good
+                            </dd>
+                            <dt>Informations</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        Cross-platform development for libraries (Windows, Mac OS X, Linux).
+                                    </li>
+                                    <li>
+                                        Development of a credit card payment solution for an ECR terminal (Hypercom - ZVT)
+                                    </li>
+                                    <li>
+                                        Integration of several libraries for different platforms (Mac, Windows, iOS).
+                                    </li>
+                                    <li>
+                                        Usage of several libraries (OpenFrameworks, OpenCV, etc).
+                                    </li>
+                                    <li>
+                                        Basic knowledge of QT.
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Experience
-                </div>
-                <div class="resume-col-right">
-                    5 years
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Informations
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Development of an experimental 32/64 bits kernel for x86 platforms.
-                        </li>
-                        <li>
-                            Direct hardware programming, memory allocation routines, BIOS, SMBIOS and VGA programming.
-                        </li>
-                        <li>
-                            Reverse engineering.
-                        </li>
-                    </ul>
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>x86 Assembly</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Good
+                            </dd>
+                            <dt>Experience</dt>
+                            <dd>
+                                5 years
+                            </dd>
+                            <dt>Informations</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        Development of an experimental 32/64 bits kernel for x86 platforms.
+                                    </li>
+                                    <li>
+                                        Direct hardware programming, memory allocation routines, BIOS, SMBIOS and VGA programming.
+                                    </li>
+                                    <li>
+                                        Reverse engineering.
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="resume-box">
-            <h4>C#</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Medium
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Informations
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Good knowledge of the language features.
-                        </li>
-                        <li>
-                            Interaction with CLR C++ projects (PInvoke, custom data marshalling, etc.)
-                        </li>
-                        <li>
-                            Basic knowledge of .NET/WPF.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="resume-box">
-            <h4>SWIG</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Good
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>C#</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Medium
+                            </dd>
+                            <dt>Informations</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        Good knowledge of the language features.
+                                    </li>
+                                    <li>
+                                        Interaction with CLR C++ projects (PInvoke, custom data marshalling, etc.)
+                                    </li>
+                                    <li>
+                                        Basic knowledge of .NET/WPF.
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Informations
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Excellent knowledge of the C# SWIG interface.
-                        </li>
-                        <li>
-                            Port of complex cross-platform C/C++ libraries to C#/.NET.
-                        </li>
-                        <li>
-                            Custom marshalling, and support for complex STL types.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="resume-box">
-            <h4>PHP - 4/5</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Excellent - Certified (09/2009 &amp; 10/2010)
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Experience
-                </div>
-                <div class="resume-col-right">
-                    9 years
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Informations
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Excellent knowledge of object-oriented PHP5 programming concepts and design patterns (especially SPL).
-                        </li>
-                        <li>
-                            Development with several frameworks and CMS (TYPO3, Flow3, Zend Framework, Drupal).
-                        </li>
-                        <li>
-                            Development of complex applications, databases layers, e-commerce applications, online payments, secure scripts, discussion boards, management interface, etc.
-                        </li>
-                        <li>
-                            Excellent knowledge of PHP-GTK, for the creation of desktop applications.
-                        </li>
-                    </ul>
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>SWIG</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Good
+                            </dd>
+                            <dt>Informations</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        Excellent knowledge of the C# SWIG interface.
+                                    </li>
+                                    <li>
+                                        Port of complex cross-platform C/C++ libraries to C#/.NET.
+                                    </li>
+                                    <li>
+                                        Custom marshalling, and support for complex STL types.
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="resume-box">
-            <h4>GNU Make</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Excellent
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Experience
-                </div>
-                <div class="resume-col-right">
-                    6 years
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Informations
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Development of makefiles for complex C, C++, Objective-C and Assembly projects.
-                        </li>
-                        <li>
-                            Management of library dependancies with libtool.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="resume-box">
-            <h4>JavaScript - ECMA-262</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Excellent
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>PHP - 4/5</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Excellent - Certified (09/2009 &amp; 10/2010)
+                            </dd>
+                            <dt>Experience</dt>
+                            <dd>
+                                9 years
+                            </dd>
+                            <dt>Informations</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        Excellent knowledge of object-oriented PHP5 programming concepts and design patterns (especially SPL).
+                                    </li>
+                                    <li>
+                                        Development with several frameworks and CMS (TYPO3, Flow3, Zend Framework, Drupal).
+                                    </li>
+                                    <li>
+                                        Development of complex applications, databases layers, e-commerce applications, online payments, secure scripts, discussion boards, management interface, etc.
+                                    </li>
+                                    <li>
+                                        Excellent knowledge of PHP-GTK, for the creation of desktop applications.
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Experience
-                </div>
-                <div class="resume-col-right">
-                    11 years
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Informations
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Excellent knowledge of the JS object model.
-                        </li>
-                        <li>
-                            Good knowledge of several JS frameworks (jQuery, Prototype, MooTools, ExtJS).
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="resume-box">
-            <h4>ActionScript - 1/2/3 / AMF</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Excellent
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Experience
-                </div>
-                <div class="resume-col-right">
-                    10 years
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Informations
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Component and library development, XML communication with databases, video integration, automation, etc.
-                        </li>
-                        <li>
-                            Excellent knowledge of the AMF protocol (0 to 3) at the binary level.
-                        </li>
-                    </ul>
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>GNU Make</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Excellent
+                            </dd>
+                            <dt>Experience</dt>
+                            <dd>
+                                6 years
+                            </dd>
+                            <dt>Informations</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        Development of makefiles for complex C, C++, Objective-C and Assembly projects.
+                                    </li>
+                                    <li>
+                                        Management of library dependancies with libtool.
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="resume-box">
-            <h4>Shell - Bash/Tcsh/Sh</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Good
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Experience
-                </div>
-                <div class="resume-col-right">
-                    8 years
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Informations
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Development of backup scripts, system administration and maintenance script and automated build systems.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="resume-box">
-            <h4>PostScript</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Good
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>JavaScript - ECMA-262</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Excellent
+                            </dd>
+                            <dt>Experience</dt>
+                            <dd>
+                                11 years
+                            </dd>
+                            <dt>Informations</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        Excellent knowledge of the JS object model.
+                                    </li>
+                                    <li>
+                                        Good knowledge of several JS frameworks (jQuery, Prototype, MooTools, ExtJS).
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Experience
-                </div>
-                <div class="resume-col-right">
-                    3 years
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Informations
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Development of generic procedures for the generation of dynamic printable documents trough XSLT.
-                        </li>
-                        <li>
-                            Good knowledge of the font encoding system.
-                        </li>
-                    </ul>
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>ActionScript - 1/2/3 / AMF</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Excellent
+                            </dd>
+                            <dt>Experience</dt>
+                            <dd>
+                                10 years
+                            </dd>
+                            <dt>Informations</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        Component and library development, XML communication with databases, video integration, automation, etc.
+                                    </li>
+                                    <li>
+                                        Excellent knowledge of the AMF protocol (0 to 3) at the binary level.
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="resume-box">
-            <h4>Python</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Basic
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>Shell - Bash/Tcsh/Sh</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Good
+                            </dd>
+                            <dt>Experience</dt>
+                            <dd>
+                                8 years
+                            </dd>
+                            <dt>Informations</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        Development of backup scripts, system administration and maintenance script and automated build systems.
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Informations
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>PostScript</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Good
+                            </dd>
+                            <dt>Experience</dt>
+                            <dd>
+                                3 years
+                            </dd>
+                            <dt>Informations</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        Development of generic procedures for the generation of dynamic printable documents trough XSLT.
+                                    </li>
+                                    <li>
+                                        Good knowledge of the font encoding system.
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Development of plugins for the «Trac» SCM system.
-                        </li>
-                    </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>Python</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Basic
+                            </dd>
+                            <dt>Informations</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        Development of plugins for the «Trac» SCM system.
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
         </div>
         <a name="resume-skills-web"></a>
         <h3 class="project-icons project-icons-website">Computing skills - Web Technologies</h3>
-        <div class="resume-box">
-            <h4>XHTML - 1 / HTML - 4/5</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Excellent
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Experience
-                </div>
-                <div class="resume-col-right">
-                    14 years
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Informations
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Strict use of W3C Recommendations (DOM), and accessibility standards (WAI, WCAG).
-                        </li>
-                    </ul>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>XHTML - 1 / HTML - 4/5</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Excellent
+                            </dd>
+                            <dt>Experience</dt>
+                            <dd>
+                                14 years
+                            </dd>
+                            <dt>Informations</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        Strict use of W3C Recommendations (DOM), and accessibility standards (WAI, WCAG).
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="resume-box">
-            <h4>CSS - 1/2/3</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Excellent
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Experience
-                </div>
-                <div class="resume-col-right">
-                    14 years
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                    <h4>CSS - 1/2/3</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Excellent
+                            </dd>
+                            <dt>Experience</dt>
+                            <dd>
+                                14 years
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="resume-box">
-            <h4>TypoScript / TYPO3 - Certified (09/2009)</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Excellent
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Experience
-                </div>
-                <div class="resume-col-right">
-            
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Informations
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Installation and configuration on dedicated or shared servers.
-                        </li>
-                        <li>
-                            Advanced TypoScript programming, extension development, software integration.
-                        </li>
-                        <li>
-                            Consulting and training.
-                        </li>
-                        <li>
-                            Excellent knowledge of PHP API of TYPO3.
-                        </li>
-                    </ul>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>TypoScript / TYPO3 - Certified (09/2009)</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Excellent
+                            </dd>
+                            <dt>Experience</dt>
+                            <dd>
+                                9 years
+                            </dd>
+                            <dt>Informations</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        Installation and configuration on dedicated or shared servers.
+                                    </li>
+                                    <li>
+                                        Advanced TypoScript programming, extension development, software integration.
+                                    </li>
+                                    <li>
+                                        Consulting and training.
+                                    </li>
+                                    <li>
+                                        Excellent knowledge of PHP API of TYPO3.
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="resume-box">
-            <h4>XML</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Excellent
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Experience
-                </div>
-                <div class="resume-col-right">
-                    12 years
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Informations
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Excellent knowledge of several XML specifications (RDF, RSS, ATOM, SOAP, WSDL, etc).
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="resume-box">
-            <h4>XForms</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Good
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Experience
-                </div>
-                <div class="resume-col-right">
-                    3 years
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>XSL / XSLT / XPath</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Good
+                            </dd>
+                            <dt>Experience</dt>
+                            <dd>
+                                9 years
+                            </dd>
+                            <dt>Informations</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        Development of automated workflow (CMS).
+                                    </li>
+                                    <li>
+                                        Automatic generation of PDF or PostScript documents.
+                                    </li>
+                                    <li>
+                                        Good knowledge of the Xalan and Sablotron XSLT processors. 
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="resume-box">
-            <h4>XSL / XSLT / XPath</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Good
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>XML</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Excellent
+                            </dd>
+                            <dt>Experience</dt>
+                            <dd>
+                                12 years
+                            </dd>
+                            <dt>Informations</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        Excellent knowledge of several XML specifications (RDF, RSS, ATOM, SOAP, WSDL, etc).
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Experience
-                </div>
-                <div class="resume-col-right">
-                    9 years
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Informations
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Development of automated workflow (CMS).
-                        </li>
-                        <li>
-                            Automatic generation of PDF or PostScript documents.
-                        </li>
-                        <li>
-                            Good knowledge of the Xalan and Sablotron XSLT processors. 
-                        </li>
-                    </ul>
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>DTD / XSD (XML Schemas)</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Good
+                            </dd>
+                            <dt>Experience</dt>
+                            <dd>
+                                9 years
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="resume-box">
-            <h4>DTD / XSD (XML Schemas)</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Good
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Experience
-                </div>
-                <div class="resume-col-right">
-                    9 years
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>XForms</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Good
+                            </dd>
+                            <dt>Experience</dt>
+                            <dd>
+                                3 years
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
         </div>
         <a name="resume-skills-database"></a>
         <h3 class="project-icons project-icons-glass-empty">Computing skills - Database</h3>
-        <div class="resume-box">
-            <h4>MySQL - 3/4/5</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Good
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Experience
-                </div>
-                <div class="resume-col-right">
-                    9 years
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Informations
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Installation, configuration and maintenance.
-                        </li>
-                        <li>
-                            Modeling and queries with the MyISAM and InnoDB format.
-                        </li>
-                        <li>
-                            Usage with PHP (mainly), C and Objective-C.
-                        </li>
-                    </ul>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>MySQL - 3/4/5</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Good
+                            </dd>
+                            <dt>Experience</dt>
+                            <dd>
+                                9 years
+                            </dd>
+                            <dt>Informations</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        Installation, configuration and maintenance.
+                                    </li>
+                                    <li>
+                                        Modeling and queries with the MyISAM and InnoDB format.
+                                    </li>
+                                    <li>
+                                        Usage with PHP (mainly), C and Objective-C.
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="resume-box">
-            <h4>SQLite</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Medium
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Informations
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Usage with PHP. 
-                        </li>
-                    </ul>
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>SQLite</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Medium
+                            </dd>
+                            <dt>Informations</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        Usage with PHP. 
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="resume-box">
-            <h4>Oracle</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Basic
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Informations
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Usage with PHP. 
-                        </li>
-                    </ul>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>Oracle</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Basic
+                            </dd>
+                            <dt>Informations</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        Usage with PHP. 
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
         </div>
         <a name="resume-skills-sysadmin"></a>
         <h3 class="project-icons project-icons-monitor-wallpaper">Computing skills - System administration</h3>
-        <div class="resume-box">
-            <h4>Apache - 1/2</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Excellent
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Experience
-                </div>
-                <div class="resume-col-right">
-                    7 years
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Informations
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Installation, configuration, maintenance and optimization.
-                        </li>
-                        <li>
-                            Website management, virtual server configuration, custom  module installation.
-                        </li>
-                        <li>
-                            Security audits, load testing and benchmarks.
-                        </li>
-                    </ul>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>Apache - 1/2</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Excellent
+                            </dd>
+                            <dt>Experience</dt>
+                            <dd>
+                                7 years
+                            </dd>
+                            <dt>Informations</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        Installation, configuration, maintenance and optimization.
+                                    </li>
+                                    <li>
+                                        Website management, virtual server configuration, custom  module installation.
+                                    </li>
+                                    <li>
+                                        Security audits, load testing and benchmarks.
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="resume-box">
-            <h4>LDAP - OpenLDAP/ActiveDirectory</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Good
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Experience
-                </div>
-                <div class="resume-col-right">
-                    5 years
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Informations
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Installation, configuration and maintenance.
-                        </li>
-                        <li>
-                            Usage from PHP and Objective-C.
-                        </li>
-                    </ul>
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>LDAP - OpenLDAP/ActiveDirectory</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Good
+                            </dd>
+                            <dt>Experience</dt>
+                            <dd>
+                                5 years
+                            </dd>
+                            <dt>Informations</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        Installation, configuration and maintenance.
+                                    </li>
+                                    <li>
+                                        Usage from PHP and Objective-C.
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="resume-box">
-            <h4>Subversion</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Excellent
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Experience
-                </div>
-                <div class="resume-col-right">
-                    7 years
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Informations
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Extensive use in many development projects in team or personally.
-                        </li>
-                        <li>
-                            Installation, configuration, maintenance and administration.
-                        </li>
-                        <li>
-                            Excellent knowledge of the SVN administration tools.
-                        </li>
-                    </ul>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>Subversion</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Excellent
+                            </dd>
+                            <dt>Experience</dt>
+                            <dd>
+                                7 years
+                            </dd>
+                            <dt>Informations</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        Extensive use in many development projects in team or personally.
+                                    </li>
+                                    <li>
+                                        Installation, configuration, maintenance and administration.
+                                    </li>
+                                    <li>
+                                        Excellent knowledge of the SVN administration tools.
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="resume-box">
-            <h4>GIT</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Medium
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>GIT</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Medium
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
         </div>
         <a name="resume-skills-os"></a>
         <h3 class="project-icons project-icons-desktop">Computing skills - Operating System</h3>
-        <div class="resume-box">
-            <h4>Mac OS X - Client/Server</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Excellent
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Experience
-                </div>
-                <div class="resume-col-right">
-                    11 years
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Informations
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Excellent knowledge of the BSD sub-system of Mac OS X.
-                        </li>
-                        <li>
-                            Installation, configuration and administration of Mac OS X Server.
-                        </li>
-                    </ul>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>Mac OS X - Client/Server</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Excellent
+                            </dd>
+                            <dt>Experience</dt>
+                            <dd>
+                                11 years
+                            </dd>
+                            <dt>Informations</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        Excellent knowledge of the BSD sub-system of Mac OS X.
+                                    </li>
+                                    <li>
+                                        Installation, configuration and administration of Mac OS X Server.
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="resume-box">
-            <h4>Linux / Unix</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Excellent
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Experience
-                </div>
-                <div class="resume-col-right">
-                    11 years
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Informations
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Excellent knowledge of the Debian (and Ubuntu) distributions., for desktop and server use.
-                        </li>
-                        <li>
-                            Good knowledge of RedHat Enterprise.
-                        </li>
-                        <li>
-                            Basic knowledge of Suze, Slackware and FreeBSD.
-                        </li>
-                    </ul>
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                    <h4>Linux / Unix</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Excellent
+                            </dd>
+                            <dt>Experience</dt>
+                            <dd>
+                                11 years
+                            </dd>
+                            <dt>Informations</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        Excellent knowledge of the Debian (and Ubuntu) distributions., for desktop and server use.
+                                    </li>
+                                    <li>
+                                        Good knowledge of RedHat Enterprise.
+                                    </li>
+                                    <li>
+                                        Basic knowledge of Suze, Slackware and FreeBSD.
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
         </div>
         <a name="resume-skills-misc"></a>
         <h3 class="project-icons project-icons-bookshelf">Computing skills - Miscellaneous</h3>
-        <div class="resume-box">
-            <h4>UML - 2</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Basic
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                    <h4>UML - 2</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Basic
+                            </dd>
+                            <dt>Informations</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        Usage for several web projects (mainly PHP).
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Informations
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Usage for several web projects (mainly PHP).
-                        </li>
-                    </ul>
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                    <h4>MPEG-4 - ISO-IEC 14496-12</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Good
+                            </dd>
+                            <dt>Informations</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        Very good knowledge of the MPEG-4 file format standard at the binary level. 
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="resume-box">
-            <h4>MPEG-4 - ISO-IEC 14496-12</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Good
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Informations
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Very good knowledge of the MPEG-4 file format standard at the binary level. 
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="resume-box">
-            <h4>JavaDoc / HeaderDoc</h4>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Knowledge
-                </div>
-                <div class="resume-col-right">
-                    Excellent
-                </div>
-            </div>
-            <div class="resume-row">
-                <div class="resume-col-left">
-                    Informations
-                </div>
-                <div class="resume-col-right">
-                    <ul>
-                        <li>
-                            Code documentation for several languages and automatic generation of the documentation (Doxygen, PHPDoc, HeaderDoc, JavaDoc).
-                        </li>
-                    </ul>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                    <h4>JavaDoc / HeaderDoc / HeaderDoc</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Excellent
+                            </dd>
+                            <dt>Informations</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        Code documentation for several languages and automatic generation of the documentation (Doxygen, PHPDoc, HeaderDoc, JavaDoc).
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
         </div>

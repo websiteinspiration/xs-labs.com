@@ -75,6 +75,7 @@
 
 .panel-heading {
     padding:                    2px;
+    padding-left:               10px;
 }
 
 .panel-heading h1, .panel-heading h2, .panel-heading h3, .panel-heading h4, .panel-heading h5, .panel-heading h6 {
