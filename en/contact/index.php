@@ -631,6 +631,7 @@
                 </div>
             </div>
         </div>
+        <a name="resume-skills"></a>
         <a name="resume-skills-programming"></a>
         <h3 class="project-icons project-icons-chip">Computing skills - Programming languages</h3>
         <div class="resume-box">
@@ -1622,35 +1623,40 @@
             </div>
         </div>
     </div>
-    <div class="col-md-2">
-        <div data-spy="affix" data-offset-top="60" data-offset-bottom="200">
+    <div class="col-md-2 resume-menu">
+        <div data-spy="affix" data-offset-top="0" data-offset-bottom="0" class="resume-menu-affix">
             <ul class="hidden-xs">
                 <li>
-                    <a href="#resume-language">Language</a>
+                    <a href="#resume-language"><strong>Language</strong></a>
                 </li>
                 <li>
-                    <a href="#resume-work">Work experience</a>
+                    <a href="#resume-work"><strong>Work experience</strong></a>
                 </li>
                 <li>
-                    <a href="#resume-education">Education / Certifications</a>
+                    <a href="#resume-education"><strong>Education / Certifications</strong></a>
                 </li>
                 <li>
-                    <a href="#resume-skills-programming">Computing skills - Programming languages</a>
-                </li>
-                <li>
-                    <a href="#resume-skills-web">Computing skills - Web Technologies</a>
-                </li>
-                <li>
-                    <a href="#resume-skills-database">Computing skills - Database</a>
-                </li>
-                <li>
-                    <a href="#resume-skills-sysadmin">Computing skills - System administration</a>
-                </li>
-                <li>
-                    <a href="#resume-skills-os">Computing skills - Operating System</a>
-                </li>
-                <li>
-                    <a href="#resume-skills-os">Computing skills - Miscellaneous</a>
+                    <a href="#resume-skills"><strong>Computing skills</strong></a>
+                    <ul>
+                        <li>
+                            <a href="#resume-skills-programming">Programming languages</a>
+                        </li>
+                        <li>
+                            <a href="#resume-skills-web">Web Technologies</a>
+                        </li>
+                        <li>
+                            <a href="#resume-skills-database">Database</a>
+                        </li>
+                        <li>
+                            <a href="#resume-skills-sysadmin">System administration</a>
+                        </li>
+                        <li>
+                            <a href="#resume-skills-os">Operating System</a>
+                        </li>
+                        <li>
+                            <a href="#resume-skills-os">Miscellaneous</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </div>

@@ -101,4 +101,24 @@ ul.xs-status-items li.xs-status-item-ok {
     padding-bottom:         2px;
 }
 
+.resume-menu {
+    font-size:              12px;
+    white-space:            nowrap;
+}
+
+.resume-menu ul {
+    margin:                 0px;
+    padding:                0px;
+    list-style:             none;
+}
+
+.resume-menu ul ul {
+    margin-left:            20px;
+}
+
+.resume-menu li {
+    margin:                 0px;
+    padding:                0px;
+}
+
 /* ]]> */
