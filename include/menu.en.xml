@@ -160,6 +160,7 @@
 		    </opensource>
 		    <articles>
 		        <title>Old articles archives</title>
+		        <subtitle>About</subtitle>
 		        <sub>
 		            <c-reference-counting hidden="yes">
 		                <title>Reference counting in ANSI-C</title>
