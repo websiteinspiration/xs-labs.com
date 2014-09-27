@@ -1,47 +1,73 @@
-<h2>Screenshots</h2>
-<div class="gallery">
-    <div>
-         <a href="/uploads/image/codeine/screenshots/Screen-MainWindow-Full.jpg" rel="shadowbox"><img src="/uploads/image/codeine/screenshots/Screen-MainWindow.jpg" alt="" width="200" height="154" /></a><br />
-        Main window
+<div class="row">
+    <div class="col-sm-3">
+        <div class="text-center">
+             <a href="/uploads/image/codeine/screenshots/main-full.jpg" class="lightbox"><img src="/uploads/image/codeine/screenshots/main.png" alt="" width="200" height="148" class="img-thumbnail" /></a><br />
+            Main window
+        </div>
     </div>
-    <div>
-         <a href="/uploads/image/codeine/screenshots/Screen-MainWindow-NewFile-Full.jpg" rel="shadowbox"><img src="/uploads/image/codeine/screenshots/Screen-MainWindow-NewFile.jpg" alt="" width="200" height="154" /></a><br />
-        File creation dialog
+    <div class="col-sm-3">
+        <div class="text-center">
+             <a href="/uploads/image/codeine/screenshots/new-full.jpg" class="lightbox"><img src="/uploads/image/codeine/screenshots/new.png" alt="" width="200" height="148" class="img-thumbnail" /></a><br />
+            File creation dialog
+        </div>
     </div>
-    <div>
-         <a href="/uploads/image/codeine/screenshots/Screen-MainWindow-Diagnostics-Full.jpg" rel="shadowbox"><img src="/uploads/image/codeine/screenshots/Screen-MainWindow-Diagnostics.jpg" alt="" width="200" height="154" /></a><br />
-        Live diagnostics
+    <div class="col-sm-3">
+        <div class="text-center">
+             <a href="/uploads/image/codeine/screenshots/diagnostics-full.jpg" class="lightbox"><img src="/uploads/image/codeine/screenshots/diagnostics.png" alt="" width="200" height="148" class="img-thumbnail" /></a><br />
+            Live diagnostics
+        </div>
     </div>
-    <div>
-         <a href="/uploads/image/codeine/screenshots/Screen-MainWindow-Completion-Full.jpg" rel="shadowbox"><img src="/uploads/image/codeine/screenshots/Screen-MainWindow-Completion.jpg" alt="" width="200" height="154" /></a><br />
-        Code completion
-    </div>
-    <div>
-         <a href="/uploads/image/codeine/screenshots/Screen-MainWindow-BareBones-Full.jpg" rel="shadowbox"><img src="/uploads/image/codeine/screenshots/Screen-MainWindow-BareBones.jpg" alt="" width="200" height="154" /></a><br />
-        Main window - Light theme
-    </div>
-    <div>
-         <a href="/uploads/image/codeine/screenshots/Screen-Preferences-General-Full.jpg" rel="shadowbox"><img src="/uploads/image/codeine/screenshots/Screen-Preferences-General.jpg" alt="" width="200" height="154" /></a><br />
-        Preferences - General
-    </div>
-    <div>
-         <a href="/uploads/image/codeine/screenshots/Screen-Preferences-Editor-Full.jpg" rel="shadowbox"><img src="/uploads/image/codeine/screenshots/Screen-Preferences-Editor.jpg" alt="" width="200" height="154" /></a><br />
-        Preferences - Editor
-    </div>
-    <div>
-         <a href="/uploads/image/codeine/screenshots/Screen-Preferences-Compiler-Full.jpg" rel="shadowbox"><img src="/uploads/image/codeine/screenshots/Screen-Preferences-Compiler.jpg" alt="" width="200" height="154" /></a><br />
-        Preferences - Compiler
-    </div>
-    <div>
-        <a href="/uploads/image/codeine/screenshots/Screen-Preferences-Linker-Full.jpg" rel="shadowbox"><img src="/uploads/image/codeine/screenshots/Screen-Preferences-Linker.jpg" alt="" width="200" height="154" /></a><br />
-        Preferences - Linker
-    </div>
-    <div>
-         <a href="/uploads/image/codeine/screenshots/Screen-Preferences-Colors-Full.jpg" rel="shadowbox"><img src="/uploads/image/codeine/screenshots/Screen-Preferences-Colors.jpg" alt="" width="200" height="154" /></a><br />
-        Preferences - Fonts &amp; Colors
-    </div>
-    <div>
-        <a href="/uploads/image/codeine/screenshots/Screen-Preferences-Files-Full.jpg" rel="shadowbox"><img src="/uploads/image/codeine/screenshots/Screen-Preferences-Files.jpg" alt="" width="200" height="154" /></a><br />
-        Main window - File types
+    <div class="col-sm-3">
+        <div class="text-center">
+             <a href="/uploads/image/codeine/screenshots/completion-full.jpg" class="lightbox"><img src="/uploads/image/codeine/screenshots/completion.png" alt="" width="200" height="148" class="img-thumbnail" /></a><br />
+            Code completion
+        </div>
     </div>
 </div>
+<div class="row">
+    <div class="col-sm-3">
+        <div class="text-center">
+             <a href="/uploads/image/codeine/screenshots/light-full.jpg" class="lightbox"><img src="/uploads/image/codeine/screenshots/light.png" alt="" width="200" height="148" class="img-thumbnail" /></a><br />
+            Main window - Light theme
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="text-center">
+             <a href="/uploads/image/codeine/screenshots/general-full.jpg" class="lightbox"><img src="/uploads/image/codeine/screenshots/general.png" alt="" width="200" height="148" class="img-thumbnail" /></a><br />
+            Preferences - General
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="text-center">
+             <a href="/uploads/image/codeine/screenshots/editor-full.jpg" class="lightbox"><img src="/uploads/image/codeine/screenshots/editor.png" alt="" width="200" height="148" class="img-thumbnail" /></a><br />
+            Preferences - Editor
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="text-center">
+             <a href="/uploads/image/codeine/screenshots/compiler-full.jpg" class="lightbox"><img src="/uploads/image/codeine/screenshots/compiler.png" alt="" width="200" height="148" class="img-thumbnail" /></a><br />
+            Preferences - Compiler
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-3">
+        <div class="text-center">
+            <a href="/uploads/image/codeine/screenshots/linker-full.jpg" class="lightbox"><img src="/uploads/image/codeine/screenshots/linker.png" alt="" width="200" height="148" class="img-thumbnail" /></a><br />
+            Preferences - Linker
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="text-center">
+             <a href="/uploads/image/codeine/screenshots/colors-full.jpg" class="lightbox"><img src="/uploads/image/codeine/screenshots/colors.png" alt="" width="200" height="148" class="img-thumbnail" /></a><br />
+            Preferences - Fonts &amp; Colors
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="text-center">
+            <a href="/uploads/image/codeine/screenshots/files-full.jpg" class="lightbox"><img src="/uploads/image/codeine/screenshots/files.png" alt="" width="200" height="148" class="img-thumbnail" /></a><br />
+            Main window - File types
+        </div>
+    </div>
+</div>
+
