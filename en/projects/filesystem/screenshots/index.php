@@ -1,18 +1,17 @@
-<h2>Screenshots</h2>
-<div class="gallery">
-    <div>
-         <a href="/uploads/image/filesystem/screenshots/Screen-1-Full.png" rel="shadowbox"><img src="/uploads/image/filesystem/screenshots/Screen-1.png" alt="" width="103" height="200" /></a><br />
+<div class="row">
+    <div class="col-sm-2">
+         <a href="/uploads/image/filesystem/screenshots/1-full.png" class="lightbox"><img src="/uploads/image/filesystem/screenshots/1.png" alt="" width="98" height="200" class="img-thumbnail" /></a><br />
     </div>
-    <div>
-         <a href="/uploads/image/filesystem/screenshots/Screen-2-Full.png" rel="shadowbox"><img src="/uploads/image/filesystem/screenshots/Screen-2.png" alt="" width="103" height="200" /></a><br />
+    <div class="col-sm-2">
+         <a href="/uploads/image/filesystem/screenshots/2-full.png" class="lightbox"><img src="/uploads/image/filesystem/screenshots/2.png" alt="" width="98" height="200" class="img-thumbnail" /></a><br />
     </div>
-    <div>
-         <a href="/uploads/image/filesystem/screenshots/Screen-3-Full.png" rel="shadowbox"><img src="/uploads/image/filesystem/screenshots/Screen-3.png" alt="" width="103" height="200" /></a><br />
+    <div class="col-sm-2">
+         <a href="/uploads/image/filesystem/screenshots/3-full.png" class="lightbox"><img src="/uploads/image/filesystem/screenshots/3.png" alt="" width="98" height="200" class="img-thumbnail" /></a><br />
     </div>
-    <div>
-         <a href="/uploads/image/filesystem/screenshots/Screen-4-Full.png" rel="shadowbox"><img src="/uploads/image/filesystem/screenshots/Screen-4.png" alt="" width="103" height="200" /></a><br />
+    <div class="col-sm-2">
+         <a href="/uploads/image/filesystem/screenshots/4-full.png" class="lightbox"><img src="/uploads/image/filesystem/screenshots/4.png" alt="" width="98" height="200" class="img-thumbnail" /></a><br />
     </div>
-    <div>
-         <a href="/uploads/image/filesystem/screenshots/Screen-5-Full.png" rel="shadowbox"><img src="/uploads/image/filesystem/screenshots/Screen-5.png" alt="" width="103" height="200" /></a><br />
+    <div class="col-sm-2">
+         <a href="/uploads/image/filesystem/screenshots/5-full.png" class="lightbox"><img src="/uploads/image/filesystem/screenshots/5.png" alt="" width="98" height="200" class="img-thumbnail" /></a><br />
     </div>
 </div>
