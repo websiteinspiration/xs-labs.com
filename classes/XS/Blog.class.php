@@ -195,10 +195,17 @@ final class XS_Blog
         
             foreach( $this->_posts->post as $post )
             {
-                if( $post->name == $name )
+                if( $post->name != $name )
                 {
-                    return $this->_getPostContent( $post );
+                    continue;
                 }
+                
+                if( $date != strtotime( $post->date ) )
+                {
+                    continue;
+                }
+                
+                return $this->_getPostContent( $post );
             }
         
             return '';
