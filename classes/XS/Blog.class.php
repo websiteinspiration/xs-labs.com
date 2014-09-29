@@ -205,7 +205,15 @@ final class XS_Blog
         }
         
         XS_Menu::getInstance()->setPageTitle( XS_Menu::getInstance()->getPageTitle( '/blog/' ) );
-        XS_Menu::getInstance()->addRootlineItem( $post->title, $this->_getPostUrl( $post ) );
+        
+        if( isset( $post->shortTitle ) )
+        {
+            XS_Menu::getInstance()->addRootlineItem( $post->shortTitle, $this->_getPostUrl( $post ) );
+        }
+        else
+        {
+            XS_Menu::getInstance()->addRootlineItem( $post->title, $this->_getPostUrl( $post ) );
+        }
         
         $container              = new XS_Xhtml_Tag( 'div' );
         $container[ 'class' ]   = 'row';
