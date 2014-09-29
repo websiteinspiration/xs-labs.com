@@ -67,4 +67,9 @@ pre {
     background-color:       #F9F2F4;
 }
 
+blockquote {
+    font-size:              14px;
+    font-style:             italic;
+}
+
 /* ]]> */
