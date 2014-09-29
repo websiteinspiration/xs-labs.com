@@ -204,6 +204,8 @@ final class XS_Blog
             return '';
         }
         
+        XS_Menu::getInstance()->setPageTitle( $post->title );
+        
         $container              = new XS_Xhtml_Tag( 'div' );
         $container[ 'class' ]   = 'row';
         $content                = $container->div;

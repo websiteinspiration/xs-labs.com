@@ -38,6 +38,7 @@ final class XS_Menu
     private $_pathInfos       = array();
     private $_lang            = '';
     private $_currentPath     = '';
+    private $_pageTitle       = '';
     
     private function __construct()
     {
@@ -790,5 +791,10 @@ final class XS_Menu
         }
         
         return $img;
+    }
+    
+    public setPageTitle( $title )
+    {
+        $this->_pageTitle = ( string )$title;
     }
 }
