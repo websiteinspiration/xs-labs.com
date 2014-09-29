@@ -15,10 +15,11 @@ RewriteRule ^downloads/.*$ - [L]
 RewriteRule ^fever/.*$ - [L]
 RewriteRule ^doc/xs/PHP/.*$ - [L]
 RewriteRule ^stats/.*$ - [L]
-RewriteRule ^([^/]+)/blog/.+ $1/blog/
+RewriteRule ^([^/]+)/blog/.*$ /blog.php?xxx=xxx
 RewriteRule .*/index.php /index.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-l
+RewriteCond %{REQUEST_FILENAME} !blog.php
 RewriteRule .* /index.php
 
 RewriteRule \.(?:jpe?g|gif|png)$ /retina.php [L]
