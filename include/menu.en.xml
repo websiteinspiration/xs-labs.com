@@ -197,6 +197,9 @@
 	<blog>
 		<title>Blog</title>
 	</blog>
+	<xs-one>
+		<title>XS-One</title>
+	</xs-one>
 	<sitemap hidden="yes" sitemap="no">
 		<title>Sitemap</title>
 	</sitemap>
