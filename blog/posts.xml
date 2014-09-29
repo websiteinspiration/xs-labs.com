@@ -3,6 +3,12 @@
     <post>
         <date>2011/01/30</date>
         <author>Jean-David Gadina</author>
+        <name>xeos-memory-allocator-llvm</name>
+        <title>XEOS: memory allocator &amp; LLVM</title>
+    </post>
+    <post>
+        <date>2011/01/30</date>
+        <author>Jean-David Gadina</author>
         <name>vps-switch</name>
         <title>VPS switch</title>
     </post>
