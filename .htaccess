@@ -15,6 +15,7 @@ RewriteRule ^downloads/.*$ - [L]
 RewriteRule ^fever/.*$ - [L]
 RewriteRule ^doc/xs/PHP/.*$ - [L]
 RewriteRule ^stats/.*$ - [L]
+RewriteRule ^([^/]+)/blog/.+ $1/blog/
 RewriteRule .*/index.php /index.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-l
