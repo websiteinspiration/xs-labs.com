@@ -61,9 +61,9 @@
         <p>
             The conversion is performed the following way:
         </p>
-        <pre>
+<pre>
 -1S &middot; 1.M &middot; 2( E - 127 )
-        </pre>
+</pre>
         <p>
             Where S is the sign, M the mantissa, and E the exponent.
         </p>
