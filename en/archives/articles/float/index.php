@@ -116,18 +116,18 @@
         <p>
             The final representation of the number in the binary scientific notation is:
         </p>
-        <pre>
+<pre>
 -10 &middot; 1.0111 &middot; 22
-        </pre>
+</pre>
         <p>
             Mathematically, this means:
         </p>
-        <pre>
+<pre>
 1 &middot; ( 1 &middot; 20 + 0 &middot; 2-1 + 1 &middot; 2-2 + 1 &middot; 2-3 + 1 &middot; 2-4 ) &middot; 22
 ( 20 + 2-2 + 2-3 + 2-4 ) &middot; 22
 22 + 20 + 2-1 + 2-2
 4 + 1 + 0.5 + 0.25
-        </pre>
+</pre>
         <p>
             The floating point value is then 5.75.
         </p>
@@ -152,9 +152,9 @@
         <p>
             The scientific notation for a denormalized number is:
         </p>
-        <div class="code">
-            <code>-1<span class="power">S</span> &middot;  0.M &middot; 2<span class="power">-126</span></code>
-        </div>
+<pre>
+-1S &middot;  0.M &middot; 2-126
+</pre>
         <a name="special-numbers-zero"></a>
         <h4>3.2. Zero</h4>
         <p>
