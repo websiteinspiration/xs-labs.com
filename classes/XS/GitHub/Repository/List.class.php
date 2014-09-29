@@ -63,6 +63,9 @@ class XS_GitHub_Repository_List
         
         if( count( $this->_data ) == 0 )
         {
+            $alert              = $list->div;
+            $alert[ 'class' ]   = 'alert alert-info text-center';
+            
             $list->addTextData( $this->_lang->noData );
         }
         else

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<labels>
-	<author>Author: %s</author>
-	<date>Date: %s</date>
-	<previous>Previous</previous>
-	<next>Next</next>
-	<deletePost>Delete post</deletePost>
-</labels>
