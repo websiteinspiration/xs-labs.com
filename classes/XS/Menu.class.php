@@ -33,12 +33,14 @@
 
 final class XS_Menu
 {
-    private static $_instance = NULL;
-    private $_menu            = NULL;
-    private $_pathInfos       = array();
-    private $_lang            = '';
-    private $_currentPath     = '';
-    private $_pageTitle       = '';
+    private static $_instance   = NULL;
+    private $_menu              = NULL;
+    private $_pathInfos         = array();
+    private $_lang              = '';
+    private $_currentPath       = '';
+    private $_pageTitle         = '';
+    private $_rootlineExtraName = '';
+    private $_rootlineExtraUrl  = '';
     
     private function __construct()
     {
@@ -151,9 +153,9 @@ final class XS_Menu
             
             $page = $this->_pathInfos[ $i ];
             
-            if( !isset( $menu->$page ) ) {
-                
-                return $rootline;
+            if( !isset( $menu->$page ) )
+            {
+                goto end;
             }
             
             $menu            = $menu->$page;
@@ -173,6 +175,18 @@ final class XS_Menu
             }
             
             $menu = $menu->sub;
+        }
+        
+        end:
+        
+        if( !empty( $this->_rootlineExtraName ) && !empty( $this->_rootlineExtraUrl ) )
+        {
+            $item            = $list->li;
+            $link            = $item->a;
+            $link[ 'href' ]  = $this->_rootlineExtraUrl;
+            $link[ 'title' ] = htmlentities( $this->_rootlineExtraName );
+            
+            $link->addTextData( htmlentities( $this->_rootlineExtraName ) );
         }
         
         $item[ 'class' ] = 'active';
@@ -289,6 +303,13 @@ final class XS_Menu
         $header = new XS_Xhtml_Tag( 'h1' );
         $menu   = $this->_menu;
         $path   = '/';
+        
+        if( !empty( $this->_pageTitle ) )
+        {
+            $header->addTextData( $this->_pageTitle );
+            
+            return $header;
+        }
         
         if( count( $this->_pathInfos ) > 1 ) {
             
@@ -793,8 +814,14 @@ final class XS_Menu
         return $img;
     }
     
-    public setPageTitle( $title )
+    public function setPageTitle( $title )
     {
         $this->_pageTitle = ( string )$title;
+    }
+    
+    public function addRootlineItem( $name, $url )
+    {
+        $this->_rootlineExtraName   = ( string )$name;
+        $this->_rootlineExtraUrl    = ( string )$url;
     }
 }

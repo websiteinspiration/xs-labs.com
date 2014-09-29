@@ -204,7 +204,8 @@ final class XS_Blog
             return '';
         }
         
-        XS_Menu::getInstance()->setPageTitle( $post->title );
+        XS_Menu::getInstance()->setPageTitle( XS_Menu::getInstance()->getPageTitle( '/blog/' ) );
+        XS_Menu::getInstance()->addRootlineItem( $post->title, $this->_getPostUrl( $post ) );
         
         $container              = new XS_Xhtml_Tag( 'div' );
         $container[ 'class' ]   = 'row';
@@ -286,13 +287,6 @@ final class XS_Blog
                 XS_Menu::getInstance()->getPageLink( $this->_lang->copyrightLicenseLink, $this->_lang->copyrightLicense )
             );
         }
-        
-        /*
-        <copyright>Copyright © %s</copyright>
-        <copyrightNote>This article is published under the terms of the %s.</copyrightNote>
-        <copyrightLicense>FreeBSD Documentation License</copyrightLicense>
-        <copyrightLicenseLink>/licenses/freebsd-documentation/</copyrightLicenseLink>
-        */
         
         return ( string )$container;
     }
