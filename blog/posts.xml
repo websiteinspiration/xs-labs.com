@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <blog>
     <post>
+        <date>2011/01/30</date>
+        <author>Jean-David Gadina</author>
+        <name>looking-for-a-job</name>
+        <title>Looking for a job</title>
+    </post>
+    <post>
         <date>2011/01/29</date>
         <author>Jean-David Gadina</author>
         <name>process-renicer</name>
