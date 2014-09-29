@@ -103,13 +103,13 @@ final class XS_Menu
         $rootline = $this->_menu[ 'root' ];
         $menu     = $this->_menu;
         
-        for( $i = 1; $i < count( $this->_pathInfos ); $i++ ) {
-            
+        for( $i = 1; $i < count( $this->_pathInfos ); $i++ )
+        {
             $page = $this->_pathInfos[ $i ];
             
-            if( !isset( $menu->$page ) ) {
-                
-                return $rootline;
+            if( !isset( $menu->$page ) )
+            {
+                goto end;
             }
             
             $menu = $menu->$page;
@@ -123,7 +123,14 @@ final class XS_Menu
                 $rootline .= $sep . htmlentities( $menu->title );
             }
             
-            $menu      = $menu->sub;
+            $menu = $menu->sub;
+        }
+        
+        end:
+        
+        if( !empty( $this->_rootlineExtraName ) )
+        {
+            $rootline .= $sep . htmlentities( $this->_rootlineExtraName );
         }
         
         return $rootline;
@@ -398,8 +405,8 @@ final class XS_Menu
     
     public function getPageTitle( $path = NULL )
     {
-        if( $path === NULL ) {
-            
+        if( $path === NULL )
+        {
             $path = $this->_currentPath;
         }
         
@@ -408,13 +415,13 @@ final class XS_Menu
         $menu  = $this->_menu;
         $title = '';
         
-        if( count( $infos ) && $infos[ 0 ] === '' ) {
-            
+        if( count( $infos ) && $infos[ 0 ] === '' )
+        {
             array_shift( $infos );
         }
         
-        if( count( $infos ) && $infos[ count( $infos ) - 1 ] === '' ) {
-            
+        if( count( $infos ) && $infos[ count( $infos ) - 1 ] === '' )
+        {
             array_pop( $infos );
         }
         
@@ -423,10 +430,10 @@ final class XS_Menu
             return $this->_menu[ 'root' ];
         }
         
-        foreach( $infos as $page ) {
-            
-            if( !isset( $menu->$page ) ) {
-                
+        foreach( $infos as $page )
+        {
+            if( !isset( $menu->$page ) )
+            {
                 return '';
             }
             
