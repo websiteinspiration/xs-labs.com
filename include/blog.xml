@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<blog>
+    <post>
+        <date>2014/09/27</date>
+        <author>Jean-David Gadina</author>
+        <name>hello-world-3</name>
+        <title>Hello world 3</title>
+    </post>
+    <post>
+        <date>2014/08/27</date>
+        <author>Jean-David Gadina</author>
+        <name>hello-world-2</name>
+        <title>Hello world 2</title>
+    </post>
+    <post>
+        <date>2014/07/27</date>
+        <author>Jean-David Gadina</author>
+        <name>hello-world-1</name>
+        <title>Hello world 1</title>
+    </post>
+</blog>
