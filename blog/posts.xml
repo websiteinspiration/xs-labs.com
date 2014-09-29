@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <blog>
     <post>
+        <date>2011/02/03</date>
+        <author>Jean-David Gadina</author>
+        <name>filesystem-iphone</name>
+        <title>FileSystem for iPhone</title>
+    </post>
+    <post>
         <date>2011/02/01</date>
         <author>Jean-David Gadina</author>
         <name>next-freeware-siege-gui</name>
