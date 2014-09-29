@@ -81,7 +81,7 @@
 <p>
     Now let's create an Objective-C class that will detect the idle time:
 </p>
-<div class="code-block language-objc">
+<pre class="code-block language-objc">
 #include &lt;IOKit/IOKitLib.h&gt;
 
 @interface IdleTime: NSObject
@@ -95,7 +95,7 @@
 @property( readonly ) NSUInteger secondsIdle;
 
 @end
-</div>
+</pre>
 <p>
     This class has three instance variables, which will be used to communicate with I/O Kit.<br />
     The variables' types are defined by the «IOKit/IOKitLib.h», which we are including.
@@ -106,7 +106,7 @@
 <p>
     Here's the basic implementation of the class:
 </p>
-<div class="code-block language-objc">
+<pre class="code-block language-objc">
 #include "IdleTime.h"
 
 @implementation IdleTime
@@ -141,7 +141,7 @@
 }
 
 @end
-</div>
+</pre>
 <p>
     We've got an «init» method that we will use to establish the base communication with I/O Kit, a «dealloc» method that will free the allocated resources, and a getter method for each property.
 </p>
@@ -151,7 +151,7 @@
 <p>
     Now let's concentrate to the «init» method, and let's establish communication with I/O Kit, to obtain hardware informations.
 </p>
-<div class="code-block language-objc">
+<pre class="code-block language-objc">
 - ( id )init
 {
     kern_return_t status;
@@ -163,42 +163,42 @@
     
     return self;
 }
-</div>
+</pre>
 <p>
     We a declaring a variable of type «kern_status» that we'll use to check the status of the I/O Kit communication, and to manage errors.<br />
     The following code is inside the «if» statement:
 </p>
-<div class="code-block language-objc">
+<pre class="code-block language-objc">
 status = IOMasterPort( MACH_PORT_NULL, &#038;_ioPort );
-</div>
+</pre>
 <p>
     Here, we establish the connection with I/O Kit, on the default port (MACH_PORT_NULL).
 </p>
 <p>
     To know if the operation was successfull, we can check the value of the status variable with «KERN_SUCCESS»:
 </p>
-<div class="code-block language-objc">
+<pre class="code-block language-objc">
 if( status != KERN_SUCCESS )
 {
     /* Error management... */
 }
-</div>
+</pre>
 <p>
     I/O Kit has many services. The one we are going to use is «IOHID». It will allow us to know about user interaction.<br />
     In the following code, we get an iterator on the I/O Kit services, so we can access to IOHID.
 </p>
-<div class="code-block language-objc">
+<pre class="code-block language-objc">
 status = IOServiceGetMatchingServices
 (
     _ioPort,
      IOServiceMatching( "IOHIDSystem" ),
     &#038;_ioIterator
 );
-</div>
+</pre>
 <p>
     Now we can store the IOHID service:
 </p>
-<div class="code-block language-objc">
+<pre class="code-block language-objc">
 _ioObject = IOIteratorNext( _ioIterator );
 
 if ( ioObject == 0 )
@@ -208,12 +208,12 @@ if ( ioObject == 0 )
 
 IOObjectRetain( _ioObject );
 IOObjectRetain( _ioIterator );
-</div>
+</pre>
 <p>
     Here, we are doing a retain, so the objects won't be automatically freed.<br />
     So we'll have to release then in the «dealloc» method:
 </p>
-<div class="code-block language-objc">
+<pre class="code-block language-objc">
 - ( void )dealloc
 {
     IOObjectRelease( _ioObject );
@@ -221,12 +221,12 @@ IOObjectRetain( _ioIterator );
     
     [ super dealloc ];
 }
-</div>
+</pre>
 <p>
     Now the I/O Kit communication is established, and we have access to IOHID.<br />
     We can now use that service in the «timeIdle» method.
 </p>
-<div class="code-block language-objc">
+<pre class="code-block language-objc">
 - ( uint64_t )timeIdle
 {
     kern_return_t          status;
@@ -236,14 +236,14 @@ IOObjectRetain( _ioIterator );
     CFMutableDictionaryRef properties;
     
     properties = NULL;
-</div>
+</pre>
 <p>
     Let's start by declaring the variables we are going to use.
 </p>
 <p>
     First of all, we are going to access the IOHID properties.
 </p>
-<div class="code-block language-objc">
+<pre class="code-block language-objc">
 status = IORegistryEntryCreateCFProperties
 (
    _ioObject,
@@ -251,7 +251,7 @@ status = IORegistryEntryCreateCFProperties
    kCFAllocatorDefault,
    0
 );
-</div>
+</pre>
 <p>
     Here, we get a dictionary (similar to NSDictionary) in the «properties» variable.<br />
     We also get a kernel status, that we have to check, as usual.
@@ -259,7 +259,7 @@ status = IORegistryEntryCreateCFProperties
 <p>
     Now we can get the IOHID properties. The one we'll used is called «HIDIdleTime»:
 </p>
-<div class="code-block language-objc">
+<pre class="code-block language-objc">
 idle = CFDictionaryGetValue( properties, CFSTR( "HIDIdleTime" ) );
     
 if( !idle )
@@ -268,20 +268,20 @@ if( !idle )
     
     /* Error management */
 }
-</div>
+</pre>
 <p>
     If an error occurs, we have to release the «properties» object, in order to avoid a memory leak.
 </p>
 <p>
     A dictionary can contains several types of values, so we have to know the type of the «HIDIdleTime» property, before using it.
 </p>
-<div class="code-block language-objc">
+<pre class="code-block language-objc">
 type = CFGetTypeID( idle );
-</div>
+</pre>
 <p>
     The property can be of type «number» or «data». To obtain the correct value, each case must be managed.
 </p>
-<div class="code-block language-objc">
+<pre class="code-block language-objc">
 if( type == CFDataGetTypeID() )
 {
     CFDataGetBytes( ( CFDataRef )idle, CFRangeMake( 0, sizeof( time ) ), ( UInt8 * )&#038;time );
@@ -298,16 +298,16 @@ else
     
     /* Error management */
 }
-</div>
+</pre>
 <p>
     Then we can release the objects, and return the value:
 </p>
-<div class="code-block language-objc">
+<pre class="code-block language-objc">
 CFRelease( idle );
 CFRelease( ( CFTypeRef )properties );
 
 return time;
-</div>
+</pre>
 <p>
     The class is done. To use it, we just have to instantiate it and read the «secondsIdle» property (from a timer, for instance).
 </p>
@@ -323,9 +323,9 @@ return time;
 <p>
     To compile and execute it:
 </p>
-<div class="code-block nohighlight">
+<pre class="code-block nohighlight">
 gcc -Wall -framework Cocoa -framework IOKit -o idle idle.m &#038;&#038; ./idle
-</div>
+</pre>
 <div class="modal fade" id="idle_code">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -334,7 +334,7 @@ gcc -Wall -framework Cocoa -framework IOKit -o idle idle.m &#038;&#038; ./idle
                 <h4 class="modal-title">idle.m</h4>
             </div>
             <div class="modal-body">
-                <div class="code-block language-objc">
+                <pre class="code-block language-objc">
 /*******************************************************************************
  * Copyright (c) 2011, Jean-David Gadina &lt;macmade@eosgarden.com&gt;
  * All rights reserved.
@@ -623,7 +623,7 @@ int main( int argc, char * argv[] )
     
     return EXIT_SUCCESS;
 }
-                </div>
+                </pre>
             </div>
         </div>
     </div>

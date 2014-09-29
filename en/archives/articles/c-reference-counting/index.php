@@ -39,19 +39,19 @@
 <p>
     For instance, in Objective-C:
 </p>
-<div class="code-block language-objc">
+<pre class="code-block language-objc">
 NSArray * object1 = [ NSArray array ];
 NSArray * object2 = [ [ NSArray alloc ] init ];
 NSArray * object3 = [ [ [ NSArray array ] retain ] retain ];
-</div>
+</pre>
 <p>
     Here, the object2 variable will need to be released, as we allocated it explicitly.<br />
     The object3 variable will need to be released twice, since we retained it twice.
 </p>
-<div class="code-block language-objc">
+<pre class="code-block language-objc">
 [ object2 release ];
 [ [ object3 release ] release ];
-</div>
+</pre>
 <h3>C implementation</h3>
 <p>
     As a C coder, I've implemented this with ANSi-C.<br />
@@ -61,27 +61,27 @@ NSArray * object3 = [ [ [ NSArray array ] retain ] retain ];
     First of all, we are going to define a structure for our memory records.<br />
     The structure will look like this:
 </p>
-<div class="code-block language-c">
+<pre class="code-block language-c">
 typedef struct
 {
     unsigned int retainCount
     void       * data;
 }
 MemoryObject;
-</div>
+</pre>
 <p>
     Here, we are storing the retain count of the memory object. A retain will increment it, and a release decrement it. When it reaches 0, the object will be freed.
 </p>
 <p>
     We'll also need a custom allocation function:
 </p>
-<div class="code-block language-c">
-    void * Alloc( size_t size )
-    {
-        MemoryObject * o;
-        
-        o = ( MemoryObject * )calloc( sizeof( MemoryObject ) + size, 1 );
-</div>
+<pre class="code-block language-c">
+void * Alloc( size_t size )
+{
+    MemoryObject * o;
+    
+    o = ( MemoryObject * )calloc( sizeof( MemoryObject ) + size, 1 );
+</pre>
 <p>
     Here, allocate space for our memory object structure, plus the user requested size.<br />
     We are not going to return the memory object, so we need some calculation here.
@@ -89,32 +89,32 @@ MemoryObject;
 <p>
     First of all, let's declare a char pointer, that will point to our allocated memory object structure:
 </p>
-<div class="code-block language-c">
+<pre class="code-block language-c">
 char * ptr = ( char * )o;
-</div>
+</pre>
 <p>
     Then, we can get the location of the user defined data by adding the size of the memory object structure:
 </p>
-<div class="code-block language-c">
+<pre class="code-block language-c">
 ptr += sizeof( MemoryObject );
-</div>
+</pre>
 <p>
     Then, we can set our data pointer, et set the retain count to 1.
 </p>
-<div class="code-block language-c">
+<pre class="code-block language-c">
 o->data        = ptr;
 o->retainCount = 1;
-</div>
+</pre>
 <p>
     Now we'll return to pointer to the user data, so it doesn't have to know about our memory object structure.
 </p>
-<div class="code-block language-c">
+<pre class="code-block language-c">
 return ptr;
-</div>
+</pre>
 <p>
     Here's the full function:
 </p>
-<div class="code-block language-c">
+<pre class="code-block language-c">
 void * Alloc( size_t size )
 {
     MemoryObject * o;
@@ -128,7 +128,7 @@ void * Alloc( size_t size )
     
     return ( void * )ptr;
 }
-</div>
+</pre>
 <p>
     This way, we return the user defined allocated size, and we are hiding our structure before that data.
 </p>
@@ -138,7 +138,7 @@ void * Alloc( size_t size )
 <p>
     For example, here's the Retain function:
 </p>
-<div class="code-block language-c">
+<pre class="code-block language-c">
 void Retain( void * ptr )
 {
     MemoryObject * o;
@@ -150,14 +150,14 @@ void Retain( void * ptr )
     
     o->retainCount++:
 }
-</div>
+</pre>
 <p>
     We are here retrieving our MemoryObject structure, by subtracting the size of it to the user pointer. Once done, we can increase the retain count by one.
 </p>
 <p>
     Same thing is done for the Release function:
 </p>
-<div class="code-block language-c">
+<pre class="code-block language-c">
 void Release( void * ptr )
 {
     MemoryObject * o;
@@ -174,7 +174,7 @@ void Release( void * ptr )
         free( o );
     }
 }
-</div>
+</pre>
 <p>
     When the retain count reaches zero, we can free the object.
 </p>

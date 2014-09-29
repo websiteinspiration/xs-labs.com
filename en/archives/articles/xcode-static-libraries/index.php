@@ -59,7 +59,7 @@
 <p>
     We are now going to implement a static method named «doSomething».
 </p>
-<div class="code-block language-objc">
+<pre class="code-block language-objc">
 /* MethodProvider.h */
 #import &lt;UIKit/UIKit.h&gt;
 
@@ -81,11 +81,11 @@
 }
 
 @end
-</div>
+</pre>
 <p>
     We are going to call that method from our application, when it's loaded. We'll add the call on the «application: didFinishLaunchingWithOptions:» method of the «MyAppAppDelegate» class.
 </p>
-<div class="code-block language-objc">
+<pre class="code-block language-objc">
 - ( BOOL )application: ( UIApplication * )application didFinishLaunchingWithOptions: ( NSDictionary * )launchOptions
 {
     [ _window addSubview: _viewController.view ];
@@ -95,15 +95,15 @@
     
     return YES;
 }
-</div>
+</pre>
 <p>
     Do not forget to include the header file for the method provider class in the «MyAppAppController.m» file:
 </p>
-<div class="code-block language-objc">
+<pre class="code-block language-objc">
 #import "MyAppAppDelegate.h"
 #import "MyAppViewController.h"
 #import "MethodProvider.h"
-</div>
+</pre>
 <p>
     Now, the «MethodProvider» class is compiled at the same time as other project files. We are now going to change that.
 </p>
@@ -116,12 +116,12 @@
 <p>
     From now on, the class won't be compiled with other source files. The application build process will now fail, with the following message:
 </p>
-<div class="code-block nohighlight">
+<pre class="code-block nohighlight">
 _OBJC_CLASS_$_MethodProvider", referenced from:
 objc-class-ref-to-MethodProvider in MyAppAppDelegate.o
 ld: symbol(s) not found
 collect2: ld returned 1 exit status
-</div>
+</pre>
 <p>
     It tells that the linker has not found the symbol corresponding to our class, even if it's used from the «MyAppAppDelegate» class.
 </p>
@@ -205,7 +205,7 @@ collect2: ld returned 1 exit status
 <p>
     We are going to add a category on the «UIApplication» class, in our library's target:
 </p>
-<div class="code-block language-objc">
+<pre class="code-block language-objc">
 /* MyUIApp.h */
 #import &lt;UIKit/UIKit.h&gt;
 
@@ -226,11 +226,11 @@ collect2: ld returned 1 exit status
 }
 
 @end
-</div>
+</pre>
 <p>
     Let's use the method in our application:
 </p>
-<div class="code-block language-objc">
+<pre class="code-block language-objc">
 /* MyAppAppDelegate.m */
 - ( BOOL )application: ( UIApplication * )application didFinishLaunchingWithOptions: ( NSDictionary * )launchOptions
 {
@@ -242,28 +242,28 @@ collect2: ld returned 1 exit status
     
     return YES;
 }
-</div>
+</pre>
 <p>
     Do not forget to include the header file:
 </p>
-<div class="code-block language-objc">
+<pre class="code-block language-objc">
 #import "MyUIApp.h"
-</div>
+</pre>
 <p>
     Compilation will be successfull, but the application will crash, with the following message, displayed in the console:
 </p>
-<div class="code-block nohighlight">
+<pre class="code-block nohighlight">
 - [ UIApplication sayHello ]: unrecognized selector sent to instance 0x5911700
-</div>
+</pre>
 <p>
     This particular case is caused by the dynamic aspect of the Objective-C language (symbol resolution occures at run-time), and by the linker that does not generate symbols for categories.
 </p>
 <p>
     To solve the problem, we have to fix the linker parameters, in the informations of the application's target, and add, in the «Other Linker Flags» section:
 </p>
-<div class="code-block nohighlight">
+<pre class="code-block nohighlight">
 -ObjC -all_load
-</div>
+</pre>
 <p>
     <img src="/uploads/image/archives/articles/xcode-static-libraries/objc-lib-14.png" />
 </p>

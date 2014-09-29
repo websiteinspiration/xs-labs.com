@@ -36,30 +36,30 @@
         <p>
             In JavaScript, for instance, let's take a standard function called «foo», taking a callback as parameter, and executing it:
         </p>
-        <div class="code-block language-javascript">
+        <pre class="code-block language-javascript">
 function foo( callback )
 {
     callback();
 }
-        </div>
+        </pre>
         <p>
             It is possible to define another standard function, and pass it as argument of the first function:
         </p>
-        <div class="code-block language-javascript">
+        <pre class="code-block language-javascript">
 function bar()
 {
     alert( 'hello, world' );
 }
 
 foo( bar );
-        </div>
+        </pre>
         <p>
             The problem is that we are declaring a «bar» function in the global scope. So we risk to override another function having the same name.
         </p>
         <p>
             The JavaScript language allows us to declare the callback function at call time:
         </p>
-        <div class="code-block language-javascript">
+        <pre class="code-block language-javascript">
 foo
 {
     function()
@@ -67,21 +67,21 @@ foo
         alert( 'hello, world' );
     }
 );
-        </div>
+        </pre>
         <p>
             Here, the callback has no identifier. It won't exist in the global scope, so it can't conflict with another existing function.
         </p>
         <p>
             We can also define the callback as a variable. It still won't exist in the global scope, but it will be possible to re-use it through the variable:
         </p>
-        <div class="code-block language-javascript">
+        <pre class="code-block language-javascript">
 myCallback = function()
 {
     alert( 'hello, world' );
 };
 
 foo( myCallback );
-        </div>
+        </pre>
         <a name="about-closure"></a>
         <h4>Closure</h4>
         <p>
@@ -90,7 +90,7 @@ foo( myCallback );
         <p>
             In JavaScript again, let's see the following code:
         </p>
-        <div class="code-block language-javascript">
+        <pre class="code-block language-javascript">
 function foo( callback )
 {
     alert( callback() );
@@ -110,7 +110,7 @@ function bar()
 }
 
 bar();
-        </div>
+        </pre>
         <p>
             The callback, passed to the «foo» function from the execution context of the «bar» function, returns a variable named «str».<br />
             But this variable, declared in the «bar» function's context, is local. It means it exists only from inside that context.<br />
@@ -136,21 +136,21 @@ bar();
             The syntax of a block is a bit tricky at first sight, but as function pointers, we get used to it with some time.<br />
             Here's a block prototype:
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 NSString * ( ^ myBlock )( int );
-        </div>
+        </pre>
         <p>
             We are declaring here the prototype of a block («^»), that will be named «myBlock», taking as unique parameter an «int», et returning a pointer on a «NSString» object.
         </p>
         <p>
             Now we can declare the block itself:
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 myBlock = ^( int number )
 {
     return [ NSString stringWithFormat: @"Passed number: %i", number ];
 };
-        </div>
+        </pre>
         <p>
             We assign to the «myBlock» variable a function's body, taking an integer as the «number» argument. This function returns a «NSString» object, in which the integer will be displayed.
         </p>
@@ -164,13 +164,13 @@ myBlock = ^( int number )
         <p>
             The block can now be used, as a standard function:
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 myBlock();
-        </div>
+        </pre>
         <p>
             Here's the complete source code of an Objective-C program, with the previous example:
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 #import &lt;Cocoa/Cocoa.h&gt;
 
 int main( void )
@@ -190,29 +190,29 @@ int main( void )
 
     return EXIT_SUCCESS;
 }
-        </div>
+        </pre>
         <p>
             Such a program can be compiled with the following command (Terminal):
         </p>
-        <div class="code-block nohighlight">
+        <pre class="code-block nohighlight">
 gcc -Wall -framework Cocoa -o test test.m
-        </div>
+        </pre>
         <p>
             It will generate an executable named «test», from the «test.m» source file.<br />
             To launch the executable:
         </p>
-        <div class="code-block nohighlight">
+        <pre class="code-block nohighlight">
 ./test
-        </div>
+        </pre>
         <p>
             The declaration of a block prototype can be ommited if the block is not assigned to a variable. For instance, if it's passed directly as a parameter.
         </p>
         <p>
             For instance:
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 someFunction( ^ NSString * ( void ) { return @"hello, world" } );
-        </div>
+        </pre>
         <p>
             Note that in such a case, the return type must be declared. Here, it's a «NSString» object.
         </p>
@@ -222,21 +222,21 @@ someFunction( ^ NSString * ( void ) { return @"hello, world" } );
             A block can of course be passed as an argument of a C function.<br />
             Here again, the syntax is a bit tricky at first sight:
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 void logBlock( NSString * ( ^ theBlock )( int ) )
 {
     NSLog( @"Block returned: %@", theBlock() );
 }
-        </div>
+        </pre>
         <p>
             Of course, as Objective-C is a strongly typed language, a function taking a block as argument must also declare it's return type and the type of it's arguments, if any.
         </p>
         <p>
             Same thing for an objective-C method:
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 - ( void )logBlock: ( NSString * ( ^ )( int ) )theBlock;
-        </div>
+        </pre>
         <a name="objc-closure"></a>
         <h4>Closure</h4>
         <p>
@@ -245,7 +245,7 @@ void logBlock( NSString * ( ^ theBlock )( int ) )
         <p>
             Let's see the following program:
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 #import &lt;Cocoa/Cocoa.h&gt;
 
 void logBlock( int ( ^ theBlock )( void ) )
@@ -273,7 +273,7 @@ int main( void )
 
     return EXIT_SUCCESS;
 }
-        </div>
+        </pre>
         <p>
             The «main» function declares an integer, with 42 as value, and a block, returning that variable.<br />
             The block is then passed to the «logBlock» function, that will display its return value.
@@ -290,14 +290,14 @@ int main( void )
         <p>
             For instance, let's see what happen when our block tries to increment the value of «x»:
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 myBlock = ^( void )
 {
     x++
 
     return x;
 };
-        </div>
+        </pre>
         <p>
             The compiler will produce an error, as the «x» variable is only available to read from inside the block.
         </p>
@@ -305,9 +305,9 @@ myBlock = ^( void )
             To allow a block to modify a variable, it has to be declared with the «__block» keyword.<br />
             The previous code is valid if we declare the «x» variable in the following way:
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 __block int x;
-        </div>
+        </pre>
         <a name="objc-memory"></a>
         <h4>Memory management</h4>
         <p>
@@ -339,13 +339,13 @@ __block int x;
             First, we need to declare a category for the «NSArray» class.<br />
             A category allows to add methods to existing classes.
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 @interface NSArray( BlockExample )
 
 + ( NSArray * )arrayByFilteringArray: ( NSArray * )source withCallback: ( BOOL ( ^ )( id ) )callback;
 
 @end
-        </div>
+        </pre>
         <p>
             Here, we are declaring a method returning a «NSArray» object, and taking as parameter another «NSArray» object, and a callback, as a block.
         </p>
@@ -357,7 +357,7 @@ __block int x;
         <p>
             Let's see the implementation of that method:
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 @implementation NSArray( BlockExample )
 
 + ( NSArray * )arrayByFilteringArray: ( NSArray * )source withCallback: ( BOOL ( ^ )( id ) )callback
@@ -379,7 +379,7 @@ __block int x;
 }
 
 @end
-        </div>
+        </pre>
         <p>
             First, we create an array with a dynamic size («NSMutableArray»). It's initial capacity is the same as the number of items of the source array.
         </p>
@@ -390,7 +390,7 @@ __block int x;
             Here's a complete example of a program using such a method.<br />
             We are using the callback to create an array that contains only the items of type «NSString» from the source array:
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 #import &lt;Cocoa/Cocoa.h&gt;
 
 @interface NSArray( BlockExample )
@@ -443,7 +443,7 @@ int main( void )
 
     return EXIT_SUCCESS;
 }
-        </div>
+        </pre>
     </div>
     <div class="col-md-2 resume-menu">
         <div data-spy="affix" data-offset-top="0" data-offset-bottom="0" class="resume-menu-affix">

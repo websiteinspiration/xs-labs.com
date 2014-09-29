@@ -26,9 +26,9 @@
 <p>
     Before this, it was up to each programmer to define its own boolean type, usually an enum, like the following one:
 </p>
-<div class="code-block language-c">
+<pre class="code-block language-c">
 typedef enum { false = 0, true  = 1 } bool;
-</div>
+</pre>
 <p>
     Of course, unless using prefixes, such declarations may cause many problems, especially when using libraries, in which each programmer defined a boolean datatype.
 </p>
@@ -47,7 +47,7 @@ typedef enum { false = 0, true  = 1 } bool;
 <p>
     The final declaration may look like this, to ensure a maximum portability and compatibility:
 </p>
-<div class="code-block language-c">
+<pre class="code-block language-c">
 #ifndef __bool_true_false_are_defined
     #ifdef _Bool
         #define bool                        _Bool
@@ -58,4 +58,4 @@ typedef enum { false = 0, true  = 1 } bool;
     #define false                           0
     #define __bool_true_false_are_defined   1
 #endif
-</div>
+</pre>

@@ -41,12 +41,12 @@
         <p>
             For instance, to define an object of type 'Foo' as the delegate of a NSWindow object:
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 Foo      * foo    = [ [ Foo alloc ] init ];
 NSWindow * window = [ [ NSWindow alloc ] initWithContentRect: NSMakeRect( 0, 0, 100, 100 ) styleMask: NSTitledWindowMask backing: NSBackingStoreBuffered defer: NO ];
 
 [ window setDelegate: foo ];
-        </div>
+        </pre>
         <p>
             The two first lines respectively creates an object of type 'Foo' (defined in our application), and an object of type 'NSWindow' (from the Cocoa framework).
         </p>
@@ -56,15 +56,15 @@ NSWindow * window = [ [ NSWindow alloc ] initWithContentRect: NSMakeRect( 0, 0, 
         <p>
             From now on, if we close the window object.
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 [ window close ];
-        </div>
+        </pre>
         <p>
             The delegate object can be noticed of the close operation by implementing a specific method. In our case, the 'windowWillClose' method. Here's the method's prototype:
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 - ( void )windowWillClose: ( NSNotification * )notification;
-        </div>
+        </pre>
         <p>
             This will allow the delegate, just before the window closes, to perform operations required by the application.
         </p>
@@ -79,7 +79,7 @@ NSWindow * window = [ [ NSWindow alloc ] initWithContentRect: NSMakeRect( 0, 0, 
         <p>
             In other words:
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 @interface NSWindow: NSObject
 {
 @protected
@@ -105,26 +105,26 @@ NSWindow * window = [ [ NSWindow alloc ] initWithContentRect: NSMakeRect( 0, 0, 
 }
 
 @end
-        </div>
+        </pre>
         <p>
             It's very important to remember that an object should never retain its delegate object, as this would result in a memory leak (a memory area that will never be freed).
         </p>
         <p>
             If using Objective-C 2.0, note that you can use a property in the interface declaration to allow an easy acces to the delegate object:
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 @property( nonatomic, assign, readwrite ) delegate;
-        </div>
+        </pre>
         <p>
             From that point, the getter/setter methods can be automatically declared in the implementation:
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 @synthesize delegate;
-        </div>
+        </pre>
         <p>
             Now, back to the 'close' method of the 'NSWindow' object:
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 - ( void )close
 {
     /* Do something... */
@@ -136,7 +136,7 @@ NSWindow * window = [ [ NSWindow alloc ] initWithContentRect: NSMakeRect( 0, 0, 
     
     /* Do something... */
 }
-        </div>
+        </pre>
         <p>
             At a specific time during the execution of the 'close' method, the 'NSWindow' object checks if delegate object implements a method named 'windowWillClose'.<br />
             If it has, it's executed. The 'close' method then continues its own execution.
@@ -155,15 +155,15 @@ NSWindow * window = [ [ NSWindow alloc ] initWithContentRect: NSMakeRect( 0, 0, 
         <p>
             In the previous example, we could also have written the following code, to be noticed about the window's close event:
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 [ [ NSNotificationCenter defaultCenter ] addObserver: foo selector: @selector:( myObserverMethod: ) name: NSWindowWillCloseNotification object: window ]:
-        </div>
+        </pre>
         <p>
             In other words, we declare that the 'myObserverMethod' method of the 'Foo' object must be called when the window's 'NSWindowWillCloseNotification' event occurs. In such a case, here's the prototype of the 'myObserverMethod' method:
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 - ( void )myObserverMethod: ( NSNotification * )notification;
-        </div>
+        </pre>
         <p>
             So what are the differences between those two methodologies?<br />
             The notification system only allows to be notified about some events, while the delegation system also allows to modify the behaviour of the concerned object.
@@ -171,9 +171,9 @@ NSWindow * window = [ [ NSWindow alloc ] initWithContentRect: NSMakeRect( 0, 0, 
         <p>
             Let's take the 'windowShouldClose' method as an example. It can be implemented in the delegate of a 'NSWindow' object, and here's it's prototype:
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 - ( BOOL )windowShouldClose: ( NSWindow * )window;
-        </div>
+        </pre>
         <p>
             We can here see that the method returns a boolean value.
         </p>
@@ -200,10 +200,10 @@ NSWindow * window = [ [ NSWindow alloc ] initWithContentRect: NSMakeRect( 0, 0, 
         <p>
             Let's take the following code:
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 [ window setDelegate: foo ];
 [ window setDelegate: bar ];
-        </div>
+        </pre>
         <p>
             The delegate object of the 'window' object will be 'bar', which will override the 'foo' object, which won't be able to control the window anymore.
         </p>
@@ -215,7 +215,7 @@ NSWindow * window = [ [ NSWindow alloc ] initWithContentRect: NSMakeRect( 0, 0, 
         <p>
             First, we are going to create a base class for the classes needing multiple delegate objects:
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 /* MultipleDelegateObject.h */
 @interface MultipleDelegateObject: NSObject
 {
@@ -229,7 +229,7 @@ NSWindow * window = [ [ NSWindow alloc ] initWithContentRect: NSMakeRect( 0, 0, 
 - ( NSArray * )delegates;
 
 @end;
-        </div>
+        </pre>
         <p>
             We won't manage the delegate chain here, but in another class, named 'DelegateChain'. We'll see this class in a few moments.
         </p>
@@ -239,7 +239,7 @@ NSWindow * window = [ [ NSWindow alloc ] initWithContentRect: NSMakeRect( 0, 0, 
         <p>
             Here's the implementation:
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 /* MultipleDelegateObject.m */
 @implementation
 
@@ -275,7 +275,7 @@ NSWindow * window = [ [ NSWindow alloc ] initWithContentRect: NSMakeRect( 0, 0, 
 }
 
 @end
-        </div>
+        </pre>
         <p>
             The 'init' method creates a new instance of the 'DelegateChain' class and stores it in the 'delegate' instance variable. The 'dealloc' method releases this resource when the object is freed.
         </p>
@@ -287,7 +287,7 @@ NSWindow * window = [ [ NSWindow alloc ] initWithContentRect: NSMakeRect( 0, 0, 
         <p>
             Let's see the interface of the 'DelegateChain' class:
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 /* DelegateChain.h */
 @interface DelegateChain: NSObject
 {
@@ -304,7 +304,7 @@ NSWindow * window = [ [ NSWindow alloc ] initWithContentRect: NSMakeRect( 0, 0, 
 - ( NSArray * )delegates;
 
 @end
-        </div>
+        </pre>
         <p>
             We've seen previously that we cannot retain a delegate object. So we cannot use an 'NSMutableArray' or 'NSMutableDictionary' object to store the delegates, as they would be automatically retained when added to the array or dictionary.
         </p>
@@ -320,7 +320,7 @@ NSWindow * window = [ [ NSWindow alloc ] initWithContentRect: NSMakeRect( 0, 0, 
         <p>
             Now let's see, method by method, the implementation of the 'DelegateChain' class. First of all, its initialization:
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 - ( id )init
 {
     if( ( self = [ super init ] ) )
@@ -335,14 +335,14 @@ NSWindow * window = [ [ NSWindow alloc ] initWithContentRect: NSMakeRect( 0, 0, 
     
     return self;
 }
-        </div>
+        </pre>
         <p>
             We create the dictionary which will store the memory addresses, and we ask for a memory area to store the pointers to the delegate objects. At the initialization time, this area can store 10 objects. We are doing this to improve the performances, as we won't need to call the memory allocation functions each time a delegate is added. If we need more than 10 delegates, we will increase this area so it can store 10 objects more.
         </p>
         <p>
             As we allocated memory, we need to free it when the object is deallocated:
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 - ( void )dealloc
 {
     free( _delegates );
@@ -350,11 +350,11 @@ NSWindow * window = [ [ NSWindow alloc ] initWithContentRect: NSMakeRect( 0, 0, 
     [ _hashs release ];
     [ super  dealloc ];
 }
-        </div>
+        </pre>
         <p>
             Now let's see the method used to add a delegate:
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 - ( void )addDelegate: ( id )object
 {
     NSString * hash;
@@ -387,7 +387,7 @@ NSWindow * window = [ [ NSWindow alloc ] initWithContentRect: NSMakeRect( 0, 0, 
     
     _numberOfDelegates++;
 }
-        </div>
+        </pre>
         <p>
             We have previously allocated enough space for 10 delegates. If ten are set, and if another one is added, we just add space for 10 more objects with the 'realloc' function.
         </p>
@@ -469,10 +469,10 @@ NSWindow * window = [ [ NSWindow alloc ] initWithContentRect: NSMakeRect( 0, 0, 
         <p>
             We've seen previously that we can use the 'respondsToSelector' method to check if a delegate has a specific method.
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 if( [ _delegate respondsToSelector: @selector( someMethod ) ] )
 {}
-        </div>
+        </pre>
         <p>
             We are going to implement that behaviour on the 'DelegateChain' class.
         </p>
@@ -563,7 +563,7 @@ if( [ _delegate respondsToSelector: @selector( someMethod ) ] )
         <p>
             The Objective-C language allows the definition of categories, which allows methods to be added on any existing class, even if it's a core Objective-C class. For instance:
         </p>
-        <div class="code-block language-objc">
+        <pre class="code-block language-objc">
 @interface NSObject( MyCategory )
 
 - ( void )sayHello;
@@ -578,7 +578,7 @@ if( [ _delegate respondsToSelector: @selector( someMethod ) ] )
 }
 
 @end
-        </div>
+        </pre>
         <p>
             This code adds a 'sayHello' method in the 'NSObject' class, which is part of the Cocoa framework. As 'NSObject' is the root class of all Objective-C classes, all available classes will respond to the 'sayHello' method.
         </p>

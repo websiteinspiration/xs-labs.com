@@ -24,7 +24,7 @@
     Before using GCC, we need a sample program to work with. We'll also need to add a specific compiler flag when compiling.<br />
     Let's begin with a simple C program:
 </p>
-<div class="code-block language-c">
+<pre class="code-block language-c">
 #import &lt;stdlib.h&gt;
 
 void do_stuff( void );
@@ -51,22 +51,22 @@ void do_stuff( void )
         s[ 0 ] = 0;
     }
 }
-</div>
+</pre>
 <p>
     Name the file 'gdb_test.c', then compile and run the code with the following command:
 </p>
-<div class="code-block nohighlight">
+<pre class="code-block nohighlight">
 gcc -Wall -o gdb_test gdb_test.c && ./gdb_test
-</div>
+</pre>
 <p>
     No surprise, the program will end with a segmentation fault (EXC_BAD_ACCESS - SIGSEGV).
 </p>
 <p>
     Now compile the same file again, and add the '<strong>-g</strong>' parameter to the GCC invocation:
 </p>
-<div class="code-block nohighlight">
+<pre class="code-block nohighlight">
 gcc -Wall -g -o gdb_test gdb_test.c
-</div>
+</pre>
 <p>
     That will tell GCC to generate the debug symbols file. It will be called <strong>'gdb_test.dSYM'</strong>.<br />
     Such a file contains informations about each symbol of the executable (functions, variables, line numbers, etc). Now that we have that file, we are ready to use GDB.
@@ -75,7 +75,7 @@ gcc -Wall -g -o gdb_test gdb_test.c
 <p>
     Simply type '<strong>gdb</strong>' to enter a new GDB session. We'll the load our executable using the <strong>file</strong> command:
 </p>
-<div class="code-block nohighlight">
+<pre class="code-block nohighlight">
 GNU gdb 6.3.50-20050815 (Apple version gdb-1518) (Thu Jan 27 08:34:47 UTC 2011)
 Copyright 2004 Free Software Foundation, Inc.
 GDB is free software, covered by the GNU General Public License, and you are
@@ -84,11 +84,11 @@ Type "show copying" to see the conditions.
 There is absolutely no warranty for GDB.  Type "show warranty" for details.
 This GDB was configured as "x86_64-apple-darwin".
 (gdb) file gdb_test
-</div>
+</pre>
 <p>
     The executable is now loaded. We can run it with the '<strong>run</strong>' command:
 </p>
-<div class="code-block nohighlight">
+<pre class="code-block nohighlight">
 (gdb) run
 Starting program: /Users/macmade/Desktop/gdb_test 
 Reading symbols for shared libraries +. done
@@ -97,18 +97,18 @@ Program received signal EXC_BAD_ACCESS, Could not access memory.
 Reason: KERN_INVALID_ADDRESS at address: 0x000000000000000a
 0x0000000100000f0f in do_stuff () at gdb_test.c:24
 24	        s[ 0 ] = 0;
-</div>
+</pre>
 <p>
     We can see GDB caught the segmentation fault, and stopped the program's execution. It even display the line where the segmentation fault occurs. Very useful!
 </p>
 <p>
     We can also ask GDB for a backtrace, with the '<strong>bt</strong>' command:
 </p>
-<div class="code-block nohighlight">
+<pre class="code-block nohighlight">
 (gdb) bt
 #0  0x0000000100000f0f in do_stuff () at gdb_test.c:24
 #1  0x0000000100000eeb in main () at gdb_test.c:11
-</div>
+</pre>
 <h3>Breakpoints</h3>
 <p>
     We can also set breakpoints with GDB. A breakpoint can be a function's name, a specific line number, or a condition.<br />
@@ -117,7 +117,7 @@ Reason: KERN_INVALID_ADDRESS at address: 0x000000000000000a
 <p>
     So lets run our program again, and let's set a breakpoint in the <strong>do_stuff()</strong> function:
 </p>
-<div class="code-block nohighlight">
+<pre class="code-block nohighlight">
 (gdb) break do_stuff
 Breakpoint 1 at 0x100000ef6: file gdb_test.c, line 20.
 (gdb) run
@@ -128,7 +128,7 @@ Starting program: /Users/macmade/Desktop/gdb_test
 Breakpoint 1, do_stuff () at gdb_test.c:20
 20	    s = ( char * )x;
 (gdb) 
-</div>
+</pre>
 <p>
     GDB will automatically stops the program's execution when we call the <strong>do_stuff()</strong> function.<br />
     Now we can inspect our program.
@@ -136,30 +136,30 @@ Breakpoint 1, do_stuff () at gdb_test.c:20
 <p>
     We can start by asking the value of our '<strong>x</strong>' variable:
 </p>
-<div class="code-block nohighlight">
+<pre class="code-block nohighlight">
 (gdb) p x
-</div>
+</pre>
 <p>
     That will print the value of the '<strong>x</strong>' variable:
 </p>
-<div class="code-block nohighlight">
+<pre class="code-block nohighlight">
 $1 = 10
-</div>
+</pre>
 <p>
     We can now modify that variable, so it equals '0' (NULL):
 </p>
-<div class="code-block nohighlight">
+<pre class="code-block nohighlight">
 (gdb) p x=0
-</div>
+</pre>
 <p>
     Now we've fixed the problem, and we can continue the program's execution, by stepping multiple times:
 </p>
-<div class="code-block nohighlight">
+<pre class="code-block nohighlight">
 (gdb) s
-</div>
+</pre>
 <p>
     Till GDB prints:
 </p>
-<div class="code-block nohighlight">
+<pre class="code-block nohighlight">
 Program exited normally.
-</div>
+</pre>
