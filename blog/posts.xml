@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <blog>
     <post>
+        <date>2011/01/31</date>
+        <author>Jean-David Gadina</author>
+        <name>nslog-ansi-c</name>
+        <title>NSLog in ANSI-C</title>
+    </post>
+    <post>
         <date>2011/01/30</date>
         <author>Jean-David Gadina</author>
         <name>xeos-memory-allocator-llvm</name>
