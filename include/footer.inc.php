@@ -7,6 +7,7 @@
             </div>
             <div class="pull-right">
                 <ul class="list-inline">
+                    <li><small><?php print XS_Menu::getInstance()->getPageLink( '/sitemap/' ); ?></small></li>
                     <li><small><?php print XS_Menu::getInstance()->getPageLink( '/legal/privacy/' ); ?></small></li>
                     <li><small><?php print XS_Menu::getInstance()->getPageLink( '/legal/credits/' ); ?></small></li>
                 </ul>
