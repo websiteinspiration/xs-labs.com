@@ -1,3 +1,3 @@
 <?php
     
-    print XS_SiteMap::getInstance();
+    print new XS_SiteMap();
