@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <blog>
     <post>
-        <date>2011/02/07</date>
+        <date>2014/06/24</date>
         <author>Jean-David Gadina</author>
         <name>webstart-announced</name>
         <title>Running OS X 10.10 Yosemite’s iTunes in LLDB</title>
