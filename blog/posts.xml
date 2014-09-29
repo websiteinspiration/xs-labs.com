@@ -3,6 +3,12 @@
     <post>
         <date>2011/01/31</date>
         <author>Jean-David Gadina</author>
+        <name>laws-simplicity</name>
+        <title>Laws of simplicity</title>
+    </post>
+    <post>
+        <date>2011/01/31</date>
+        <author>Jean-David Gadina</author>
         <name>nslog-ansi-c</name>
         <title>NSLog in ANSI-C</title>
     </post>
