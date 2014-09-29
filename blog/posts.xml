@@ -3,6 +3,12 @@
     <post>
         <date>2011/02/04</date>
         <author>Jean-David Gadina</author>
+        <name>about-compiler-optimizations</name>
+        <title>About compiler optimizations</title>
+    </post>
+    <post>
+        <date>2011/02/04</date>
+        <author>Jean-David Gadina</author>
         <name>xcode-build-settings</name>
         <title>XCode Build Settings</title>
     </post>
