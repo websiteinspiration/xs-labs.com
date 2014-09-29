@@ -123,9 +123,9 @@
             Mathematically, this means:
         </p>
         <pre>
-1 &middot; ( 1 &middot; 20 + 0 &middot; 2-1 + 1 &middot; 2-2 + 1 &middot; 2-3 + 1 &middot; 2-4 ) &middot; 22<br />
-( 20 + 2-2 + 2-3 + 2-4 ) &middot; 22<br />
-22 + 20 + 2-1 + 2-2<br />
+1 &middot; ( 1 &middot; 20 + 0 &middot; 2-1 + 1 &middot; 2-2 + 1 &middot; 2-3 + 1 &middot; 2-4 ) &middot; 22
+( 20 + 2-2 + 2-3 + 2-4 ) &middot; 22
+22 + 20 + 2-1 + 2-2
 4 + 1 + 0.5 + 0.25
         </pre>
         <p>
