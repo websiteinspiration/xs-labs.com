@@ -35,13 +35,7 @@ final class XS_Blog
 {
     private static $_instance = NULL;
     
-    private function __construct()
-    {}
-    
-    public function __clone()
-    {
-        throw new Exception( 'Class ' . __CLASS__ . ' cannot be cloned' );
-    }
+    private $_posts = NULL;
     
     public static function getInstance()
     {
@@ -53,8 +47,28 @@ final class XS_Blog
         return self::$_instance;
     }
     
+    private function __construct()
+    {
+        $menuPath = __ROOTDIR__ . DIRECTORY_SEPARATOR . 'blog' . DIRECTORY_SEPARATOR . 'posts.xml';
+        
+        if( file_exists( $menuPath ) )
+        {
+            $this->_menu = simplexml_load_file( $menuPath );
+        }
+    }
+    
+    public function __clone()
+    {
+        throw new Exception( 'Class ' . __CLASS__ . ' cannot be cloned' );
+    }
+    
     public function __toString()
     {
+        if( $this->_posts == NULL )
+        {
+            return '';
+        }
+        
         return 'XS_Blog';
     }
 }
