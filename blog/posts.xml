@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <blog>
     <post>
+        <date>2011/02/01</date>
+        <author>Jean-David Gadina</author>
+        <name>process-renicer-release</name>
+        <title>Release: ProcessRenicer</title>
+    </post>
+    <post>
         <date>2011/01/31</date>
         <author>Jean-David Gadina</author>
         <name>laws-simplicity</name>
