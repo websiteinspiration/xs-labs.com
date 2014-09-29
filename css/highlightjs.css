@@ -66,6 +66,50 @@
     color:                      rgb( 191, 191, 191 );
 }
 
+.hljs-preprocessor,
+.hljs-preprocessor *,
+.hljs-pragma,
+.hljs-shebang {
+    color:                      rgb( 174, 109, 166 );
+}
+
+.hljs-number {
+    color:                      rgb( 108, 136, 77 );
+}
+
+.hljs-class .hljs-title,
+.smalltalk .hljs-class,
+.hljs-javadoctag,
+.hljs-yardoctag,
+.hljs-phpdoc,
+.hljs-dartdoc,
+.hljs-type,
+.hljs-typename,
+.hljs-tag .hljs-attribute,
+.hljs-doctype,
+.hljs-class .hljs-id,
+.hljs-built_in,
+.setting,
+.clojure .hljs-attribute {
+    color:                      rgb( 111, 175, 175 );
+}
+
+.hljs-sub .hljs-identifier,
+.hljs-pi,
+.hljs-tag,
+.hljs-tag .hljs-keyword,
+.hljs-decorator,
+.ini .hljs-title,
+.hljs-prompt,
+.hljs-hexcolor,
+.hljs-rules .hljs-value,
+.hljs-symbol,
+.hljs-symbol .hljs-string,
+.css .hljs-function,
+.coffeescript .hljs-attribute {
+    color: #1c00cf;
+}
+
 .method,
 .hljs-list .hljs-title,
 .hljs-tag .hljs-title,
@@ -90,44 +134,6 @@
 .hljs-date,
 .hljs-regexp {
   color: #080;
-}
-
-.hljs-sub .hljs-identifier,
-.hljs-pi,
-.hljs-tag,
-.hljs-tag .hljs-keyword,
-.hljs-decorator,
-.ini .hljs-title,
-.hljs-shebang,
-.hljs-prompt,
-.hljs-hexcolor,
-.hljs-rules .hljs-value,
-.hljs-symbol,
-.hljs-symbol .hljs-string,
-.css .hljs-function,
-.coffeescript .hljs-attribute {
-  color: #1c00cf;
-}
-
-.hljs-number {
-  color: rgb( 108, 136, 77 );
-}
-
-.hljs-class .hljs-title,
-.smalltalk .hljs-class,
-.hljs-javadoctag,
-.hljs-yardoctag,
-.hljs-phpdoc,
-.hljs-dartdoc,
-.hljs-type,
-.hljs-typename,
-.hljs-tag .hljs-attribute,
-.hljs-doctype,
-.hljs-class .hljs-id,
-.hljs-built_in,
-.setting,
-.clojure .hljs-attribute {
-  color: rgb( 111, 175, 175 );
 }
 
 .css .hljs-tag,
@@ -155,12 +161,6 @@
 .apache .hljs-sqbracket,
 .nginx .hljs-built_in {
   color: #9b859d;
-}
-
-.hljs-preprocessor,
-.hljs-preprocessor *,
-.hljs-pragma {
-  color: rgb( 174, 109, 166 );
 }
 
 .tex .hljs-formula {
