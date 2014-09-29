@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labels>
+	<readArticle>Read article »</readArticle>
+	<author>Author</author>
+	<date>Date</date>
+	<category>Category</category>
+	<comments>Comments</comments>
+	<copyright>Copyright © %s</copyright>
+	<copyrightNote>This article is published under the terms of the %s.</copyrightNote>
+	<copyrightLicense>FreeBSD Documentation License</copyrightLicense>
+	<copyrightLicenseLink>/licenses/freebsd-documentation/</copyrightLicenseLink>
+</labels>
