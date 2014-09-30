@@ -10,8 +10,144 @@
     
     
     
-    
-    
+    <post>
+        <date>2011/09/13</date>
+        <author>Jean-David Gadina</author>
+        <name>xcode-build-number-svn</name>
+        <title>Xcode - Build number from SVN</title>
+    </post>
+    <post>
+        <date>2011/08/23</date>
+        <author>Jean-David Gadina</author>
+        <name>icloud-migration</name>
+        <title>iCloud - Migration from MobileMe</title>
+    </post>
+    <post>
+        <date>2011/07/29</date>
+        <author>Jean-David Gadina</author>
+        <name>c-const-static-keywords</name>
+        <title>C - const and static keywords</title>
+    </post>
+    <post>
+        <date>2011/06/03</date>
+        <author>Jean-David Gadina</author>
+        <name>gdb-asm-debug</name>
+        <title>GDB - Assembly debugging</title>
+    </post>
+    <post>
+        <date>2011/05/31</date>
+        <author>Jean-David Gadina</author>
+        <name>new-job</name>
+        <title>New job</title>
+    </post>
+    <post>
+        <date>2011/05/31</date>
+        <author>Jean-David Gadina</author>
+        <name>book-selection</name>
+        <title>Book selection</title>
+    </post>
+    <post>
+        <date>2011/04/20</date>
+        <author>Jean-David Gadina</author>
+        <name>c-call-stack-windows</name>
+        <title>C - Function call stack on Windows</title>
+    </post>
+    <post>
+        <date>2011/04/20</date>
+        <author>Jean-David Gadina</author>
+        <name>xsfoundation</name>
+        <title>The next big thing - XSFoundation</title>
+    </post>
+    <post>
+        <date>2011/04/07</date>
+        <author>Jean-David Gadina</author>
+        <name>face-detection-iphone</name>
+        <title>Face detection on iPhone</title>
+    </post>
+    <post>
+        <date>2011/04/04</date>
+        <author>Jean-David Gadina</author>
+        <name>migration-github</name>
+        <title>Migration to GitHub</title>
+    </post>
+    <post>
+        <date>2011/03/17</date>
+        <author>Jean-David Gadina</author>
+        <name>cpu-64bits-check</name>
+        <title>CPU 64bits check</title>
+    </post>
+    <post>
+        <date>2011/03/14</date>
+        <author>Jean-David Gadina</author>
+        <name>webstart-osx-lion</name>
+        <title>WebStart - OS X Lion</title>
+    </post>
+    <post>
+        <date>2011/03/10</date>
+        <author>Jean-David Gadina</author>
+        <name>webstart-whats-new</name>
+        <title>WebStart - What's new?</title>
+    </post>
+    <post>
+        <date>2011/03/05</date>
+        <author>Jean-David Gadina</author>
+        <name>osx-fat-binaries</name>
+        <title>OSX fat binaries</title>
+    </post>
+    <post>
+        <date>2011/03/01</date>
+        <author>Jean-David Gadina</author>
+        <name>finder-wallpaper</name>
+        <title>Finder wallpaper</title>
+    </post>
+    <post>
+        <date>2011/02/28</date>
+        <author>Jean-David Gadina</author>
+        <name>selling-software</name>
+        <title>About selling software</title>
+    </post>
+    <post>
+        <date>2011/02/24</date>
+        <author>Jean-David Gadina</author>
+        <name>mountain-lion-server</name>
+        <title>Mountain Lion - Server side</title>
+    </post>
+    <post>
+        <date>2011/02/24</date>
+        <author>Jean-David Gadina</author>
+        <name>mountain-lion-screens</name>
+        <title>Mountain Lion - Screens</title>
+    </post>
+    <post>
+        <date>2011/02/18</date>
+        <author>Jean-David Gadina</author>
+        <name>interview-apple</name>
+        <title>Interview with Apple</title>
+    </post>
+    <post>
+        <date>2011/02/16</date>
+        <author>Jean-David Gadina</author>
+        <name>mwc-barcelona</name>
+        <title>MWC Barcelona</title>
+    </post>
+    <post>
+        <date>2011/02/1z</date>
+        <author>Jean-David Gadina</author>
+        <name>mwc-barcelona</name>
+        <title>MWC Barcelona</title>
+    </post>
+    <post>
+        <date>2011/02/14</date>
+        <author>Jean-David Gadina</author>
+        <name>webstart-light</name>
+        <title>WebStart light</title>
+    </post>
+    <post>
+        <date>2011/02/13</date>
+        <author>Jean-David Gadina</author>
+        <name>webstart-installer</name>
+        <title>WebStart installer is ready</title>
+    </post>
     <post>
         <date>2011/02/07</date>
         <author>Jean-David Gadina</author>

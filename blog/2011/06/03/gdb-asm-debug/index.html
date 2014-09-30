@@ -1,0 +1,30 @@
+GDB - Assembly debugging
+
+Published on: May 3, 2011 @ 16:01
+
+Here's a little GDB trick, if you want to debug your program using assembly output.
+
+From a GDB session, type:
+
+<pre class="code-block nohighlight">
+display /i $pc
+break main
+</pre>
+
+The first line will tell GCC to output the assembly code. The second one will create a breakpoint on the main function. You can of course choose another symbol for the breakpoint.
+
+Once done, you can run your program:
+
+<pre class="code-block nohighlight">
+run
+</pre>
+
+In our example, to code will stop at the main function, showing the assembly code:
+
+<pre class="code-block nohighlight">
+Breakpoint 1, main () at test.c:3
+3	    return 0;
+1: x/i $pc  0x100000f3c :	mov    $0x0,%eax
+</pre>
+
+You can then step to each assembly instruction with the «si» command.

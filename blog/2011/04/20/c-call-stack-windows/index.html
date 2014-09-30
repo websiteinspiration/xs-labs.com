@@ -1,0 +1,58 @@
+C - Function call stack on Windows
+
+Published on: Apr 20, 2011 @ 13:04
+
+For the <a href="http://www.noxeos.com/2011/04/20/big-thing-xsfoundation/">XSFoundation</a> project, I've coded an integrated debugger, that signals memory faults.
+
+On Mac OS X or Unix-like system, I can use the backtrace() function, from execinfo.h to retrieve a function call stack, when necessary.
+
+This way, when a fault occurs, the debugger can show you where the fault occurred.
+
+As XSFoundation is a portable library, I had to do the same thing on Windows.
+I first try using the <a href="http://msdn.microsoft.com/en-us/library/ms680650(v=vs.85).aspx">StackWalk64</a> function, with no luck.
+
+At last, I found a solution using the <a href="http://msdn.microsoft.com/en-us/library/bb204633(v=vs.85).aspx">CaptureBackTrace</a> function, from the MS API.
+
+The output will be the following:
+
+<pre class="code-block nohighlight">
+6: printStack - 0xD2430
+5: wmain - 0xD28F0
+4: __tmainCRTStartup - 0xE5010
+3: wmainCRTStartup - 0xE4FF0
+2: BaseThreadInitThunk - 0x75BE3665
+1: RtlInitializeExceptionChain - 0x770F9D0F
+0: RtlInitializeExceptionChain - 0x770F9D0F
+</pre>
+
+Here's the actual code to achieve this:
+
+<pre class="code-block language-c">
+void printStack( void );
+void printStack( void )
+{
+     unsigned int   i;
+     void         * stack[ 100 ];
+     unsigned short frames;
+     SYMBOL_INFO  * symbol;
+     HANDLE         process;
+
+     process = GetCurrentProcess();
+
+     SymInitialize( process, NULL, TRUE );
+
+     frames               = CaptureStackBackTrace( 0, 100, stack, NULL );
+     symbol               = ( SYMBOL_INFO * )calloc( sizeof( SYMBOL_INFO ) + 256 * sizeof( char ), 1 );
+     symbol->MaxNameLen   = 255;
+     symbol->SizeOfStruct = sizeof( SYMBOL_INFO );
+
+     for( i = 0; i < frames; i++ )
+     {
+         SymFromAddr( process, ( DWORD64 )( stack[ i ] ), 0, symbol );
+
+         printf( "%i: %s - 0x%0X\n", frames - i - 1, symbol->Name, symbol->Address );
+     }
+
+     free( symbol );
+}
+</pre>
