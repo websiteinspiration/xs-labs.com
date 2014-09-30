@@ -247,7 +247,7 @@ final class XS_Blog
             $img[ 'width' ]     = 140;
             $img[ 'height' ]    = 140;
             $img[ 'alt' ]       = $post->title;
-            $img[ 'src' ]       = '/blog/' . $post->name . '/image.png';
+            $img[ 'src' ]       = '/blog/' . $post->date . '/' . $post->name . '/image.png';
         }
         
         $panel                  = $details->div;
