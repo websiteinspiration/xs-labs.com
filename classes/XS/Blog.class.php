@@ -97,7 +97,7 @@ final class XS_Blog
                 continue;
             }
             
-            $path = __ROOTDIR__ . DIRECTORY_SEPARATOR . 'blog' . DIRECTORY_SEPARATOR . $post->name . DIRECTORY_SEPARATOR;
+            $path = __ROOTDIR__ . DIRECTORY_SEPARATOR . 'blog' . DIRECTORY_SEPARATOR . str_replace( '/', DIRECTORY_SEPARATOR, $post->date ) . DIRECTORY_SEPARATOR . $post->name . DIRECTORY_SEPARATOR;
             
             if( !file_exists( $path ) || !is_dir( $path ) || !file_exists( $path . 'index.html' ) )
             {
@@ -123,7 +123,7 @@ final class XS_Blog
                 $img[ 'width' ]     = 140;
                 $img[ 'height' ]    = 140;
                 $img[ 'alt' ]       = $post->title;
-                $img[ 'src' ]       = '/blog/' . $post->name . '/image.png';
+                $img[ 'src' ]       = '/blog/' . $post->date . '/' . $post->name . '/image.png';
             }
             
             $col->h3 = $post->title;
@@ -151,7 +151,7 @@ final class XS_Blog
     
     protected function _getPostAbstract( SimpleXMLElement $post )
     {
-        $path = __ROOTDIR__ . DIRECTORY_SEPARATOR . 'blog' . DIRECTORY_SEPARATOR . $post->name . DIRECTORY_SEPARATOR;
+        $path = __ROOTDIR__ . DIRECTORY_SEPARATOR . 'blog' . DIRECTORY_SEPARATOR . str_replace( '/', DIRECTORY_SEPARATOR, $post->date ) . DIRECTORY_SEPARATOR . $post->name . DIRECTORY_SEPARATOR;
         $text = file_get_contents( $path . 'index.html' );
         $text = strip_tags( $text );
         
@@ -177,7 +177,18 @@ final class XS_Blog
         $day    = $pathInfo[ 5 ];
         $name   = $pathInfo[ 6 ];
     
-        $path = __ROOTDIR__ . DIRECTORY_SEPARATOR . 'blog' . DIRECTORY_SEPARATOR . $name . DIRECTORY_SEPARATOR;
+        $path = __ROOTDIR__
+              . DIRECTORY_SEPARATOR
+              . 'blog'
+              . DIRECTORY_SEPARATOR
+              .$year
+              . DIRECTORY_SEPARATOR
+              .$month
+              . DIRECTORY_SEPARATOR
+              .$day
+              . DIRECTORY_SEPARATOR 
+              . $name
+              . DIRECTORY_SEPARATOR;
         
         if( !file_exists( $path ) || !is_dir( $path ) || !file_exists( $path . 'index.html' ) )
         {
