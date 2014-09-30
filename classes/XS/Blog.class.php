@@ -226,7 +226,7 @@ final class XS_Blog
         $date = strftime( '%m/%d/%Y', $time );
         
         XS_Menu::getInstance()->setPageTitle( XS_Menu::getInstance()->getPageTitle( '/blog/' ) );
-        XS_Menu::getInstance()->addRootlineItem( ( $time > 0 ) ? $date . ' - ' $post->title : $post->title, $this->_getPostUrl( $post ) );
+        XS_Menu::getInstance()->addRootlineItem( ( $time > 0 ) ? $date . ' - ' . $post->title : $post->title, $this->_getPostUrl( $post ) );
         
         $container              = new XS_Xhtml_Tag( 'div' );
         $container[ 'class' ]   = 'row';
