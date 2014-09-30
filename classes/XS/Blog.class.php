@@ -236,7 +236,8 @@ final class XS_Blog
         $details[ 'class' ]     = 'col-sm-4';
         
         $content->h2 = $post->title;
-        $content->p  = file_get_contents( $path . 'index.html' );
+        
+        $content->addTextData( file_get_contents( $path . 'index.html' ) );
         
         if( file_exists( $path . 'image.png' ) )
         {
