@@ -374,9 +374,8 @@ final class XS_Blog
     
     public function getAtomFeed()
     {
-        $feed            = new XS_Xhtml_Tag( 'feed' );
-        $feed[ 'xmlns' ] = 'http://www.w3.org/2005/Atom';
-        
+        $feed                = new XS_Xhtml_Tag( 'feed' );
+        $feed[ 'xmlns' ]    = 'http://www.w3.org/2005/Atom';
         $feed->title        = 'XS-Labs';
         $feed->subtitle     = 'XS-Labs Blog';
         $feed->id           = 'urn:uuid:' . ( string )( new XS_UUID( 'XS-Labs Blog' ) );
@@ -445,5 +444,66 @@ final class XS_Blog
         }
         
         return '<?xml version="1.0" encoding="utf-8"?>' . chr( 10 ) . ( string )$feed->asXml();
+    }
+    
+    public function getRssFeed()
+    {
+        $rss                    = new XS_Xhtml_Tag( 'ssss' );
+        $rss [ 'version' ]      = '2.0';
+        $channel                = $rss->channel;
+        $channel->title         = 'XS-Labs';
+        $channel->description   = 'XS-Labs Blog';
+        $link                   = XS_Menu::getInstance()->getPageURL( 'blog' );
+        $link                   = $feed->link;
+        $link[ 'href' ]         = 'http://' . $_SERVER[ 'HTTP_HOST' ] . '/';
+        $channel->ttl           = '1800';
+        
+        if( count( $this->_posts ) > 0 && isset( $this->_posts->post[ 0 ]->date ) && isset( $this->_posts->post[ 0 ]->time ) )
+        {
+            $updated = $rss->pubDate;
+            
+            $updated->addTextData( ( new DateTime( $this->_posts->post[ 0 ]->date . ' ' .$this->_posts->post[ 0 ]->time ) )->format( DateTime::RSS ) );
+        }
+        
+        foreach( $this->_posts->post as $post )
+        {
+            if( !isset( $post->title ) )
+            {
+                continue;
+            }
+            
+            if( !isset( $post->name ) )
+            {
+                continue;
+            }
+            
+            if( !isset( $post->date ) )
+            {
+                continue;
+            }
+            
+            if( !isset( $post->time ) )
+            {
+                continue;
+            }
+            
+            $path = __ROOTDIR__ . DIRECTORY_SEPARATOR . 'blog' . DIRECTORY_SEPARATOR . str_replace( '/', DIRECTORY_SEPARATOR, $post->date ) . DIRECTORY_SEPARATOR . $post->name . DIRECTORY_SEPARATOR;
+            
+            if( !file_exists( $path ) || !is_dir( $path ) || !file_exists( $path . 'index.html' ) )
+            {
+                continue;
+            }
+            
+            $item = $feed->item;
+            
+            $item->title            = $post->title;
+            $item->description      = trim( $this->_getPostAbstract( $post ) );
+            $link                   = $entry->link;
+            $link[ 'href' ]         = 'http://' . $_SERVER[ 'HTTP_HOST' ] . $this->_getPostUrl( $post );
+            $entry->gui             = ( string )( new XS_UUID( $post->date . '-' . $post->name ) );
+            $entry->pubDate         = ( new DateTime( $post->date . ' ' . $post->time ) )->format( DateTime::RSS );
+        }
+        
+        return '<?xml version="1.0" encoding="utf-8"?>' . chr( 10 ) . ( string )$rss->asXml();
     }
 }
