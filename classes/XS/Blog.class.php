@@ -350,7 +350,7 @@ final class XS_Blog
         }
         
         $error          = new XS_Xhtml_Tag( 'div' );
-        $msg            = $errot->div;
+        $msg            = $error->div;
         $pre            = $error->div;
         $msg[ 'class' ] = 'alert alert-warning';
         
