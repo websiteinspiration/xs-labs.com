@@ -10,6 +10,45 @@
     
     
     
+    
+    
+    
+    <post>
+        <date>2012/01/16</date>
+        <author>Jean-David Gadina</author>
+        <name>mixing-cpp-objective-c</name>
+        <title>Mixing C++ with C/Objective-C</title>
+    </post>
+    <post>
+        <date>2012/01/10</date>
+        <author>Jean-David Gadina</author>
+        <name>warning-flags-clang</name>
+        <title>Warning flags for Clang</title>
+    </post>
+    <post>
+        <date>2012/01/05</date>
+        <author>Jean-David Gadina</author>
+        <name>webstart-1-3-0</name>
+        <title>WebStart 1.3.0</title>
+    </post>
+    <post>
+        <date>2012/01/05</date>
+        <author>Jean-David Gadina</author>
+        <name>little-apps-on-appstore</name>
+        <title>Little apps on the Mac AppStore</title>
+    </post>
+    <post>
+        <date>2012/01/03</date>
+        <author>Jean-David Gadina</author>
+        <name>unix-man-pages</name>
+        <title>Unix manual pages</title>
+    </post>
+    <post>
+        <date>2012/01/03</date>
+        <author>Jean-David Gadina</author>
+        <name>webstart-1-2-0</name>
+        <title>WebStart 1.2.0 released</title>
+    </post>
     <post>
         <date>2011/09/13</date>
         <author>Jean-David Gadina</author>

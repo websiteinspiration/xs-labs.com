@@ -30,6 +30,11 @@
     left:                       10px;
 }
 
+.navbar-nav > li > a {
+    padding-left:               10px;
+    padding-right:              10px;
+}
+
 .navbar-right {
     padding-right:              20px;
 }
