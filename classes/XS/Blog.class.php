@@ -425,15 +425,15 @@ final class XS_Blog
             $row                    = $detailsCol->div;
             $row[ 'class' ]         = 'row';
             $authorLabel            = $row->div;
-            $authorLabel[ 'class' ] = 'col-xs-2';
+            $authorLabel[ 'class' ] = 'col-xs-3';
             $author                 = $row->div;
-            $author[ 'class' ]      = 'col-xs-10';
+            $author[ 'class' ]      = 'col-xs-9';
             $row                    = $detailsCol->div;
             $row[ 'class' ]         = 'row';
             $dateLabel              = $row->div;
-            $dateLabel[ 'class' ]   = 'col-xs-2';
+            $dateLabel[ 'class' ]   = 'col-xs-3';
             $date                   = $row->div;
-            $date[ 'class' ]        = 'col-xs-10';
+            $date[ 'class' ]        = 'col-xs-9';
             
             $authorLabel->small->strong->addTextData( $this->_lang->author );
             $author->small->addTextData( $comment->author );
