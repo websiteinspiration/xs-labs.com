@@ -380,7 +380,7 @@ final class XS_Blog
         $feed->subtitle     = 'XS-Labs Blog';
         $feed->id           = 'urn:uuid:' . ( string )( new XS_UUID( 'XS-Labs Blog' ) );
         $link1              = $feed->link;
-        $link1[ 'href' ]    = 'http://' . $_SERVER[ 'HTTP_HOST' ] . '/atom.php';
+        $link1[ 'href' ]    = 'http://' . $_SERVER[ 'HTTP_HOST' ] . '/feed/atom.php';
         $link1[ 'rel' ]     = self;
         $link2              = $feed->link;
         $link2[ 'href' ]    = 'http://' . $_SERVER[ 'HTTP_HOST' ] . '/';
