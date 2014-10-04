@@ -86,7 +86,8 @@ final class XS_Blog
     
     public function getPosts()
     {
-        $i = 0;
+        $i              = 0;
+        $this->_errors  = array();
         
         $posts              = new XS_Xhtml_Tag( 'div' );
         $posts[ 'class' ]   = 'marketing';
@@ -329,6 +330,11 @@ final class XS_Blog
     {
         if( count( $this->_errors ) === 0 )
         {
+            $this->getPosts();
+        }
+        
+        if( count( $this->_errors ) === 0 )
+        {
             return '';
         }
         
@@ -342,7 +348,7 @@ final class XS_Blog
         return ( string )$errors;
     }
     
-    protected function _addPostError( $message, SimpleXMLElement $post )
+    protected function _addPostError( SimpleXMLElement $post, $message )
     {
         if( empty( $message ) || $post === NULL )
         {
@@ -351,7 +357,7 @@ final class XS_Blog
         
         $error          = new XS_Xhtml_Tag( 'div' );
         $msg            = $error->div;
-        $pre            = $error->div;
+        $pre            = $error->pre;
         $msg[ 'class' ] = 'alert alert-warning';
         
         $msg->addTextData( $message );
