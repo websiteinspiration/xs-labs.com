@@ -365,4 +365,9 @@ final class XS_Blog
         
         $this->_errors[] = $error;
     }
+    
+    public function getAtomFeed()
+    {
+        return 'ATOM';
+    }
 }
