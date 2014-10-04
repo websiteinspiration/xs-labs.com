@@ -52,11 +52,11 @@ final class XS_Blog
     private function __construct()
     {
         $this->_lang = XS_Language_File::getInstance( get_class( $this ) );
-        $menuPath    = __ROOTDIR__ . DIRECTORY_SEPARATOR . 'blog' . DIRECTORY_SEPARATOR . 'posts.xml';
+        $path        = __ROOTDIR__ . DIRECTORY_SEPARATOR . 'blog' . DIRECTORY_SEPARATOR . 'posts.xml';
         
-        if( file_exists( $menuPath ) )
+        if( file_exists( $path ) )
         {
-            $this->_posts = simplexml_load_file( $menuPath );
+            $this->_posts = simplexml_load_file( $path );
         }
     }
     
@@ -350,7 +350,83 @@ final class XS_Blog
     
     protected function _getPostComments( SimpleXMLElement $post )
     {
-        return NULL;
+        $comments   = array();
+        $path       = __ROOTDIR__ . DIRECTORY_SEPARATOR . 'blog' . DIRECTORY_SEPARATOR . 'comments.xml';
+        
+        if( !file_exists( $path ) )
+        {
+            return NULL;
+        }
+        
+        if( !isset( $post->date ) )
+        {
+            return NULL;
+        }
+        
+        if( !isset( $post->name ) )
+        {
+            return NULL;
+        }
+        
+        $postID = $post->date . '/' . $post->name;
+        $xml    = simplexml_load_file( $path );
+        
+        foreach( $xml->comment as $comment )
+        {
+            if( $postID == $comment->post )
+            {
+                $comments[] = $comment;
+            }
+        }
+        
+        if( count( $comments ) === 0 )
+        {
+            return NULL;
+        }
+        
+        $html       = new XS_Xhtml_Tag( div );
+        $html->h3   = $this->_lang->comments;
+        
+        foreach( $comments as $comment )
+        {
+            $panel = $html->div;
+            
+            if( XS_Crypto::getInstance()->decrypt( $comment->email ) == XS_Crypto::getInstance()->decrypt( 'wNZPcaaaOVpOu7p4ec1uTtv3F5Tlr49n3mYRLwc4WH4yCzaOzL//x0l+6NzaJGRX' ) )
+            {
+                $panel[ 'class' ]   = 'panel panel-warning';
+            }
+            else
+            {
+                $panel[ 'class' ]   = 'panel panel-default';
+            }
+            
+            $heading            = $panel->div;
+            $heading[ 'class' ] = 'panel-heading';
+            $body               = $panel->div;
+            $body[ 'class' ]    = 'panel-body';
+            
+            $row                    = $heading->div;
+            $row[ 'class' ]         = 'row';
+            $authorLabel            = $row->div;
+            $authorLabel[ 'class' ] = 'col-xs-2';
+            $author                 = $row->div;
+            $author[ 'class' ]      = 'col-xs-10';
+            $row                    = $heading->div;
+            $row[ 'class' ]         = 'row';
+            $dateLabel              = $row->div;
+            $dateLabel[ 'class' ]   = 'col-xs-2';
+            $date                   = $row->div;
+            $date[ 'class' ]        = 'col-xs-10';
+            
+            $authorLabel->small->strong->addTextData( $this->_lang->author );
+            $author->small->addTextData( $comment->author );
+            $dateLabel->small->strong->addTextData( $this->_lang->date );
+            $date->small->addTextData( $comment->date );
+            
+            $body->addTextData( nl2br( trim( $comment->content ) ) );
+        }
+        
+        return $html;
     }
     
     public function getErrors()
