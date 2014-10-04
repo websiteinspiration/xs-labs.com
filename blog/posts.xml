@@ -49,6 +49,12 @@
         <title>Code optimisations - Optimising memset()</title>
     </post>
     <post>
+        <date>2013/07/15</date>
+        <author>Jean-David Gadina</author>
+        <name>manual-github</name>
+        <title>Manual on GitHub</title>
+    </post>
+    <post>
         <date>2013/06/18</date>
         <author>Jean-David Gadina</author>
         <name>ios7-new-ui-strategies</name>
@@ -59,12 +65,6 @@
         <author>Jean-David Gadina</author>
         <name>ios7-new-filesystem-security</name>
         <title>New filesystem security on iOS 7</title>
-    </post>
-    <post>
-        <date>2013/06/15</date>
-        <author>Jean-David Gadina</author>
-        <name>manual-github</name>
-        <title>Manual on GitHub</title>
     </post>
     <post>
         <date>2013/06/10</date>
