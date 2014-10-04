@@ -496,12 +496,12 @@ final class XS_Blog
             
             $item = $feed->item;
             
-            $item->title            = $post->title;
+            $item->title            = $item->title;
             $item->description      = trim( $this->_getPostAbstract( $post ) );
-            $link                   = $entry->link;
+            $link                   = $item->link;
             $link[ 'href' ]         = 'http://' . $_SERVER[ 'HTTP_HOST' ] . $this->_getPostUrl( $post );
-            $entry->gui             = ( string )( new XS_UUID( $post->date . '-' . $post->name ) );
-            $entry->pubDate         = ( new DateTime( $post->date . ' ' . $post->time ) )->format( DateTime::RSS );
+            $item->gui              = ( string )( new XS_UUID( $post->date . '-' . $post->name ) );
+            $item->pubDate          = ( new DateTime( $post->date . ' ' . $post->time ) )->format( DateTime::RSS );
         }
         
         return '<?xml version="1.0" encoding="utf-8"?>' . chr( 10 ) . ( string )$rss->asXml();
