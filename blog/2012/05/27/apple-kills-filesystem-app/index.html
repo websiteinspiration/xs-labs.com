@@ -1,0 +1,118 @@
+Apple kills the FileSystem App
+
+Published on: May 27, 2012 @ 16:33
+
+<img class="img-thumbnail wp-image-626 alignright" title="fs1" src="http://www.noxeos.com/wp-content/uploads/2012/05/fs1.png" alt="" width="230" height="346" />
+
+A few month ago, I decided to update my `FileSystem` iPhone app, available on the AppStore since a few years now.
+
+The purpose of the App was to let you access (read-only) the complete iOS filesystem, displaying every directory, file, file contents, etc.
+Just like a Finder on OS X.
+
+When I started iOS development back then, being an experienced Cocoa developer, I suffered from the lack of informations about the filesystem, the organization of files, etc.
+Of course, I knew that all apps were sandboxed, but as a developer, I usually like to know how stuff is done on the platform I am developing for.
+
+So the first test app I actually created was this one, as I wanted to see how the iOS system actually looked liked.
+It helped me a lot understanding iOS, and the sandboxing system.
+
+As it helped me, I decided then to clean-up the project, provide a better UI, and publish it to the AppStore, as it would maybe help other developers.
+
+<div style="clear: both;"></div>
+<img class="img-thumbnail alignright wp-image-625" title="fs2" src="http://www.noxeos.com/wp-content/uploads/2012/05/fs2.png" alt="" width="230" height="346" />
+Of course, I knew that the app would certainly be rejected, even if it was perfectly clean.
+No private API, no hidden feature... Everything was in accordance with the AppStore review guidelines.
+
+I published it, and it was accepted. Hooray!
+I even published a small update, to fix a crash on iOS 5 (the app was originally made for iOS 3).
+
+And by the way, the app was available for free.
+
+The app was working nice, I had some good reviews, but unfortunately, it wasn't an universal app, so it wasn't available for iPad.
+Of course, the iPad did not exist when I developed the app.
+
+So I decided to update it.
+In fact, I rewrote it from scratch as an universal app, adding some extra features (like showing the iOS partitions, better and faster previews, open-in features, etc)  and a smoother and cleaner UI.
+
+I was pretty confident, as the app was accepted twice.
+Moreover, the update also sticked with the AppStore review guidelines.
+No editing, so no security problem for Apple; as an iOS developer, I'm perfectly OK to play the Apple's rules.
+
+So I uploaded the new version (2.0) on the AppStore.
+The review process began. «Waiting for review», then a few weeks later, «In review». Nice.
+
+Then I received a very strange mail from the AppStore review team:
+<blockquote>Subject: Your app requires additional review time
+
+Dear Jean-David,
+
+We are currently reviewing an app that you submitted for inclusion on the App Store, and want to let you know that the review process will require additional time. We apologize for the delay and will provide you with an update on the status of your app as soon as possible.
+
+Sincerely,If you have any questions or concerns regarding this notice please contact us at <a href="mailto:appreview@apple.com">appreview@apple.com</a> .
+
+App Review</blockquote>
+
+Wow... What was this?
+I published several iOS app, mainly for clients,  but I never received this kind of mail.
+What was happening?
+
+I searched a bit on the internet, and discovered that the Apple App Review Team uses this when they don't want an app an the AppStore, but have no legal right not to allow it.
+Apparently, some developers have such an app in this special «in review» state for more than a year.
+
+Additional review time. When it becomes more than a year, I guess lots of developers will turn to another app...
+
+I decided to wait, to see what could happen.
+Two month later, without a single answer or explanation from Apple,  I decided to contact them.
+
+I explained the situation, very politely, asking if I could do something to help the review process, etc.
+
+A few hours later, the app status changed to: «removed from sales», meaning it was not available anymore on the AppStore.
+Yep, Apple just killed it.
+
+I then received an email from Apple's WorldWide Developer Relations's team:
+<blockquote>Hello Jean-David,
+
+My name is XXX and I’m writing on behalf of the App Review Team at Apple.
+
+I would like to talk to you about your app.
+
+At your earliest convenience, can you please reply to this message and provide a phone number where you can be reached between 6:00 pm and 9:00 pm (your local time)? Additionally, if you can be reached after 9 pm your time, please let me know.
+
+Once I receive your phone number, I will contact you at my next available opportunity.
+
+Thank you and Best Regards,</blockquote>
+Mmmmm... It just looked bad.
+Anyway, I had this phone call.
+
+The person at Apple told me my app was removed from sales, as it was accessing files from the system, and as it should only access files from it's own sandbox.
+I then tried to explain the purpose of the app, insisting on the fact that no editing was allowed.
+
+The person then explained me that, at Apple, <strong>some «business models» are not wanted</strong>.
+Ok... So it's like: we don't like your app, but we can't reject it officially, so we are going to kill it, and ask you not to submit it anymore.
+
+Neat...
+
+So here I am. It's not really a problem, as the app was free, and as I never tried to build something on it.
+But I just feel bad about Apple policy.
+
+So the app is no more available from the AppStore, and will never be.
+
+What's the result of all this, now?
+
+Well, the project is <a href="https://github.com/macmade/FileSystem">freely available on GitHub</a>, published under an OpenSource license.
+I'll also publish the app for free on Cydia as soon as possible, for jailbroken iOS devices.
+
+Nice  Apple... You just dislike OpenSource (most of the times), and fight against JailBreak...
+Maybe you should do something so developers don't feel forced to break your rules.
+
+Ok, maybe I'm a bit sarcastic. It's just a little iPhone app, for other iOS geeks...
+
+But think a minute. Today's date is May 27, 2012.
+On June 1, 2012, all applications on the Mac AppStore are supposed to be sandboxed. You see now?
+
+Lots of fun ahead for Mac developers.
+
+I always loved Apple, and of course I still do.
+But times are definitively changing.
+
+Years ago, maybe some don't remembers or weren't even born, developers helped Apple not to die.
+Now it just seems Apple wants to help developers quitting Mac development.

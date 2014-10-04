@@ -14,6 +14,72 @@
     
     
     <post>
+        <date>2013/06/18</date>
+        <author>Jean-David Gadina</author>
+        <name>ios7-new-ui-strategies</name>
+        <title>Strategies to support the new iOS7 UI</title>
+    </post>
+    <post>
+        <date>2013/06/17</date>
+        <author>Jean-David Gadina</author>
+        <name>ios7-new-filesystem-security</name>
+        <title>New filesystem security on iOS 7</title>
+    </post>
+    <post>
+        <date>2013/06/15</date>
+        <author>Jean-David Gadina</author>
+        <name>manual-github</name>
+        <title>Manual on GitHub</title>
+    </post>
+    <post>
+        <date>2013/06/10</date>
+        <author>Jean-David Gadina</author>
+        <name>wwdc-2013-whats-new</name>
+        <title>WWDC 2013 - So what's new?</title>
+    </post>
+    <post>
+        <date>2013/04/28</date>
+        <author>Jean-David Gadina</author>
+        <name>xs-labs</name>
+        <title>XS-Labs</title>
+    </post>
+    <post>
+        <date>2013/04/26</date>
+        <author>Jean-David Gadina</author>
+        <name>spring-cleaning</name>
+        <title>Spring cleaning</title>
+    </post>
+    <post>
+        <date>2012/08/19</date>
+        <author>Jean-David Gadina</author>
+        <name>codeine-diagnostics-completion</name>
+        <title>Codeine - Diagnostics & Code completion</title>
+    </post>
+    <post>
+        <date>2012/08/15</date>
+        <author>Jean-David Gadina</author>
+        <name>announcing-codeine</name>
+        <title>Announcing Codeine</title>
+    </post>
+    <post>
+        <date>2012/08/06</date>
+        <author>Jean-David Gadina</author>
+        <name>apple-vs-world</name>
+        <title>Apple vs the World (again)</title>
+    </post>
+    <post>
+        <date>2012/05/27</date>
+        <author>Jean-David Gadina</author>
+        <name>apple-kills-filesystem-app</name>
+        <title>Apple kills the FileSystem App</title>
+    </post>
+    <post>
+        <date>2012/04/20</date>
+        <author>Jean-David Gadina</author>
+        <name>osx-mountain-lion-screens</name>
+        <title>Mac OS X Mountain Lion - Screens</title>
+    </post>
+    <post>
         <date>2012/01/16</date>
         <author>Jean-David Gadina</author>
         <name>mixing-cpp-objective-c</name>
@@ -148,14 +214,14 @@
     <post>
         <date>2011/02/24</date>
         <author>Jean-David Gadina</author>
-        <name>mountain-lion-server</name>
-        <title>Mountain Lion - Server side</title>
+        <name>osx-lion-server</name>
+        <title>Mac OS X Lion - Server side</title>
     </post>
     <post>
         <date>2011/02/24</date>
         <author>Jean-David Gadina</author>
-        <name>mountain-lion-screens</name>
-        <title>Mountain Lion - Screens</title>
+        <name>osx-lion-screens</name>
+        <title>Mac OS X Lion - Screens</title>
     </post>
     <post>
         <date>2011/02/18</date>

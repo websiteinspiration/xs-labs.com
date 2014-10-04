@@ -1,0 +1,27 @@
+Codeine - Diagnostics & Code completion
+
+Published on: Aug 19, 2012 @ 20:55
+
+Since I <a href="http://www.noxeos.com/2012/08/15/announcing-codeine/">announced</a> Codeine, I mainly worked on live code diagnostics and code completion.
+
+Live diagnostics are now working well.<br />
+I modified Codeine's console area to provide live diagnostics, as well as the output console.<br />
+The whole stuff now looks like this:
+
+<a href="http://www.noxeos.com/wp-content/uploads/2012/08/debug.png"><img src="http://www.noxeos.com/wp-content/uploads/2012/08/debug.png" alt="" title="debug" width="600" height="95" class="img-thumbnail size-full wp-image-665" /></a>
+
+On the right, you can select the output console, or the code diagnostics (here with a well formed code).
+
+Diagnostics are provided in real-time:
+
+<a href="http://www.noxeos.com/wp-content/uploads/2012/08/errors.png"><img src="http://www.noxeos.com/wp-content/uploads/2012/08/errors.png" alt="" title="errors" width="572" height="305" class="img-thumbnail size-full wp-image-668" /></a>
+
+In that example, I didn't include the necessary C library headers, hence the errors.
+
+Code completion is more complex, but it's now beginning to work:
+
+<a href="http://www.noxeos.com/wp-content/uploads/2012/08/complete.png"><img src="http://www.noxeos.com/wp-content/uploads/2012/08/complete.png" alt="" title="complete" width="548" height="245" class="img-thumbnail size-full wp-image-670" /></a>
+
+Code-completion results still needs to be filtered, and the final output will of course provide useful infos, just as xCode autocompletion.
+
+So stay tuned. I'll keep posting here updates about Codeine. : )
