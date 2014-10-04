@@ -423,7 +423,7 @@ final class XS_Blog
             $dateLabel->small->strong->addTextData( $this->_lang->date );
             $date->small->addTextData( strftime( '%m/%d/%Y %H:%M', strtotime( $comment->date ) ) );
             
-            $body->addTextData( nl2br( trim( $comment->content ) ) );
+            $body->addTextData( nl2br( htmlspecialchars( trim( $comment->content ) ) ) );
         }
         
         return $html;
