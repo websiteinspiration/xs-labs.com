@@ -244,8 +244,9 @@ final class XS_Blog
             return '';
         }
         
-        $time = ( isset( $post->date ) ) ? strtotime( $post->date . ' ' .$post->time ) : 0;
-        $date = strftime( '%m/%d/%Y %H:%M', $time );
+        $time     = ( isset( $post->date ) ) ? strtotime( $post->date . ' ' .$post->time ) : 0;
+        $date     = strftime( '%m/%d/%Y', $time );
+        $dateTime = strftime( '%m/%d/%Y %H:%M', $time );
         
         XS_Menu::getInstance()->setPageTitle( XS_Menu::getInstance()->getPageTitle( '/blog/' ) );
         XS_Menu::getInstance()->addRootlineItem( ( $time > 0 ) ? $date . ' - ' . $post->title : $post->title, $this->_getPostUrl( $post ) );
@@ -318,7 +319,7 @@ final class XS_Blog
         $panelCommentsLabel->small->strong  = $this->_lang->comments;
         
         $panelAuthorText->small     = ( isset( $post->author ) ) ? $post->author : '-';
-        $panelDateText->small       = ( $time > 0 ) ? $date : '-';
+        $panelDateText->small       = ( $time > 0 ) ? $dateTime : '-';
         $panelCategoryText->small   = '-';
         $panelCommentsText->small   = '0';
         
