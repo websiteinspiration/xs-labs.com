@@ -238,11 +238,6 @@ final class XS_Blog
                     continue;
                 }
                 
-                if( $date != strtotime( $post->time ) )
-                {
-                    continue;
-                }
-                
                 return $this->_getPostContent( $post );
             }
         
