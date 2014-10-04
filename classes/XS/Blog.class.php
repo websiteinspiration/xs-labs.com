@@ -112,6 +112,12 @@ final class XS_Blog
                 continue;
             }
             
+            if( !isset( $post->time ) )
+            {
+                $this->_addPostError( $post, $this->_lang->missingPostTime );
+                continue;
+            }
+            
             $path = __ROOTDIR__ . DIRECTORY_SEPARATOR . 'blog' . DIRECTORY_SEPARATOR . str_replace( '/', DIRECTORY_SEPARATOR, $post->date ) . DIRECTORY_SEPARATOR . $post->name . DIRECTORY_SEPARATOR;
             
             if( !file_exists( $path ) || !is_dir( $path ) || !file_exists( $path . 'index.html' ) )
@@ -159,10 +165,10 @@ final class XS_Blog
     
     protected function _getPostUrl( SimpleXMLElement $post )
     {
-        $time = strtotime( $post->date );
+        $time = strtotime( $post->date . ' ' .$post->time );
         $url  = XS_Menu::getInstance()->getPageURL( 'blog' );
         
-        return $url . strftime( '%Y/%m/%d', $time ) . '/' . $post->name . '/';
+        return $url . strftime( '%Y/%m/%d %H:%M', $time ) . '/' . $post->name . '/';
     }
     
     protected function _getPostAbstract( SimpleXMLElement $post )
@@ -232,14 +238,19 @@ final class XS_Blog
                     continue;
                 }
                 
+                if( $date != strtotime( $post->time ) )
+                {
+                    continue;
+                }
+                
                 return $this->_getPostContent( $post );
             }
         
             return '';
         }
         
-        $time = ( isset( $post->date ) ) ? strtotime( $post->date ) : 0;
-        $date = strftime( '%m/%d/%Y', $time );
+        $time = ( isset( $post->date ) ) ? strtotime( $post->date . ' ' .$post->time ) : 0;
+        $date = strftime( '%m/%d/%Y %H:%M', $time );
         
         XS_Menu::getInstance()->setPageTitle( XS_Menu::getInstance()->getPageTitle( '/blog/' ) );
         XS_Menu::getInstance()->addRootlineItem( ( $time > 0 ) ? $date . ' - ' . $post->title : $post->title, $this->_getPostUrl( $post ) );
@@ -380,11 +391,11 @@ final class XS_Blog
         $link2              = $feed->link;
         $link2[ 'href' ]    = 'http://' . $_SERVER[ 'HTTP_HOST' ] . '/';
         
-        if( count( $this->_posts ) > 0 && isset( $this->_posts->post[ 0 ]->date ) )
+        if( count( $this->_posts ) > 0 && isset( $this->_posts->post[ 0 ]->date && isset( $this->_posts->post[ 0 ]->time ) ) )
         {
             $updated = $feed->updated;
             
-            $updated->addTextData( ( new DateTime( $this->_posts->post[ 0 ]->date ) )->format( DateTime::ATOM ) );
+            $updated->addTextData( ( new DateTime( $this->_posts->post[ 0 ]->date . ' ' .$this->_posts->post[ 0 ]->date ) )->format( DateTime::ATOM ) );
         }
         
         foreach( $this->_posts->post as $post )
@@ -400,6 +411,11 @@ final class XS_Blog
             }
             
             if( !isset( $post->date ) )
+            {
+                continue;
+            }
+            
+            if( !isset( $post->time ) )
             {
                 continue;
             }
@@ -421,7 +437,7 @@ final class XS_Blog
             $link2[ 'rel' ]         = 'alternate';
             $link2[ 'type' ]        = 'text/html';
             $entry->id              = 'urn:uuid:' . ( string )( new XS_UUID( $post->date . '-' . $post->name ) );
-            $entry->updated         = ( new DateTime( $post->date ) )->format( DateTime::ATOM );
+            $entry->updated         = ( new DateTime( $post->date . $post->time ) )->format( DateTime::ATOM );
             $summary                = $entry->summary;
             $summary[ 'type' ]      = 'html';
             $content                = $entry->content;
