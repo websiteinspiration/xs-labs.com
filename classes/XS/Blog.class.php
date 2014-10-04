@@ -35,9 +35,11 @@ final class XS_Blog
 {
     private static $_instance   = NULL;
     
-    protected $_lang    = NULL;
-    protected $_posts   = NULL;
-    protected $_errors  = array();
+    protected $_lang            = NULL;
+    protected $_posts           = NULL;
+    protected $_errors          = array();
+    protected $_commentError    = false;
+    protected $_adminEmail      = 'wNZPcaaaOVpOu7p4ec1uTtv3F5Tlr49n3mYRLwc4WH4yCzaOzL//x0l+6NzaJGRX';
     
     public static function getInstance()
     {
@@ -244,6 +246,8 @@ final class XS_Blog
             return '';
         }
         
+        $this->_writeNewComment( $post );
+        
         $time     = ( isset( $post->date ) ) ? strtotime( $post->date . ' ' .$post->time ) : 0;
         $date     = strftime( '%m/%d/%Y', $time );
         $dateTime = strftime( '%m/%d/%Y %H:%M', $time );
@@ -276,6 +280,8 @@ final class XS_Blog
         {
             $content->addChildNode( $comments );
         }
+        
+        $content->addChildNode( $this->_getCommentForm( $post ) );
         
         if( file_exists( $path . 'image.png' ) )
         {
@@ -348,6 +354,110 @@ final class XS_Blog
         return ( string )$container;
     }
     
+    protected function _getCommentForm( SimpleXMLElement $post )
+    {
+        $div                = new XS_Xhtml_Tag( 'div' );
+        $a                  = $div->a;
+        $a[ 'name' ]        = 'xs_comment_form';
+        $div->h3            = $this->_lang->addComment;
+        
+        if( $this->_commentError === true )
+        {
+            $error              = $div->div;
+            $error[ 'class' ]   = 'alert alert-warning';
+            $error[ 'role' ]    = 'alert';
+            
+            $error->addTextData( $this->_lang->commentError );
+        }
+        
+        $form               = $div->form;
+        $form[ 'role' ]     = 'form';
+        $form[ 'class' ]    = 'form-horizontal';
+        $form[ 'method' ]   = 'post';
+        $form[ 'action' ]   = $_SERVER[ 'REQUEST_URI' ] . '#xs_comment_form';
+        
+        $group                  = $form->div;
+        $group[ 'class' ]       = 'form-group';
+        $label                  = $group->label;
+        $label[ 'for' ]         = 'xs_comment_author';
+        $label[ 'class' ]       = 'col-sm-2 control-label';
+        $col                    = $group->div;
+        $col[ 'class' ]         = 'col-sm-10';
+        $input                  = $col->input;
+        $input[ 'type' ]        = 'text';
+        $input[ 'class' ]       = 'form-control';
+        $input[ 'id' ]          = 'xs_comment_author';
+        $input[ 'name' ]        = 'xs_comment_author';
+        $input[ 'placeholder' ] = $this->_lang->authorRequired;
+        
+        if( isset( $_POST[ 'xs_comment_author' ] ) )
+        {
+            $input[ 'value' ] = $_POST[ 'xs_comment_author' ];
+        }
+        
+        $label->addTextData( $this->_lang->author );
+        
+        $group                  = $form->div;
+        $group[ 'class' ]       = 'form-group';
+        $label                  = $group->label;
+        $label[ 'for' ]         = 'xs_comment_email';
+        $label[ 'class' ]       = 'col-sm-2 control-label';
+        $col                    = $group->div;
+        $col[ 'class' ]         = 'col-sm-10';
+        $input                  = $col->input;
+        $input[ 'type' ]        = 'text';
+        $input[ 'class' ]       = 'form-control';
+        $input[ 'id' ]          = 'xs_comment_email';
+        $input[ 'name' ]        = 'xs_comment_email';
+        $input[ 'placeholder' ] = $this->_lang->emailRequired;
+        
+        if( isset( $_POST[ 'xs_comment_email' ] ) )
+        {
+            $input[ 'value' ] = $_POST[ 'xs_comment_email' ];
+        }
+        
+        $label->addTextData( $this->_lang->email );
+        
+        $group                  = $form->div;
+        $group[ 'class' ]       = 'form-group';
+        $label                  = $group->label;
+        $label[ 'for' ]         = 'xs_comment_text';
+        $label[ 'class' ]       = 'col-sm-2 control-label';
+        $col                    = $group->div;
+        $col[ 'class' ]         = 'col-sm-10';
+        $input                  = $col->textarea;
+        $input[ 'rows' ]        = 5;
+        $input[ 'class' ]       = 'form-control';
+        $input[ 'id' ]          = 'xs_comment_text';
+        $input[ 'name' ]        = 'xs_comment_text';
+        $input[ 'placeholder' ] = $this->_lang->commentRequired;
+        
+        if( isset( $_POST[ 'xs_comment_text' ] ) )
+        {
+            $input->addTextData( $_POST[ 'xs_comment_text' ] );
+        }
+        
+        $label->addTextData( $this->_lang->comment );
+        
+        $group                  = $form->div;
+        $group[ 'class' ]       = 'form-group';
+        $col                    = $group->div;
+        $col[ 'class' ]         = 'col-sm-10 col-sm-offset-2';
+        $input                  = $col->input;
+        $input[ 'type' ]        = 'submit';
+        $input[ 'class' ]       = 'btn btn-primary';
+        $input[ 'id' ]          = 'xs_comment_submit';
+        $input[ 'name' ]        = 'xs_comment_submit';
+        $input[ 'value' ]       = $this->_lang->addComment;
+        
+        $hidden             = $form->input;
+        $hidden[ 'type' ]   = 'hidden';
+        $hidden[ 'name' ]   = 'xs_comment_time';
+        $hidden[ 'value' ]  = time();
+
+        return $div;
+    }
+    
     protected function _getPostComments( SimpleXMLElement $post )
     {
         $comments   = array();
@@ -391,7 +501,7 @@ final class XS_Blog
         {
             $panel = $html->div;
             
-            if( XS_Crypto::getInstance()->decrypt( $comment->email ) == XS_Crypto::getInstance()->decrypt( 'wNZPcaaaOVpOu7p4ec1uTtv3F5Tlr49n3mYRLwc4WH4yCzaOzL//x0l+6NzaJGRX' ) )
+            if( XS_Crypto::getInstance()->decrypt( $comment->email ) == XS_Crypto::getInstance()->decrypt( $this->_adminEmail ) )
             {
                 $panel[ 'class' ]   = 'panel panel-warning';
             }
@@ -637,5 +747,166 @@ final class XS_Blog
         }
         
         return '<?xml version="1.0" encoding="utf-8"?>' . chr( 10 ) . ( string )$rss->asXml();
+    }
+    
+    protected function _writeNewComment( SimpleXMLElement $post )
+    {
+        $comments   = array();
+        $emails     = array();
+        $path       = __ROOTDIR__ . DIRECTORY_SEPARATOR . 'blog' . DIRECTORY_SEPARATOR . 'comments.xml';
+        
+        if( !file_exists( $path ) )
+        {
+            return;
+        }
+        
+        if( !isset( $post->date ) )
+        {
+            return;
+        }
+        
+        if( !isset( $post->name ) )
+        {
+            return;
+        }
+        
+        if( !isset( $_POST[ 'xs_comment_submit' ] ) || !isset( $_POST[ 'xs_comment_time' ] ) )
+        {
+            return;
+        }
+        
+        if( intval( $_POST[ 'xs_comment_time' ] ) + 2 > time() )
+        {
+            $this->_commentError = true;
+            return;
+        }
+        
+        if( !isset( $_POST[ 'xs_comment_author' ] ) || !isset( $_POST[ 'xs_comment_email' ] ) || !isset( $_POST[ 'xs_comment_text' ] ) )
+        {
+            $this->_commentError = true;
+            return;
+        }
+        
+        if( empty( $_POST[ 'xs_comment_author' ] ) || empty( $_POST[ 'xs_comment_email' ] ) || empty( $_POST[ 'xs_comment_text' ] ) )
+        {
+            $this->_commentError = true;
+            return;
+        }
+        
+        if( !filter_var( $_POST[ 'xs_comment_email' ], FILTER_VALIDATE_EMAIL ) )
+        {
+            $this->_commentError = true;
+            return;
+        }
+        
+        $xml = simplexml_load_file( $path );
+        
+        foreach( $xml->comment as $comment )
+        {
+            $comments[] = $comment;
+        }
+        
+        $writer = new XMLWriter(); 
+        
+        $writer->openURI( $path );
+        $writer->startDocument( '1.0', 'utf-8' );
+        $writer->setIndent( true );
+        $writer->setIndentString( '    ' );
+        $writer->startElement( 'comments' );
+        
+        foreach( $comments as $comment )
+        {
+            $writer->startElement( 'comment' );
+            
+            $writer->startElement( 'author' );
+            $writer->writeCData( $comment->author );
+            $writer->endElement();
+            
+            $writer->startElement( 'email' );
+            $writer->writeCData( $comment->email );
+            $writer->endElement();
+            
+            $writer->startElement( 'url' );
+            $writer->writeCData( $comment->url );
+            $writer->endElement();
+            
+            $writer->startElement( 'date' );
+            $writer->writeCData( $comment->date );
+            $writer->endElement();
+            
+            $writer->startElement( 'content' );
+            $writer->writeCData( $comment->content );
+            $writer->endElement();
+            
+            $writer->startElement( 'post' );
+            $writer->writeCData( $comment->post );
+            $writer->endElement();
+            
+            $writer->endElement();
+            
+            if( $post->date . '/' . $post->name == $comment->post )
+            {
+                $email            = XS_Crypto::getInstance()->decrypt( $comment->email );
+                $emails[ $email ] = $email;
+            }
+        }
+        
+        $writer->startElement( 'comment' );
+        
+        $writer->startElement( 'author' );
+        $writer->writeCData( $_POST[ 'xs_comment_author' ] );
+        $writer->endElement();
+        
+        $writer->startElement( 'email' );
+        $writer->writeCData( XS_Crypto::getInstance()->crypt( $_POST[ 'xs_comment_email' ] ) );
+        $writer->endElement();
+        
+        $writer->startElement( 'date' );
+        $writer->writeCData( $comment->date );
+        $writer->endElement();
+        
+        $writer->startElement( 'content' );
+        $writer->writeCData( $_POST[ 'xs_comment_text' ] );
+        $writer->endElement();
+        
+        $writer->startElement( 'post' );
+        $writer->writeCData( $post->date . '/' . $post->name );
+        $writer->endElement();
+        
+        $writer->endElement(); 
+        
+        $writer->endElement(); 
+        $writer->endDocument();
+        $writer->flush();
+        
+        $emails[ XS_Crypto::getInstance()->decrypt( $this->_adminEmail ) ] = XS_Crypto::getInstance()->decrypt( $this->_adminEmail );
+        
+        $message = $this->_lang->mailMessage;
+        $message = str_replace( '{POST_TITLE}', $post->title, $message );
+        $message = str_replace
+        (
+            '{POST_URL}',
+            'http://' . $_SERVER[ 'HTTP_HOST' ] . '/en/blog/' . $post->date . '/' . $post->name . '/',
+            $message
+        );
+        
+        foreach( $emails as $email )
+        {
+            $mail = new XS_Mail
+            (
+                '',
+                $this->_lang->mailSubject,
+                trim( $message ),
+                XS_Crypto::getInstance()->decrypt( $this->_adminEmail )
+            );
+            
+            if( $email == $_POST[ 'xs_comment_email' ] )
+            {
+                continue;
+            }
+            
+            $mail->setTo( $email );
+            $mail->send();
+        }
     }
 }
