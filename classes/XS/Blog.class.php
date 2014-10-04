@@ -421,7 +421,7 @@ final class XS_Blog
             $authorLabel->small->strong->addTextData( $this->_lang->author );
             $author->small->addTextData( $comment->author );
             $dateLabel->small->strong->addTextData( $this->_lang->date );
-            $date->small->addTextData( $comment->date );
+            $date->small->addTextData( strftime( '%m/%d/%Y %H:%M', strtotime( $comment->date ) ) );
             
             $body->addTextData( nl2br( trim( $comment->content ) ) );
         }
