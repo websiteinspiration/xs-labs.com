@@ -496,7 +496,7 @@ final class XS_Blog
             
             $item = $feed->item;
             
-            $item->title            = $item->title;
+            $item->title            = $post->title;
             $item->description      = trim( $this->_getPostAbstract( $post ) );
             $link                   = $item->link;
             $link[ 'href' ]         = 'http://' . $_SERVER[ 'HTTP_HOST' ] . $this->_getPostUrl( $post );
