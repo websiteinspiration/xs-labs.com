@@ -259,7 +259,15 @@ final class XS_Blog
         
         $content->h2 = $post->title;
         
-        $content->addTextData( file_get_contents( $path . 'index.html' ) );
+        $html = file_get_contents( $path . 'index.html' );
+        $html = str_replace
+        (
+            '{POST_URL}',
+            '/blog/' . $post->date . '/' . $post->name . '/',
+            $html
+        );
+        
+        $content->addTextData( $html );
         
         if( file_exists( $path . 'image.png' ) )
         {
