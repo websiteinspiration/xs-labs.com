@@ -270,6 +270,13 @@ final class XS_Blog
         
         $content->addTextData( $html );
         
+        $comments = $this->_getPostComments( $post );
+        
+        if( $comments !== NULL )
+        {
+            $content->addChildNode( $comments );
+        }
+        
         if( file_exists( $path . 'image.png' ) )
         {
             $imgDiv             = $details->p;
@@ -339,6 +346,11 @@ final class XS_Blog
         }
         
         return ( string )$container;
+    }
+    
+    protected function _getPostComments( SimpleXMLElement $post )
+    {
+        return NULL;
     }
     
     public function getErrors()
