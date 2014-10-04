@@ -56,7 +56,7 @@ if( isset( $_SERVER[ 'HTTP_USER_AGENT' ] ) && ( strpos( $_SERVER[ 'HTTP_USER_AGE
     <!--[if IE]><link rel="shortcut icon" href="/favicon.ico"><![endif]-->
     <link rel="icon" href="/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="/favicon-apple-touch.png">
-    <link href="atom.php" type="application/atom+xml" rel="alternate" title="XS-Labs ATOM Feed" />
+    <link href="/atom.php" type="application/atom+xml" rel="alternate" title="XS-Labs ATOM Feed" />
     <script type="text/javascript">
         // <![CDATA[
         
