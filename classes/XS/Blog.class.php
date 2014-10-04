@@ -391,7 +391,7 @@ final class XS_Blog
         $link2              = $feed->link;
         $link2[ 'href' ]    = 'http://' . $_SERVER[ 'HTTP_HOST' ] . '/';
         
-        if( count( $this->_posts ) > 0 && isset( $this->_posts->post[ 0 ]->date && isset( $this->_posts->post[ 0 ]->time ) ) )
+        if( count( $this->_posts ) > 0 && isset( $this->_posts->post[ 0 ]->date ) && isset( $this->_posts->post[ 0 ]->time ) )
         {
             $updated = $feed->updated;
             
