@@ -818,7 +818,7 @@
         <date><![CDATA[2013-01-10 12:53:39]]></date>
         <content><![CDATA[
             
-            [...] initialement utilisés par Xcode (par exemple &amp;laquo;&amp;nbsp;Hidden Local Variables&amp;nbsp;&amp;raquo;). Ce site peut aider à choisir les différents flags à [...]
+            [...] initialement utilisés par Xcode (par exemple "Hidden Local Variables"). Ce site peut aider à choisir les différents flags à [...]
             
             ]]></content>
         <post><![CDATA[2011/02/04/xcode-build-settings]]></post>
@@ -1402,7 +1402,7 @@
         <content><![CDATA[
             
             Explanation was very good.
-            I now understand the meaning of commands const &amp;amp; static.
+            I now understand the meaning of commands const & static.
             I tried the example given and it's work.
             But still i do not understood one thing: If static acting as a const in the main program , how you can change the value of static in the function?
             
@@ -1419,7 +1419,7 @@
             I think the optimized C version will most likely crash when setting a single byte (n=1) that is not 64-bit aligned...
             When checking the memory alignment
             
-            while( n-- &amp;amp;&amp;amp; ( ( ( uint64_t )sp &amp;amp; ( uint64_t )-8 ) &amp;lt; ( uint64_t )sp ) )
+            while( n-- && ( ( ( uint64_t )sp & ( uint64_t )-8 ) < ( uint64_t )sp ) )
             
             n is decreased to zero in the first loop cycle and in the next loop cycle, although n is zero, the n-- statement is executed. As size_t is an unsigned integer type, it will have the maximum value then. And the following code will set memory to far beyond the intended end because n is greater than zero...
             
