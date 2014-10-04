@@ -165,10 +165,10 @@ final class XS_Blog
     
     protected function _getPostUrl( SimpleXMLElement $post )
     {
-        $time = strtotime( $post->date . ' ' .$post->time );
+        $time = strtotime( $post->date );
         $url  = XS_Menu::getInstance()->getPageURL( 'blog' );
         
-        return $url . strftime( '%Y/%m/%d %H:%M', $time ) . '/' . $post->name . '/';
+        return $url . strftime( '%Y/%m/%d', $time ) . '/' . $post->name . '/';
     }
     
     protected function _getPostAbstract( SimpleXMLElement $post )
