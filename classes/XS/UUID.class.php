@@ -1,7 +1,7 @@
 <?php
 
 ################################################################################
-# Copyright (c) 2009, Jean-David Gadina <macmade@xs-labs.com>                  #
+# Copyright (c) 2010, Jean-David Gadina <macmade@xs-labs.com>                  #
 # All rights reserved.                                                         #
 #                                                                              #
 # Redistribution and use in source and binary forms, with or without           #
@@ -31,10 +31,28 @@
 
 # $Id$
 
-header( 'Content-type: application/atom+xml' );
-
-$ROOT = str_replace( $_SERVER[ 'SCRIPT_NAME' ], '', $_SERVER[ 'SCRIPT_FILENAME' ] );
-
-require_once( $ROOT . DIRECTORY_SEPARATOR . 'include' . DIRECTORY_SEPARATOR . 'init.inc.php' );
-
-print ( string )( XS_Blog::getInstance()->getAtomFeed() );
+class XS_UUID
+{
+    protected $_data = '';
+    
+    public function __construct( $data )
+    {
+        $this->_data = ( string )$data;
+    }
+    
+    public function __toString()
+    {
+        $hash = md5( $this->_data );
+        $uuid = sprintf
+        (
+            '%08s-%04s-%04x-%04x-%12s',
+            substr( $hash, 0, 8 ),
+            substr( $hash, 8, 4 ),
+            ( hexdec( substr( $hash, 12, 4 ) ) & 0x0FFF ) | 0x3000,
+            ( hexdec( substr( $hash, 16, 4 ) ) & 0x3FFF ) | 0x8000,
+            substr( $hash, 20, 12 )
+        );
+        
+        return $uuid;
+    }
+}

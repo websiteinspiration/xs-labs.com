@@ -368,6 +368,71 @@ final class XS_Blog
     
     public function getAtomFeed()
     {
-        return 'ATOM';
+        $feed            = new XS_Xhtml_Tag( 'feed' );
+        $feed[ 'xmlns' ] = 'http://www.w3.org/2005/Atom';
+        
+        $feed->title        = 'XS-Labs';
+        $feed->subtitle     = 'XS-Labs Blog';
+        $feed->id           = 'urn:uuid:' . ( string )( new XS_UUID( 'XS-Labs Blog' ) );
+        $link1              = $feed->link;
+        $link1[ 'href' ]    = 'http://' . $_SERVER[ 'HTTP_HOST' ] . '/atom.php';
+        $link1[ 'rel' ]     = self;
+        $link2              = $feed->link;
+        $link2[ 'href' ]    = 'http://' . $_SERVER[ 'HTTP_HOST' ] . '/';
+        
+        if( count( $this->_posts ) > 0 && isset( $this->_posts->post[ 0 ]->date ) )
+        {
+            $updated = $feed->updated;
+            
+            $updated->addTextData( ( new DateTime( $this->_posts->post[ 0 ]->date ) )->format( DateTime::ATOM ) );
+        }
+        
+        foreach( $this->_posts->post as $post )
+        {
+            if( !isset( $post->title ) )
+            {
+                continue;
+            }
+            
+            if( !isset( $post->name ) )
+            {
+                continue;
+            }
+            
+            if( !isset( $post->date ) )
+            {
+                continue;
+            }
+            
+            $path = __ROOTDIR__ . DIRECTORY_SEPARATOR . 'blog' . DIRECTORY_SEPARATOR . str_replace( '/', DIRECTORY_SEPARATOR, $post->date ) . DIRECTORY_SEPARATOR . $post->name . DIRECTORY_SEPARATOR;
+            
+            if( !file_exists( $path ) || !is_dir( $path ) || !file_exists( $path . 'index.html' ) )
+            {
+                continue;
+            }
+            
+            $entry = $feed->entry;
+            
+            $entry->title           = $post->title;
+            $link1                  = $entry->link;
+            $link2                  = $entry->link;
+            $link1[ 'href' ]        = 'http://' . $_SERVER[ 'HTTP_HOST' ] . $this->_getPostUrl( $post );
+            $link2[ 'href' ]        = 'http://' . $_SERVER[ 'HTTP_HOST' ] . $this->_getPostUrl( $post );
+            $link2[ 'rel' ]         = 'alternate';
+            $link2[ 'type' ]        = 'text/html';
+            $entry->id              = 'urn:uuid:' . ( string )( new XS_UUID( $post->date . '-' . $post->name ) );
+            $entry->updated         = ( new DateTime( $post->date ) )->format( DateTime::ATOM );
+            $summary                = $entry->summary;
+            $summary[ 'type' ]      = 'html';
+            $content                = $entry->content;
+            $content[ 'type' ]      = 'html';
+            $author                 = $entry->author;
+            $author->name           = $post->author;
+            
+            $summary->addTextData( trim( $this->_getPostAbstract( $post ) ) );
+            $content->addTextData( file_get_contents( $path . 'index.html' ) );
+        }
+        
+        return '<?xml version="1.0" encoding="utf-8"?>' . chr( 10 ) . ( string )$feed->asXml();
     }
 }
