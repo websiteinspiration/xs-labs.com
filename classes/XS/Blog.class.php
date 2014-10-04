@@ -390,7 +390,7 @@ final class XS_Blog
         {
             $updated = $feed->updated;
             
-            $updated->addTextData( ( new DateTime( $this->_posts->post[ 0 ]->date . ' ' .$this->_posts->post[ 0 ]->date ) )->format( DateTime::ATOM ) );
+            $updated->addTextData( ( new DateTime( $this->_posts->post[ 0 ]->date . ' ' .$this->_posts->post[ 0 ]->time ) )->format( DateTime::ATOM ) );
         }
         
         foreach( $this->_posts->post as $post )
@@ -432,7 +432,7 @@ final class XS_Blog
             $link2[ 'rel' ]         = 'alternate';
             $link2[ 'type' ]        = 'text/html';
             $entry->id              = 'urn:uuid:' . ( string )( new XS_UUID( $post->date . '-' . $post->name ) );
-            $entry->updated         = ( new DateTime( $post->date . $post->time ) )->format( DateTime::ATOM );
+            $entry->updated         = ( new DateTime( $post->date . ' ' . $post->time ) )->format( DateTime::ATOM );
             $summary                = $entry->summary;
             $summary[ 'type' ]      = 'html';
             $content                = $entry->content;
