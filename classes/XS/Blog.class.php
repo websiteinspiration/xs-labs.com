@@ -448,7 +448,7 @@ final class XS_Blog
     
     public function getRssFeed()
     {
-        $rss                    = new XS_Xhtml_Tag( 'ssss' );
+        $rss                    = new XS_Xhtml_Tag( 'rss' );
         $rss [ 'version' ]      = '2.0';
         $channel                = $rss->channel;
         $channel->title         = 'XS-Labs';
