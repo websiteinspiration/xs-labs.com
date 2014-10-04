@@ -68,14 +68,14 @@ img.pull-left {
     margin-left:                0px;
     margin-top:                 0px;
     margin-right:               10px;
-    margin-bottom:              0px;
+    margin-bottom:              10px;
 }
 
 img.pull-right {
     margin-left:                10px;
     margin-top:                 0px;
     margin-right:               0px;
-    margin-bottom:              0px;
+    margin-bottom:              10px;
 }
 
 .panel-heading {
