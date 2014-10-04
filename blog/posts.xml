@@ -197,11 +197,11 @@
         <title>C - const and static keywords</title>
     </post>
     <post>
-        <date>2011/06/03</date>
-        <time>14:03</time>
+        <date>2011/05/31</date>
+        <time>16:01</time>
         <author>Jean-David Gadina</author>
-        <name>gdb-asm-debug</name>
-        <title>GDB - Assembly debugging</title>
+        <name>book-selection</name>
+        <title>Book selection</title>
     </post>
     <post>
         <date>2011/05/31</date>
@@ -212,10 +212,10 @@
     </post>
     <post>
         <date>2011/05/31</date>
-        <time>16:01</time>
+        <time>14:03</time>
         <author>Jean-David Gadina</author>
-        <name>book-selection</name>
-        <title>Book selection</title>
+        <name>gdb-asm-debug</name>
+        <title>GDB - Assembly debugging</title>
     </post>
     <post>
         <date>2011/04/20</date>
