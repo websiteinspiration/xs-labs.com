@@ -448,7 +448,16 @@ final class XS_Blog
             $author->name           = $post->author;
             
             $summary->addTextData( trim( $this->_getPostAbstract( $post ) ) );
-            $content->addTextData( file_get_contents( $path . 'index.html' ) );
+            
+            $html = file_get_contents( $path . 'index.html' );
+            $html = str_replace
+            (
+                '{POST_URL}',
+                '/blog/' . $post->date . '/' . $post->name . '/',
+                $html
+            );
+        
+            $content->addTextData( $html );
         }
         
         return '<?xml version="1.0" encoding="utf-8"?>' . chr( 10 ) . ( string )$feed->asXml();
