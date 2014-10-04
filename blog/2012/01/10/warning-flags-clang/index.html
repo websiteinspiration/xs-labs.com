@@ -1,17 +1,16 @@
-Warning flags for Clang
-
-Published on: Jan 10, 2012 @ 19:43
-
-Below is the complete list of the warning flags I use with <a href="http://clang.llvm.org/">Clang</a>, the C frontend for LLVM.
-I personally use those flags for all my production code, for C, C++ and Objective-C development.
-
-Basically, all warning flags are activated. I had to look at the Clang source code to find all of them.
-
-I also created a header file which automatically sets those flags, when compiling source code.
-This way, whether you use an IDE or command-line to compile your code, you won't need anymore to set those flags, as long as you include the header.
-It's available <a href="https://github.com/macmade/SeriousCode/blob/master/clang-warnings.h">here on GitHub</a>. Enjoy!
-
-<strong>Warning flags list:</strong>
+<p>
+    Below is the complete list of the warning flags I use with <a href="http://clang.llvm.org/">Clang</a>, the C frontend for LLVM.<br />
+    I personally use those flags for all my production code, for C, C++ and Objective-C development.
+</p>
+<p>
+    Basically, all warning flags are activated. I had to look at the Clang source code to find all of them.
+</p>
+<p>
+    I also created a header file which automatically sets those flags, when compiling source code.<br />
+    This way, whether you use an IDE or command-line to compile your code, you won't need anymore to set those flags, as long as you include the header.<br />
+    It's available <a href="https://github.com/macmade/SeriousCode/blob/master/clang-warnings.h">here on GitHub</a>. Enjoy!
+</p>
+<h3>Warning flags list:</h3>
 <ul>
 	<li><code>-Wabi</code></li>
 	<li><code>-Waddress-of-temporary</code></li>
