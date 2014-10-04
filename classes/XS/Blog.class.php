@@ -508,6 +508,7 @@ final class XS_Blog
             $guid                   = $item->guid;
             $guid[ 'isPermaLink' ]  = "false";
             $item->pubDate          = ( new DateTime( $post->date . ' ' . $post->time ) )->format( DateTime::RSS );
+            $item->link             = 'http://' . $_SERVER[ 'HTTP_HOST' ] . $this->_getPostUrl( $post );
             
             $guid->addTextData( ( string )( new XS_UUID( $post->date . '-' . $post->name ) ) );
         }
