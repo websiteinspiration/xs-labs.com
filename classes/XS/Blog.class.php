@@ -357,6 +357,6 @@ final class XS_Blog
         $msg->addTextData( $message );
         $pre->addTextData( print_r( $post, true ) );
         
-        this->_errors[] = $error;
+        $this->_errors[] = $error;
     }
 }
