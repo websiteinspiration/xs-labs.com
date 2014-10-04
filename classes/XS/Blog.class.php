@@ -179,7 +179,7 @@ final class XS_Blog
         
         if( strlen( $text ) > 400 )
         {
-            $text = substr( $text, 0, 400 ) . ' [...]';
+            $text = substr( $text, 0, 400 ) . '...';
         }
         
         return $text;
