@@ -37,6 +37,7 @@ final class XS_Blog
     
     protected $_lang    = NULL;
     protected $_posts   = NULL;
+    protected $_errors  = array();
     
     public static function getInstance()
     {
@@ -92,8 +93,21 @@ final class XS_Blog
         
         foreach( $this->_posts->post as $post )
         {
-            if( !isset( $post->title ) || !isset( $post->name ) || !isset( $post->date ) )
+            if( !isset( $post->title ) )
             {
+                $this->_addPostError( $post, $this->_lang->missingPostTitle );
+                continue;
+            }
+            
+            if( !isset( $post->name ) )
+            {
+                $this->_addPostError( $post, $this->_lang->missingPostName );
+                continue;
+            }
+            
+            if( !isset( $post->date ) )
+            {
+                $this->_addPostError( $post, $this->_lang->missingPostDate );
                 continue;
             }
             
@@ -101,6 +115,7 @@ final class XS_Blog
             
             if( !file_exists( $path ) || !is_dir( $path ) || !file_exists( $path . 'index.html' ) )
             {
+                $this->_addPostError( $post, $this->_lang->missingPostFile );
                 continue;
             }
             
@@ -308,5 +323,40 @@ final class XS_Blog
         }
         
         return ( string )$container;
+    }
+    
+    public function getErrors()
+    {
+        if( count( $this->_errors ) === 0 )
+        {
+            return '';
+        }
+        
+        $errors = new XS_Xhtml_Tag( 'div' );
+        
+        foreach( $this->_errors as $error )
+        {
+            $errors->addChildNode( $error );
+        }
+        
+        return ( string )$errors;
+    }
+    
+    protected function _addPostError( $message, SimpleXMLElement $post )
+    {
+        if( empty( $message ) || $post === NULL )
+        {
+            return;
+        }
+        
+        $error          = new XS_Xhtml_Tag( 'div' );
+        $msg            = $errot->div;
+        $pre            = $error->div;
+        $msg[ 'class' ] = 'alert alert-warning';
+        
+        $msg->addTextData( $message );
+        $pre->addTextData( print_r( $post, true ) );
+        
+        this->_errors[] = $error;
     }
 }

@@ -9,4 +9,8 @@
 	<copyrightNote>This article is published under the terms of the %s.</copyrightNote>
 	<copyrightLicense>FreeBSD Documentation License</copyrightLicense>
 	<copyrightLicenseLink>/licenses/freebsd-documentation/</copyrightLicenseLink>
+	<missingPostTitle>Warning - Missing post title:</missingPostTitle>
+	<missingPostName>Warning - Missing post name:</missingPostName>
+	<missingPostDate>Warning - Missing post date:</missingPostDate>
+	<missingPostFile>Warning - Missing post file:</missingPostFile>
 </labels>
