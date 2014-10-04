@@ -64,14 +64,14 @@
     padding-top:                10px;
 }
 
-.panel img.pull-left {
+img.pull-left {
     margin-left:                0px;
     margin-top:                 0px;
     margin-right:               10px;
     margin-bottom:              0px;
 }
 
-.panel img.pull-right {
+img.pull-right {
     margin-left:                10px;
     margin-top:                 0px;
     margin-right:               0px;
