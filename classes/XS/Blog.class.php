@@ -383,7 +383,7 @@ final class XS_Blog
         $link1[ 'href' ]    = 'http://' . $_SERVER[ 'HTTP_HOST' ] . '/feed/atom.php';
         $link1[ 'rel' ]     = self;
         $link2              = $feed->link;
-        $link2[ 'href' ]    = 'http://' . $_SERVER[ 'HTTP_HOST' ] . '/';
+        $link2[ 'href' ]    = 'http://' . $_SERVER[ 'HTTP_HOST' ] . XS_Menu::getInstance()->getPageURL( 'blog' );
         
         if( count( $this->_posts ) > 0 && isset( $this->_posts->post[ 0 ]->date ) && isset( $this->_posts->post[ 0 ]->time ) )
         {
@@ -449,18 +449,24 @@ final class XS_Blog
     public function getRssFeed()
     {
         $rss                    = new XS_Xhtml_Tag( 'rss' );
-        $rss [ 'version' ]      = '2.0';
+        $rss[ 'version' ]       = '2.0';
+        $rss[ 'xmlns:atom' ]    = 'http://www.w3.org/2005/Atom';
         $channel                = $rss->channel;
         $channel->title         = 'XS-Labs';
         $channel->description   = 'XS-Labs Blog';
-        $link                   = XS_Menu::getInstance()->getPageURL( 'blog' );
-        $link                   = $feed->link;
-        $link[ 'href' ]         = 'http://' . $_SERVER[ 'HTTP_HOST' ] . '/';
         $channel->ttl           = '1800';
+        $channel->link          = 'http://' . $_SERVER[ 'HTTP_HOST' ] . XS_Menu::getInstance()->getPageURL( 'blog' );
+        
+        $atomLink           = new XS_Xhtml_Tag( 'atom:link' );
+        $atomLink[ 'href' ] = 'http://' . $_SERVER[ 'HTTP_HOST' ] . '/feed/rss.php';
+        $atomLink[ 'rel' ]  = 'self';
+        $atomLink[ 'type' ] = 'application/rss+xml';
+        
+        $channel->addChildNode( $atomLink );
         
         if( count( $this->_posts ) > 0 && isset( $this->_posts->post[ 0 ]->date ) && isset( $this->_posts->post[ 0 ]->time ) )
         {
-            $updated = $rss->pubDate;
+            $updated = $channel->pubDate;
             
             $updated->addTextData( ( new DateTime( $this->_posts->post[ 0 ]->date . ' ' .$this->_posts->post[ 0 ]->time ) )->format( DateTime::RSS ) );
         }
@@ -494,14 +500,16 @@ final class XS_Blog
                 continue;
             }
             
-            $item = $feed->item;
+            $item = $channel->item;
             
             $item->title            = $post->title;
             $item->description      = trim( $this->_getPostAbstract( $post ) );
-            $link                   = $item->link;
-            $link[ 'href' ]         = 'http://' . $_SERVER[ 'HTTP_HOST' ] . $this->_getPostUrl( $post );
-            $item->gui              = ( string )( new XS_UUID( $post->date . '-' . $post->name ) );
+            $link                   = 'http://' . $_SERVER[ 'HTTP_HOST' ] . $this->_getPostUrl( $post );
+            $guid                   = $item->guid;
+            $guid[ 'isPermaLink' ]  = "false";
             $item->pubDate          = ( new DateTime( $post->date . ' ' . $post->time ) )->format( DateTime::RSS );
+            
+            $guid->addTextData( ( string )( new XS_UUID( $post->date . '-' . $post->name ) ) );
         }
         
         return '<?xml version="1.0" encoding="utf-8"?>' . chr( 10 ) . ( string )$rss->asXml();

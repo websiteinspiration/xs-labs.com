@@ -234,7 +234,7 @@ class XS_Xhtml_Tag implements ArrayAccess, Iterator
             $tag .= ' ' . $key . '="' . $value . '"';
         }
         
-        if( !$this->_childrenCount ) {
+        if( !$this->_childrenCount || ( $xmlCompliant === false && isset( self::$_emptyTags[ $this->_tagName ] ) ) ) {
             
             $tag .= ( isset( self::$_emptyTags[ $this->_tagName ] ) || $xmlCompliant ) ? ' />' : '></' . $this->_tagName . '>';
             
@@ -312,17 +312,14 @@ class XS_Xhtml_Tag implements ArrayAccess, Iterator
     
     public function addTextData( $data )
     {
-        if( !isset( self::$_emptyTags[ $this->_tagName ] ) ) {
+        if( $data instanceof self ) {
             
-            if( $data instanceof self ) {
-                
-                $this->addChildNode( $data );
-                
-            } else {
-                
-                $this->_children[] = ( string )$data;
-                $this->_childrenCount++;
-            }
+            $this->addChildNode( $data );
+            
+        } else {
+            
+            $this->_children[] = ( string )$data;
+            $this->_childrenCount++;
         }
     }
     
