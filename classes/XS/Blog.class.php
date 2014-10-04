@@ -407,11 +407,28 @@ final class XS_Blog
             
             $row                    = $heading->div;
             $row[ 'class' ]         = 'row';
+            $detailsCol             = $row->div;
+            $imgCol                 = $row->div;
+            $detailsCol[ 'class' ]  = 'col-xs-10';
+            $imgCol[ 'class' ]      = 'col-xs-2';
+            
+            $gravatar           = 'http://www.gravatar.com/avatar/'
+                                . md5( strtolower( trim( XS_Crypto::getInstance()->decrypt( $comment->email ) ) ) )
+                                . "?s=80&d=mm&r=g";
+            $img                = $imgCol->img;
+            $img[ 'src' ]       = $gravatar;
+            $img[ 'class' ]     = 'pull-right img-circle';
+            $img[ 'style' ]     = 'margin: 2px;';
+            $img[ 'width' ]     = 40;
+            $img[ 'height' ]    = 40;
+            
+            $row                    = $detailsCol->div;
+            $row[ 'class' ]         = 'row';
             $authorLabel            = $row->div;
             $authorLabel[ 'class' ] = 'col-xs-2';
             $author                 = $row->div;
             $author[ 'class' ]      = 'col-xs-10';
-            $row                    = $heading->div;
+            $row                    = $detailsCol->div;
             $row[ 'class' ]         = 'row';
             $dateLabel              = $row->div;
             $dateLabel[ 'class' ]   = 'col-xs-2';
