@@ -264,7 +264,7 @@ final class XS_Blog
         $html = str_replace
         (
             '{POST_URL}',
-            '/blog/' . $post->date . '/' . $post->name . '/',
+            'http://' . $_SERVER[ 'HTTP_HOST' ] . '/blog/' . $post->date . '/' . $post->name . '/',
             $html
         );
         
@@ -454,7 +454,7 @@ final class XS_Blog
             $html = str_replace
             (
                 '{POST_URL}',
-                '/blog/' . $post->date . '/' . $post->name . '/',
+                'http://' . $_SERVER[ 'HTTP_HOST' ] . '/blog/' . $post->date . '/' . $post->name . '/',
                 $html
             );
         
