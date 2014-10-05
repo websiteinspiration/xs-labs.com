@@ -33,12 +33,6 @@
     padding:                10px;
 }
 
-.xs-github-repository-commits .panel-heading .xs-github-repository-commit-author-image {
-    float:                  left;
-    margin-right:           10px;
-    border:                 solid 1px #E7E7E7;
-}
-
 ul.xs-status-items {
     overflow:               hidden;
     height:                 100%;

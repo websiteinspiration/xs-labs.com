@@ -98,13 +98,13 @@ class XS_GitHub_Repository
                 if( isset( $value->author->avatar_url ) )
                 {
                     $div                = $details->div;
-                    $div[ 'class' ]     = 'xs-github-repository-commit-author-image';
                     
                     $img                = $div->img;
                     $img[ 'src' ]       = $value->author->avatar_url;
                     $img[ 'alt' ]       = $value->commit->author->name;
                     $img[ 'width' ]     = 50;
                     $img[ 'height' ]    = 50;
+                    $img[ 'class' ]     = 'pull-left img-circle';
                 }
                 
                 $infos              = $details->div;
