@@ -910,5 +910,9 @@ final class XS_Blog
             $mail->setTo( $email );
             $mail->send();
         }
+        
+        unset( $_POST[ 'xs_comment_author' ] );
+        unset( $_POST[ 'xs_comment_email' ] );
+        unset( $_POST[ 'xs_comment_text' ] );
     }
 }
