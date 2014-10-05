@@ -26,6 +26,8 @@ A new comment has been posted in "{POST_TITLE}:"
 {POST_URL}
 
 Kind regards,
+
+--
 XS-Labs
 	</mailMessage>
 </labels>
