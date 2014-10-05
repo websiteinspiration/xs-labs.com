@@ -848,7 +848,13 @@ final class XS_Blog
             
             if( $post->date . '/' . $post->name == $comment->post )
             {
-                $email            = XS_Crypto::getInstance()->decrypt( $comment->email );
+                $email = XS_Crypto::getInstance()->decrypt( $comment->email );
+                
+                if( $email == XS_Crypto::getInstance()->decrypt( $this->_adminEmail ) )
+                {
+                    continue;
+                }
+                
                 $emails[ $email ] = $email;
             }
         }
@@ -881,8 +887,6 @@ final class XS_Blog
         $writer->endDocument();
         $writer->flush();
         
-        $emails[ XS_Crypto::getInstance()->decrypt( $this->_adminEmail ) ] = XS_Crypto::getInstance()->decrypt( $this->_adminEmail );
-        
         $message = $this->_lang->mailMessage;
         $message = str_replace( '{POST_TITLE}', $post->title, $message );
         $message = str_replace
@@ -910,6 +914,28 @@ final class XS_Blog
             $mail->setTo( $email );
             $mail->send();
         }
+        
+        $message = $this->_lang->mailAdminMessage;
+        $message = str_replace( '{POST_TITLE}',     $post->title,                   $message );
+        $message = str_replace( '{COMMENT_AUTHOR}', $_POST[ 'xs_comment_author' ],  $message );
+        $message = str_replace( '{COMMENT_EMAIL}',  $_POST[ 'xs_comment_email' ],   $message );
+        $message = str_replace( '{COMMENT}',        $_POST[ 'xs_comment_text' ],    $message );
+        $message = str_replace
+        (
+            '{POST_URL}',
+            'http://' . $_SERVER[ 'HTTP_HOST' ] . '/en/blog/' . $post->date . '/' . $post->name . '/',
+            $message
+        );
+        
+        $mail = new XS_Mail
+        (
+            XS_Crypto::getInstance()->decrypt( $this->_adminEmail ),
+            $this->_lang->mailSubject,
+            trim( $message ),
+            XS_Crypto::getInstance()->decrypt( $this->_adminEmail )
+        );
+        
+        $mail->send();
         
         unset( $_POST[ 'xs_comment_author' ] );
         unset( $_POST[ 'xs_comment_email' ] );
