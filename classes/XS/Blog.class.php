@@ -356,6 +356,8 @@ final class XS_Blog
     
     protected function _getCommentForm( SimpleXMLElement $post )
     {
+        XS_Session::getInstance()->setData( 'xs-comment-time', time() );
+        
         $div                = new XS_Xhtml_Tag( 'div' );
         $a                  = $div->a;
         $a[ 'name' ]        = 'xs_comment_form';
@@ -450,11 +452,6 @@ final class XS_Blog
         $input[ 'name' ]        = 'xs_comment_submit';
         $input[ 'value' ]       = $this->_lang->addComment;
         
-        $hidden             = $form->input;
-        $hidden[ 'type' ]   = 'hidden';
-        $hidden[ 'name' ]   = 'xs_comment_time';
-        $hidden[ 'value' ]  = time();
-
         return $div;
     }
     
@@ -755,6 +752,11 @@ final class XS_Blog
         $emails     = array();
         $path       = __ROOTDIR__ . DIRECTORY_SEPARATOR . 'blog' . DIRECTORY_SEPARATOR . 'comments.xml';
         
+        if( XS_Session::getInstance()->getData( 'xs-comment-time' ) === false )
+        {
+            return;
+        }
+        
         if( !file_exists( $path ) )
         {
             return;
@@ -770,12 +772,12 @@ final class XS_Blog
             return;
         }
         
-        if( !isset( $_POST[ 'xs_comment_submit' ] ) || !isset( $_POST[ 'xs_comment_time' ] ) )
+        if( !isset( $_POST[ 'xs_comment_submit' ] ) )
         {
             return;
         }
         
-        if( intval( $_POST[ 'xs_comment_time' ] ) + 2 > time() )
+        if( intval( XS_Session::getInstance()->getData( 'xs-comment-time' ) ) + 2 > time() )
         {
             $this->_commentError = true;
             return;
