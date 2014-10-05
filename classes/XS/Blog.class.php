@@ -500,7 +500,7 @@ final class XS_Blog
             
             if( XS_Crypto::getInstance()->decrypt( $comment->email ) == XS_Crypto::getInstance()->decrypt( $this->_adminEmail ) )
             {
-                $panel[ 'class' ]   = 'panel panel-warning';
+                $panel[ 'class' ]   = 'panel panel-info';
             }
             else
             {
