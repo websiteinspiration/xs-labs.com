@@ -123,12 +123,12 @@ final class XS_Captcha
     {
         $req        = $this->_encodeQueryString( $data );
         $nl         = chr( 10 ) . chr( 13 );
-        $request    = 'POST ' . $path . ' HTTP/1.0' . $nl;
-                    . 'Host: ' . $host . $nl;
-                    . 'Content-Type: application/x-www-form-urlencoded;' . $nl;
-                    . 'Content-Length: ' . strlen( $req ) . $nl;
-                    . 'User-Agent: reCAPTCHA/PHP' . $nl;
-                    . $nl;
+        $request    = 'POST ' . $path . ' HTTP/1.0' . $nl
+                    . 'Host: ' . $host . $nl
+                    . 'Content-Type: application/x-www-form-urlencoded;' . $nl
+                    . 'Content-Length: ' . strlen( $req ) . $nl
+                    . 'User-Agent: reCAPTCHA/PHP' . $nl
+                    . $nl
                     . $req;
         
         if( $fs = @fsockopen( $host, $port, $errno, $errstr, 10 ) ) === false )
