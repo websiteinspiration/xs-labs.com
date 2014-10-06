@@ -441,7 +441,12 @@ final class XS_Blog
         
         $label->addTextData( $this->_lang->comment );
         
-        $form->addChildNode( XS_Captcha::getInstance()->getCapchta() );
+        $group                  = $form->div;
+        $group[ 'class' ]       = 'form-group';
+        $col                    = $group->div;
+        $col[ 'class' ]         = 'col-sm-10 col-sm-offset-2';
+        
+        $col->addChildNode( XS_Captcha::getInstance()->getCapchta() );
         
         $group                  = $form->div;
         $group[ 'class' ]       = 'form-group';
