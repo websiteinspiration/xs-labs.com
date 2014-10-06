@@ -131,7 +131,7 @@ final class XS_Captcha
                     . $nl
                     . $req;
         
-        if( $fs = @fsockopen( $host, $port, $errno, $errstr, 10 ) ) === false )
+        if( ( $fs = @fsockopen( $host, $port, $errno, $errstr, 10 ) ) === false )
         {
             return array();
         }
