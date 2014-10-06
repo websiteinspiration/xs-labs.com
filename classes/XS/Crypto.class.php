@@ -38,7 +38,7 @@ final class XS_Crypto
     
     public static function getInstance()
     {
-        if( self::$_instance == NULL )
+        if( !is_object( self::$_instance ) )
         {
             self::$_instance = new self();
         }
@@ -48,6 +48,11 @@ final class XS_Crypto
     
     private function __construct()
     {}
+    
+    public function __clone()
+    {
+        throw new Exception( 'Class ' . __CLASS__ . ' cannot be cloned' );
+    }
     
     public function crypt( $data )
     {
