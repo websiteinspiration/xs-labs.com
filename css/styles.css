@@ -160,8 +160,12 @@ dl.dl-horizontal ul {
     background-color:       #FFFFFF;
 }
 
-.xs-captcha {
+.xs-captcha, .xs-captcha input {
     font-size:              12px;
+}
+
+.xs-captcha a:link {
+    color:                  #999999;
 }
 
 /* ]]> */
