@@ -92,7 +92,7 @@ final class XS_Captcha
         
         $options->addTextData
         (
-            'var RecaptchaOptions = { theme : \'white\' }'
+            'var RecaptchaOptions = { theme : \'clean\' }'
         );
         
         $script[ 'type' ]   = 'text/javascript';
