@@ -171,7 +171,7 @@ dl.dl-horizontal ul {
 .xs-captcha .recaptchatable input#recaptcha_response_field {
     font-size:              12px;
     padding:                5px;
-    border:                 solid 1px #E7E7E7;
+    border:                 solid 1px #E7E7E7 !important;
 }
 
 /* ]]> */
