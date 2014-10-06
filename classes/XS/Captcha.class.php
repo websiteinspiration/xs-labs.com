@@ -62,12 +62,17 @@ final class XS_Captcha
     
     public function __toString()
     {
+        return ( string )( $this->getCapchta() );
+    }
+    
+    public function getCapchta()
+    {
+        $div = new XS_Xhtml_Tag( 'div' );
+        
         if( empty( $this->_publicKey ) )
         {
-            return '';
+            return $div;
         }
-        
-        $div = new XS_Xhtml_Tag( 'div' );
         
         $script     = $div->script;
         $noscript   = $div->noscript;
