@@ -67,13 +67,15 @@ final class XS_Captcha
     
     public function getCapchta()
     {
-        $div = new XS_Xhtml_Tag( 'div' );
+        $div            = new XS_Xhtml_Tag( 'div' );
+        $div[ 'class' ] = 'xs-captcha';
         
         if( empty( $this->_publicKey ) )
         {
             return $div;
         }
         
+        $options    = $div->script;
         $script     = $div->script;
         $noscript   = $div->noscript;
         $iframe     = $noscript->iframe;
@@ -85,6 +87,13 @@ final class XS_Captcha
         $noscript->br;
         
         $input      = $noscript->input;
+        
+        $options[ 'type' ]  = 'text/javascript';
+        
+        $options->addTextData
+        (
+            'var RecaptchaOptions = { theme : \'clean\' }';
+        );
         
         $script[ 'type' ]   = 'text/javascript';
         $script[ 'src' ]    = self::RECAPTCHA_API_SERVER . '/challenge?k=' . $this->_publicKey;
@@ -98,9 +107,9 @@ final class XS_Captcha
         $textarea[ 'rows' ]     = 3;
         $textarea[ 'cols' ]     = 40;
         
-        $textarea[ 'type' ]     = 'hidden';
-        $textarea[ 'name' ]     = 'recaptcha_response_field';
-        $textarea[ 'value' ]    = 'manual_challenge';
+        $input[ 'type' ]    = 'hidden';
+        $input[ 'name' ]    = 'recaptcha_response_field';
+        $input[ 'value' ]   = 'manual_challenge';
         
         return $div;
     }
