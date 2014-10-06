@@ -168,4 +168,8 @@ dl.dl-horizontal ul {
     color:                  #999999;
 }
 
+.xs-captcha .recaptchatable #recaptcha_response_field {
+    font-size:              12px;
+}
+
 /* ]]> */
