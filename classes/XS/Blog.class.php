@@ -446,6 +446,18 @@ final class XS_Blog
         $col                    = $group->div;
         $col[ 'class' ]         = 'col-sm-10 col-sm-offset-2';
         $input                  = $col->input;
+        $input[ 'type' ]        = 'text';
+        $input[ 'class' ]       = 'hidden';
+        $input[ 'id' ]          = 'xs_comment_human';
+        $input[ 'name' ]        = 'xs_comment_human';
+        $input[ 'value' ]       = '';
+        $input[ 'placeholder' ] = $this->_lang->leaveEmpty;
+        
+        $group                  = $form->div;
+        $group[ 'class' ]       = 'form-group';
+        $col                    = $group->div;
+        $col[ 'class' ]         = 'col-sm-10 col-sm-offset-2';
+        $input                  = $col->input;
         $input[ 'type' ]        = 'submit';
         $input[ 'class' ]       = 'btn btn-primary';
         $input[ 'id' ]          = 'xs_comment_submit';
@@ -778,6 +790,12 @@ final class XS_Blog
         }
         
         if( intval( XS_Session::getInstance()->getData( 'xs-comment-time' ) ) + 2 > time() )
+        {
+            $this->_commentError = true;
+            return;
+        }
+        
+        if( isset( $_POST[ 'xs_comment_human' ] ) && !empty( $_POST[ 'xs_comment_human' ] ) )
         {
             $this->_commentError = true;
             return;

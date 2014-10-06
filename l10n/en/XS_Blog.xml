@@ -21,6 +21,7 @@
 	<commentRequired>Comment (required)</commentRequired>
 	<commentError>Cannot post your comment: some fields have errors.</commentError>
 	<mailSubject>XS-Labs Blog - New comment</mailSubject>
+	<leaveEmpty>Please leave this empty...</leaveEmpty>
 	<mailMessage>
 A new comment has been posted in "{POST_TITLE}":
 {POST_URL}
