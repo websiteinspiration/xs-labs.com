@@ -790,7 +790,7 @@ final class XS_Blog
             return;
         }
         
-        if( XS_Capctha::getInstance()->verifyCaptcha() === false )
+        if( XS_Captcha::getInstance()->verifyCaptcha() === false )
         {
             $this->_commentError = true;
             return;
