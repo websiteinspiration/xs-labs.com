@@ -790,6 +790,12 @@ final class XS_Blog
             return;
         }
         
+        if( XS_Capctha::getInstance()->verifyCaptcha() === false )
+        {
+            $this->_commentError = true;
+            return;
+        }
+        
         if( !isset( $_POST[ 'xs_comment_author' ] ) || !isset( $_POST[ 'xs_comment_email' ] ) || !isset( $_POST[ 'xs_comment_text' ] ) )
         {
             $this->_commentError = true;

@@ -37,8 +37,9 @@ final class XS_Captcha
     const RECAPTCHA_API_SECURE_SERVER   = 'https://www.google.com/recaptcha/api';
     const RECAPTCHA_VERIFY_SERVER       = 'www.google.com';
     
-    private static $_instance   = NULL;
-    private        $_publicKey  = '6LeXgPsSAAAAAM55inPekSBO0-zwo88JX6ZprgSi';
+    private static  $_instance      = NULL;
+    private         $_publicKey     = '6LeXgPsSAAAAAM55inPekSBO0-zwo88JX6ZprgSi';
+    private         $_privateKey    = '6LeXgPsSAAAAAA4rltqyN6xmZJs__ewCCKH6oIhS';
     
     public static function getInstance()
     {
@@ -112,6 +113,46 @@ final class XS_Captcha
         $input[ 'value' ]   = 'manual_challenge';
         
         return $div;
+    }
+    
+    public function verifyCaptcha()
+    {
+        if( empty( $this->_privateKey ) )
+        {
+            return false;
+        }
+        
+        $response = $this->_sendHTTPPost
+        (
+            RECAPTCHA_VERIFY_SERVER,
+            "/recaptcha/api/verify",
+            array
+            (
+                'privatekey'    => $this->_privateKey,
+                'remoteip'      => $_SERVER[ 'REMOTE_ADDR' ],
+                'challenge'     => $_POST[ 'recaptcha_challenge_field' ],
+                'response'      => $_POST[ 'recaptcha_response_field' ]
+            )
+        );
+        
+        if( !isset( $response[ 1 ] ) )
+        {
+            return false;
+        }
+        
+        $answers = explode( '\n', $response[ 1 ] );
+        
+        if( !isset( $answers[ 0 ] ) )
+        {
+            return false;
+        }
+        
+        if( trim( $answers[ 0 ] ) == 'true' )
+        {
+            return true;
+        }
+        
+        return false;
     }
     
     private function _encodeQueryString( $data )
