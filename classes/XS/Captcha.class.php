@@ -124,7 +124,7 @@ final class XS_Captcha
         
         $response = $this->_sendHTTPPost
         (
-            RECAPTCHA_VERIFY_SERVER,
+            self::RECAPTCHA_VERIFY_SERVER,
             "/recaptcha/api/verify",
             array
             (
@@ -140,14 +140,7 @@ final class XS_Captcha
             return false;
         }
         
-        $answers = explode( '\n', $response[ 1 ] );
-        
-        if( !isset( $answers[ 0 ] ) )
-        {
-            return false;
-        }
-        
-        if( trim( $answers[ 0 ] ) == 'true' )
+        if( substr( $response[ 1 ], 0, 4 ) == 'true' )
         {
             return true;
         }
@@ -172,7 +165,7 @@ final class XS_Captcha
     private function _sendHTTPPost( $host, $path, $data, $port = 80 )
     {
         $req        = $this->_encodeQueryString( $data );
-        $nl         = chr( 10 ) . chr( 13 );
+        $nl         = chr( 13 ) . chr( 10 );
         $request    = 'POST ' . $path . ' HTTP/1.0' . $nl
                     . 'Host: ' . $host . $nl
                     . 'Content-Type: application/x-www-form-urlencoded;' . $nl
@@ -196,5 +189,5 @@ final class XS_Captcha
         fclose( $fs );
         
         return explode( "\r\n\r\n", $response, 2 );
-}
+    }
 }
