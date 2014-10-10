@@ -386,21 +386,13 @@ final class XS_Blog
         
         $div->h3 = $this->_lang->relatedPosts;
         $list    = $div->ul;
-        $i       = 0;
         
         foreach( $posts as $p )
         {
-            if( $i === 10 )
-            {
-                break;
-            }
-            
             $link           = $list->li->a;
             $link[ 'href' ] = $this->_getPostUrl( $p );
             
             $link->addTextData( $p->title );
-            
-            $i++;
         }
         
         return $div;
