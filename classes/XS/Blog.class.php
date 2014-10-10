@@ -333,7 +333,7 @@ final class XS_Blog
         
         $panelAuthorText->small     = ( isset( $post->author ) ) ? $post->author : '-';
         $panelDateText->small       = ( $time > 0 ) ? $dateTime : '-';
-        $panelCategoryText->small   = '-';
+        $panelCategoryText->small   = $post->category;
         $panelCommentsText->small   = '0';
         
         $copyright = $details->div;
@@ -351,7 +351,83 @@ final class XS_Blog
             );
         }
         
+        $details->addChildNode( $this->_getRelatedPosts( $post ) );
+        
         return ( string )$container;
+    }
+    
+    protected function _getRelatedPosts( SimpleXMLElement $post )
+    {
+        $div        = new XS_Xhtml_Tag( 'div' );
+        $posts      = array();
+        
+        if( $post === NULL )
+        {
+            return $div;
+        }
+        
+        foreach( $this->_posts as $p )
+        {
+            if( $post == $p )
+            {
+                continue;
+            }
+            
+            if( $this->_isRelated( $post, $p ) )
+            {
+                $posts[] = $p;
+            }
+        }
+        
+        if( count( $posts ) === 0 )
+        {
+            return $div;
+        }
+        
+        $div->h3 = $this->_lang->relatedPosts;
+        $list    = $div->ul;
+        $i       = 0;
+        
+        foreach( $posts as $p )
+        {
+            if( $i === 10 )
+            {
+                break;
+            }
+            
+            $link           = $list->li->a;
+            $link[ 'href' ] = $this->_getPostUrl( $p );
+            
+            $link->addTextData( $p->title );
+            
+            $i++;
+        }
+        
+        return $div;
+    }
+    
+    protected function _isRelated( $p1, $p2 )
+    {
+        if( $p1 === NULL || $p2 === NULL )
+        {
+            return false;
+        }
+        
+        $cc1 = explode( ',', $p1->category );
+        $cc2 = explode( ',', $p2->category );
+        
+        foreach( $cc1 as $c1 )
+        {
+            foreach( $cc2 as $c2 )
+            {
+                if( trim( strtolower( $c1 ) ) == trim( strtolower( $c2 ) ) )
+                {
+                    return true;
+                }
+            }
+        }
+        
+        return false;
     }
     
     protected function _getCommentForm( SimpleXMLElement $post )

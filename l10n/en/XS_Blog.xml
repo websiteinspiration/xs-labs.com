@@ -42,4 +42,5 @@ Email:  {COMMENT_EMAIL}
 --
 XS-Labs
 	</mailAdminMessage>
+	<relatedPosts>Similar posts</relatedPosts>
 </labels>
