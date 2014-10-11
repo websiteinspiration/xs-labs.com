@@ -208,7 +208,7 @@ class XS_Twitter_Feed
             return;
         }
         
-        $url  = 'http://'
+        $url  = 'https://'
               . self::TWITTER_HOST
               . self::TWITTER_FEED_URL
               . '?screen_name='
