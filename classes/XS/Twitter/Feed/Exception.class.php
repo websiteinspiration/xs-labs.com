@@ -31,8 +31,8 @@
 
 # $Id$
 
-class XS_Layout_Exception extends XS_Exception_Base
+class XS_Twitter_Feed_Exception extends XS_Exception_Base
 {
-    const EXCEPTION_NO_INCLUDE_FILE           = 0x01;
-    const EXCEPTION_INCLUDE_FILE_NOT_READABLE = 0x02;
+    const EXCEPTION_CACHE_DIR_NOT_WRITEABLE  = 0x01;
+    const EXCEPTION_CACHE_FILE_NOT_WRITEABLE = 0x02;
 }
