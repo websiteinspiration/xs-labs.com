@@ -36,9 +36,9 @@ class XS_Twitter_Feed
     const CACHE_FILE       = 'tmp/twitter-cache.xml';
     const CACHE_TTL        = 3600;
     const SOCKET_TIMEOUT   = 2;
-    const TWITTER_HOST     = 'twitter.com';
+    const TWITTER_HOST     = 'api.twitter.com';
     const TWITTER_PORT     = 80;
-    const TWITTER_FEED_URL = '/statuses/user_timeline.xml';
+    const TWITTER_FEED_URL = '/1.1/statuses/user_timeline.xml';
     
     protected $_screenName = '';
     protected $_data       = '';
