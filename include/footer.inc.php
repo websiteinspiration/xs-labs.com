@@ -19,7 +19,7 @@
                             <h3>Latest tweets</h3>
                         </div>
                         <div class="panel-body">
-                            
+                            <?php print ( string )new XS_Twitter_Feed( 'macmade' ); ?>
                         </div>
                     </div>
                 </div>
