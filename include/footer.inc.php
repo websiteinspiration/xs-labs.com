@@ -2,15 +2,39 @@
     </div>
     <div class="footer">
         <div class="container">
-            <div class="pull-left">
-                <small>XS-Labs &copy; <?php print date( 'Y', time() ); ?> - All Rights Reserved - All Wrongs Reserved</small>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3>Latest blog posts</h3>
+                        </div>
+                        <div class="panel-body">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3>Latest tweets</h3>
+                        </div>
+                        <div class="panel-body">
+                            
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="pull-right">
-                <ul class="list-inline">
-                    <li><small><?php print XS_Menu::getInstance()->getPageLink( '/sitemap/' ); ?></small></li>
-                    <li><small><?php print XS_Menu::getInstance()->getPageLink( '/legal/privacy/' ); ?></small></li>
-                    <li><small><?php print XS_Menu::getInstance()->getPageLink( '/legal/credits/' ); ?></small></li>
-                </ul>
+            <div class="row">
+                <div class="col-sm-6">
+                    XS-Labs &copy; <?php print date( 'Y', time() ); ?> - All Rights Reserved - All Wrongs Reserved
+                </div>
+                <div class="col-sm-6">
+                    <ul class="list-inline">
+                        <li><?php print XS_Menu::getInstance()->getPageLink( '/sitemap/' ); ?></li>
+                        <li><?php print XS_Menu::getInstance()->getPageLink( '/legal/privacy/' ); ?></li>
+                        <li><?php print XS_Menu::getInstance()->getPageLink( '/legal/credits/' ); ?></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
