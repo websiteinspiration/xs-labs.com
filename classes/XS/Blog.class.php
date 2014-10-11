@@ -668,6 +668,34 @@ final class XS_Blog
         $this->_errors[] = $error;
     }
     
+    public function getLatestPosts()
+    {
+        if( $this->_posts === NULL || count( $this->_posts ) === 0 )
+        {
+            return '';
+        }
+        
+        $i      = 0;
+        $list   = new XS_Xhtml_Tag( 'ul' );
+        
+        foreach( $this->_posts as $post )
+        {
+            if( $i === 10 )
+            {
+                break;
+            }
+            
+            $link           = $list->li->a;
+            $link[ 'href' ] = $this->_getPostUrl( $post );
+            
+            $link->addTextData( $post->title );
+            
+            $i++
+        }
+        
+        return $list;
+    }
+    
     public function getAtomFeed()
     {
         $feed                = new XS_Xhtml_Tag( 'feed' );

@@ -9,7 +9,7 @@
                             <h3>Latest blog posts</h3>
                         </div>
                         <div class="panel-body">
-                            
+                            <?php print ( string )XS_Blog::getInstance()->getLatestPosts(); ?>
                         </div>
                     </div>
                 </div>
