@@ -29,7 +29,7 @@
                     XS-Labs &copy; <?php print date( 'Y', time() ); ?> - All Rights Reserved - All Wrongs Reserved
                 </div>
                 <div class="col-sm-6">
-                    <ul class="list-inline">
+                    <ul class="list-inline pull-right">
                         <li><?php print XS_Menu::getInstance()->getPageLink( '/sitemap/' ); ?></li>
                         <li><?php print XS_Menu::getInstance()->getPageLink( '/legal/privacy/' ); ?></li>
                         <li><?php print XS_Menu::getInstance()->getPageLink( '/legal/credits/' ); ?></li>
