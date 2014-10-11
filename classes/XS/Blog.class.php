@@ -690,7 +690,7 @@ final class XS_Blog
             
             $link->addTextData( $post->title );
             
-            $i++
+            $i++;
         }
         
         return $list;
