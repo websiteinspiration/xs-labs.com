@@ -62,8 +62,8 @@ class SiteMap
         $url->loc       = $this->_baseUrl;
         $url->lastmod   = $this->_getModificationDate( ( string )$url->loc );
         
-        foreach( $this->_availableLanguages as $key => $value ) {
-            
+        foreach( $this->_availableLanguages as $key => $value )
+        {
             $menu     = simplexml_load_file( $value );
             $iterator = new \SimpleXMLIterator( file_get_contents( $value ) );
             
@@ -87,8 +87,8 @@ class SiteMap
     
     protected function _getLinks( \SimpleXMLElement $sitemap, \SimpleXMLIterator $iterator, $path )
     {
-        foreach( $iterator as $key => $value ) {
-            
+        foreach( $iterator as $key => $value )
+        {
             if( isset( $value[ 'preview' ] ) )
             {
                 continue;
@@ -101,8 +101,8 @@ class SiteMap
             $url->loc       = $pageUrl;
             $url->lastmod   = $this->_getModificationDate( ( string )$url->loc );
             
-            if( isset( $value->sub ) ) {
-                
+            if( isset( $value->sub ) )
+            {
                 $this->_getLinks( $sitemap, new \SimpleXMLIterator( $value->sub->asXML() ), $pageUrl );
             }
         }
@@ -115,8 +115,8 @@ class SiteMap
               . str_replace( '/', DIRECTORY_SEPARATOR, substr( $url, strlen( $this->_baseUrl ) ) )
               . 'index.php';
         
-        if( file_exists( $path ) && function_exists( 'filemtime' ) ) {
-            
+        if( file_exists( $path ) && function_exists( 'filemtime' ) )
+        {
             return date( $this->_dateFormat, filemtime( $path ) );
         }
         

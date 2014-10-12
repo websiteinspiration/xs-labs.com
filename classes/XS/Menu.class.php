@@ -54,8 +54,8 @@ final class Menu
         $this->_lang = ( isset( $this->_pathInfos[ 0 ] ) ) ? $this->_pathInfos[ 0 ] : 'en';
         $menuPath    = __ROOTDIR__ . DIRECTORY_SEPARATOR . 'include' . DIRECTORY_SEPARATOR . 'menu.' . $this->_lang . '.xml';
         
-        if( !file_exists( $menuPath ) ) {
-            
+        if( !file_exists( $menuPath ) )
+        {
             $this->_lang = 'en';
             $menuPath    = __ROOTDIR__ . DIRECTORY_SEPARATOR . 'include' . DIRECTORY_SEPARATOR . 'menu.' . $this->_lang . '.xml';
         }
@@ -72,7 +72,8 @@ final class Menu
     
     public function __clone()
     {
-        throw new \XS\Singleton\Exception(
+        throw new \XS\Singleton\Exception
+        (
             'Class ' . __CLASS__ . ' cannot be cloned',
             \XS\Singleton\Exception::EXCEPTION_CLONE
         );
@@ -80,8 +81,8 @@ final class Menu
     
     public static function getInstance()
     {
-        if( !is_object( self::$_instance ) ) {
-            
+        if( !is_object( self::$_instance ) )
+        {
             self::$_instance = new self();
         }
         
@@ -92,8 +93,8 @@ final class Menu
     {
         $query = '?';
         
-        foreach( $params as $key => $value ) {
-            
+        foreach( $params as $key => $value )
+        {
             $query .= urlencode( $key ) . '=' . urlencode( $value ) . '&';
         }
         
@@ -140,8 +141,8 @@ final class Menu
     
     public function getRootLineMenu( $class = 'rootline' )
     {
-        if( count( $this->_pathInfos ) == 1 ) {
-            
+        if( count( $this->_pathInfos ) == 1 )
+        {
             return '';
         }
         
@@ -158,8 +159,8 @@ final class Menu
         
         $link->addTextData( $menu[ 'root' ] );
         
-        for( $i = 1; $i < count( $this->_pathInfos ); $i++ ) {
-            
+        for( $i = 1; $i < count( $this->_pathInfos ); $i++ )
+        {
             $page = $this->_pathInfos[ $i ];
             
             if( !isset( $menu->$page ) )
@@ -210,8 +211,8 @@ final class Menu
     
     public function getMenuLevel( $level, $showHidden = false )
     {
-        if( !isset( $this->_pathInfos[ $level - 1 ] ) && $level > 1 ) {
-            
+        if( !isset( $this->_pathInfos[ $level - 1 ] ) && $level > 1 )
+        {
             return new \XS\XHTML\Comment( 'No available menu items' );
         }
         
@@ -221,17 +222,17 @@ final class Menu
         
         $list->useFormattedOutput( false );
         
-        for( $i = 1; $i < count( $this->_pathInfos ); $i++ ) {
-            
+        for( $i = 1; $i < count( $this->_pathInfos ); $i++ )
+        {
             $page = $this->_pathInfos[ $i ];
             
-            if( !isset( $menu->$page ) && $i > 1 ) {
-                
+            if( !isset( $menu->$page ) && $i > 1 )
+            {
                 return new \XS\XHTML\Comment( 'No available menu items' );
             }
             
-            if( $i == $level ) {
-                
+            if( $i == $level )
+            {
                 break;
             }
             
@@ -245,22 +246,22 @@ final class Menu
             return '';
         }
         
-        if( $i > 1 ) {
-            
+        if( $i > 1 )
+        {
             $menu = $menu->children();
         }
         
         $j = 0;
         
-        foreach( $menu as $item ) {
-            
-            if( isset( $item[ 'preview' ] ) ) {
-                
+        foreach( $menu as $item )
+        {
+            if( isset( $item[ 'preview' ] ) )
+            {
                 continue;
             }
             
-            if( isset( $item[ 'hidden' ] ) && $showHidden === false ) {
-                
+            if( isset( $item[ 'hidden' ] ) && $showHidden === false )
+            {
                 continue;
             }
             
@@ -268,36 +269,38 @@ final class Menu
             $link            = $listItem->a;
             $link[ 'href' ]  = $path . $item->getName() . '/';
             
-            if( isset( $item->linkTitle ) ) {
-            
+            if( isset( $item->linkTitle ) )
+            {
                 $link[ 'title' ] =  htmlentities( $item->linkTitle );
                 
-            } else {
-            
+            }
+            else
+            {
                 $link[ 'title' ] =  htmlentities( $item->title );
             }
             
-            if( isset( $item->navTitle ) ) {
-                
+            if( isset( $item->navTitle ) )
+            {
                 $link->addTextData(  htmlentities( $item->navTitle ) );
                 
-            } else {
-                
+            }
+            else
+            {
                 $link->addTextData(  htmlentities( $item->title ) );
             }
             
-            if( $link[ 'href' ] == $_SERVER[ 'REQUEST_URI' ] || strpos( $_SERVER[ 'REQUEST_URI' ], $link[ 'href' ] ) === 0 ) {
-                
+            if( $link[ 'href' ] == $_SERVER[ 'REQUEST_URI' ] || strpos( $_SERVER[ 'REQUEST_URI' ], $link[ 'href' ] ) === 0 )
+            {
                 $listItem[ 'class' ] = 'active';
             }
             
-            if( isset( $item->anchor ) ) {
-                
+            if( isset( $item->anchor ) )
+            {
                 $link[ 'href' ] .= '#' . $item->anchor;
             }
             
-            if( isset( $item->redirect ) ) {
-                
+            if( isset( $item->redirect ) )
+            {
                 $link[ 'href' ] = $item->redirect;
             }
             
@@ -320,19 +323,19 @@ final class Menu
             return $header;
         }
         
-        if( count( $this->_pathInfos ) > 1 ) {
-            
-            for( $i = 1; $i < count( $this->_pathInfos ); $i++ ) {
-            
-                if( $i == $lockOnLevel + 1 ) {
-                
+        if( count( $this->_pathInfos ) > 1 )
+        {
+            for( $i = 1; $i < count( $this->_pathInfos ); $i++ )
+            {
+                if( $i == $lockOnLevel + 1 )
+                {
                     break;
                 }
             
                 $page = $this->_pathInfos[ $i ];
             
-                if( !isset( $menu->$page ) ) {
-                
+                if( !isset( $menu->$page ) )
+                {
                     return new \XS\XHTML\Comment( 'No available page title' );
                 }
             
@@ -372,14 +375,14 @@ final class Menu
         $path       = '/';
         $subtitle   = '';
         
-        if( count( $this->_pathInfos ) > 1 ) {
-            
-            for( $i = 1; $i < count( $this->_pathInfos ); $i++ ) {
-            
+        if( count( $this->_pathInfos ) > 1 )
+        {
+            for( $i = 1; $i < count( $this->_pathInfos ); $i++ )
+            {
                 $page = $this->_pathInfos[ $i ];
             
-                if( !isset( $menu->$page ) ) {
-                
+                if( !isset( $menu->$page ) )
+                {
                     return new \XS\XHTML\Comment( 'No available page subtitle' );
                 }
             
@@ -449,8 +452,8 @@ final class Menu
     
     public function getPageSubtitle( $path = NULL )
     {
-        if( $path === NULL ) {
-            
+        if( $path === NULL )
+        {
             $path = $this->_currentPath;
         }
         
@@ -459,13 +462,13 @@ final class Menu
         $menu  = $this->_menu;
         $title = '';
         
-        if( count( $infos ) && $infos[ 0 ] === '' ) {
-            
+        if( count( $infos ) && $infos[ 0 ] === '' )
+        {
             array_shift( $infos );
         }
         
-        if( count( $infos ) && $infos[ count( $infos ) - 1 ] === '' ) {
-            
+        if( count( $infos ) && $infos[ count( $infos ) - 1 ] === '' )
+        {
             array_pop( $infos );
         }
         
@@ -474,10 +477,10 @@ final class Menu
             return '';
         }
         
-        foreach( $infos as $page ) {
-            
-            if( !isset( $menu->$page ) ) {
-                
+        foreach( $infos as $page )
+        {
+            if( !isset( $menu->$page ) )
+            {
                 return '';
             }
             
@@ -491,7 +494,7 @@ final class Menu
     
     public function isPreview( $path = '' )
     {
-        $menu      = $this->_menu;
+        $menu = $this->_menu;
         
         if( $path )
         {
@@ -506,12 +509,12 @@ final class Menu
             $pathInfos = $this->_pathInfos;
         }
         
-        for( $i = 1; $i < count( $pathInfos ); $i++ ) {
-            
+        for( $i = 1; $i < count( $pathInfos ); $i++ )
+        {
             $page = $pathInfos[ $i ];
             
-            if( !isset( $menu->$page ) ) {
-                
+            if( !isset( $menu->$page ) )
+            {
                 return false;
             }
             
@@ -538,12 +541,12 @@ final class Menu
         $path = '/' . $this->_lang . '/';
         $menu = $this->_menu;
         
-        for( $i = 1; $i < count( $this->_pathInfos ); $i++ ) {
-            
+        for( $i = 1; $i < count( $this->_pathInfos ); $i++ )
+        {
             $page = $this->_pathInfos[ $i ];
             
-            if( !isset( $menu->$page ) ) {
-                
+            if( !isset( $menu->$page ) )
+            {
                 return;
             }
             
@@ -554,12 +557,12 @@ final class Menu
         
         $children = $menu->children();
         
-        if( !isset( $children[ 0 ] ) ) {
-            
+        if( !isset( $children[ 0 ] ) )
+        {
             return;
-            
-        } else {
-            
+        }
+        else
+        {
             header( 'Location: ' . $path . $children[ 0 ]->getName() . '/' );
         }
     }
@@ -573,77 +576,77 @@ final class Menu
         $menu     = $this->_menu;
         $href     = '/' . $this->_lang . '/';
         
-        if( count( $infos ) > 0 && $infos[ 0 ] === '' ) {
-            
+        if( count( $infos ) > 0 && $infos[ 0 ] === '' )
+        {
             array_shift( $infos );
             $segments--;
         }
         
-        if( count( $infos ) > 0 && $infos[ $segments - 1 ] === '' ) {
-            
+        if( count( $infos ) > 0 && $infos[ $segments - 1 ] === '' )
+        {
             array_pop( $infos );
             $segments--;
         }
         
-        if( count( $infos ) > 0 ) {
-        
-            for( $i = 0; $i < $segments; $i++ ) {
-            
+        if( count( $infos ) > 0 )
+        {
+            for( $i = 0; $i < $segments; $i++ )
+            {
                 $page = $infos[ $i ];
             
-                if( !isset( $menu->$page ) ) {
-                
+                if( !isset( $menu->$page ) )
+                {
                     return ( string )new \XS\XHTML\Comment( 'No available menu link (path: ' . $path . ')' );
                 }
             
                 $menu  = $menu->$page;
                 $href .= $page . '/';
                 
-                if( isset( $menu->linkTitle ) ) {
-        
+                if( isset( $menu->linkTitle ) )
+                {
                     $title = htmlentities( $menu->linkTitle );
-            
-                } else {
-        
+                }
+                else
+                {
                     $title = htmlentities( $menu->title );
                 }
             
-                if( $i === $segments - 1 ) {
-                
+                if( $i === $segments - 1 )
+                {
                     break;
                 }
             
                 $menu = $menu->sub;
             }
         }
-        else {
-            
+        else
+        {
             $title = htmlentities( $this->_menu[ 'root' ] );
         }
         
         $link[ 'href' ]  = $href;
         
-        if( $customTitle ) {
-            
+        if( $customTitle )
+        {
             $link->addTextData( $customTitle );
-            
-        } else {
-            
+        }
+        else
+        {
             $link->addTextData(  $title );
         }
         
-        if( isset( $menu->anchor ) ) {
-            
+        if( isset( $menu->anchor ) )
+        {
             $link[ 'href' ] .= '#' . $menu->anchor;
         }
         
-        if( count( $params ) ) {
-            
+        if( count( $params ) )
+        {
             $link[ 'href' ] .= $this->_getParams( $params );
         }
         
-        if( isset( $menu->redirect ) ) {
-            
+        if( isset( $menu->redirect ) )
+        {
             $link[ 'href' ] = $menu->redirect;
         }
         
@@ -659,51 +662,50 @@ final class Menu
         $menu     = $this->_menu;
         $href     = '/' . $this->_lang . '/';
         
-        if( $infos[ 0 ] === '' ) {
-            
+        if( $infos[ 0 ] === '' )
+        {
             array_shift( $infos );
             $segments--;
         }
         
-        if( isset( $infos[ $segments - 1 ] ) && $infos[ $segments - 1 ] === '' ) {
-            
+        if( isset( $infos[ $segments - 1 ] ) && $infos[ $segments - 1 ] === '' )
+        {
             array_pop( $infos );
             $segments--;
         }
         
-        for( $i = 0; $i < $segments; $i++ ) {
-            
+        for( $i = 0; $i < $segments; $i++ )
+        {
             $page = $infos[ $i ];
             
-            if( !isset( $menu->$page ) ) {
-                
+            if( !isset( $menu->$page ) )
+            {
                 return new \XS\XHTML\Comment( 'No available menu link (path: ' . $path . ')' );
-                
             }
             
             $menu  = $menu->$page;
             $href .= $page . '/';
             
-            if( $i === $segments - 1 ) {
-                
+            if( $i === $segments - 1 )
+            {
                 break;
             }
             
             $menu = $menu->sub;
         }
         
-        if( isset( $menu->anchor ) ) {
-            
+        if( isset( $menu->anchor ) )
+        {
             $href .= '#' . $menu->anchor;
         }
         
-        if( isset( $menu->redirect ) ) {
-            
+        if( isset( $menu->redirect ) )
+        {
             $href = $menu->redirect;
         }
         
-        if( count( $params ) ) {
-            
+        if( count( $params ) )
+        {
             $href .= $this->_getParams( $params );
         }
         

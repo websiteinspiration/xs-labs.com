@@ -57,18 +57,18 @@ class Feed
         
         $this->_getXmlData();
         
-        if( $this->_data === '' ) {
-            
+        if( $this->_data === '' )
+        {
             $this->_error = true;
             return;
         }
         
-        try {
-            
+        try
+        {
             $this->_xml = simplexml_load_string( $this->_data );
-            
-        } catch( Exception $e ) {
-            
+        }
+        catch( Exception $e )
+        {
             $this->_error = true;
             return;
         }
@@ -76,8 +76,8 @@ class Feed
     
     public function __toString()
     {
-        if( $this->_error === true ) {
-            
+        if( $this->_error === true )
+        {
             $link             = new \XS\XHTML\Tag( 'a' );
             $link[ 'href' ]   = 'https://twitter.com/' . $this->_screenName;
             $link[ 'title' ]  = $this->_lang->twitter . ': ' . $this->_screenName;
@@ -96,10 +96,10 @@ class Feed
         $i       = 0;
         $content = new \XS\XHTML\Tag( 'div' );
         
-        foreach( $this->_xml as $status ) {
-            
-            if( $i === $this->_limit ) {
-                
+        foreach( $this->_xml as $status )
+        {
+            if( $i === $this->_limit )
+            {
                 break;
             }
             
@@ -174,23 +174,25 @@ class Feed
         $cache    = __ROOTDIR__ . DIRECTORY_SEPARATOR .self::CACHE_FILE;
         $cacheDir = dirname( $cache );
         
-        if( !file_exists( $cache ) && !is_writable( $cacheDir ) ) {
-            
-            throw new \XS\Twitter\Feed\Exception(
+        if( !file_exists( $cache ) && !is_writable( $cacheDir ) )
+        {
+            throw new \XS\Twitter\Feed\Exception
+            (
                 'The cache directory is not writeable (path: ' . $cacheDir . ')',
                 \XS\Twitter\Feed\Exception::EXCEPTION_CACHE_DIR_NOT_WRITEABLE
             );
-            
-        } elseif( file_exists( $cache ) && !is_writable( $cache ) ) {
-            
-            throw new \XS\Twitter\Feed\Exception(
+        }
+        elseif( file_exists( $cache ) && !is_writable( $cache ) )
+        {
+            throw new \XS\Twitter\Feed\Exception
+            (
                 'The cache file is not writeable (path: ' . $cache . ')',
                 \XS\Twitter\Feed\Exception::EXCEPTION_CACHE_FILE_NOT_WRITEABLE
             );
         }
         
-        if( file_exists( $cache ) && $time < filemtime( $cache ) + self::CACHE_TTL ) {
-            
+        if( file_exists( $cache ) && $time < filemtime( $cache ) + self::CACHE_TTL )
+        {
             $this->_data = file_get_contents( $cache );
             
             return;
@@ -200,10 +202,10 @@ class Feed
         $errStr  = '';
         $connect = @fsockopen( self::TWITTER_HOST, self::TWITTER_PORT, $errNo, $errStr, self::SOCKET_TIMEOUT );
         
-        if( !$connect ) {
-            
-            if( file_exists( $cache ) ) {
-                
+        if( !$connect )
+        {
+            if( file_exists( $cache ) )
+            {
                 $this->_data = file_get_contents( $cache );
             }
             
@@ -226,22 +228,22 @@ class Feed
         $headersSent = false;
         $status      = substr( fgets( $connect, 128 ), -8, 6 );
         
-        if( $status !== '200 OK' ) {
-            
+        if( $status !== '200 OK' )
+        {
             return;
         }
         
-        while( !feof( $connect ) ) {
-        
+        while( !feof( $connect ) )
+        {
            $line = fgets( $connect, 128 );
         
-           if( $headersSent ) {
-        
+           if( $headersSent )
+           {
                $this->_data .= $line;
            }
         
-           if( $line === $nl ) {
-        
+           if( $line === $nl )
+           {
                $headersSent = true;
            }
         }

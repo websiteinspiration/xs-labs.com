@@ -51,8 +51,8 @@ final class Layout
     
     public static function getInstance()
     {
-        if( !is_object( self::$_instance ) ) {
-            
+        if( !is_object( self::$_instance ) )
+        {
             self::$_instance = new self();
         }
         
@@ -61,17 +61,19 @@ final class Layout
     
     public function getContent( $path )
     {
-        if( !file_exists( $path ) ) {
-            
-            throw new \XS\Layout\Exception(
+        if( !file_exists( $path ) )
+        {
+            throw new \XS\Layout\Exception
+            (
                 'The requested include file does not exist (path: ' . $path . ')',
                 \XS\Layout\Exception::EXCEPTION_NO_INCLUDE_FILE
             );
         }
         
-        if( !is_readable( $path ) ) {
-            
-            throw new \XS\Layout\Exception(
+        if( !is_readable( $path ) )
+        {
+            throw new \XS\Layout\Exception
+            (
                 'The requested include file is not readable (path: ' . $path . ')',
                 \XS\Layout\Exception::EXCEPTION_INCLUDE_FILE_NOT_READABLE
             );
@@ -79,14 +81,15 @@ final class Layout
         
         ob_start();
         
-        try {
-        
+        try
+        {
             require( $path );
             
             $out = ob_get_contents();
             
-        } catch( Exception $e ) {
-            
+        }
+        catch( Exception $e )
+        {
             ob_end_clean();
             
             throw $e;

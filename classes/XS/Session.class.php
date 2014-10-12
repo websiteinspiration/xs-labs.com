@@ -45,7 +45,8 @@ final class Session
     
     public function __clone()
     {
-        throw new \XS\Singleton\Exception(
+        throw new \XS\Singleton\Exception
+        (
             'Class ' . __CLASS__ . ' cannot be cloned',
             \XS\Singleton\Exception::EXCEPTION_CLONE
         );
@@ -83,8 +84,8 @@ final class Session
     
     public static function getInstance()
     {
-        if( !is_object( self::$_instance ) ) {
-            
+        if( !is_object( self::$_instance ) )
+        {
             self::$_instance = new self();
         }
         
@@ -93,8 +94,8 @@ final class Session
     
     public function start()
     {
-        if( !$this->_started ) {
-            
+        if( !$this->_started )
+        {
             session_set_cookie_params( 0, '/' );
             session_name( self::SESSION_ID );
             session_start();
@@ -105,8 +106,8 @@ final class Session
     
     public function close()
     {
-        if( $this->_started ) {
-            
+        if( $this->_started )
+        {
             session_write_close();
             
             $this->_started = false;
@@ -116,8 +117,8 @@ final class Session
     
     public function destroy()
     {
-        if( $this->_started ) {
-            
+        if( $this->_started )
+        {
             session_destroy();
             
             $this->_started = false;
@@ -129,12 +130,12 @@ final class Session
     {
         $this->start();
         
-        if( isset( $_SESSION[ $key ] ) ) {
-            
+        if( isset( $_SESSION[ $key ] ) )
+        {
             return $_SESSION[ $key ];
-            
-        } else {
-            
+        }
+        else
+        {
             return false;
         }
         

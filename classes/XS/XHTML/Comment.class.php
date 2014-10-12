@@ -46,9 +46,10 @@ class Comment extends \XS\XHTML\Tag implements \ArrayAccess
     
     protected function _output( $xmlCompliant = false, $level = 0 )
     {
-        if( !$xmlCompliant ) {
-            
+        if( !$xmlCompliant )
+        {
             $indent = str_pad( '', $level, self::$_TAB );
+            
             return self::$_NL . $indent . '<!-- ' . $this->_comment . ' -->' . self::$_NL . $indent;
         }
         

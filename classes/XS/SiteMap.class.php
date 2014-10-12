@@ -52,8 +52,8 @@ class SiteMap
         $this->_menuPath      = __ROOTDIR__ . DIRECTORY_SEPARATOR . 'include' . DIRECTORY_SEPARATOR . 'menu.' . $this->_lang . '.xml';
         $this->_displayLevels = ( int )$displayLevels;
         
-        if( !file_exists( $this->_menuPath ) ) {
-            
+        if( !file_exists( $this->_menuPath ) )
+        {
             $this->_lang     = 'en';
             $this->_menuPath = __ROOTDIR__ . DIRECTORY_SEPARATOR . 'include' . DIRECTORY_SEPARATOR . 'menu.' . $this->_lang . '.xml';
         }
@@ -79,14 +79,15 @@ class SiteMap
             return;
         }
         
-        foreach( $iterator as $key => $value ) {
-            
-            if( isset( $value[ 'preview' ] ) ) {
-                
+        foreach( $iterator as $key => $value )
+        {
+            if( isset( $value[ 'preview' ] ) )
+            {
                 continue;
             }
-            if( isset( $value[ 'sitemap' ] ) && ( string )$value[ 'sitemap' ] === 'no' ) {
-                
+            
+            if( isset( $value[ 'sitemap' ] ) && ( string )$value[ 'sitemap' ] === 'no' )
+            {
                 return;
             }
             
@@ -101,8 +102,8 @@ class SiteMap
             
             $link->addTextData(  htmlentities( $value->title ) );
             
-            if( isset( $value->sub ) ) {
-        
+            if( isset( $value->sub ) )
+            {
                 if( $this->_displayLevels && $this->_level + 1 > $this->_displayLevels )
                 {
                     continue;

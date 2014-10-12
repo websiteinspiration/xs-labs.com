@@ -64,8 +64,8 @@ class Tag implements \ArrayAccess, \Iterator
     
     public function __construct( $tagName )
     {
-        if( !self::$_hasStatic ) {
-            
+        if( !self::$_hasStatic )
+        {
             self::_setStaticVars();
         }
         
@@ -89,8 +89,8 @@ class Tag implements \ArrayAccess, \Iterator
     
     public function __call( $name, array $args = array() )
     {
-        switch( $name ) {
-            
+        switch( $name )
+        {
             case 'spacer':
                 
                 return $this->_addSpacer( $args[ 0 ] );
@@ -138,21 +138,11 @@ class Tag implements \ArrayAccess, \Iterator
         return $this->_children[ $this->_iteratorIndex ]->_tagName;
     }
     
-    /**
-     * Moves the position to the next tag (SPL Iterator method)
-     * 
-     * @return  NULL
-     */
     public function next()
     {
         $this->_iteratorIndex++;
     }
     
-    /**
-     * Checks for a current tag (SPL Iterator method)
-     * 
-     * @return  boolean
-     */
     public function valid()
     {
         return isset( $this->_children[ $this->_iteratorIndex ] );
@@ -161,9 +151,7 @@ class Tag implements \ArrayAccess, \Iterator
     private static function _setStaticVars()
     {
         self::$_NL        = chr( 10 );
-        
         self::$_TAB       = chr( 9 );
-        
         self::$_hasStatic = true;
     }
     
@@ -185,8 +173,8 @@ class Tag implements \ArrayAccess, \Iterator
     
     protected function _addComment( $text )
     {
-        if( !isset( $this->_childrenByName[ '<!--' ] ) ) {
-            
+        if( !isset( $this->_childrenByName[ '<!--' ] ) )
+        {
             $this->_childrenByName[ '<!--' ]      = array();
             $this->_childrenCountByName[ '<!--' ] = 0;
         }
@@ -207,8 +195,8 @@ class Tag implements \ArrayAccess, \Iterator
     
     protected function _addChild( $name )
     {
-        if( !isset( $this->_childrenByName[ $name ] ) ) {
-            
+        if( !isset( $this->_childrenByName[ $name ] ) )
+        {
             $this->_childrenByName[ $name ]      = array();
             $this->_childrenCountByName[ $name ] = 0;
         }
@@ -231,52 +219,52 @@ class Tag implements \ArrayAccess, \Iterator
     {
         $tag = '<' . $this->_tagName;
         
-        foreach( $this->_attribs as $key => &$value ) {
-            
+        foreach( $this->_attribs as $key => &$value )
+        {
             $tag .= ' ' . $key . '="' . $value . '"';
         }
         
-        if( !$this->_childrenCount || ( $xmlCompliant === false && isset( self::$_emptyTags[ $this->_tagName ] ) ) ) {
-            
+        if( !$this->_childrenCount || ( $xmlCompliant === false && isset( self::$_emptyTags[ $this->_tagName ] ) ) )
+        {
             $tag .= ( isset( self::$_emptyTags[ $this->_tagName ] ) || $xmlCompliant ) ? ' />' : '></' . $this->_tagName . '>';
-            
-        } else {
-            
+        }
+        else
+        {
             $tag .= '>';
             
-            foreach( $this->_children as $child ) {
-                
-                if( $child instanceof self ) {
-                    
-                    if( self::$_formattedOutput ) {
-                        
+            foreach( $this->_children as $child )
+            {
+                if( $child instanceof self )
+                {
+                    if( self::$_formattedOutput )
+                    {
                         $tag .= self::$_NL . str_pad( '', $level + 1, self::$_TAB );
                         $tag .= $child->_output( $xmlCompliant, $level + 1 );
-                        
-                    } else {
-                        
+                    }
+                    else
+                    {
                         $tag .= $child->_output( $xmlCompliant, $level + 1 );
                     }
-                    
-                } elseif( $xmlCompliant ) {
-                    
-                    if( $this->_hasNodeChildren ) {
-                        
+                }
+                elseif( $xmlCompliant )
+                {
+                    if( $this->_hasNodeChildren )
+                    {
                         $tag .= '<span><![CDATA[' . $child . ']]></span>';
-                        
-                    } else {
-                        
+                    }
+                    else
+                    {
                         $tag .= '<![CDATA[' . $child . ']]>';
                     }
-                    
-                } else {
-                    
+                }
+                else
+                {
                     $tag .= ( string )$child;
                 }
             }
             
-            if( self::$_formattedOutput && $this->_hasNodeChildren ) {
-                
+            if( self::$_formattedOutput && $this->_hasNodeChildren )
+            {
                 $tag .= self::$_NL . str_pad( '', $level, self::$_TAB );
             }
             
@@ -288,10 +276,10 @@ class Tag implements \ArrayAccess, \Iterator
     
     public function addChildNode( \XS\XHTML\Tag $child )
     {
-        if( !isset( self::$_emptyTags[ $this->_tagName ] ) ) {
-            
-            if( !isset( $this->_childrenByName[ $child->_tagName ] ) ) {
-                
+        if( !isset( self::$_emptyTags[ $this->_tagName ] ) )
+        {
+            if( !isset( $this->_childrenByName[ $child->_tagName ] ) )
+            {
                 $this->_childrenByName[ $child->_tagName ]      = array();
                 $this->_childrenCountByName[ $child->_tagName ] = 0;
             }
@@ -314,12 +302,12 @@ class Tag implements \ArrayAccess, \Iterator
     
     public function addTextData( $data )
     {
-        if( $data instanceof self ) {
-            
+        if( $data instanceof self )
+        {
             $this->addChildNode( $data );
-            
-        } else {
-            
+        }
+        else
+        {
             $this->_children[] = ( string )$data;
             $this->_childrenCount++;
         }
@@ -337,8 +325,8 @@ class Tag implements \ArrayAccess, \Iterator
     
     public function getParent( $parentIndex = 0 )
     {
-        if( isset( $this->_parents[ $parentIndex ] ) ) {
-            
+        if( isset( $this->_parents[ $parentIndex ] ) )
+        {
             return $this->_parents[ $parentIndex ];
         }
         

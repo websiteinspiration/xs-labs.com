@@ -42,8 +42,8 @@ final class File
     
     private function __construct( $className )
     {
-        if( self::$_hasStaticVars === false ) {
-            
+        if( self::$_hasStaticVars === false )
+        {
             self::_setStaticVars();
         }
         
@@ -58,9 +58,10 @@ final class File
               . $className
               . '.xml';
         
-        if( !file_exists( $path ) ) {
-            
-            throw new \XS\Language\File\Exception(
+        if( !file_exists( $path ) )
+        {
+            throw new \XS\Language\File\Exception
+            (
                 'The requested language file does not exist (path: ' . $path . ')',
                 \XS\Language\File\Exception::EXCEPTION_NO_LANGUAGE_FILE
             );
@@ -78,8 +79,8 @@ final class File
     {
         $name = ( string )$name;
         
-        if( isset( $this->_labels->$name ) ) {
-            
+        if( isset( $this->_labels->$name ) )
+        {
             return $this->_labels->$name;
         }
         
@@ -103,8 +104,8 @@ final class File
     {
         $className = ( string )$className;
         
-        if( !isset( self::$_instances[ $className ] ) ) {
-            
+        if( !isset( self::$_instances[ $className ] ) )
+        {
             self::$_instances[ $className ] = new self( $className );
         }
         
