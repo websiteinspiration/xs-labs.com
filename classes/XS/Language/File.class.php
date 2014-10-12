@@ -47,6 +47,8 @@ final class File
             self::_setStaticVars();
         }
         
+        $className = str_replace( '\\', '_', $className );
+        
         $path = __ROOTDIR__
               . DIRECTORY_SEPARATOR
               . 'l10n'
