@@ -35,27 +35,31 @@ namespace XS\Twitter;
 
 class Feed
 {
-    const CACHE_FILE       = 'tmp/twitter-cache.xml';
-    const CACHE_TTL        = 3600;
-    const SOCKET_TIMEOUT   = 2;
-    const TWITTER_HOST     = 'api.twitter.com';
-    const TWITTER_PORT     = 80;
-    const TWITTER_FEED_URL = '/1.1/statuses/user_timeline.xml';
+    const CACHE_FILE        = 'tmp/twitter-cache.xml';
+    const CACHE_TTL         = 3600;
     
-    protected $_screenName = '';
-    protected $_data       = '';
-    protected $_xml        = NULL;
-    protected $_error      = false;
-    protected $_limit      = 0;
-    protected $_lang       = NULL;
+    protected $_screenName      = '';
+    protected $_consumerKey     = '';
+    protected $_consumerSecret  = '';
+    protected $_accessToken     = '';
+    protected $_accessSecret    = '';
+    protected $_data            = '';
+    protected $_json            = array();
+    protected $_error           = false;
+    protected $_limit           = 0;
+    protected $_lang            = NULL;
     
-    public function __construct( $screenName, $limit = 10 )
+    public function __construct( $consumerKey, $consumerSecret, $accessToken, $accessSecret, $screenName, $limit = 10 )
     {
-        $this->_lang       = \XS\Language\File::getInstance( __CLASS__ );
-        $this->_screenName = ( string )$screenName;
-        $this->_limit      = ( int )$limit;
+        $this->_lang            = \XS\Language\File::getInstance( __CLASS__ );
+        $this->_consumerKey     = ( string )$consumerKey;
+        $this->_consumerSecret  = ( string )$consumerSecret;
+        $this->_accessToken     = ( string )$accessToken;
+        $this->_accessSecret    = ( string )$accessSecret;
+        $this->_screenName      = ( string )$screenName;
+        $this->_limit           = ( int )$limit;
         
-        $this->_getXmlData();
+        $this->_getJSONData();
         
         if( $this->_data === '' )
         {
@@ -65,7 +69,7 @@ class Feed
         
         try
         {
-            $this->_xml = simplexml_load_string( $this->_data );
+            $this->_json = json_decode( $this->_data );
         }
         catch( Exception $e )
         {
@@ -96,7 +100,7 @@ class Feed
         $i       = 0;
         $content = new \XS\XHTML\Tag( 'div' );
         
-        foreach( $this->_xml as $status )
+        foreach( $this->_json as $status )
         {
             if( $i === $this->_limit )
             {
@@ -116,7 +120,7 @@ class Feed
             $infos[ 'class' ]    = 'tweet-infos';
             $user[ 'class' ]     = 'tweet-infos-user';
             $date[ 'class' ]     = 'tweet-infos-date';
-            $userLink[ 'href' ]  = 'http://' . self::TWITTER_HOST . '/' . $status->user->screen_name;
+            $userLink[ 'href' ]  = 'http://twitter.com/' . $status->user->screen_name;
             $userLink[ 'title' ] = $this->_lang->twitter . ': ' . $status->user->screen_name;
             
             $statusText = $status->text;
@@ -149,7 +153,7 @@ class Feed
     protected function _replaceTwitterNames( array $matches )
     {
         $link            = new \XS\XHTML\Tag( 'a' );
-        $link[ 'href' ]  = 'http://' . self::TWITTER_HOST . '/' . $matches[ 1 ];
+        $link[ 'href' ]  = 'http://twitter.com/' . $matches[ 1 ];
         $link[ 'title' ] = $this->_lang->twitter . ': ' . $matches[ 1 ];
         
         $link->addTextData( $matches[ 0 ] );
@@ -160,7 +164,7 @@ class Feed
     protected function _replaceTwitterTags( array $matches )
     {
         $link            = new \XS\XHTML\Tag( 'a' );
-        $link[ 'href' ]  = 'http://' . self::TWITTER_HOST . '/search?q=%23' . $matches[ 1 ];
+        $link[ 'href' ]  = 'http://twitter.com/search?q=%23' . $matches[ 1 ];
         $link[ 'title' ] = $this->_lang->twitter . ': ' . $matches[ 1 ];
         
         $link->addTextData( $matches[ 0 ] );
@@ -168,7 +172,7 @@ class Feed
         return ( string )$link;
     }
     
-    protected function _getXmlData()
+    protected function _getJSONData()
     {
         $time     = time();
         $cache    = __ROOTDIR__ . DIRECTORY_SEPARATOR .self::CACHE_FILE;
@@ -198,11 +202,59 @@ class Feed
             return;
         }
         
-        $errNo   = 0;
-        $errStr  = '';
-        $connect = @fsockopen( self::TWITTER_HOST, self::TWITTER_PORT, $errNo, $errStr, self::SOCKET_TIMEOUT );
+        $hash   = 'count=' . $this->_limit
+                . '&oauth_consumer_key=' . $this->_consumerKey
+                . '&oauth_nonce=' . time()
+                . '&oauth_signature_method=HMAC-SHA1'
+                . '&oauth_timestamp=' . time()
+                . '&oauth_token=' . $this->_accessToken
+                . '&oauth_version=1.0'
+                . '&screen_name=' . $this->_screenName;
+                
+        $base   = 'GET'
+                . '&'
+                . rawurlencode( 'https://api.twitter.com/1.1/statuses/user_timeline.json' )
+                . '&'
+                . rawurlencode( $hash );
+                
+        $key    = rawurlencode( $this->_consumerSecret )
+                . '&'
+                . rawurlencode( $this->_accessSecret );
         
-        if( !$connect )
+        $sig = rawurlencode( base64_encode( hash_hmac( 'sha1', $base, $key, true ) ) );
+        
+        $header = 'count="' . $this->_limit . '"'
+                . ', oauth_consumer_key="' . $this->_consumerKey . '"'
+                . ', oauth_nonce="' . time() . '"'
+                . ', oauth_signature="' . $sig . '"'
+                . ', oauth_signature_method="HMAC-SHA1"'
+                . ', oauth_timestamp="' . time() . '"'
+                . ', oauth_token="' . $this->_accessToken . '"'
+                . ', oauth_version="1.0"'
+                . ', screen_name="' . $this->_screenName . '"';
+         
+        $headers = array
+        (
+            'Authorization: Oauth {' . $header . '}',
+            'Expect:'
+        );
+        
+        $req = curl_init();
+        
+        curl_setopt( $req, CURLOPT_HTTPHEADER, $headers );
+        curl_setopt( $req, CURLOPT_HEADER, true );
+        curl_setopt( $req, CURLOPT_URL, 'https://api.twitter.com/1.1/statuses/user_timeline.json?count=' . $this->_limit . '&screen_name=' . $this->_screenName );
+        curl_setopt( $req, CURLOPT_RETURNTRANSFER, true );
+        curl_setopt( $req, CURLOPT_SSL_VERIFYPEER, false );
+        
+        $data = curl_exec( $req );
+        
+        curl_close( $req );
+        
+        $status = substr( $data, 0, 12 );
+        $json   = trim( substr( $data, strpos( $data, chr( 13 ) . chr( 10 ) . chr( 13 ) . chr( 10 ) ) ) );
+        
+        if( $status != 'HTTP/1.1 200' || strlen( $json ) === 0 )
         {
             if( file_exists( $cache ) )
             {
@@ -212,41 +264,7 @@ class Feed
             return;
         }
         
-        $url  = 'https://'
-              . self::TWITTER_HOST
-              . self::TWITTER_FEED_URL
-              . '?screen_name='
-              . urlencode( $this->_screenName );
-        $nl   = chr( 13 ) . chr( 10 );
-        $req  = 'GET ' . $url . ' HTTP/1.1' . $nl
-             . 'Host: ' . self::TWITTER_HOST . $nl
-             . 'Connection: Close' . $nl . $nl;
-        
-        fwrite( $connect, $req );
-        
-        $response    = '';
-        $headersSent = false;
-        $status      = substr( fgets( $connect, 128 ), -8, 6 );
-        
-        if( $status !== '200 OK' )
-        {
-            return;
-        }
-        
-        while( !feof( $connect ) )
-        {
-           $line = fgets( $connect, 128 );
-        
-           if( $headersSent )
-           {
-               $this->_data .= $line;
-           }
-        
-           if( $line === $nl )
-           {
-               $headersSent = true;
-           }
-        }
+        $this->_data = $json;
         
         file_put_contents( $cache, $this->_data );
     }

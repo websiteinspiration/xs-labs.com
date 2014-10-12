@@ -19,7 +19,16 @@
                             <h3>Latest tweets</h3>
                         </div>
                         <div class="panel-body">
-                            <?php print ( string )new \XS\Twitter\Feed( 'macmade' ); ?>
+                            <?php
+                            print ( string )new \XS\Twitter\Feed
+                            (
+                                'SGBDulUJtDMj4YqhI0Vi12vEJ',
+                                'vRY4qZmzz7Nqibs0wOIUiiYj0ozIXRAJdtlRWP5Zyr4ugK28oB',
+                                '66378123-hPIVzrmv4eSNu0Utc6t3W80TzYznSS6DeSRKzvF9P',
+                                'JtNt0MQwnvTeUUo9HTNNtw17CWPvqyA9F1kN83ZWNSoNg',
+                                'macmade',
+                                4
+                            ); ?>
                         </div>
                     </div>
                 </div>

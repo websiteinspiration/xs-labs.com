@@ -174,4 +174,12 @@ dl.dl-horizontal ul {
     border:                 solid 1px #E7E7E7 !important;
 }
 
+.tweet, .tweet-alt {
+    margin-bottom:          7px;
+}
+
+.tweet-infos, .tweet-infos * {
+    color:                  #999999;
+}
+
 /* ]]> */
