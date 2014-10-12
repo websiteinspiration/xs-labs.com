@@ -33,7 +33,7 @@
 
 namespace XS\Exception;
 
-abstract class Base extends Exception
+abstract class Base extends \Exception
 {
     protected static $_debug        = true;
     protected static $_commonStyles = 'font-family: Verdana, sans-serif; font-size: 10px; color: #898989;';
