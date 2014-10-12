@@ -44,17 +44,17 @@ define( '__ROOTDIR__', realpath( dirname( __FILE__ ) . DIRECTORY_SEPARATOR . '..
 
 if( !function_exists( 'spl_autoload_register' ) )
 {
-    throw new Exception
+    throw new \Exception
     (
         'The SPL (Standard PHP Library) is required'
     );
 }
 
-if( !class_exists( 'SimpleXMLElement' ) )
+if( !class_exists( '\SimpleXMLElement' ) )
 {
-    throw new Exception
+    throw new \Exception
     (
-        'The SimpleXMLElement class is required'
+        'The \SimpleXMLElement class is required'
     );
 }
 

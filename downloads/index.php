@@ -51,7 +51,7 @@ print '        <link>http://www.xs-labs.com/downloads/' . $app . '</link>' . chr
 print '        <description>Latest ' . $app . ' Updates...</description>' . chr( 10 );
 print '        <language>en</language>' . chr( 10 );
 
-$dir    = new DirectoryIterator( $appDir );
+$dir    = new \DirectoryIterator( $appDir );
 $files  = array();
 
 foreach( $dir as $download )

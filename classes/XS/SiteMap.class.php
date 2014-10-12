@@ -63,14 +63,14 @@ class SiteMap
     {
         $sitemap            = new \XS\XHTML\Tag( 'ul' );
         $sitemap[ 'class' ] = 'sitemap';
-        $iterator           = new SimpleXMLIterator( file_get_contents( $this->_menuPath ) );
+        $iterator           = new \SimpleXMLIterator( file_get_contents( $this->_menuPath ) );
         
         $this->_getLinks( $sitemap, $iterator, $this->_baseUrl . $this->_lang . '/' );
         
         return ( string )$sitemap;
     }
     
-    protected function _getLinks( \XS\XHTML\Tag $sitemap, SimpleXMLIterator $iterator, $path )
+    protected function _getLinks( \XS\XHTML\Tag $sitemap, \SimpleXMLIterator $iterator, $path )
     {
         $this->_level++;
         
@@ -111,7 +111,7 @@ class SiteMap
                 $div[ 'class' ] = 'sitemap-branch';
                 $ul             = new \XS\XHTML\Tag( 'ul' );
                 
-                $this->_getLinks( $ul, new SimpleXMLIterator( $value->sub->asXML() ), $pageUrl );
+                $this->_getLinks( $ul, new \SimpleXMLIterator( $value->sub->asXML() ), $pageUrl );
                 
                 if( $ul->valid() )
                 {

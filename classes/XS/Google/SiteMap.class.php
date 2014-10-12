@@ -56,7 +56,7 @@ class SiteMap
     
     public function __toString()
     {
-        $sitemap        = new SimpleXMLElement( '<urlset xmlns="' .  $this->_xmlns . '"></urlset>' );
+        $sitemap        = new \SimpleXMLElement( '<urlset xmlns="' .  $this->_xmlns . '"></urlset>' );
         $url            = $sitemap->addChild( 'url' );
         $url[ 'index' ] = 0;
         $url->loc       = $this->_baseUrl;
@@ -65,7 +65,7 @@ class SiteMap
         foreach( $this->_availableLanguages as $key => $value ) {
             
             $menu     = simplexml_load_file( $value );
-            $iterator = new SimpleXMLIterator( file_get_contents( $value ) );
+            $iterator = new \SimpleXMLIterator( file_get_contents( $value ) );
             
             $index          = count( $sitemap );
             $url            = $sitemap->addChild( 'url' );
@@ -76,7 +76,7 @@ class SiteMap
             $this->_getLinks( $sitemap, $iterator, $this->_baseUrl . $menu[ 'lang' ] . '/' );
         }
         
-        $dom               = new DOMDocument( $this->_xmlVersion, $this->_xmlCharset );
+        $dom               = new \DOMDocument( $this->_xmlVersion, $this->_xmlCharset );
         $dom->formatOutput = true;
         $domNode           = dom_import_simplexml($sitemap );
         $domNode           = $dom->importNode( $domNode, true );
@@ -85,7 +85,7 @@ class SiteMap
         return $dom->saveXML();
     }
     
-    protected function _getLinks( SimpleXMLElement $sitemap, SimpleXMLIterator $iterator, $path )
+    protected function _getLinks( \SimpleXMLElement $sitemap, \SimpleXMLIterator $iterator, $path )
     {
         foreach( $iterator as $key => $value ) {
             
@@ -103,7 +103,7 @@ class SiteMap
             
             if( isset( $value->sub ) ) {
                 
-                $this->_getLinks( $sitemap, new SimpleXMLIterator( $value->sub->asXML() ), $pageUrl );
+                $this->_getLinks( $sitemap, new \SimpleXMLIterator( $value->sub->asXML() ), $pageUrl );
             }
         }
     }

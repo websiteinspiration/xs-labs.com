@@ -46,7 +46,7 @@ final class Layout
     
     public function __clone()
     {
-        throw new Exception( 'Class ' . __CLASS__ . ' cannot be cloned' );
+        throw new \Exception( 'Class ' . __CLASS__ . ' cannot be cloned' );
     }
     
     public static function getInstance()

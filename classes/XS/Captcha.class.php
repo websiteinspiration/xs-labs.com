@@ -60,7 +60,7 @@ final class Captcha
     
     public function __clone()
     {
-        throw new Exception( 'Class ' . __CLASS__ . ' cannot be cloned' );
+        throw new \Exception( 'Class ' . __CLASS__ . ' cannot be cloned' );
     }
     
     public function __toString()

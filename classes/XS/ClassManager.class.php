@@ -43,7 +43,7 @@ final class ClassManager
     private function __construct()
     {
         $this->_classDir = realpath( dirname( __FILE__ ) ) . DIRECTORY_SEPARATOR;
-        $dirIterator     = new DirectoryIterator( $this->_classDir );
+        $dirIterator     = new \DirectoryIterator( $this->_classDir );
         
         foreach( $dirIterator as $file )
         {
@@ -70,7 +70,7 @@ final class ClassManager
     
     public function __clone()
     {
-        throw new Exception( 'Class ' . __CLASS__ . ' cannot be cloned' );
+        throw new \Exception( 'Class ' . __CLASS__ . ' cannot be cloned' );
     }
     
     public static function getInstance()

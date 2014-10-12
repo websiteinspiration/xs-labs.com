@@ -66,7 +66,7 @@ final class Blog
     
     public function __clone()
     {
-        throw new Exception( 'Class ' . __CLASS__ . ' cannot be cloned' );
+        throw new \Exception( 'Class ' . __CLASS__ . ' cannot be cloned' );
     }
     
     public function __toString()
@@ -167,7 +167,7 @@ final class Blog
         return ( string )$posts;
     }
     
-    protected function _getPostUrl( SimpleXMLElement $post )
+    protected function _getPostUrl( \SimpleXMLElement $post )
     {
         $time = strtotime( $post->date );
         $url  = \XS\Menu::getInstance()->getPageURL( 'blog' );
@@ -175,7 +175,7 @@ final class Blog
         return $url . strftime( '%Y/%m/%d', $time ) . '/' . $post->name . '/';
     }
     
-    protected function _getPostAbstract( SimpleXMLElement $post )
+    protected function _getPostAbstract( \SimpleXMLElement $post )
     {
         $path = __ROOTDIR__ . DIRECTORY_SEPARATOR . 'blog' . DIRECTORY_SEPARATOR . str_replace( '/', DIRECTORY_SEPARATOR, $post->date ) . DIRECTORY_SEPARATOR . $post->name . DIRECTORY_SEPARATOR;
         $text = file_get_contents( $path . 'index.html' );
@@ -189,7 +189,7 @@ final class Blog
         return $text;
     }
     
-    protected function _getPostContent( SimpleXMLElement $post = NULL )
+    protected function _getPostContent( \SimpleXMLElement $post = NULL )
     {
         $pathInfo = explode( '/', $_SERVER[ 'REQUEST_URI' ] );
     
@@ -358,7 +358,7 @@ final class Blog
         return ( string )$container;
     }
     
-    protected function _getRelatedPosts( SimpleXMLElement $post )
+    protected function _getRelatedPosts( \SimpleXMLElement $post )
     {
         $div        = new \XS\XHTML\Tag( 'div' );
         $posts      = array();
@@ -424,7 +424,7 @@ final class Blog
         return false;
     }
     
-    protected function _getCommentForm( SimpleXMLElement $post )
+    protected function _getCommentForm( \SimpleXMLElement $post )
     {
         \XS\Session::getInstance()->setData( 'xs-comment-time', time() );
         
@@ -532,7 +532,7 @@ final class Blog
         return $div;
     }
     
-    protected function _getPostComments( SimpleXMLElement $post )
+    protected function _getPostComments( \SimpleXMLElement $post )
     {
         $comments   = array();
         $path       = __ROOTDIR__ . DIRECTORY_SEPARATOR . 'blog' . DIRECTORY_SEPARATOR . 'comments.xml';
@@ -652,7 +652,7 @@ final class Blog
         return ( string )$errors;
     }
     
-    protected function _addPostError( SimpleXMLElement $post, $message )
+    protected function _addPostError( \SimpleXMLElement $post, $message )
     {
         if( empty( $message ) || $post === NULL )
         {
@@ -715,7 +715,7 @@ final class Blog
         {
             $updated = $feed->updated;
             
-            $updated->addTextData( ( new DateTime( $this->_posts->post[ 0 ]->date . ' ' .$this->_posts->post[ 0 ]->time ) )->format( DateTime::ATOM ) );
+            $updated->addTextData( ( new \DateTime( $this->_posts->post[ 0 ]->date . ' ' .$this->_posts->post[ 0 ]->time ) )->format( DateTime::ATOM ) );
         }
         
         foreach( $this->_posts->post as $post )
@@ -757,7 +757,7 @@ final class Blog
             $link2[ 'rel' ]         = 'alternate';
             $link2[ 'type' ]        = 'text/html';
             $entry->id              = 'urn:uuid:' . ( string )( new \XS\UUID( $post->date . '-' . $post->name ) );
-            $entry->updated         = ( new DateTime( $post->date . ' ' . $post->time ) )->format( DateTime::ATOM );
+            $entry->updated         = ( new \DateTime( $post->date . ' ' . $post->time ) )->format( DateTime::ATOM );
             $summary                = $entry->summary;
             $summary[ 'type' ]      = 'html';
             $content                = $entry->content;
@@ -803,7 +803,7 @@ final class Blog
         {
             $updated = $channel->pubDate;
             
-            $updated->addTextData( ( new DateTime( $this->_posts->post[ 0 ]->date . ' ' .$this->_posts->post[ 0 ]->time ) )->format( DateTime::RSS ) );
+            $updated->addTextData( ( new \DateTime( $this->_posts->post[ 0 ]->date . ' ' .$this->_posts->post[ 0 ]->time ) )->format( DateTime::RSS ) );
         }
         
         foreach( $this->_posts->post as $post )
@@ -842,7 +842,7 @@ final class Blog
             $link                   = 'http://' . $_SERVER[ 'HTTP_HOST' ] . $this->_getPostUrl( $post );
             $guid                   = $item->guid;
             $guid[ 'isPermaLink' ]  = "false";
-            $item->pubDate          = ( new DateTime( $post->date . ' ' . $post->time ) )->format( DateTime::RSS );
+            $item->pubDate          = ( new \DateTime( $post->date . ' ' . $post->time ) )->format( DateTime::RSS );
             $item->link             = 'http://' . $_SERVER[ 'HTTP_HOST' ] . $this->_getPostUrl( $post );
             
             $guid->addTextData( ( string )( new \XS\UUID( $post->date . '-' . $post->name ) ) );
@@ -851,7 +851,7 @@ final class Blog
         return '<?xml version="1.0" encoding="utf-8"?>' . chr( 10 ) . ( string )$rss->asXml();
     }
     
-    protected function _writeNewComment( SimpleXMLElement $post )
+    protected function _writeNewComment( \SimpleXMLElement $post )
     {
         $comments   = array();
         $emails     = array();
@@ -919,7 +919,7 @@ final class Blog
             $comments[] = $comment;
         }
         
-        $writer = new XMLWriter(); 
+        $writer = new \XMLWriter(); 
         
         $writer->openURI( $path );
         $writer->startDocument( '1.0', 'utf-8' );
