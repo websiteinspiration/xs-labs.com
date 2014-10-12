@@ -37,7 +37,6 @@ final class ClassManager
 {
     private static $_instance = NULL;
     private $_loadedClasses   = array();
-    private $_packages        = array();
     private $_classDir        = '';
     
     private function __construct()
@@ -49,8 +48,6 @@ final class ClassManager
         {
             if( substr( $file, strlen( $file ) - 10 ) === '.class.php' )
             {
-                $this->_packages[ ( string )$file ] = $file->getPathName();
-                
                 continue;
             }
             
@@ -63,8 +60,6 @@ final class ClassManager
             {
                 continue;
             }
-            
-            $this->_packages[ ( string )$file ] = $file->getPathName();
         }
     }
     
@@ -96,10 +91,7 @@ final class ClassManager
         {
             $rootPkg = substr( $className, 3, strpos( $className, '\\', 3 ) - 3 );
             
-            if( isset( $instance->_packages[ $rootPkg ] ) || isset( $instance->_packages[ substr( $className, 3 ) . '.class.php' ] ) )
-            {
-                return $instance->_loadClass( $className );
-            }
+            return $instance->_loadClass( $className );
         }
         
         return false;
@@ -107,7 +99,7 @@ final class ClassManager
     
     private function _loadClass( $className )
     {
-        $classPath = $this->_classDir . str_replace( '_', DIRECTORY_SEPARATOR, substr( $className, 3 ) ) . '.class.php';
+        $classPath = $this->_classDir . str_replace( '\\', DIRECTORY_SEPARATOR, substr( $className, 3 ) ) . '.class.php';
         
         if( file_exists( $classPath ) )
         {
