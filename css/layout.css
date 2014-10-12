@@ -64,6 +64,10 @@
     font-size:                  12px;
 }
 
+.footer .panel-body {
+    background-color:           #FAFAFA;
+}
+
 img.pull-left {
     margin-left:                0px;
     margin-top:                 0px;
