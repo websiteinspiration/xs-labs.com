@@ -31,7 +31,9 @@
 
 # $Id$
 
-class XS_UUID
+namespace XS;
+
+class UUID
 {
     protected $_data = '';
     

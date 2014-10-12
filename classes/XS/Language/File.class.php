@@ -31,7 +31,9 @@
 
 # $Id$
 
-final class XS_Language_File
+namespace XS\Language;
+
+final class File
 {
     private static $_instances     = array();
     private static $_lang          = '';
@@ -56,9 +58,9 @@ final class XS_Language_File
         
         if( !file_exists( $path ) ) {
             
-            throw new XS_Language_File_Exception(
+            throw new \XS\Language\File\Exception(
                 'The requested language file does not exist (path: ' . $path . ')',
-                XS_Language_File_Exception::EXCEPTION_NO_LANGUAGE_FILE
+                \XS\Language\File\Exception::EXCEPTION_NO_LANGUAGE_FILE
             );
         }
         
@@ -91,7 +93,7 @@ final class XS_Language_File
     
     private static function _setStaticVars()
     {
-        self::$_lang          = XS_Menu::getInstance()->getLanguage();
+        self::$_lang          = \XS\Menu::getInstance()->getLanguage();
         self::$_hasStaticVars = true;
     }
     

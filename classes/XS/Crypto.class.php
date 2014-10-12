@@ -31,7 +31,9 @@
 
 # $Id$
 
-final class XS_Crypto
+namespace XS;
+
+final class Crypto
 {
     private static $_instance   = NULL;
     private $_key               = 'f1e612c691344d019fd6a8785445393c1f75bfa3d349f136d8cf6eaf5953aaa1';

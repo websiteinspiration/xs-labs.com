@@ -7,7 +7,7 @@
 </p>
 <h3 class="clearer">Latest commits</h3>
 <?php
-    $GIT = new XS_GitHub_Repository( 'macmade', 'XEOS-Software-License' );
+    $GIT = new \XS\GitHub\Repository( 'macmade', 'XEOS-Software-License' );
     
     print $GIT->commits();
 ?>

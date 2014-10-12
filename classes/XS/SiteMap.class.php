@@ -31,7 +31,9 @@
 
 # $Id$
 
-class XS_SiteMap
+namespace XS;
+
+class SiteMap
 {
     protected $_pathInfos     = array();
     protected $_lang          = '';
@@ -43,7 +45,7 @@ class XS_SiteMap
     
     public function __construct( $displayLevels = 0 )
     {
-        $this->_menu          = XS_Menu::getInstance();
+        $this->_menu          = \XS\Menu::getInstance();
         $protocol             = ( isset( $_SERVER[ 'HTTPS' ] ) && $_SERVER[ 'HTTPS' ] ) ? 'https://' : 'http://';
         $this->_baseUrl       = $protocol . $_SERVER[ 'HTTP_HOST' ] . '/';
         $this->_lang          = $this->_menu->getLanguage();
@@ -59,7 +61,7 @@ class XS_SiteMap
     
     public function __toString()
     {
-        $sitemap            = new XS_Xhtml_Tag( 'ul' );
+        $sitemap            = new \XS\XHTML\Tag( 'ul' );
         $sitemap[ 'class' ] = 'sitemap';
         $iterator           = new SimpleXMLIterator( file_get_contents( $this->_menuPath ) );
         
@@ -68,7 +70,7 @@ class XS_SiteMap
         return ( string )$sitemap;
     }
     
-    protected function _getLinks( XS_Xhtml_Tag $sitemap, SimpleXMLIterator $iterator, $path )
+    protected function _getLinks( \XS\XHTML\Tag $sitemap, SimpleXMLIterator $iterator, $path )
     {
         $this->_level++;
         
@@ -107,7 +109,7 @@ class XS_SiteMap
                 }
                 
                 $div[ 'class' ] = 'sitemap-branch';
-                $ul             = new XS_Xhtml_Tag( 'ul' );
+                $ul             = new \XS\XHTML\Tag( 'ul' );
                 
                 $this->_getLinks( $ul, new SimpleXMLIterator( $value->sub->asXML() ), $pageUrl );
                 

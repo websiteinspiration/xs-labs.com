@@ -6,7 +6,7 @@
 </p>
 <h3 class="clearer">Latest commits</h3>
 <?php
-    $GIT = new XS_GitHub_Repository( 'macmade', 'FileSystem' );
+    $GIT = new \XS\GitHub\Repository( 'macmade', 'FileSystem' );
     
     print $GIT->commits();
 ?>

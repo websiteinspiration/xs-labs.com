@@ -31,7 +31,9 @@
 
 # $Id$
 
-class XS_GitHub_Repository_List
+namespace XS\GitHub\Repository;
+
+class List
 {
     const CACHE_FILE            = 'tmp/github-cache-%s.json';
     const CACHE_TTL             = 3600;
@@ -50,13 +52,13 @@ class XS_GitHub_Repository_List
     public function __construct( $user, $ignored = array() )
     {
         $this->_user    = ( string )$user;
-        $this->_lang    = XS_Language_File::getInstance( get_class( $this ) );
+        $this->_lang    = \XS\Language\File::getInstance( get_class( $this ) );
         $this->_ignored = $ignored;
     }
     
     public function __toString()
     {
-        $list            = new XS_Xhtml_Tag( 'div' );
+        $list            = new \XS\XHTML\Tag( 'div' );
         $list[ 'class' ] = 'xs-github-repository-list';
         
         $this->_getData();
@@ -127,19 +129,19 @@ class XS_GitHub_Repository_List
         
         if( !file_exists( $cache ) && !is_writable( $cacheDir ) )
         {
-            throw new XS_GitHub_Repository_Exception
+            throw new \XS\GitHub\Repository\Exception
             (
                 'The cache directory is not writeable (path: ' . $cacheDir . ')',
-                XS_GitHub_Repository_Exception::EXCEPTION_CACHE_DIR_NOT_WRITEABLE
+                \XS\GitHub\Repository\Exception::EXCEPTION_CACHE_DIR_NOT_WRITEABLE
             );
             
         }
         elseif( file_exists( $cache ) && !is_writable( $cache ) )
         {
-            throw new XS_GitHub_Repository_Exception
+            throw new \XS\GitHub\Repository\Exception
             (
                 'The cache file is not writeable (path: ' . $cache . ')',
-                XS_GitHub_Repository_Exception::EXCEPTION_CACHE_FILE_NOT_WRITEABLE
+                \XS\GitHub\Repository\Exception::EXCEPTION_CACHE_FILE_NOT_WRITEABLE
             );
         }
         

@@ -11,7 +11,7 @@
 </p>
 <h2>License</h2>
 <p>
-    XS-Labs coding guidelines are released under the terms of the <a href="<?php print XS_Menu::getInstance()->getPageUrl( '/licenses/freebsd-documentation' ); ?>">FreeBSD documentation license</a><br />
+    XS-Labs coding guidelines are released under the terms of the <a href="<?php print \XS\Menu::getInstance()->getPageUrl( '/licenses/freebsd-documentation' ); ?>">FreeBSD documentation license</a><br />
     You're free to use those guideline for your own projects if you like it, and/or adapt it to fit your own coding conventions.
 </p>
 <div class="clearer"></div>

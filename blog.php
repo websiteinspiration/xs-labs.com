@@ -66,12 +66,12 @@ else
     
     require_once( $ROOT . DIRECTORY_SEPARATOR . 'include' . DIRECTORY_SEPARATOR . 'init.inc.php' );
     
-    $LAYOUT  = XS_Layout::getInstance();
-    $CONTENT = ( string )( XS_Blog::getInstance()->getErrors() ) . ( string )( XS_Blog::getInstance() );
+    $LAYOUT  = \XS\Layout::getInstance();
+    $CONTENT = ( string )( \XS\Blog::getInstance()->getErrors() ) . ( string )( \XS\Blog::getInstance() );
     $HEADER  = $LAYOUT->getHeader();
     $FOOTER  = $LAYOUT->getFooter();
     
-    $DEBUG_STACK = XS_Debug::getStack();
+    $DEBUG_STACK = \XS\Debug::getStack();
     
     if( count( $DEBUG_STACK ) )
     {

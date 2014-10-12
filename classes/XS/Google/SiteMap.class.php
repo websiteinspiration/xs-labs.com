@@ -31,7 +31,9 @@
 
 # $Id$
 
-class XS_Google_SiteMap
+namespace XS\Google;
+
+class SiteMap
 {
     protected $_availableLanguages = array();
     protected $_baseUrl            = '';

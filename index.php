@@ -66,13 +66,13 @@ else
     
     require_once( $ROOT . DIRECTORY_SEPARATOR . 'include' . DIRECTORY_SEPARATOR . 'init.inc.php' );
     
-    $LAYOUT = XS_Layout::getInstance();
+    $LAYOUT = \XS\Layout::getInstance();
     
     $INCLUDE_404 = $ROOT . DIRECTORY_SEPARATOR . 'errors' . DIRECTORY_SEPARATOR . '404' . DIRECTORY_SEPARATOR . 'index.php';
     $INCLUDE_403 = $ROOT . DIRECTORY_SEPARATOR . 'errors' . DIRECTORY_SEPARATOR . '403' . DIRECTORY_SEPARATOR . 'index.php';
     $INCLUDE_200 = $ROOT . DIRECTORY_SEPARATOR . $PATH . 'index.php';
     
-    if( XS_Menu::getInstance()->isPreview() === true && $_SERVER[ 'SERVER_NAME' ] !== 'xs-labs.localhost' )
+    if( \XS\Menu::getInstance()->isPreview() === true && $_SERVER[ 'SERVER_NAME' ] !== 'xs-labs.localhost' )
     {
         $INCLUDE = $INCLUDE_403;
     }
@@ -93,7 +93,7 @@ else
     $HEADER  = $LAYOUT->getHeader();
     $FOOTER  = $LAYOUT->getFooter();
     
-    $DEBUG_STACK = XS_Debug::getStack();
+    $DEBUG_STACK = \XS\Debug::getStack();
     
     if( count( $DEBUG_STACK ) )
     {

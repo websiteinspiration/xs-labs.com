@@ -31,7 +31,9 @@
 
 # $Id$
 
-final class XS_Blog
+namespace XS;
+
+final class Blog
 {
     private static $_instance   = NULL;
     
@@ -53,7 +55,7 @@ final class XS_Blog
     
     private function __construct()
     {
-        $this->_lang = XS_Language_File::getInstance( get_class( $this ) );
+        $this->_lang = \XS\Language\File::getInstance( get_class( $this ) );
         $path        = __ROOTDIR__ . DIRECTORY_SEPARATOR . 'blog' . DIRECTORY_SEPARATOR . 'posts.xml';
         
         if( file_exists( $path ) )
@@ -91,7 +93,7 @@ final class XS_Blog
         $i              = 0;
         $this->_errors  = array();
         
-        $posts              = new XS_Xhtml_Tag( 'div' );
+        $posts              = new \XS\XHTML\Tag( 'div' );
         $posts[ 'class' ]   = 'marketing';
         
         foreach( $this->_posts->post as $post )
@@ -168,7 +170,7 @@ final class XS_Blog
     protected function _getPostUrl( SimpleXMLElement $post )
     {
         $time = strtotime( $post->date );
-        $url  = XS_Menu::getInstance()->getPageURL( 'blog' );
+        $url  = \XS\Menu::getInstance()->getPageURL( 'blog' );
         
         return $url . strftime( '%Y/%m/%d', $time ) . '/' . $post->name . '/';
     }
@@ -252,10 +254,10 @@ final class XS_Blog
         $date     = strftime( '%m/%d/%Y', $time );
         $dateTime = strftime( '%m/%d/%Y %H:%M', $time );
         
-        XS_Menu::getInstance()->setPageTitle( XS_Menu::getInstance()->getPageTitle( '/blog/' ) );
-        XS_Menu::getInstance()->addRootlineItem( ( $time > 0 ) ? $date . ' - ' . $post->title : $post->title, $this->_getPostUrl( $post ) );
+        \XS\Menu::getInstance()->setPageTitle( \XS\Menu::getInstance()->getPageTitle( '/blog/' ) );
+        \XS\Menu::getInstance()->addRootlineItem( ( $time > 0 ) ? $date . ' - ' . $post->title : $post->title, $this->_getPostUrl( $post ) );
         
-        $container              = new XS_Xhtml_Tag( 'div' );
+        $container              = new \XS\XHTML\Tag( 'div' );
         $container[ 'class' ]   = 'row';
         $content                = $container->div;
         $details                = $container->div;
@@ -347,7 +349,7 @@ final class XS_Blog
             $copyright->small = sprintf
             (
                 $this->_lang->copyrightNote,
-                XS_Menu::getInstance()->getPageLink( $this->_lang->copyrightLicenseLink, $this->_lang->copyrightLicense )
+                \XS\Menu::getInstance()->getPageLink( $this->_lang->copyrightLicenseLink, $this->_lang->copyrightLicense )
             );
         }
         
@@ -358,7 +360,7 @@ final class XS_Blog
     
     protected function _getRelatedPosts( SimpleXMLElement $post )
     {
-        $div        = new XS_Xhtml_Tag( 'div' );
+        $div        = new \XS\XHTML\Tag( 'div' );
         $posts      = array();
         
         if( $post === NULL )
@@ -424,9 +426,9 @@ final class XS_Blog
     
     protected function _getCommentForm( SimpleXMLElement $post )
     {
-        XS_Session::getInstance()->setData( 'xs-comment-time', time() );
+        \XS\Session::getInstance()->setData( 'xs-comment-time', time() );
         
-        $div                = new XS_Xhtml_Tag( 'div' );
+        $div                = new \XS\XHTML\Tag( 'div' );
         $a                  = $div->a;
         $a[ 'name' ]        = 'xs_comment_form';
         $div->h3            = $this->_lang->addComment;
@@ -514,7 +516,7 @@ final class XS_Blog
         $col                    = $group->div;
         $col[ 'class' ]         = 'col-sm-10 col-sm-offset-2';
         
-        $col->addChildNode( XS_Captcha::getInstance()->getCapchta() );
+        $col->addChildNode( \XS\Captcha::getInstance()->getCapchta() );
         
         $group                  = $form->div;
         $group[ 'class' ]       = 'form-group';
@@ -566,14 +568,14 @@ final class XS_Blog
             return NULL;
         }
         
-        $html       = new XS_Xhtml_Tag( div );
+        $html       = new \XS\XHTML\Tag( div );
         $html->h3   = $this->_lang->comments;
         
         foreach( $comments as $comment )
         {
             $panel = $html->div;
             
-            if( XS_Crypto::getInstance()->decrypt( $comment->email ) == XS_Crypto::getInstance()->decrypt( $this->_adminEmail ) )
+            if( \XS\Crypto::getInstance()->decrypt( $comment->email ) == \XS\Crypto::getInstance()->decrypt( $this->_adminEmail ) )
             {
                 $panel[ 'class' ]   = 'panel panel-info';
             }
@@ -595,7 +597,7 @@ final class XS_Blog
             $imgCol[ 'class' ]      = 'col-xs-2';
             
             $gravatar           = 'http://www.gravatar.com/avatar/'
-                                . md5( strtolower( trim( XS_Crypto::getInstance()->decrypt( $comment->email ) ) ) )
+                                . md5( strtolower( trim( \XS\Crypto::getInstance()->decrypt( $comment->email ) ) ) )
                                 . "?s=80&d=mm&r=g";
             $img                = $imgCol->img;
             $img[ 'src' ]       = $gravatar;
@@ -640,7 +642,7 @@ final class XS_Blog
             return '';
         }
         
-        $errors = new XS_Xhtml_Tag( 'div' );
+        $errors = new \XS\XHTML\Tag( 'div' );
         
         foreach( $this->_errors as $error )
         {
@@ -657,7 +659,7 @@ final class XS_Blog
             return;
         }
         
-        $error          = new XS_Xhtml_Tag( 'div' );
+        $error          = new \XS\XHTML\Tag( 'div' );
         $msg            = $error->div;
         $pre            = $error->pre;
         $msg[ 'class' ] = 'alert alert-warning';
@@ -676,7 +678,7 @@ final class XS_Blog
         }
         
         $i      = 0;
-        $list   = new XS_Xhtml_Tag( 'ul' );
+        $list   = new \XS\XHTML\Tag( 'ul' );
         
         foreach( $this->_posts as $post )
         {
@@ -698,16 +700,16 @@ final class XS_Blog
     
     public function getAtomFeed()
     {
-        $feed                = new XS_Xhtml_Tag( 'feed' );
+        $feed                = new \XS\XHTML\Tag( 'feed' );
         $feed[ 'xmlns' ]    = 'http://www.w3.org/2005/Atom';
         $feed->title        = 'XS-Labs';
         $feed->subtitle     = 'XS-Labs Blog';
-        $feed->id           = 'urn:uuid:' . ( string )( new XS_UUID( 'XS-Labs Blog' ) );
+        $feed->id           = 'urn:uuid:' . ( string )( new \XS\UUID( 'XS-Labs Blog' ) );
         $link1              = $feed->link;
         $link1[ 'href' ]    = 'http://' . $_SERVER[ 'HTTP_HOST' ] . '/feed/atom.php';
         $link1[ 'rel' ]     = self;
         $link2              = $feed->link;
-        $link2[ 'href' ]    = 'http://' . $_SERVER[ 'HTTP_HOST' ] . XS_Menu::getInstance()->getPageURL( 'blog' );
+        $link2[ 'href' ]    = 'http://' . $_SERVER[ 'HTTP_HOST' ] . \XS\Menu::getInstance()->getPageURL( 'blog' );
         
         if( count( $this->_posts ) > 0 && isset( $this->_posts->post[ 0 ]->date ) && isset( $this->_posts->post[ 0 ]->time ) )
         {
@@ -754,7 +756,7 @@ final class XS_Blog
             $link2[ 'href' ]        = 'http://' . $_SERVER[ 'HTTP_HOST' ] . $this->_getPostUrl( $post );
             $link2[ 'rel' ]         = 'alternate';
             $link2[ 'type' ]        = 'text/html';
-            $entry->id              = 'urn:uuid:' . ( string )( new XS_UUID( $post->date . '-' . $post->name ) );
+            $entry->id              = 'urn:uuid:' . ( string )( new \XS\UUID( $post->date . '-' . $post->name ) );
             $entry->updated         = ( new DateTime( $post->date . ' ' . $post->time ) )->format( DateTime::ATOM );
             $summary                = $entry->summary;
             $summary[ 'type' ]      = 'html';
@@ -781,16 +783,16 @@ final class XS_Blog
     
     public function getRssFeed()
     {
-        $rss                    = new XS_Xhtml_Tag( 'rss' );
+        $rss                    = new \XS\XHTML\Tag( 'rss' );
         $rss[ 'version' ]       = '2.0';
         $rss[ 'xmlns:atom' ]    = 'http://www.w3.org/2005/Atom';
         $channel                = $rss->channel;
         $channel->title         = 'XS-Labs';
         $channel->description   = 'XS-Labs Blog';
         $channel->ttl           = '1800';
-        $channel->link          = 'http://' . $_SERVER[ 'HTTP_HOST' ] . XS_Menu::getInstance()->getPageURL( 'blog' );
+        $channel->link          = 'http://' . $_SERVER[ 'HTTP_HOST' ] . \XS\Menu::getInstance()->getPageURL( 'blog' );
         
-        $atomLink           = new XS_Xhtml_Tag( 'atom:link' );
+        $atomLink           = new \XS\XHTML\Tag( 'atom:link' );
         $atomLink[ 'href' ] = 'http://' . $_SERVER[ 'HTTP_HOST' ] . '/feed/rss.php';
         $atomLink[ 'rel' ]  = 'self';
         $atomLink[ 'type' ] = 'application/rss+xml';
@@ -843,7 +845,7 @@ final class XS_Blog
             $item->pubDate          = ( new DateTime( $post->date . ' ' . $post->time ) )->format( DateTime::RSS );
             $item->link             = 'http://' . $_SERVER[ 'HTTP_HOST' ] . $this->_getPostUrl( $post );
             
-            $guid->addTextData( ( string )( new XS_UUID( $post->date . '-' . $post->name ) ) );
+            $guid->addTextData( ( string )( new \XS\UUID( $post->date . '-' . $post->name ) ) );
         }
         
         return '<?xml version="1.0" encoding="utf-8"?>' . chr( 10 ) . ( string )$rss->asXml();
@@ -855,7 +857,7 @@ final class XS_Blog
         $emails     = array();
         $path       = __ROOTDIR__ . DIRECTORY_SEPARATOR . 'blog' . DIRECTORY_SEPARATOR . 'comments.xml';
         
-        if( XS_Session::getInstance()->getData( 'xs-comment-time' ) === false )
+        if( \XS\Session::getInstance()->getData( 'xs-comment-time' ) === false )
         {
             return;
         }
@@ -880,13 +882,13 @@ final class XS_Blog
             return;
         }
         
-        if( intval( XS_Session::getInstance()->getData( 'xs-comment-time' ) ) + 2 > time() )
+        if( intval( \XS\Session::getInstance()->getData( 'xs-comment-time' ) ) + 2 > time() )
         {
             $this->_commentError = true;
             return;
         }
         
-        if( XS_Captcha::getInstance()->verifyCaptcha() === false )
+        if( \XS\Captcha::getInstance()->verifyCaptcha() === false )
         {
             $this->_commentError = true;
             return;
@@ -957,9 +959,9 @@ final class XS_Blog
             
             if( $post->date . '/' . $post->name == $comment->post )
             {
-                $email = XS_Crypto::getInstance()->decrypt( $comment->email );
+                $email = \XS\Crypto::getInstance()->decrypt( $comment->email );
                 
-                if( $email == XS_Crypto::getInstance()->decrypt( $this->_adminEmail ) )
+                if( $email == \XS\Crypto::getInstance()->decrypt( $this->_adminEmail ) )
                 {
                     continue;
                 }
@@ -975,7 +977,7 @@ final class XS_Blog
         $writer->endElement();
         
         $writer->startElement( 'email' );
-        $writer->writeCData( XS_Crypto::getInstance()->crypt( $_POST[ 'xs_comment_email' ] ) );
+        $writer->writeCData( \XS\Crypto::getInstance()->crypt( $_POST[ 'xs_comment_email' ] ) );
         $writer->endElement();
         
         $writer->startElement( 'date' );
@@ -1007,12 +1009,12 @@ final class XS_Blog
         
         foreach( $emails as $email )
         {
-            $mail = new XS_Mail
+            $mail = new \XS\Mail
             (
                 '',
                 $this->_lang->mailSubject,
                 trim( $message ),
-                XS_Crypto::getInstance()->decrypt( $this->_adminEmail )
+                \XS\Crypto::getInstance()->decrypt( $this->_adminEmail )
             );
             
             if( $email == $_POST[ 'xs_comment_email' ] )
@@ -1036,12 +1038,12 @@ final class XS_Blog
             $message
         );
         
-        $mail = new XS_Mail
+        $mail = new \XS\Mail
         (
-            XS_Crypto::getInstance()->decrypt( $this->_adminEmail ),
+            \XS\Crypto::getInstance()->decrypt( $this->_adminEmail ),
             $this->_lang->mailSubject,
             trim( $message ),
-            XS_Crypto::getInstance()->decrypt( $this->_adminEmail )
+            \XS\Crypto::getInstance()->decrypt( $this->_adminEmail )
         );
         
         $mail->send();

@@ -3,11 +3,11 @@
 </div>
 <p>
     CoreFoundation++ source code is freely available ont <a href="https://github.com/macmade/CFPP">GitHub</a>.<br />
-    Follow the instructions in the <?php print XS_Menu::getInstance()->getPageLink( '/projects/cfpp/documentation', 'documentation' ); ?> to build and use it.
+    Follow the instructions in the <?php print \XS\Menu::getInstance()->getPageLink( '/projects/cfpp/documentation', 'documentation' ); ?> to build and use it.
 </p>
 <h3 class="clearer">Latest commits</h3>
 <?php
-    $GIT = new XS_GitHub_Repository( 'macmade', 'CFPP' );
+    $GIT = new \XS\GitHub\Repository( 'macmade', 'CFPP' );
     
     print $GIT->commits();
 ?>

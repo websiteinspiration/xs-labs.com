@@ -31,7 +31,9 @@
 
 # $Id$
 
-class XS_Language_File_Exception extends XS_Exception_Base
+namespace XS\Language\File;
+
+class Exception extends \XS\Exception\Base
 {
     const EXCEPTION_NO_LANGUAGE_FILE = 0x01;
 }

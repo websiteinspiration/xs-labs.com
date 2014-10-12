@@ -31,7 +31,9 @@
 
 # $Id$
 
-class XS_Layout_Exception extends XS_Exception_Base
+namespace XS\Layout;
+
+class Exception extends \XS\Exception\Base
 {
     const EXCEPTION_NO_INCLUDE_FILE           = 0x01;
     const EXCEPTION_INCLUDE_FILE_NOT_READABLE = 0x02;

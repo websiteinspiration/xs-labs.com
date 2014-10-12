@@ -31,7 +31,9 @@
 
 # $Id$
 
-final class XS_ClassManager
+namespace XS;
+
+final class ClassManager
 {
     private static $_instance = NULL;
     private $_loadedClasses   = array();
@@ -90,9 +92,9 @@ final class XS_ClassManager
             $instance = self::getInstance();
         }
         
-        if( substr( $className, 0, 3 ) === 'XS_' )
+        if( substr( $className, 0, 3 ) === 'XS\\' )
         {
-            $rootPkg = substr( $className, 3, strpos( $className, '_', 3 ) - 3 );
+            $rootPkg = substr( $className, 3, strpos( $className, '\\', 3 ) - 3 );
             
             if( isset( $instance->_packages[ $rootPkg ] ) || isset( $instance->_packages[ substr( $className, 3 ) . '.class.php' ] ) )
             {

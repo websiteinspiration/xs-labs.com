@@ -31,7 +31,9 @@
 
 # $Id$
 
-final class XS_Captcha
+namespace XS;
+
+final class Captcha
 {
     const RECAPTCHA_API_SERVER          = 'http://www.google.com/recaptcha/api';
     const RECAPTCHA_API_SECURE_SERVER   = 'https://www.google.com/recaptcha/api';
@@ -68,7 +70,7 @@ final class XS_Captcha
     
     public function getCapchta()
     {
-        $div            = new XS_Xhtml_Tag( 'div' );
+        $div            = new \XS\XHTML\Tag( 'div' );
         $div[ 'class' ] = 'xs-captcha';
         
         if( empty( $this->_publicKey ) )

@@ -31,7 +31,9 @@
 
 # $Id$
 
-class XS_Twitter_Feed
+namespace XS\Twitter;
+
+class Feed
 {
     const CACHE_FILE       = 'tmp/twitter-cache.xml';
     const CACHE_TTL        = 3600;
@@ -49,7 +51,7 @@ class XS_Twitter_Feed
     
     public function __construct( $screenName, $limit = 10 )
     {
-        $this->_lang       = XS_Language_File::getInstance( __CLASS__ );
+        $this->_lang       = \XS\Language\File::getInstance( __CLASS__ );
         $this->_screenName = ( string )$screenName;
         $this->_limit      = ( int )$limit;
         
@@ -76,13 +78,13 @@ class XS_Twitter_Feed
     {
         if( $this->_error === true ) {
             
-            $link             = new XS_Xhtml_Tag( 'a' );
-            $link[ 'href' ]   = 'http://' . self::TWITTER_HOST . '/' . $this->_screenName;
+            $link             = new \XS\XHTML\Tag( 'a' );
+            $link[ 'href' ]   = 'https://twitter.com/' . $this->_screenName;
             $link[ 'title' ]  = $this->_lang->twitter . ': ' . $this->_screenName;
             
             $link->addTextData( $link[ 'href' ] );
             
-            $error            = new XS_Xhtml_Tag( 'div' );
+            $error            = new \XS\XHTML\Tag( 'div' );
             $error[ 'class' ] = 'tweet-error';
             $error->div       = sprintf( $this->_lang->notAvailable, $this->_screenName );
             $error->div       = sprintf( $this->_lang->tryLater, $this->_screenName ) . '<br />' . $link;
@@ -92,7 +94,7 @@ class XS_Twitter_Feed
         }
         
         $i       = 0;
-        $content = new XS_Xhtml_Tag( 'div' );
+        $content = new \XS\XHTML\Tag( 'div' );
         
         foreach( $this->_xml as $status ) {
             
@@ -135,7 +137,7 @@ class XS_Twitter_Feed
     
     protected function _replaceLinks( array $matches )
     {
-        $link            = new XS_Xhtml_Tag( 'a' );
+        $link            = new \XS\XHTML\Tag( 'a' );
         $link[ 'href' ]  = $matches[ 0 ];
         $link[ 'title' ] = $matches[ 0 ];
         
@@ -146,7 +148,7 @@ class XS_Twitter_Feed
     
     protected function _replaceTwitterNames( array $matches )
     {
-        $link            = new XS_Xhtml_Tag( 'a' );
+        $link            = new \XS\XHTML\Tag( 'a' );
         $link[ 'href' ]  = 'http://' . self::TWITTER_HOST . '/' . $matches[ 1 ];
         $link[ 'title' ] = $this->_lang->twitter . ': ' . $matches[ 1 ];
         
@@ -157,7 +159,7 @@ class XS_Twitter_Feed
     
     protected function _replaceTwitterTags( array $matches )
     {
-        $link            = new XS_Xhtml_Tag( 'a' );
+        $link            = new \XS\XHTML\Tag( 'a' );
         $link[ 'href' ]  = 'http://' . self::TWITTER_HOST . '/search?q=%23' . $matches[ 1 ];
         $link[ 'title' ] = $this->_lang->twitter . ': ' . $matches[ 1 ];
         
@@ -174,16 +176,16 @@ class XS_Twitter_Feed
         
         if( !file_exists( $cache ) && !is_writable( $cacheDir ) ) {
             
-            throw new XS_Twitter_Feed_Exception(
+            throw new \XS\Twitter\Feed\Exception(
                 'The cache directory is not writeable (path: ' . $cacheDir . ')',
-                XS_Twitter_Feed_Exception::EXCEPTION_CACHE_DIR_NOT_WRITEABLE
+                \XS\Twitter\Feed\Exception::EXCEPTION_CACHE_DIR_NOT_WRITEABLE
             );
             
         } elseif( file_exists( $cache ) && !is_writable( $cache ) ) {
             
-            throw new XS_Twitter_Feed_Exception(
+            throw new \XS\Twitter\Feed\Exception(
                 'The cache file is not writeable (path: ' . $cache . ')',
-                XS_Twitter_Feed_Exception::EXCEPTION_CACHE_FILE_NOT_WRITEABLE
+                \XS\Twitter\Feed\Exception::EXCEPTION_CACHE_FILE_NOT_WRITEABLE
             );
         }
         

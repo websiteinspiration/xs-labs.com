@@ -11,7 +11,7 @@
 <div class="clearer"></div>
 <h3>About XEOS</h3>
 <p>
-    <?php print XS_MENU::getInstance()->getPageLink( "/projects/xeos/", "XEOS" ); ?> is an experimental 32/64 bits Operating System for x86 platforms, written from scratch in Assembly and C, including a C99 Standard Library, and aiming at POSIX/SUS2 compatibility.
+    <?php print \XS\MENU::getInstance()->getPageLink( "/projects/xeos/", "XEOS" ); ?> is an experimental 32/64 bits Operating System for x86 platforms, written from scratch in Assembly and C, including a C99 Standard Library, and aiming at POSIX/SUS2 compatibility.
 </p>
 <h3>Supported OS</h3>
 <p>
@@ -91,7 +91,7 @@
             </div>
             <div class="panel-body">
                 <p>
-                    While the purpose of XSFoundation is to be used in the <?php print XS_MENU::getInstance()->getPageLink( "/projects/xeos/", "XEOS Operating System" ); ?>, it can be used as a standalone, cross-platform library. Mac OS X, Linux, Unix and Windows are currently fully supported.
+                    While the purpose of XSFoundation is to be used in the <?php print \XS\MENU::getInstance()->getPageLink( "/projects/xeos/", "XEOS Operating System" ); ?>, it can be used as a standalone, cross-platform library. Mac OS X, Linux, Unix and Windows are currently fully supported.
                  </p>
             </div>
         </div>

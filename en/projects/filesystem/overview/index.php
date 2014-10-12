@@ -20,9 +20,9 @@
 <p>
     FileSystem used to be available on the AppStore.<br />
     Unfortunately, after a few years of availability, Apple decided to <a href="http://www.noxeos.com/2012/05/27/apple-kills-filesystem-app/">remove it</a>.<br />
-    The complete source code is now <?php print XS_Menu::getInstance()->getPageLink( '/projects/filesystem/download/', "available freely" ); ?>.
+    The complete source code is now <?php print \XS\Menu::getInstance()->getPageLink( '/projects/filesystem/download/', "available freely" ); ?>.
 </p>
 <h2>License</h2>
 <p>
-    FileSystem source code is released under the terms of the <?php print XS_Menu::getInstance()->getPageLink( '/licenses/bsd/', "BSD license" ); ?>.
+    FileSystem source code is released under the terms of the <?php print \XS\Menu::getInstance()->getPageLink( '/licenses/bsd/', "BSD license" ); ?>.
 </p>

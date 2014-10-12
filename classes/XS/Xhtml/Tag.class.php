@@ -31,7 +31,9 @@
 
 # $Id$
 
-class XS_Xhtml_Tag implements ArrayAccess, Iterator
+namespace XS\XHTML;
+
+class Tag implements ArrayAccess, Iterator
 {
     protected static $_formattedOutput = true;
     protected static $_hasStatic       = false;
@@ -189,7 +191,7 @@ class XS_Xhtml_Tag implements ArrayAccess, Iterator
             $this->_childrenCountByName[ '<!--' ] = 0;
         }
         
-        $comment             = new XS_Xhtml_Comment( $text );
+        $comment             = new \XS\XHTML\Comment( $text );
         $comment->_parents[] = $this;
         
         $this->_children[]                = $comment;
@@ -284,7 +286,7 @@ class XS_Xhtml_Tag implements ArrayAccess, Iterator
         return $tag;
     }
     
-    public function addChildNode( XS_Xhtml_Tag $child )
+    public function addChildNode( \XS\XHTML\Tag $child )
     {
         if( !isset( self::$_emptyTags[ $this->_tagName ] ) ) {
             

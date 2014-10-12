@@ -31,7 +31,9 @@
 
 # $Id$
 
-final class XS_Layout
+namespace XS;
+
+final class Layout
 {
     private static $_instance = NULL;
     private $_header          = '';
@@ -61,17 +63,17 @@ final class XS_Layout
     {
         if( !file_exists( $path ) ) {
             
-            throw new XS_Layout_Exception(
+            throw new \XS\Layout\Exception(
                 'The requested include file does not exist (path: ' . $path . ')',
-                XS_Layout_Exception::EXCEPTION_NO_INCLUDE_FILE
+                \XS\Layout\Exception::EXCEPTION_NO_INCLUDE_FILE
             );
         }
         
         if( !is_readable( $path ) ) {
             
-            throw new XS_Layout_Exception(
+            throw new \XS\Layout\Exception(
                 'The requested include file is not readable (path: ' . $path . ')',
-                XS_Layout_Exception::EXCEPTION_INCLUDE_FILE_NOT_READABLE
+                \XS\Layout\Exception::EXCEPTION_INCLUDE_FILE_NOT_READABLE
             );
         }
         

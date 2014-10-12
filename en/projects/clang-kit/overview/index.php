@@ -25,5 +25,5 @@
 </p>
 <h3>License</h3>
 <p>
-    ClangKit is published under the terms of the <?php print XS_Menu::getInstance()->getPageLink( "/licenses/boost/", "BOOST license" ); ?>.
+    ClangKit is published under the terms of the <?php print \XS\Menu::getInstance()->getPageLink( "/licenses/boost/", "BOOST license" ); ?>.
 </p>

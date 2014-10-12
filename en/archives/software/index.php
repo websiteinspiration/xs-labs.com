@@ -6,7 +6,7 @@
     Most of them were actually released under the <a href="http://www.eosgarden.com/en/opensource/">eosgarden</a> identity, and are listed here for archive purpose.
 </p>
 <p>
-    Please take a look at the <?php print XS_Menu::getInstance()->getPageLink( '/projects', 'projects page' ); ?> to see the list of the active OpenSource projects by XS-Labs.
+    Please take a look at the <?php print \XS\Menu::getInstance()->getPageLink( '/projects', 'projects page' ); ?> to see the list of the active OpenSource projects by XS-Labs.
 </p>
 <div class="clearer"></div>
 <hr />

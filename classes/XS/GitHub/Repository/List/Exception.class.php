@@ -31,7 +31,9 @@
 
 # $Id$
 
-class XS_GitHub_Repository_List_Exception extends XS_Exception_Base
+namespace XS\GitHub\Repository\List;
+
+class Exception extends \XS\Exception\Base
 {
     const EXCEPTION_CACHE_DIR_NOT_WRITEABLE  = 0x01;
     const EXCEPTION_CACHE_FILE_NOT_WRITEABLE = 0x02;

@@ -33,7 +33,7 @@
 
 if( ( double )PHP_VERSION >= 5 )
 {
-    #error_reporting( E_ALL | E_STRICT );
+    error_reporting( E_ALL | E_STRICT );
 }
 else
 {
@@ -62,10 +62,10 @@ date_default_timezone_set( 'Europe/Zurich' );
 
 require_once( __ROOTDIR__ . DIRECTORY_SEPARATOR . 'classes' . DIRECTORY_SEPARATOR . 'XS' . DIRECTORY_SEPARATOR . 'ClassManager.class.php' );
 
-spl_autoload_register( array( 'XS_ClassManager', 'autoLoad' ) );
+spl_autoload_register( array( '\XS\ClassManager', 'autoLoad' ) );
 set_include_path( __ROOTDIR__ . DIRECTORY_SEPARATOR . 'classes' . DIRECTORY_SEPARATOR );
 
-$LAYOUT = XS_Layout::getInstance();
+$LAYOUT = \XS\Layout::getInstance();
 
 $LAYOUT->setHeader( 'header.inc.php' );
 $LAYOUT->setFooter( 'footer.inc.php' );

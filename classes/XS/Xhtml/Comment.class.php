@@ -31,7 +31,9 @@
 
 # $Id$
 
-class XS_Xhtml_Comment extends XS_Xhtml_Tag implements ArrayAccess
+namespace XS\XHTML;
+
+class Comment extends \XS\XHTML\Tag implements ArrayAccess
 {
     protected $_comment = '';
     

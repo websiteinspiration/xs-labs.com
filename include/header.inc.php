@@ -29,7 +29,7 @@ if( isset( $_SERVER[ 'HTTP_USER_AGENT' ] ) && ( strpos( $_SERVER[ 'HTTP_USER_AGE
 }
 ?>
 <!DOCTYPE html>
-<html lang="<?php print XS_Menu::getInstance()->getLanguage(); ?>">
+<html lang="<?php print \XS\Menu::getInstance()->getLanguage(); ?>">
 <head>
     <!--
 
@@ -45,11 +45,11 @@ if( isset( $_SERVER[ 'HTTP_USER_AGENT' ] ) && ( strpos( $_SERVER[ 'HTTP_USER_AGE
     -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title><?php print XS_Menu::getInstance()->getRootLine(); ?></title>
+    <title><?php print \XS\Menu::getInstance()->getRootLine(); ?></title>
     <link rel="stylesheet" href="/css/styles.php" type="text/css" media="all" />
     <meta name="author" content="XS-Labs" />
-    <meta name="description" content="<?php print XS_Menu::getInstance()->getDescription(); ?>" />
-    <meta name="keywords" content="<?php print XS_Menu::getInstance()->getKeywords(); ?>" />
+    <meta name="description" content="<?php print \XS\Menu::getInstance()->getDescription(); ?>" />
+    <meta name="keywords" content="<?php print \XS\Menu::getInstance()->getKeywords(); ?>" />
     <meta name="rating" content="General" />
     <meta name="robots" content="all" />
     <meta name="generator" content="BBEdit 10.5" />
@@ -123,7 +123,7 @@ if( isset( $_SERVER[ 'HTTP_USER_AGENT' ] ) && ( strpos( $_SERVER[ 'HTTP_USER_AGE
                 <div class="navbar-collapse collapse" id="navbar">
                     <ul class="nav navbar-nav">
                     <?php
-                        $MENU = XS_Menu::getInstance()->getMenuLevel( 1 );
+                        $MENU = \XS\Menu::getInstance()->getMenuLevel( 1 );
                         
                         foreach( $MENU as $ITEM )
                         {
@@ -146,14 +146,14 @@ if( isset( $_SERVER[ 'HTTP_USER_AGENT' ] ) && ( strpos( $_SERVER[ 'HTTP_USER_AGE
             <ol class="carousel-indicators"></ol>
             <div class="carousel-inner">
                 <div class="item active">
-                    <?php print XS_Menu::getInstance()->getPageImage() . chr( 10 ); ?>
+                    <?php print \XS\Menu::getInstance()->getPageImage() . chr( 10 ); ?>
                     <div class="container">
                         <div class="carousel-caption">
                             <div class="hidden-xs">
-                                <?php print XS_Menu::getInstance()->getPageTitleHeader( false, 2 ); ?>
+                                <?php print \XS\Menu::getInstance()->getPageTitleHeader( false, 2 ); ?>
                             </div>
                             <div class="visible-xs-block">
-                                <?php print XS_Menu::getInstance()->getPageTitleHeader( false, 2 ); ?>
+                                <?php print \XS\Menu::getInstance()->getPageTitleHeader( false, 2 ); ?>
                             </div>
                         </div>
                     </div>
@@ -163,11 +163,11 @@ if( isset( $_SERVER[ 'HTTP_USER_AGENT' ] ) && ( strpos( $_SERVER[ 'HTTP_USER_AGE
     </div>
     <div class="container">
         <?php
-            print XS_Menu::getInstance()->getRootlineMenu() . chr( 10 );
+            print \XS\Menu::getInstance()->getRootlineMenu() . chr( 10 );
         ?>
         <?php
-            $MENU       = XS_Menu::getInstance()->getMenuLevel( 3 );
-            $SUB        = XS_Menu::getInstance()->getPageSubtitle();
+            $MENU       = \XS\Menu::getInstance()->getMenuLevel( 3 );
+            $SUB        = \XS\Menu::getInstance()->getPageSubtitle();
             $HAS_SUB    = strlen( $SUB ) > 0;
             $HAS_MENU   = ( $MENU != NULL && $MENU->isEmpty() == false );
             
@@ -184,7 +184,7 @@ if( isset( $_SERVER[ 'HTTP_USER_AGENT' ] ) && ( strpos( $_SERVER[ 'HTTP_USER_AGE
             <?php
                 }
                 
-                print XS_Menu::getInstance()->getPageSubtitleHeader() . chr( 10 );
+                print \XS\Menu::getInstance()->getPageSubtitleHeader() . chr( 10 );
                 
                 if( $HAS_SUB && $HAS_MENU )
                 {

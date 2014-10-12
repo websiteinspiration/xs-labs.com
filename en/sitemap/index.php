@@ -1,3 +1,3 @@
 <?php
     
-    print new XS_SiteMap();
+    print new \XS\SiteMap();

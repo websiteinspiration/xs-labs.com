@@ -31,7 +31,9 @@
 
 # $Id$
 
-final class XS_Singleton_Exception extends XS_Exception_Base
+namespace XS\Singleton;
+
+final class Exception extends \XS\Exception\Base
 {
     const EXCEPTION_CLONE = 0x01;
 }

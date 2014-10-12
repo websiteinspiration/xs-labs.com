@@ -31,7 +31,9 @@
 
 # $Id$
 
-final class XS_Debug
+namespace XS;
+
+final class Debug
 {
     protected static $_stack = array();
     
@@ -86,7 +88,7 @@ final class XS_Debug
     {
         $commonStyle          = 'font-family: Verdana, sans-serif; font-size: 10px; color: #898989; ';
         
-        $container            = new XS_Xhtml_Tag( 'div' );
+        $container            = new \XS\XHTML\Tag( 'div' );
         $container[ 'style' ] = $commonStyle;
         
         $container->comment( 'PHP array debug  - start' );
@@ -145,7 +147,7 @@ final class XS_Debug
     {
         $commonStyle          = 'font-family: Verdana, sans-serif; font-size: 10px; color: #898989; ';
         
-        $container            = new XS_Xhtml_Tag( 'div' );
+        $container            = new \XS\XHTML\Tag( 'div' );
         $container[ 'style' ] = $commonStyle . 'background-color: #EDF5FA; border: solid 1px #D3E7F4; margin: 2px; padding: 2px;';
         
         $container->comment( 'PHP variable debug  - start' );

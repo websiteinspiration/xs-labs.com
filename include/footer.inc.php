@@ -9,7 +9,7 @@
                             <h3>Latest blog posts</h3>
                         </div>
                         <div class="panel-body">
-                            <?php print ( string )XS_Blog::getInstance()->getLatestPosts(); ?>
+                            <?php print ( string )\XS\Blog::getInstance()->getLatestPosts(); ?>
                         </div>
                     </div>
                 </div>
@@ -19,7 +19,7 @@
                             <h3>Latest tweets</h3>
                         </div>
                         <div class="panel-body">
-                            <?php print ( string )new XS_Twitter_Feed( 'macmade' ); ?>
+                            <?php print ( string )new \XS\Twitter\Feed( 'macmade' ); ?>
                         </div>
                     </div>
                 </div>
@@ -30,9 +30,9 @@
                 </div>
                 <div class="col-sm-6">
                     <ul class="list-inline pull-right">
-                        <li><?php print XS_Menu::getInstance()->getPageLink( '/sitemap/' ); ?></li>
-                        <li><?php print XS_Menu::getInstance()->getPageLink( '/legal/privacy/' ); ?></li>
-                        <li><?php print XS_Menu::getInstance()->getPageLink( '/legal/credits/' ); ?></li>
+                        <li><?php print \XS\Menu::getInstance()->getPageLink( '/sitemap/' ); ?></li>
+                        <li><?php print \XS\Menu::getInstance()->getPageLink( '/legal/privacy/' ); ?></li>
+                        <li><?php print \XS\Menu::getInstance()->getPageLink( '/legal/credits/' ); ?></li>
                     </ul>
                 </div>
             </div>

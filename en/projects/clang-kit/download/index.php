@@ -3,11 +3,11 @@
 </div>
 <p>
     ClangKit source code is freely available ont <a href="https://github.com/macmade/ClangKit">GitHub</a>.<br />
-    Follow the instructions in the <?php print XS_Menu::getInstance()->getPageLink( '/projects/clang-kit/documentation', 'documentation' ); ?> to build and use it.
+    Follow the instructions in the <?php print \XS\Menu::getInstance()->getPageLink( '/projects/clang-kit/documentation', 'documentation' ); ?> to build and use it.
 </p>
 <h3 class="clearer">Latest commits</h3>
 <?php
-    $GIT = new XS_GitHub_Repository( 'macmade', 'ClangKit' );
+    $GIT = new \XS\GitHub\Repository( 'macmade', 'ClangKit' );
     
     print $GIT->commits();
 ?>

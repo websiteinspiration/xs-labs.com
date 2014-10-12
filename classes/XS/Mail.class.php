@@ -31,7 +31,9 @@
 
 # $Id$
 
-class XS_Mail
+namespace XS;
+
+class Mail
 {
     protected $_parts   = array();
     protected $_to      = '';

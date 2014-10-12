@@ -37,4 +37,4 @@ $ROOT = str_replace( $_SERVER[ 'SCRIPT_NAME' ], '', $_SERVER[ 'SCRIPT_FILENAME' 
 
 require_once( $ROOT . DIRECTORY_SEPARATOR . 'include' . DIRECTORY_SEPARATOR . 'init.inc.php' );
 
-print ( string )( XS_Blog::getInstance()->getAtomFeed() );
+print ( string )( \XS\Blog::getInstance()->getAtomFeed() );

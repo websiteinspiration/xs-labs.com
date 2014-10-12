@@ -8,6 +8,6 @@
 <hr />
 <div class="alert alert-info">
     <p class="text-center">
-        All previously published software have been discontinued, and I now only focus on some personal projects, like the development of the <?php print XS_Menu::getInstance()->getPageLink( '/projects/xeos', 'XEOS Operating System' ); ?>.
+        All previously published software have been discontinued, and I now only focus on some personal projects, like the development of the <?php print \XS\Menu::getInstance()->getPageLink( '/projects/xeos', 'XEOS Operating System' ); ?>.
     </p>
 </div>

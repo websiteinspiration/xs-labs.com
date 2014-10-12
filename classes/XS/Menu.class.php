@@ -31,7 +31,9 @@
 
 # $Id$
 
-final class XS_Menu
+namespace XS;
+
+final class Menu
 {
     private static $_instance   = NULL;
     private $_menu              = NULL;
@@ -70,9 +72,9 @@ final class XS_Menu
     
     public function __clone()
     {
-        throw new XS_Singleton_Exception(
+        throw new \XS\Singleton\Exception(
             'Class ' . __CLASS__ . ' cannot be cloned',
-            XS_Singleton_Exception::EXCEPTION_CLONE
+            \XS\Singleton\Exception::EXCEPTION_CLONE
         );
     }
     
@@ -143,7 +145,7 @@ final class XS_Menu
             return '';
         }
         
-        $rootline            = new XS_Xhtml_Tag( 'div' );
+        $rootline            = new \XS\XHTML\Tag( 'div' );
         $rootline[ 'class' ] = $class;
         $menu                = $this->_menu;
         $list                = $rootline->ol;
@@ -210,11 +212,11 @@ final class XS_Menu
     {
         if( !isset( $this->_pathInfos[ $level - 1 ] ) && $level > 1 ) {
             
-            return new XS_Xhtml_Comment( 'No available menu items' );
+            return new \XS\XHTML\Comment( 'No available menu items' );
         }
         
         $menu = $this->_menu;
-        $list = new XS_Xhtml_Tag( 'ul' );
+        $list = new \XS\XHTML\Tag( 'ul' );
         $path = '/' . $this->_lang . '/';
         
         $list->useFormattedOutput( false );
@@ -225,7 +227,7 @@ final class XS_Menu
             
             if( !isset( $menu->$page ) && $i > 1 ) {
                 
-                return new XS_Xhtml_Comment( 'No available menu items' );
+                return new \XS\XHTML\Comment( 'No available menu items' );
             }
             
             if( $i == $level ) {
@@ -307,7 +309,7 @@ final class XS_Menu
     
     public function getPageTitleHeader( $link = true, $lockOnLevel = 2 )
     {
-        $header = new XS_Xhtml_Tag( 'h1' );
+        $header = new \XS\XHTML\Tag( 'h1' );
         $menu   = $this->_menu;
         $path   = '/';
         
@@ -331,7 +333,7 @@ final class XS_Menu
             
                 if( !isset( $menu->$page ) ) {
                 
-                    return new XS_Xhtml_Comment( 'No available page title' );
+                    return new \XS\XHTML\Comment( 'No available page title' );
                 }
             
                 $menu  = $menu->$page;
@@ -365,7 +367,7 @@ final class XS_Menu
     
     public function getPageSubtitleHeader()
     {
-        $header     = new XS_Xhtml_Tag( 'h2' );
+        $header     = new \XS\XHTML\Tag( 'h2' );
         $menu       = $this->_menu;
         $path       = '/';
         $subtitle   = '';
@@ -378,7 +380,7 @@ final class XS_Menu
             
                 if( !isset( $menu->$page ) ) {
                 
-                    return new XS_Xhtml_Comment( 'No available page subtitle' );
+                    return new \XS\XHTML\Comment( 'No available page subtitle' );
                 }
             
                 $menu  = $menu->$page;
@@ -395,7 +397,7 @@ final class XS_Menu
         
         if( empty( $subtitle ) )
         {
-            return new XS_Xhtml_Comment( 'No available page subtitle' );
+            return new \XS\XHTML\Comment( 'No available page subtitle' );
         }
         
         $header->addTextData( $subtitle );
@@ -567,7 +569,7 @@ final class XS_Menu
         $path     = ( string )$path;
         $infos    = explode( '/', $path );
         $segments = count( $infos );
-        $link     = new XS_Xhtml_Tag( 'a' );
+        $link     = new \XS\XHTML\Tag( 'a' );
         $menu     = $this->_menu;
         $href     = '/' . $this->_lang . '/';
         
@@ -591,7 +593,7 @@ final class XS_Menu
             
                 if( !isset( $menu->$page ) ) {
                 
-                    return ( string )new XS_Xhtml_Comment( 'No available menu link (path: ' . $path . ')' );
+                    return ( string )new \XS\XHTML\Comment( 'No available menu link (path: ' . $path . ')' );
                 }
             
                 $menu  = $menu->$page;
@@ -653,7 +655,7 @@ final class XS_Menu
         $path     = ( string )$path;
         $infos    = explode( '/', $path );
         $segments = count( $infos );
-        $link     = new XS_Xhtml_Tag( 'a' );
+        $link     = new \XS\XHTML\Tag( 'a' );
         $menu     = $this->_menu;
         $href     = '/' . $this->_lang . '/';
         
@@ -675,7 +677,7 @@ final class XS_Menu
             
             if( !isset( $menu->$page ) ) {
                 
-                return new XS_Xhtml_Comment( 'No available menu link (path: ' . $path . ')' );
+                return new \XS\XHTML\Comment( 'No available menu link (path: ' . $path . ')' );
                 
             }
             
@@ -784,7 +786,7 @@ final class XS_Menu
     
     public function getPageImage( $width = 0, $height = 0 )
     {
-        $img                = new XS_Xhtml_Tag( 'img' );
+        $img                = new \XS\XHTML\Tag( 'img' );
         $img[ 'src' ]       = $this->_menu[ 'image' ];
         $img[ 'alt' ]       = $this->getPageTitle();
         $menu               = $this->_menu;

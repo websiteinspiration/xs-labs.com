@@ -13,7 +13,7 @@
                 </dd>
                 <dt>License</dt>
                 <dd>
-                    This article is published under the terms of the <?php print  XS_Menu::getInstance()->getPageLink( '/licenses/freebsd-documentation' ); ?>
+                    This article is published under the terms of the <?php print  \XS\Menu::getInstance()->getPageLink( '/licenses/freebsd-documentation' ); ?>
                 </dd>
                 <dt>Source</dt>
                 <dd>

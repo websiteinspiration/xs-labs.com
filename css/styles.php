@@ -15,7 +15,7 @@ require_once
   . 'Minifier.class.php'
 );
 
-$css = new XS_Css_Minifier();
+$css = new \XS\CSS\Minifier();
 
 $css->setBaseDirectory( dirname( __FILE__ ) );
 

@@ -1,1 +1,1 @@
-<?php XS_Menu::getInstance()->redirectOnFirstSubpage(); ?>
+<?php \XS\Menu::getInstance()->redirectOnFirstSubpage(); ?>

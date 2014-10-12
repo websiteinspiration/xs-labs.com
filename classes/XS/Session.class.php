@@ -31,7 +31,9 @@
 
 # $Id$
 
-final class XS_Session
+namespace XS;
+
+final class Session
 {
     const SESSION_ID = 'XSLABS-SESSION';
     
@@ -43,9 +45,9 @@ final class XS_Session
     
     public function __clone()
     {
-        throw new XS_Singleton_Exception(
+        throw new \XS\Singleton\Exception(
             'Class ' . __CLASS__ . ' cannot be cloned',
-            XS_Singleton_Exception::EXCEPTION_CLONE
+            \XS\Singleton\Exception::EXCEPTION_CLONE
         );
     }
     

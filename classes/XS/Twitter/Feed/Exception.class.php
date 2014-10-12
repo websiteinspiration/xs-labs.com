@@ -31,7 +31,9 @@
 
 # $Id$
 
-class XS_Twitter_Feed_Exception extends XS_Exception_Base
+namespace XS\Twitter\Feed;
+
+class Exception extends \XS\Exception\Base
 {
     const EXCEPTION_CACHE_DIR_NOT_WRITEABLE  = 0x01;
     const EXCEPTION_CACHE_FILE_NOT_WRITEABLE = 0x02;
