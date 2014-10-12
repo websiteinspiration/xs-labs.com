@@ -10,7 +10,7 @@
 </p>
 <h3 class="clearer">Past projects</h3>
 <?php
-    print new \XS\GitHub\Repository\List
+    print new \XS\GitHub\Repository\Listing
     (
         'macmade',
         array

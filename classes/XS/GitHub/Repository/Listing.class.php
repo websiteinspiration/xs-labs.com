@@ -33,7 +33,7 @@
 
 namespace XS\GitHub\Repository;
 
-class List
+class Listing
 {
     const CACHE_FILE            = 'tmp/github-cache-%s.json';
     const CACHE_TTL             = 3600;

@@ -31,7 +31,7 @@
 
 # $Id$
 
-namespace XS\GitHub\Repository\List;
+namespace XS\GitHub\Repository\Listing;
 
 class Exception extends \XS\Exception\Base
 {
