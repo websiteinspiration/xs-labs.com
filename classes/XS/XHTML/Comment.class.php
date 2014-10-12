@@ -33,7 +33,7 @@
 
 namespace XS\XHTML;
 
-class Comment extends \XS\XHTML\Tag implements ArrayAccess
+class Comment extends \XS\XHTML\Tag implements \ArrayAccess
 {
     protected $_comment = '';
     

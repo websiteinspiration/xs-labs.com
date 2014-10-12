@@ -33,7 +33,7 @@
 
 namespace XS\XHTML;
 
-class Tag implements ArrayAccess, Iterator
+class Tag implements \ArrayAccess, \Iterator
 {
     protected static $_formattedOutput = true;
     protected static $_hasStatic       = false;
