@@ -568,7 +568,7 @@ final class Blog
             return NULL;
         }
         
-        $html       = new \XS\XHTML\Tag( div );
+        $html       = new \XS\XHTML\Tag( 'div' );
         $html->h3   = $this->_lang->comments;
         
         foreach( $comments as $comment )
