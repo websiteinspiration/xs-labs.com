@@ -1464,5 +1464,14 @@
             ]]></content>
         <post><![CDATA[2013/08/06/optimising-memset]]></post>
     </comment>
-</comments>
+    <comment>
+        <author><![CDATA[dmigous]]></author>
+        <email><![CDATA[USDw73zkCV2hEqvJw55WZujxzwWUey6PYFHVCl742gncVAhcPp41NiuBtlu+kFJf]]></email>
+        <url><![CDATA[]]></url>
+        <date><![CDATA[2014-09-28 01:46:09]]></date>
+        <content><![CDATA[>>> A function (or method) can have multiple implementations, as long as there is a difference in the return type and/or the arguments.
 
+C++ doesn't allow to overload function by return type]]></content>
+        <post><![CDATA[2012/01/16/mixing-cpp-objective-c]]></post>
+    </comment>
+</comments>
