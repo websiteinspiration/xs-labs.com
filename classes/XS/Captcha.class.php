@@ -55,7 +55,11 @@ final class Captcha
     
     private function __construct()
     {
-        
+        \XS\Layout::getInstance()->addHeaderPart
+        (
+            __CLASS__,
+            '<script src="https://www.google.com/recaptcha/api.js" type="text/javascript"></script>'
+        );
     }
     
     public function __clone()
@@ -78,41 +82,9 @@ final class Captcha
             return $div;
         }
         
-        $options    = $div->script;
-        $script     = $div->script;
-        $noscript   = $div->noscript;
-        $iframe     = $noscript->iframe;
-        
-        $noscript->br;
-        
-        $textarea   = $noscript->textarea;
-        
-        $noscript->br;
-        
-        $input      = $noscript->input;
-        
-        $options[ 'type' ]  = 'text/javascript';
-        
-        $options->addTextData
-        (
-            'var RecaptchaOptions = { theme : \'clean\' }'
-        );
-        
-        $script[ 'type' ]   = 'text/javascript';
-        $script[ 'src' ]    = self::RECAPTCHA_API_SERVER . '/challenge?k=' . $this->_publicKey;
-        
-        $iframe[ 'src' ]            = self::RECAPTCHA_API_SERVER . '/noscript?k=' . $this->_publicKey;
-        $iframe[ 'width' ]          = 500;
-        $iframe[ 'height' ]         = 300;
-        $iframe[ 'frameborder' ]    = 0;
-        
-        $textarea[ 'name' ]     = 'recaptcha_challenge_field';
-        $textarea[ 'rows' ]     = 3;
-        $textarea[ 'cols' ]     = 40;
-        
-        $input[ 'type' ]    = 'hidden';
-        $input[ 'name' ]    = 'recaptcha_response_field';
-        $input[ 'value' ]   = 'manual_challenge';
+        $captcha                    = $div->div;
+        $captcha[ 'class' ]         = 'g-recaptcha';
+        $captcha[ 'data-sitekey' ]  = $this->_publicKey;
         
         return $div;
     }
@@ -124,72 +96,26 @@ final class Captcha
             return false;
         }
         
-        $response = $this->_sendHTTPPost
-        (
-            self::RECAPTCHA_VERIFY_SERVER,
-            "/recaptcha/api/verify",
-            array
-            (
-                'privatekey'    => $this->_privateKey,
-                'remoteip'      => $_SERVER[ 'REMOTE_ADDR' ],
-                'challenge'     => $_POST[ 'recaptcha_challenge_field' ],
-                'response'      => $_POST[ 'recaptcha_response_field' ]
-            )
-        );
+        $url = self::RECAPTCHA_API_SECURE_SERVER
+             . '/siteverify?secret='
+             . $this->_privateKey
+             . '&response='
+             . $_POST[ 'g-recaptcha-response' ]
+             . '&remoteip='
+             . $_SERVER[ 'REMOTE_ADDR' ];
         
-        if( !isset( $response[ 1 ] ) )
+        if( empty( $url ) )
         {
             return false;
         }
         
-        if( substr( $response[ 1 ], 0, 4 ) == 'true' )
+        $json = json_decode( file_get_contents( $url ) );
+        
+        if( !is_object( $json ) || !isset( $json->success ) )
         {
-            return true;
+            return false;
         }
         
-        return false;
-    }
-    
-    private function _encodeQueryString( $data )
-    {
-        $req = '';
-        
-        foreach( $data as $key => $value )
-        {
-            $req .= $key . '=' . urlencode( stripslashes( $value ) ) . '&';
-        }
-        
-        $req = substr( $req, 0, strlen( $req ) - 1 );
-        
-        return $req;
-    }
-    
-    private function _sendHTTPPost( $host, $path, $data, $port = 80 )
-    {
-        $req        = $this->_encodeQueryString( $data );
-        $nl         = chr( 13 ) . chr( 10 );
-        $request    = 'POST ' . $path . ' HTTP/1.0' . $nl
-                    . 'Host: ' . $host . $nl
-                    . 'Content-Type: application/x-www-form-urlencoded;' . $nl
-                    . 'Content-Length: ' . strlen( $req ) . $nl
-                    . 'User-Agent: reCAPTCHA/PHP' . $nl
-                    . $nl
-                    . $req;
-        
-        if( ( $fs = @fsockopen( $host, $port, $errno, $errstr, 10 ) ) === false )
-        {
-            return array();
-        }
-        
-        fwrite( $fs, $request );
-        
-        while( !feof( $fs ) )
-        {
-            $response .= fgets( $fs, 1160 );
-        }
-        
-        fclose( $fs );
-        
-        return explode( "\r\n\r\n", $response, 2 );
+        return $json->success == true;
     }
 }

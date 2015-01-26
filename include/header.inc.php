@@ -103,6 +103,14 @@ if( isset( $_SERVER[ 'HTTP_USER_AGENT' ] ) && ( strpos( $_SERVER[ 'HTTP_USER_AGE
         
         // ]]>
     </script>
+    <?php
+        foreach( \XS\Layout::getInstance()->getHeaderParts() as $LAYOUT_HEADER )
+        {
+            print $LAYOUT_HEADER;
+        }
+        
+        unset( $LAYOUT_HEADER );
+    ?>
     <?php endif; ?>
 </head>
 <body>

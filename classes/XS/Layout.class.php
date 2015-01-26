@@ -40,6 +40,7 @@ final class Layout
     private $_footer          = '';
     private $_disableHeader   = false;
     private $_disableFooter   = false;
+    private $_headerParts     = array();
     
     private function __construct()
     {}
@@ -138,5 +139,15 @@ final class Layout
     public function enableFooter()
     {
         $this->_disableFooter = false;
+    }
+    
+    public function getHeaderParts()
+    {
+        return $this->_headerParts;
+    }
+    
+    public function addHeaderPart( $id, $part )
+    {
+        $this->_headerParts[ $id ] = ( string )$part;
     }
 }
