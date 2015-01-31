@@ -74,7 +74,7 @@
                 To be defined
             </dd>
         </dl>
-        <h2>Resume - January 2013</h2>
+        <h2>Resume - November 2014</h2>
         <a name="resume-language"></a>
         <h3 class="project-icons project-icons-dictionary">Language</h3>
         <div class="panel panel-default">
