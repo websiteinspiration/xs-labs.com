@@ -10,21 +10,25 @@
 </div>
 <h2 style="margin-top: 0px; padding-top: 20px;  ">
     Jean-David Gadina<br />
-    <small>Research &amp; Development engineer</small>
+    <small>Software engineer</small>
 </h2>
 <div class="row">
     <div class="col-md-10">
         <h3 class="project-icons project-icons-contact-card">Personal information</h3>
         <dl class="dl-horizontal">
+            <dt>Date of birth</dt>
+            <dd>
+                05/17/82
+            </dd>
             <dt>Address</dt>
             <dd>
                 Rue Des Echelettes 4, Lausanne - Switzerland
             </dd>
-            <dt>Telephone</dt>
+            <dt>Phone</dt>
             <dd>
                 +41 (79) 944-7441 mobile
             </dd>
-            <dt>Web</dt>
+            <dt>Web/Blog</dt>
             <dd>
                 <a href="http://www.xs-labs.com/" title="eosgarden">www.xs-labs.com</a>
             </dd>
@@ -49,9 +53,25 @@
             <dd>
                 Swiss
             </dd>
-            <dt>Date of birth</dt>
+            <dt>Marital status</dt>
             <dd>
-                05/17/82
+                Single
+            </dd>
+            <dt>Children</dt>
+            <dd>
+                No
+            </dd>
+            <dt>Driving license</dt>
+            <dd>
+                No
+            </dd>
+            <dt>Preferred location</dt>
+            <dd>
+                Remote/Commutable
+            </dd>
+            <dt>Availability</dt>
+            <dd>
+                To be defined
             </dd>
         </dl>
         <h2>Resume - January 2013</h2>
