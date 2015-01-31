@@ -109,8 +109,12 @@
                         <strong>English</strong>
                     </div>
                     <div class="col-xs-2">
-                        <strong>C1</strong><br />
-                        Advanced level
+                        <strong>B2</strong><br />
+                        Independent user
+                    </div>
+                    <div class="col-xs-2">
+                        <strong>B2</strong><br />
+                        Independent user
                     </div>
                     <div class="col-xs-2">
                         <strong>C1</strong><br />
@@ -123,10 +127,6 @@
                     <div class="col-xs-2">
                         <strong>B2</strong><br />
                         Independent user
-                    </div>
-                    <div class="col-xs-2">
-                        <strong>C1</strong><br />
-                        Advanced level
                     </div>
                 </div>
                 <hr />
@@ -164,40 +164,40 @@
         <h3 class="project-icons project-icons-calendar-blue">Work experience</h3>
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h4>Research &amp; development engineer</h4>
+                <h4>Lead developer / Software engineer</h4>
             </div>
             <div class="panel-body">
                 <dl class="dl-horizontal">
                     <dt>Dates</dt>
                     <dd>
-                        2011/06 - Today
+                        2011/06 - 2015/01
                     </dd>
                     <dt>Name of employer</dt>
                     <dd>
-                        <a href="http://www.digidna.net/">DigiDNA Sàrl</a>, Geneva - Switzerland / Geraldton - Western Australia
+                        <a href="http://www.digidna.net/">DigiDNA Sàrl</a>, Geneva - Switzerland / Geraldton - Australia<br />
+                        Independent Software Development Company 
                     </dd>
                     <dt>Type of business</dt>
                     <dd>
                         Software Development (Mobile, Mac, Windows)
                     </dd>
+                    <dt>Main product</dt>
+                    <dd>
+                        <a href="http://www.imazing.com/">iMazing</a> (previously DiskAid) for Mac & Windows<br />
+                        iMazing is the ultimate iOS device manager with capabilities far beyond what iTunes offers.<br />
+                        <a href="http://www.imazing.com/">www.imazing.com</a>
+                    </dd>
                     <dt>Main activities<br />and responsibilities</dt>
                     <dd>
                         <ul>
-                            <li>
-                                Full rewrite and project lead for iOS applications (<a href="http://itunes.apple.com/us/app/fileapp-documents-files-reader/id297804694?mt=8">FileApp</a> &amp; <a href="http://itunes.apple.com/us/app/fileapp-pro/id359580470?mt=8">FileApp Pro</a>).
-                            </li>
-                            <li>
-                                Full rewrite of <a href="http://www.digidna.net/diskaid">DiskAid</a>, iPhone file transfer utility, for Mac and Windows.
-                            </li>
-                            <li>
-                                Cross-platform development.
-                            </li>
-                            <li>
-                                Applied research &amp; development on iOS and Mac OS technologies.
-                            </li>
-                            <li>
-                                Reverse engineering.
-                            </li>
+                            <li>Commercial software development within a team of 7 people, partly remote (Switzerland & Australia).</li>
+                            <li>Technical lead for iOS, Mac and Windows projects.</li>
+                            <li>Full rewrite of iOS applications (FileApp & FileApp Pro).</li>
+                            <li>Full rewrite of iMazing (previously DiskAid), iPhone management utility, for Mac and Windows.</li>
+                            <li>Cross-platform development.</li>
+                            <li>Applied research & development on iOS and Mac OS technologies.</li>
+                            <li>Reverse engineering on iOS technologies and Mac OS technologies.</li>
+                            <li>User interface design for all projects.</li>
                         </ul>
                     </dd>
                 </dl>
