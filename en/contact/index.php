@@ -174,12 +174,11 @@
                     </dd>
                     <dt>Name of employer</dt>
                     <dd>
-                        <a href="http://www.digidna.net/">DigiDNA Sàrl</a>, Geneva - Switzerland / Geraldton - Australia<br />
-                        Independent Software Development Company 
+                        <a href="http://www.digidna.net/">DigiDNA Sàrl</a>, Geneva - Switzerland / Geraldton - Australia
                     </dd>
                     <dt>Type of business</dt>
                     <dd>
-                        Software Development (Mobile, Mac, Windows)
+                        Independent Software Development Company
                     </dd>
                     <dt>Main product</dt>
                     <dd>
@@ -192,10 +191,10 @@
                         <ul>
                             <li>Commercial software development within a team of 7 people, partly remote (Switzerland & Australia).</li>
                             <li>Technical lead for iOS, Mac and Windows projects.</li>
-                            <li>Full rewrite of iOS applications (FileApp & FileApp Pro).</li>
+                            <li>Full rewrite of iOS applications (FileApp &amp; FileApp Pro).</li>
                             <li>Full rewrite of iMazing (previously DiskAid), iPhone management utility, for Mac and Windows.</li>
                             <li>Cross-platform development.</li>
-                            <li>Applied research & development on iOS and Mac OS technologies.</li>
+                            <li>Applied research &amp; development on iOS and Mac OS technologies.</li>
                             <li>Reverse engineering on iOS technologies and Mac OS technologies.</li>
                             <li>User interface design for all projects.</li>
                         </ul>
@@ -234,7 +233,7 @@
                                 Development of PHP web applications (Zend Framework, TYPO3, FLOW3).
                             </li>
                             <li>
-                                Consulting in web technologies.
+                                Consulting and auditing in IT &amp; web technologies.
                             </li>
                         </ul>
                     </dd>
@@ -257,29 +256,18 @@
                     </dd>
                     <dt>Type of business</dt>
                     <dd>
-                        IT &amp; IT Consulting
+                        IT &amp; IT Consulting / Software development
                     </dd>
                     <dt>Main activities<br />and responsibilities</dt>
                     <dd>
                         <ul>
-                            <li>
-                                Development of web applications within a team of 3 people, plus an apprentice.
-                            </li>
-                            <li>
-                                TYPO3 development and consulting for large accounts (development of custom extensions, system administration and installation, training for users and developers, software integration, etc).
-                            </li>
-                            <li>
-                                Development of a ticketing system, with online payment through YellowPay for a Swiss music festival.
-                            </li>
-                            <li>
-                                Specialized PHP and TYPO3 trainer in partnership with training companies (Digicomp, Net4All) or for private clients.
-                            </li>
-                            <li>
-                                Linux server consulting (Debian, RedHat Enterprise).
-                            </li>
-                            <li>
-                                Legal expertise for FLOSS (Free Libre &amp; OpenSource Software) projects.
-                            </li>
+                            <li>Development of commercial OS X applications (Objective-C / Cocoa) - <a href="http://www.eosgarden.com/">www.eosgarden.com</a>.</li>
+                            <li>Development of web applications within a team of 3 people, plus an apprentice.</li>
+                            <li>TYPO3 development and consulting for large accounts (development of custom extensions, system administration and installation, training for users and developers, software integration, etc).</li>
+                            <li>Development of a ticketing system, with online payment through YellowPay for a Swiss music festival.</li>
+                            <li>Specialised PHP and TYPO3 trainer in partnership with training companies or for private clients.</li>
+                            <li>Linux server consulting (Debian, RedHat Enterprise).</li>
+                            <li>Legal expertise for FLOSS (Free Libre &amp; OpenSource Software) projects.</li>
                         </ul>
                     </dd>
                 </dl>
@@ -398,9 +386,6 @@
                                 Design of several promotional posters (A0).
                             </li>
                             <li>
-                                Moderation and technical assistance on the forums and mailing lists of the French community.
-                            </li>
-                            <li>
                                 Use of the «RedHat Interchange» software for e-commerce solutions (installation. configuration, personalization, etc).
                             </li>
                         </ul>
@@ -429,33 +414,11 @@
                     <dt>Main activities<br />and responsibilities</dt>
                     <dd>
                         <ul>
-                            <li>
-                                Web development work within a team of 15 people.
-                            </li>
-                            <li>
-                                Supervision and training of the web-publishing team in charge of the weekly publication of the dimanche.ch newspaper.
-                            </li>
-                            <li>
-                                Development of a new automated production workflow: data export from QuarkXPress (XML), control and validation by XSD schemas, formatting and web publication through XSLT.
-                            </li>
-                            <li>
-                                Development of a Content Management System (CMS) for the web publishing of the newspapers.
-                            </li>
-                            <li>
-                                Development of all the websites scripts (JavaScript).
-                            </li>
-                            <li>
-                                Development of an experimental Flash player for the newspapers articles formatted in XML (Flash 3 / 4).
-                            </li>
-                            <li>
-                                Design of promotional campaigns and actions.
-                            </li>
-                            <li>
-                                Various Flash developments, including specific development for kiosk devices.
-                            </li>
-                            <li>
-                                Deep analysis of the company websites in the perspective of a complete overhaul.
-                            </li>
+                            <li>Web development work within a team of 15 people.</li>
+                            <li>Supervision and training of the publishing team in charge of the weekly publication of the newspapers.</li>
+                            <li>Development of a new automated production workflow: data export from QuarkXPress (XML), control and validation by XSD schemas, formatting and web publication through XSLT.</li>
+                            <li>Development of a Content Management System (CMS) for the web publishing of the newspapers.</li>
+                            <li>Various Flash developments, including specific development for kiosk devices.</li>
                         </ul>
                     </dd>
                 </dl>
