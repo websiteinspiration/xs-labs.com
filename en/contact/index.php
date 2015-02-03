@@ -522,23 +522,18 @@
                             </dd>
                             <dt>Experience</dt>
                             <dd>
-                                6 years
+                                8 years
                             </dd>
                             <dt>Informations</dt>
                             <dd>
                                 <ul>
-                                    <li>
-                                        Development of Mac OS X applications, using the Core Foundation and Cocoa frameworks.
-                                    </li>
-                                    <li>
-                                        Development of iPhone and iPad applications, using the CocoaTouch framework.
-                                    </li>
-                                    <li>
-                                        Integration of several libraries (C and C++).
-                                    </li>
-                                    <li>
-                                        Excellent knowledge of the Objective-C runtime.
-                                    </li>
+                                    <li>Development of Mac OS X applications, using the Core Foundation and Cocoa frameworks.</li>
+                                    <li>Development of iPhone and iPad applications, using the CocoaTouch framework.</li>
+                                    <li>Development of several libraries and frameworks.</li>
+                                    <li>Excellent knowledge of Objective-C related technologies and frameworks (MRC/ARC, GCD, XPC, Core Services, IOKit, Core Data, Core Graphics, etc).</li>
+                                    <li>Integration of several libraries (C and C++).</li>
+                                    <li>Excellent knowledge of the Objective-C runtime.</li>
+                                    <li>Good knowledge of the XCTest unit testing framework.</li>
                                 </ul>
                             </dd>
                         </dl>
@@ -548,7 +543,7 @@
             <div class="col-sm-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4>C - ANSI/ISO99</h4>
+                        <h4>C - ANSI/C99/C11</h4>
                     </div>
                     <div class="panel-body">
                         <dl class="dl-horizontal">
@@ -558,23 +553,17 @@
                             </dd>
                             <dt>Experience</dt>
                             <dd>
-                                6 years
+                                8 years
                             </dd>
                             <dt>Informations</dt>
                             <dd>
                                 <ul>
-                                    <li>
-                                        Development of command-line application and libraries on Mac OS X, Linux and Windows.
-                                    </li>
-                                    <li>
-                                        Development of a memory allocation debug library.
-                                    </li>
-                                    <li>
-                                        Development of a Standard C Library (C99) for a home-made Operating System.
-                                    </li>
-                                    <li>
-                                        In-depth study of the Huffman and LZW compression algorithms.
-                                    </li>
+                                    <li>Development of command-line application and cross-platform libraries on Mac OS X, Linux and Windows.</li>
+                                    <li>Development of a Standard C Library (C99 with some C11 parts) for a home-made operating system.</li>
+                                    <li>Development of a CoreFoundation-like library for personal C projects.</li>
+                                    <li>Development of micro-controllers software.</li>
+                                    <li>Research and implementation on “object-oriented” C implementations and idioms.</li>
+                                    <li>In-depth study and implementation of the Huffman and LZW compression algorithms.</li>
                                 </ul>
                             </dd>
                         </dl>
@@ -586,42 +575,7 @@
             <div class="col-sm-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4>C++</h4>
-                    </div>
-                    <div class="panel-body">
-                        <dl class="dl-horizontal">
-                            <dt>Knowledge</dt>
-                            <dd>
-                                Good
-                            </dd>
-                            <dt>Informations</dt>
-                            <dd>
-                                <ul>
-                                    <li>
-                                        Cross-platform development for libraries (Windows, Mac OS X, Linux).
-                                    </li>
-                                    <li>
-                                        Development of a credit card payment solution for an ECR terminal (Hypercom - ZVT)
-                                    </li>
-                                    <li>
-                                        Integration of several libraries for different platforms (Mac, Windows, iOS).
-                                    </li>
-                                    <li>
-                                        Usage of several libraries (OpenFrameworks, OpenCV, etc).
-                                    </li>
-                                    <li>
-                                        Basic knowledge of QT.
-                                    </li>
-                                </ul>
-                            </dd>
-                        </dl>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4>x86 Assembly</h4>
+                        <h4>C++ - C++98/C++11</h4>
                     </div>
                     <div class="panel-body">
                         <dl class="dl-horizontal">
@@ -636,15 +590,42 @@
                             <dt>Informations</dt>
                             <dd>
                                 <ul>
-                                    <li>
-                                        Development of an experimental 32/64 bits kernel for x86 platforms.
-                                    </li>
-                                    <li>
-                                        Direct hardware programming, memory allocation routines, BIOS, SMBIOS and VGA programming.
-                                    </li>
-                                    <li>
-                                        Reverse engineering.
-                                    </li>
+                                    <li>Cross-platform development for libraries (Windows, Mac OS X, Linux).</li>
+                                    <li>Good knowledge of the C++ semantics (operator overloading, PIMPL, copy & swap, move semantics, etc).</li>
+                                    <li>Good knowledge of the C++ standard template library (STL).</li>
+                                    <li>Development of a credit card payment solution for an ECR terminal (Hypercom - ZVT).</li>
+                                    <li>Integration of several libraries for different platforms (Mac, Windows, iOS).</li>
+                                    <li>Knowledge and usage of several libraries (BOOST, OpenFrameworks, OpenCV, etc).</li>
+                                    <li>Technical review of the “OpenCV for iOS” book - [PACKT] publishing.</li>
+                                    <li>Basic knowledge of QT.</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>x86/x86-64 Assembly</h4>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Knowledge</dt>
+                            <dd>
+                                Good
+                            </dd>
+                            <dt>Experience</dt>
+                            <dd>
+                                5 years
+                            </dd>
+                            <dt>Informations</dt>
+                            <dd>
+                                <ul>
+                                    <li>Development of an experimental 32/64 bits kernel for x86/x86-64 platforms.</li>
+                                    <li>Direct hardware programming, memory allocation routines, BIOS, SMBIOS and VGA programming.</li>
+                                    <li>Research and implementation related to the optimisation of the C strings functions, using SSE2.</li>
+                                    <li>Reverse engineering on OS X and iOS technologies, including ARM assembly.</li>
                                 </ul>
                             </dd>
                         </dl>
@@ -664,18 +645,18 @@
                             <dd>
                                 Medium
                             </dd>
+                            <dt>Experience</dt>
+                            <dd>
+                                2 years
+                            </dd>
                             <dt>Informations</dt>
                             <dd>
                                 <ul>
-                                    <li>
-                                        Good knowledge of the language features.
-                                    </li>
-                                    <li>
-                                        Interaction with CLR C++ projects (PInvoke, custom data marshalling, etc.)
-                                    </li>
-                                    <li>
-                                        Basic knowledge of .NET/WPF.
-                                    </li>
+                                    <li>Development of Windows desktop applications.</li>
+                                    <li>Good knowledge of the language features.</li>
+                                    <li>Interaction with CLR C++ projects (PInvoke, custom data marshalling, etc.)</li>
+                                    <li>Good knowledge of .NET framework.</li>
+                                    <li>Good knowledge of the Windows Presentation Foundation (WPF) programming model.</li>
                                 </ul>
                             </dd>
                         </dl>
@@ -696,15 +677,9 @@
                             <dt>Informations</dt>
                             <dd>
                                 <ul>
-                                    <li>
-                                        Excellent knowledge of the C# SWIG interface.
-                                    </li>
-                                    <li>
-                                        Port of complex cross-platform C/C++ libraries to C#/.NET.
-                                    </li>
-                                    <li>
-                                        Custom marshalling, and support for complex STL types.
-                                    </li>
+                                    <li>Excellent knowledge of the C# SWIG interface.</li>
+                                    <li>Port of complex cross-platform C/C++ libraries to C#/.NET.</li>
+                                    <li>Custom marshalling, and support for complex C++ STL types.</li>
                                 </ul>
                             </dd>
                         </dl>
@@ -731,18 +706,10 @@
                             <dt>Informations</dt>
                             <dd>
                                 <ul>
-                                    <li>
-                                        Excellent knowledge of object-oriented PHP5 programming concepts and design patterns (especially SPL).
-                                    </li>
-                                    <li>
-                                        Development with several frameworks and CMS (TYPO3, Flow3, Zend Framework, Drupal).
-                                    </li>
-                                    <li>
-                                        Development of complex applications, databases layers, e-commerce applications, online payments, secure scripts, discussion boards, management interface, etc.
-                                    </li>
-                                    <li>
-                                        Excellent knowledge of PHP-GTK, for the creation of desktop applications.
-                                    </li>
+                                    <li>Excellent knowledge of object-oriented PHP5 programming concepts and design patterns (especially SPL). </li>
+                                    <li>Development with several frameworks and CMS (TYPO3, FLOW3, Zend Framework, Drupal).</li>
+                                    <li>Development of complex applications, databases layers, e-commerce applications, online payments, secure scripts, discussion boards, management interface, etc.</li>
+                                    <li>Excellent knowledge of PHP-GTK, for the creation of desktop applications.</li>
                                 </ul>
                             </dd>
                         </dl>
@@ -762,17 +729,12 @@
                             </dd>
                             <dt>Experience</dt>
                             <dd>
-                                6 years
+                                8 years
                             </dd>
                             <dt>Informations</dt>
                             <dd>
                                 <ul>
-                                    <li>
-                                        Development of makefiles for complex C, C++, Objective-C and Assembly projects.
-                                    </li>
-                                    <li>
-                                        Management of library dependancies with libtool.
-                                    </li>
+                                    <li>Development of makefiles for complex C, C++, Objective-C and assembly projects.</li>
                                 </ul>
                             </dd>
                         </dl>
@@ -799,12 +761,8 @@
                             <dt>Informations</dt>
                             <dd>
                                 <ul>
-                                    <li>
-                                        Excellent knowledge of the JS object model.
-                                    </li>
-                                    <li>
-                                        Good knowledge of several JS frameworks (jQuery, Prototype, MooTools, ExtJS).
-                                    </li>
+                                    <li>Excellent knowledge of the JS object model.</li>
+                                    <li>Good knowledge of several JS frameworks (jQuery, Prototype, MooTools, ExtJS).</li>
                                 </ul>
                             </dd>
                         </dl>
@@ -829,12 +787,8 @@
                             <dt>Informations</dt>
                             <dd>
                                 <ul>
-                                    <li>
-                                        Component and library development, XML communication with databases, video integration, automation, etc.
-                                    </li>
-                                    <li>
-                                        Excellent knowledge of the AMF protocol (0 to 3) at the binary level.
-                                    </li>
+                                    <li>Component and library development, XML communication with databases, video integration, etc.</li>
+                                    <li>Excellent knowledge of the AMF protocol (0 to 3) at the binary level.</li>
                                 </ul>
                             </dd>
                         </dl>
@@ -856,14 +810,13 @@
                             </dd>
                             <dt>Experience</dt>
                             <dd>
-                                8 years
+                                10 years
                             </dd>
                             <dt>Informations</dt>
                             <dd>
                                 <ul>
-                                    <li>
-                                        Development of backup scripts, system administration and maintenance script and automated build systems.
-                                    </li>
+                                    <li>Development of automated build systems, backup scripts, system administration, maintenance scripts, etc.</li>
+                                    <li>Use of ZSH as main shell.</li>
                                 </ul>
                             </dd>
                         </dl>
@@ -888,12 +841,8 @@
                             <dt>Informations</dt>
                             <dd>
                                 <ul>
-                                    <li>
-                                        Development of generic procedures for the generation of dynamic printable documents trough XSLT.
-                                    </li>
-                                    <li>
-                                        Good knowledge of the font encoding system.
-                                    </li>
+                                    <li>Development of generic procedures for the generation of dynamic printable documents trough XSLT.</li>
+                                    <li>Good knowledge of the font encoding system.</li>
                                 </ul>
                             </dd>
                         </dl>
@@ -916,9 +865,7 @@
                             <dt>Informations</dt>
                             <dd>
                                 <ul>
-                                    <li>
-                                        Development of plugins for the «Trac» SCM system.
-                                    </li>
+                                    <li>Development of plugins for the «Trac» SCM system.</li>
                                 </ul>
                             </dd>
                         </dl>
@@ -942,14 +889,12 @@
                             </dd>
                             <dt>Experience</dt>
                             <dd>
-                                14 years
+                                1 years
                             </dd>
                             <dt>Informations</dt>
                             <dd>
                                 <ul>
-                                    <li>
-                                        Strict use of W3C Recommendations (DOM), and accessibility standards (WAI, WCAG).
-                                    </li>
+                                    <li>Strict use of the W3C Recommendations (DOM), and accessibility standards (WAI, WCAG).</li>
                                 </ul>
                             </dd>
                         </dl>
@@ -969,7 +914,7 @@
                             </dd>
                             <dt>Experience</dt>
                             <dd>
-                                14 years
+                                16 years
                             </dd>
                         </dl>
                     </div>
@@ -995,18 +940,10 @@
                             <dt>Informations</dt>
                             <dd>
                                 <ul>
-                                    <li>
-                                        Installation and configuration on dedicated or shared servers.
-                                    </li>
-                                    <li>
-                                        Advanced TypoScript programming, extension development, software integration.
-                                    </li>
-                                    <li>
-                                        Consulting and training.
-                                    </li>
-                                    <li>
-                                        Excellent knowledge of PHP API of TYPO3.
-                                    </li>
+                                    <li>Installation and configuration on dedicated or shared servers.</li>
+                                    <li>Advanced TypoScript programming, extension development, software integration.</li>
+                                    <li>Consulting and training.</li>
+                                    <li>Excellent knowledge of the PHP API of TYPO3.</li>
                                 </ul>
                             </dd>
                         </dl>
@@ -1024,22 +961,12 @@
                             <dd>
                                 Good
                             </dd>
-                            <dt>Experience</dt>
-                            <dd>
-                                9 years
-                            </dd>
                             <dt>Informations</dt>
                             <dd>
                                 <ul>
-                                    <li>
-                                        Development of automated workflow (CMS).
-                                    </li>
-                                    <li>
-                                        Automatic generation of PDF or PostScript documents.
-                                    </li>
-                                    <li>
-                                        Good knowledge of the Xalan and Sablotron XSLT processors. 
-                                    </li>
+                                    <li>Development of automated workflows (CMS).</li>
+                                    <li>Automatic generation of PDF or PostScript documents.</li>
+                                    <li>Good knowledge of the Xalan and Sablotron XSLT processors. </li>
                                 </ul>
                             </dd>
                         </dl>
@@ -1059,16 +986,10 @@
                             <dd>
                                 Excellent
                             </dd>
-                            <dt>Experience</dt>
-                            <dd>
-                                12 years
-                            </dd>
                             <dt>Informations</dt>
                             <dd>
                                 <ul>
-                                    <li>
-                                        Excellent knowledge of several XML specifications (RDF, RSS, ATOM, SOAP, WSDL, etc).
-                                    </li>
+                                    <li>Excellent knowledge of several XML specifications (RDF, RSS, ATOM, SOAP, WSDL, etc).</li>
                                 </ul>
                             </dd>
                         </dl>
@@ -1086,10 +1007,6 @@
                             <dd>
                                 Good
                             </dd>
-                            <dt>Experience</dt>
-                            <dd>
-                                9 years
-                            </dd>
                         </dl>
                     </div>
                 </div>
@@ -1106,10 +1023,6 @@
                             <dt>Knowledge</dt>
                             <dd>
                                 Good
-                            </dd>
-                            <dt>Experience</dt>
-                            <dd>
-                                3 years
                             </dd>
                         </dl>
                     </div>
@@ -1137,15 +1050,10 @@
                             <dt>Informations</dt>
                             <dd>
                                 <ul>
-                                    <li>
-                                        Installation, configuration and maintenance.
-                                    </li>
-                                    <li>
-                                        Modeling and queries with the MyISAM and InnoDB format.
-                                    </li>
-                                    <li>
-                                        Usage with PHP (mainly), C and Objective-C.
-                                    </li>
+                                    <li>Installation, configuration and maintenance.</li>
+                                    <li>Modelling and queries with the MyISAM and InnoDB formats.</li>
+                                    <li>Security audits, load testing and benchmarks.</li>
+                                    <li>Usage with PHP (mainly), C and Objective-C.</li>
                                 </ul>
                             </dd>
                         </dl>
@@ -1166,9 +1074,7 @@
                             <dt>Informations</dt>
                             <dd>
                                 <ul>
-                                    <li>
-                                        Usage with PHP. 
-                                    </li>
+                                    <li>Usage with PHP, Objective-C and C/C++.</li>
                                 </ul>
                             </dd>
                         </dl>
@@ -1191,9 +1097,7 @@
                             <dt>Informations</dt>
                             <dd>
                                 <ul>
-                                    <li>
-                                        Usage with PHP. 
-                                    </li>
+                                    <li>Usage with PHP.</li>
                                 </ul>
                             </dd>
                         </dl>
@@ -1222,15 +1126,9 @@
                             <dt>Informations</dt>
                             <dd>
                                 <ul>
-                                    <li>
-                                        Installation, configuration, maintenance and optimization.
-                                    </li>
-                                    <li>
-                                        Website management, virtual server configuration, custom  module installation.
-                                    </li>
-                                    <li>
-                                        Security audits, load testing and benchmarks.
-                                    </li>
+                                    <li>Installation, configuration, maintenance and optimisation.</li>
+                                    <li>Website management, virtual server configuration, custom  module installation.</li>
+                                    <li>Security audits, load testing and benchmarks.</li>
                                 </ul>
                             </dd>
                         </dl>
@@ -1255,12 +1153,8 @@
                             <dt>Informations</dt>
                             <dd>
                                 <ul>
-                                    <li>
-                                        Installation, configuration and maintenance.
-                                    </li>
-                                    <li>
-                                        Usage from PHP and Objective-C.
-                                    </li>
+                                    <li>Installation, configuration and maintenance.</li>
+                                    <li>Usage from PHP and Objective-C.</li>
                                 </ul>
                             </dd>
                         </dl>
@@ -1282,20 +1176,13 @@
                             </dd>
                             <dt>Experience</dt>
                             <dd>
-                                7 years
+                                9 years
                             </dd>
                             <dt>Informations</dt>
                             <dd>
                                 <ul>
-                                    <li>
-                                        Extensive use in many development projects in team or personally.
-                                    </li>
-                                    <li>
-                                        Installation, configuration, maintenance and administration.
-                                    </li>
-                                    <li>
-                                        Excellent knowledge of the SVN administration tools.
-                                    </li>
+                                    <li>Installation, configuration, maintenance and administration.</li>
+                                    <li>Excellent knowledge of the SVN administration tools.</li>
                                 </ul>
                             </dd>
                         </dl>
@@ -1311,7 +1198,17 @@
                         <dl class="dl-horizontal">
                             <dt>Knowledge</dt>
                             <dd>
-                                Medium
+                                Good
+                            </dd>
+                            <dt>Experience</dt>
+                            <dd>
+                                4 years
+                            </dd>
+                            <dt>Informations</dt>
+                            <dd>
+                                <ul>
+                                    <li>Continuous integration with Travis CI.</li>
+                                </ul>
                             </dd>
                         </dl>
                     </div>
@@ -1334,17 +1231,14 @@
                             </dd>
                             <dt>Experience</dt>
                             <dd>
-                                11 years
+                                13 years
                             </dd>
                             <dt>Informations</dt>
                             <dd>
                                 <ul>
-                                    <li>
-                                        Excellent knowledge of the BSD sub-system of Mac OS X.
-                                    </li>
-                                    <li>
-                                        Installation, configuration and administration of Mac OS X Server.
-                                    </li>
+                                    <li>Excellent knowledge of the BSD sub-system of Mac OS X.</li>
+                                    <li>Installation, configuration and administration of Mac OS X Server.</li>
+                                    <li>Usage since the public beta.</li>
                                 </ul>
                             </dd>
                         </dl>
@@ -1364,20 +1258,14 @@
                             </dd>
                             <dt>Experience</dt>
                             <dd>
-                                11 years
+                                13 years
                             </dd>
                             <dt>Informations</dt>
                             <dd>
                                 <ul>
-                                    <li>
-                                        Excellent knowledge of the Debian (and Ubuntu) distributions., for desktop and server use.
-                                    </li>
-                                    <li>
-                                        Good knowledge of RedHat Enterprise.
-                                    </li>
-                                    <li>
-                                        Basic knowledge of Suze, Slackware and FreeBSD.
-                                    </li>
+                                    <li>Excellent knowledge of the Debian (and Ubuntu) distributions., for desktop and server use.</li>
+                                    <li>Good knowledge of RedHat Enterprise.</li>
+                                    <li>Basic knowledge of Suze, Slackware and FreeBSD.</li>
                                 </ul>
                             </dd>
                         </dl>
@@ -1388,74 +1276,14 @@
         <a name="resume-skills-misc"></a>
         <h3 class="project-icons project-icons-bookshelf">Computing skills - Miscellaneous</h3>
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
-                    <h4>UML - 2</h4>
-                    </div>
                     <div class="panel-body">
-                        <dl class="dl-horizontal">
-                            <dt>Knowledge</dt>
-                            <dd>
-                                Basic
-                            </dd>
-                            <dt>Informations</dt>
-                            <dd>
-                                <ul>
-                                    <li>
-                                        Usage for several web projects (mainly PHP).
-                                    </li>
-                                </ul>
-                            </dd>
-                        </dl>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                    <h4>MPEG-4 - ISO-IEC 14496-12</h4>
-                    </div>
-                    <div class="panel-body">
-                        <dl class="dl-horizontal">
-                            <dt>Knowledge</dt>
-                            <dd>
-                                Good
-                            </dd>
-                            <dt>Informations</dt>
-                            <dd>
-                                <ul>
-                                    <li>
-                                        Very good knowledge of the MPEG-4 file format standard at the binary level. 
-                                    </li>
-                                </ul>
-                            </dd>
-                        </dl>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                    <h4>JavaDoc / HeaderDoc / HeaderDoc</h4>
-                    </div>
-                    <div class="panel-body">
-                        <dl class="dl-horizontal">
-                            <dt>Knowledge</dt>
-                            <dd>
-                                Excellent
-                            </dd>
-                            <dt>Informations</dt>
-                            <dd>
-                                <ul>
-                                    <li>
-                                        Code documentation for several languages and automatic generation of the documentation (Doxygen, PHPDoc, HeaderDoc, JavaDoc).
-                                    </li>
-                                </ul>
-                            </dd>
-                        </dl>
+                        <ul>
+                            <li>Various experiments with ARM based micro-controllers (Arduino, MBed, etc.), and with Intel boards.</li>
+                            <li>Development of prototype boards (solder-less or soldered).</li>
+                            <li>Actually building a Apple I replica from scratch.</li>
+                        </ul>
                     </div>
                 </div>
             </div>

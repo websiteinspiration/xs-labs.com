@@ -11,3 +11,7 @@
         All previously published software have been discontinued, and I now only focus on some personal projects, like the development of the <?php print \XS\Menu::getInstance()->getPageLink( '/projects/xeos', 'XEOS Operating System' ); ?>.
     </p>
 </div>
+<hr />
+<p>
+   Please take a look at the <?php print \XS\Menu::getInstance()->getPageLink( '/contact', 'contact' ); ?> page for more informations about me.
+</p>
