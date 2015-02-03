@@ -12,6 +12,6 @@
     </p>
 </div>
 <hr />
-<p>
+<p class="text-center">
    Please take a look at the <?php print \XS\Menu::getInstance()->getPageLink( '/contact', 'contact' ); ?> page for more informations about me.
 </p>
