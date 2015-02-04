@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <blog>
     <post>
+        <date>2015/02/04</date>
+        <time>09:00</time>
+        <author>Jean-David Gadina</author>
+        <name>goodbye-imazing</name>
+        <title>Goodbye iMazing</title>
+        <category>Software</category>
+    </post>
+    <post>
         <date>2014/06/24</date>
         <time>19:32</time>
         <author>Jean-David Gadina</author>
