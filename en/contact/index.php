@@ -170,7 +170,7 @@
                 <dl class="dl-horizontal">
                     <dt>Dates</dt>
                     <dd>
-                        2011/06 - 2015/01
+                        2011/06 - Present
                     </dd>
                     <dt>Name of employer</dt>
                     <dd>
@@ -1328,4 +1328,3 @@
         </div>
     </div>
 </div>
-
