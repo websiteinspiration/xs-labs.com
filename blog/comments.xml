@@ -1477,8 +1477,32 @@ C++ doesn't allow to overload function by return type]]></content>
     <comment>
         <author><![CDATA[Nice Work]]></author>
         <email><![CDATA[ZzekLd/FJ0bKZlhdJt2XyRm8Hb/M37yc8C53p3P4eHRbJ4kYB7DDhaAGO82KeQkq]]></email>
+        <url><![CDATA[]]></url>
         <date><![CDATA[2014-09-28 01:46:09]]></date>
         <content><![CDATA[Great work explaining. Thank you!]]></content>
         <post><![CDATA[2011/07/29/c-const-static-keywords]]></post>
+    </comment>
+    <comment>
+        <author><![CDATA[DJ]]></author>
+        <email><![CDATA[G8GoYVzEWEkv/B3y/nHAhoKu9gUGTdtp53tfPBvrD88GSzldHr2iT4dICUnc66s0]]></email>
+        <url><![CDATA[]]></url>
+        <date><![CDATA[2014-09-28 01:46:09]]></date>
+        <content><![CDATA[I tried this but it doesn't work. Could you provide a solution for iTunes 12.1.2? Please?
+
+Thanks]]></content>
+        <post><![CDATA[2014/06/24/itunes-yosemite-lldb]]></post>
+    </comment>
+    <comment>
+        <author><![CDATA[Macmade]]></author>
+        <email><![CDATA[xORikBeGcDJneNg9ZNagymvs6WWH7f4THPZ1UgX638mdZu0F87fOH2frXOBOx3Xk]]></email>
+        <date><![CDATA[2014-09-28 01:46:09]]></date>
+        <content><![CDATA[The exact solution does indeed not work with latest iTunes build. Different builds will have different functions, so you may need to adapt quite a bit.
+
+But that being said, the exact same procedure does work with latest iTunes versions. Simply follow the entire procedure, breaking on _Exit, and then breaking on functions displayed on the backtrace, returning directly as explained.
+
+At the time I wrote this article, the function was called iTunes`___lldb_unnamed_function35905$$iTunes.
+
+In latest iTunes build (12.1.2.27), you'll simply need to break on iTunes`___lldb_unnamed_function3677$$iTunes instead.]]></content>
+        <post><![CDATA[2014/06/24/itunes-yosemite-lldb]]></post>
     </comment>
 </comments>
