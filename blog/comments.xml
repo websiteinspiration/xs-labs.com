@@ -1495,6 +1495,7 @@ Thanks]]></content>
     <comment>
         <author><![CDATA[Macmade]]></author>
         <email><![CDATA[xORikBeGcDJneNg9ZNagymvs6WWH7f4THPZ1UgX638mdZu0F87fOH2frXOBOx3Xk]]></email>
+        <url><![CDATA[]]></url>
         <date><![CDATA[2014-09-28 01:46:09]]></date>
         <content><![CDATA[The exact solution does indeed not work with latest iTunes build. Different builds will have different functions, so you may need to adapt quite a bit.
 
@@ -1504,5 +1505,44 @@ At the time I wrote this article, the function was called iTunes`___lldb_unnamed
 
 In latest iTunes build (12.1.2.27), you'll simply need to break on iTunes`___lldb_unnamed_function3677$$iTunes instead.]]></content>
         <post><![CDATA[2014/06/24/itunes-yosemite-lldb]]></post>
+    </comment>
+    <comment>
+        <author><![CDATA[Trogdan]]></author>
+        <email><![CDATA[wxbZt1dGK6YmIwI6E8uwpPlvROttmFbykx4PrcWgK/25KvLqvr5V4BR/NKdJxwZ2]]></email>
+        <url><![CDATA[]]></url>
+        <date><![CDATA[2014-09-28 01:46:09]]></date>
+        <content><![CDATA[BTW, according to the definition of memset, the unsigned int value is interpreted as an unsigned char, and replicated throughout each byte.  your examples use the entire 32-bit value]]></content>
+        <post><![CDATA[2013/08/06/optimising-memset]]></post>
+    </comment>
+    <comment>
+        <author><![CDATA[Jean-David Gadina]]></author>
+        <email><![CDATA[4WG1zjbnxsL4hsV+LRKY9yO7olwgQzhVniUE523BszhXLOr9itjT2kJZIEKPkLMH]]></email>
+        <url><![CDATA[]]></url>
+        <date><![CDATA[2014-09-28 01:46:09]]></date>
+        <content><![CDATA[@Trogdan You mean you could have some junk in the high 24-bits?]]></content>
+        <post><![CDATA[2013/08/06/optimising-memset]]></post>
+    </comment>
+    <comment>
+        <author><![CDATA[Trogdan]]></author>
+        <email><![CDATA[Nb5wyhU+OQ7DjNGz+CvGdl45McotbGLmdUwiAyDPDY5ChuiwvEpZIuKQOpQEaK83]]></email>
+        <url><![CDATA[]]></url>
+        <date><![CDATA[2014-09-28 01:46:09]]></date>
+        <content><![CDATA[@Jean Yup!  Each byte element needs to be the same unsigned char after casting value, high order 24 bites need to be dropped.]]></content>
+        <post><![CDATA[2013/08/06/optimising-memset]]></post>
+    </comment>
+    <comment>
+        <author><![CDATA[Trogdan]]></author>
+        <email><![CDATA[7k7WYO6PkSIsRQKv4sBDMpH8L4osp1t/9q626BbmkLaqDxX0FWfd2Fd/7KZ7KATV]]></email>
+        <url><![CDATA[]]></url>
+        <date><![CDATA[2014-09-28 01:46:09]]></date>
+        <content><![CDATA[@Jean memset predates function prototypes in C, thus, char was not allowed.  It was left as is for backwards compatibility Http://stackoverflow.com/questions/5919735/why-does-memset-take-an-int-instead-of-a-char]]></content>
+        <post><![CDATA[2013/08/06/optimising-memset]]></post>
+    </comment>
+    <comment>
+        <author><![CDATA[Tariq]]></author>
+        <email><![CDATA[y1u55iSHZN45QAKzq8tc3Xb+GkBoLwGDnX6R9gxcER4=]]></email>
+        <date><![CDATA[2014-09-28 01:46:09]]></date>
+        <content><![CDATA[very well articulated, thank you.]]></content>
+        <post><![CDATA[2012/01/16/mixing-cpp-objective-c]]></post>
     </comment>
 </comments>
