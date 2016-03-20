@@ -5,6 +5,7 @@
 	keywords="XS-Labs, XEOS, XSFoundation, Codeine, ClangKit, FileSystem, XEOS Software Licence, OpenSource, Operating System, Development, Cocoa, iOS, Objective-C, Assembly, x86, C++, Code, Software, Mac, IDE, Macmade, Jean-David, Gadina, Switzerland"
 	description="XS-Labs is the home of the XEOS Operating System and related projects."
 	image="/uploads/image/highlights/default.jpg"
+	banner="default"
 >
 	<projects>
 	    <title>Projects</title>

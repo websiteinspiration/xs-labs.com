@@ -825,6 +825,66 @@ final class Menu
         return $img;
     }
     
+    public function getPageBanner()
+    {
+        $banner = $this->_menu[ 'banner' ];
+        $menu   = $this->_menu;
+        
+        for( $i = 0; $i < count( $this->_pathInfos ); $i++ )
+        {
+            $page = $this->_pathInfos[ $i ];
+            
+            if( $i == 1 )
+            {
+                $menu = $menu->$page;
+            }
+            elseif( $i > 1 && isset( $menu->sub ) )
+            {
+                $menu = $menu->sub->$page;
+            }
+            
+            if( isset( $menu->banner ) && !isset( $menu[ 'preview' ] ) )
+            {
+                $banner = $menu->banner;
+            }
+        }
+        
+        if( !empty( $banner ) )
+        {
+            $root = str_replace( $_SERVER[ 'SCRIPT_NAME' ], '', $_SERVER[ 'SCRIPT_FILENAME' ] );
+            $path = $root . DIRECTORY_SEPARATOR . 'banners' . DIRECTORY_SEPARATOR . $banner . DIRECTORY_SEPARATOR . 'index.php';
+            
+            if( !file_exists( $path ) )
+            {
+                return '';
+            }
+        
+            if( !is_readable( $path ) )
+            {
+                return '';
+            }
+        
+            ob_start();
+        
+            try
+            {
+                require( $path );
+            
+                $out = ob_get_contents();
+            }
+            catch( Exception $e )
+            {
+                $out = '';
+            }
+        
+            ob_end_clean();
+        
+            return $out;
+        }
+        
+        return '';
+    }
+    
     public function setPageTitle( $title )
     {
         $this->_pageTitle = ( string )$title;

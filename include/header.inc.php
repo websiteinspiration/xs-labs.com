@@ -154,17 +154,7 @@ if( isset( $_SERVER[ 'HTTP_USER_AGENT' ] ) && ( strpos( $_SERVER[ 'HTTP_USER_AGE
             <ol class="carousel-indicators"></ol>
             <div class="carousel-inner">
                 <div class="item active">
-                    <?php print \XS\Menu::getInstance()->getPageImage() . chr( 10 ); ?>
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <div class="hidden-xs">
-                                <?php print \XS\Menu::getInstance()->getPageTitleHeader( false, 2 ); ?>
-                            </div>
-                            <div class="visible-xs-block">
-                                <?php print \XS\Menu::getInstance()->getPageTitleHeader( false, 2 ); ?>
-                            </div>
-                        </div>
-                    </div>
+                    <?php print \XS\Menu::getInstance()->getPageBanner(); ?>
                 </div>
             </div>
         </div>
