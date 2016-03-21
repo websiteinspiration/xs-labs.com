@@ -73,6 +73,8 @@ Using the `XS\Layout` class, it will then print the page header, content and foo
 Filesystem hierarchy
 --------------------
 
+ * **banners/default/index.php**
+ Default page header's panner.
  * **blog/comments.xml**
  XML file with all blog comments - used by the blog module.
  * **blog/posts.xml**
@@ -462,6 +464,10 @@ Classes
    Gets the image for the current page.
    `$width`: optional - the width for the generated `img` tag
    `$height`: optional - the height for the generated `img` tag
+   
+ * **`getPageBanner()`**
+   
+   Gets the banner for the current page.
 
 <a name="server-technical-requirements"></a>
 Server technical requirements
