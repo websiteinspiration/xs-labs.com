@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <blog>
     <post>
+        <date>2016/03/22</date>
+        <time>09:00</time>
+        <author>Jean-David Gadina</author>
+        <name>hello-again</name>
+        <title>Hello (again)</title>
+        <category>Miscellaneous</category>
+    </post>
+    <post>
         <date>2015/02/04</date>
         <time>09:00</time>
         <author>Jean-David Gadina</author>

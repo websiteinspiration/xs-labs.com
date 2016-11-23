@@ -1541,8 +1541,103 @@ In latest iTunes build (12.1.2.27), you'll simply need to break on iTunes`___lld
     <comment>
         <author><![CDATA[Tariq]]></author>
         <email><![CDATA[y1u55iSHZN45QAKzq8tc3Xb+GkBoLwGDnX6R9gxcER4=]]></email>
+        <url><![CDATA[]]></url>
         <date><![CDATA[2014-09-28 01:46:09]]></date>
         <content><![CDATA[very well articulated, thank you.]]></content>
         <post><![CDATA[2012/01/16/mixing-cpp-objective-c]]></post>
+    </comment>
+    <comment>
+        <author><![CDATA[Alec]]></author>
+        <email><![CDATA[JCsmqtBt8HNib/M8wCORyXt610XSuRMFNSvN6AN9X9Y=]]></email>
+        <url><![CDATA[]]></url>
+        <date><![CDATA[2014-09-28 01:46:09]]></date>
+        <content><![CDATA[This is broken in multiple ways.
+
+Here's a version I think is fixed. Apologies in advance for likely messed up formatting.
+
+void * memset(void * p, int c, size_t n) {
+	uint8_t u8 = (uint8_t)c;
+	uint64_t u64 = (uint64_t)c;
+	u64 = (u64 << 48) | (u64 << 32) | (u64 << 16) | u64;
+	uint8_t *sp = (uint8_t *)p;
+	while (n && ((uintptr_t)sp & 7)) {
+		n--;
+		*sp++ = u8;
+	}
+	uint64_t *lp  = (uint64_t *)(void *)sp;
+	while (n >= 8) {
+		*lp++ = u64;
+		n -= 8;
+	}
+	sp = (uint8_t *)(void *)lp;
+	while (n--)
+		*sp++ = u8;
+	return p;
+}]]></content>
+        <post><![CDATA[2013/08/06/optimising-memset]]></post>
+    </comment>
+    <comment>
+        <author><![CDATA[Alec]]></author>
+        <email><![CDATA[kYiOnlzdWegVKS2sr65zx3svQaaHyNxIIbjJJ+c9r20=]]></email>
+        <url><![CDATA[]]></url>
+        <date><![CDATA[2014-09-28 01:46:09]]></date>
+        <content><![CDATA[Sorry, that should be:
+u64 = (u64 << 56) | (u64 << 48) | (u64 << 40) | (u64 << 32) | (u64 << 24) | (u64 << 16) | (u64 << 8) | u64;]]></content>
+        <post><![CDATA[2013/08/06/optimising-memset]]></post>
+    </comment>
+    <comment>
+        <author><![CDATA[mac]]></author>
+        <email><![CDATA[vV6w7hfJ/kicJF8Ezmog5hnTZ5lqKHTCo9gkqMHz9GuaZz/9DzhtUiy7+H8VCNRg]]></email>
+        <date><![CDATA[2014-09-28 01:46:09]]></date>
+        <content><![CDATA[Hi Jean-David ,
+
+I'm a beginner and have some questions.
+
+I did not understand the 2nd version of your memset function i.e
+
+A simple solution is to write 8 bytes while it's possible, then writes the remaining bytes one by one.
+Something like:
+
+
+ What does this  "u64 = ( u64 << 32 ) | u64 " do?
+Here is my understanding:
+
+As written in the beginning "Let's take a look a the memset() function, which is used to fill a memory buffer with a single character."
+Let's sat we are passing 'zero' (decimal value 48) as a argument to the 2nd version of your memset function.
+Then
+ u64 = 48 (decimal value of character zero)
+So, now the line :
+ u64 = ( u64 << 32 ) | u64 
+will look like  --> u64 = (48<< 2^5) | 48
+ 48<<32 = 48 * 32 = 1536
+    
+u64 = 1536 | 48 ;
+
+Hence, u64 = 1536 OR 48 = 11000000000 OR 000001100000 = 110001100000 (binary) = 3168 (decimal value)
+
+is my understanding right?
+
+Coming to the 1st while loop:
+
+    while( ( n / 8 ) > 0 )
+    {
+        *( lp++ ) = u64;                  // But this line is placing value '3168' instead of a character in the memory buffer.
+        n        -= 8;
+    }
+    
+    sp = ( uint8_t * )lp;
+    
+The 2nd while loop looks good to me.
+    while( n-- )
+    {
+        *( sp++ ) = u8;                          // This places the original argument passed in the memory buffer.
+    }
+    
+Should'nt the value stored in variables u64 and u8 be same?
+Can you please explain how this line "A simple solution is to write 8 bytes while it's possible, then writes the remaining bytes one by one." works in your function?
+
+Thanks
+]]></content>
+        <post><![CDATA[2013/08/06/optimising-memset]]></post>
     </comment>
 </comments>

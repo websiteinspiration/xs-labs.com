@@ -1,5 +1,15 @@
 RewriteEngine On
 
+RewriteCond %{HTTP_HOST} ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+
+RewriteRule (.*) http://www.xs-labs.com/$1 [R=301,L]
+
+RewriteCond %{HTTP_USER_AGENT} libwww-perl.* 
+RewriteRule .* ? [F,L]
+
+# Sitemaps
+RewriteRule ^sitemap\.xml.*$ /sitemap/ [R,L]
+RewriteRule ^sitemap_index\.xml.*$ /sitemap/ [R,L]
+
 # Amazon S3
 #RewriteRule ^(downloads/foo.*.pkg)$ /s3.php?download=$1 [R,L]
 
