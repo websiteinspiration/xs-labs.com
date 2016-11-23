@@ -221,18 +221,23 @@
     Unlike the copy constructor, this is not the only possible signature for an assignment operator, but we'll cover this in the next tutorial.
 </p>
 <h3>2.3 - C++11</h3>
-
-C++11 introduced **rvalue references**, denoted by `&&`.  
-I won't cover here what they are, but if targeting C++11, you can also declare a **move constructor**, and a **move assignment** operator.
-
-The basic idea behind this is that sometimes, copy construction or assignment can be avoided.
-
-While the use of rvalue references overloads can be manually triggered by using `std::move`, the compiler can also decide to avoid copy construction or assignment in some situations.
-
-Such situations include the generation of **temporary** objects. In such a case, using only copy construction or assignment may have performance impacts.
-
-Let's take a look at the following example:
-
+<p>
+    C++11 introduced <strong>rvalue references</strong>, denoted by <code>&&</code>.<br />
+    I won't cover here what they are, but if targeting C++11, you can also declare a <strong>move constructor</strong>, and a <strong>move assignment</strong> operator.
+</p>
+<p>
+    The basic idea behind this is that sometimes, copy construction or assignment can be avoided.
+</p>
+<p>
+    While the use of rvalue references overloads can be manually triggered by using <code>std::move</code>, the compiler can also decide to avoid copy construction or assignment in some situations.
+</p>
+<p>
+    Such situations include the generation of <strong>temporary</strong> objects. In such a case, using only copy construction or assignment may have performance impacts.
+</p>
+<p>
+    Let's take a look at the following example:
+</p>
+<pre class="code-block language-cpp">
     Point foo( void )
     {
         Point p( 42, 42 );
@@ -248,38 +253,50 @@ Let's take a look at the following example:
         
         return 0;
     }
-    
-Without rvalue references, here's what a compiler might do (I'm not saying it will necessary the case, but this will illustrate the need of rvalue references):
-
- 1. In `main`, a `Point` object is allocated. Parameter-less constructor is invoked.
- 2. `foo` is called.
- 3. A `Point` object is allocated in `foo`, with `x = 42` and `y = 42`.
- 4. The `Point`object is returned. As we saw before, this will create another `Point`object, calling the copy constructor.
- 5. The temporary `Point` copy returned by `foo` is finally assigned to the local `p` object from `main`.
-
-As we can see in points 4 and 5, we have a **temporary copy which is the assigned to an existing object**.  
-With our basic `Point` class, using only integers, there's nothing to worry about.
-
-But our class might be different and allocate dynamic resources.  
-In such a case, we'll end up **copying twice** the object. One time when it is return (copy constructor), and another time when it's assigned (assignment operator).
-
-Depending on the implementation, this can have an impact on performance.
-
-**C++11 rvalue references** solve this problem by avoiding the extra final step.
-
-In the above example, by providing a **move assignment** operator, we'll be able to directly use the resources of the assigned object, as it is a temporary, rather that copy them.
-
-Don't worry if this isn't clear right now, we'll see more of this in the next tutorial.
-
-For reference, here's the signature of a move constructor for our `Point` class:
-
+</pre>
+<p>    
+    Without rvalue references, here's what a compiler might do (I'm not saying it will necessary the case, but this will illustrate the need of rvalue references):
+</p>
+<ol>
+    <li>In <code>main</code>, a <code>Point</code> object is allocated. Parameter-less constructor is invoked.</li>
+    <li><code>foo</code> is called.</li>
+    <li>A <code>Point</code> object is allocated in <code>foo</code>, with <code>x = 42</code> and <code>y = 42</code>.</li>
+    <li>The <code>Point</code> object is returned. As we saw before, this will create another <code>Point</code> object, calling the copy constructor.</li>
+    <li>The temporary <code>Point</code> copy returned by <code>foo</code> is finally assigned to the local <code>p</code> object from <code>main</code>.</li>
+</ol>
+<p>
+    As we can see in points 4 and 5, we have a <strong>temporary copy which is then assigned to an existing object</strong>.<br />
+    With our basic <code>Point</code> class, using only integers, there's nothing to worry about.
+</p>
+<p>
+    But our class might be different and allocate/acquire dynamic resources.<br />
+    In such a case, we'll end up <strong>copying twice</strong> the object. One time when it is return (copy constructor), and another time when it's assigned (assignment operator).
+</p>
+<p>
+    Depending on the implementation, this can have an impact on performance.
+</p>
+<p>
+    <strong>C++11 rvalue references</strong> solve this problem by avoiding the extra final step.
+</p>
+<p>
+    In the above example, by providing a <strong>move assignment</strong> operator, we'll be able to directly use the resources of the assigned object, as it is a temporary, rather that copy them.
+</p>
+<p>
+    Don't worry if this isn't clear right now, we'll see more of this in the next tutorial.
+</p>
+<p>
+    For reference, here's the signature of a move constructor for our <code>Point</code> class:
+</p>
+<pre class="code-block language-cpp">
     Point( Point && p ):
         x( p.x ),
         y( p.y ),
     {}
-    
-And here's the move assignment operator:
-
+</pre>
+<p>    
+    And here's the move assignment operator:
+</p>
+<pre class="code-block language-cpp">
     Point & operator =( Point && p )
     {
         this->x = p.x;
@@ -287,9 +304,12 @@ And here's the move assignment operator:
         
         return *( this );
     }
-    
-Again, this is clearly not the best example with such a simple class.  
-But the point here is that objects are passed as rvalue references (note the `&&`), and are not marked `const`.
-
-This mean we can actually **_steal/move_** their resources, rather than copying them.  
-Again, not a big deal with our `Point` class, but more on this in the next tutorial.
+</pre>
+<p>
+    Again, this is clearly not the best example with such a simple class.<br />
+    But the point here is that objects are passed as rvalue references (note the <code>&&</code>), and are not marked <code>const</code>.
+</p>
+<p>
+    This mean we can actually <strong>steal/move</strong> their resources, rather than copying them.<br />
+    Again, not a big deal with our <code>Point</code> class, but more on this in the next tutorial.
+</p>
