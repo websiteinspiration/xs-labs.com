@@ -43,24 +43,27 @@
     }
 </pre>
 <p>
-    Here, `s1` uses **automatic** allocation, while `s2`uses **dynamic** allocation.<br />
-    Note the call to the `new` and `delete` operators, as well as the pointer type for `s2`.
+    Here, <code>s1</code> uses <strong>automatic</strong> allocation, while <code>s2</code> uses <strong>dynamic</strong> allocation.<br />
+    Note the call to the <code>new</code> and <code>delete</code> operators, as well as the pointer type for <code>s2</code>.
 </p>
-With automatic allocation, the compiler will automatically allocates memory for the object (here from the stack), and call the **constructor**. When the object's goes out of scope, it will the automatically call the **detstructor**, and reclaim the memory. Quite simple.
-
-
-Dynamic allocation, using the `new` operator, will allocate memory from the **heap**. The constructor will be called, obviously, but the compiler won't then manage the lifetime of the object, and you'll have to manually call the `delete`operator when you're done using the object. `delete` will call the destructor and free the memory.
-
-Both allocation styles are useful. One is not better than the other. It just depend on the context.  
-I won't extend here on this specific topic, as it's not the purpose of this tutorial.
-
-2 - Automatic allocation rules
-------------------------------
-
-Now let's concentrate on **automatic allocation**.  
-In order to make a class fully compatible with automatic allocation, a few rules needs to be respected.
-
-Let's take as an example a very basic `Point` class, representing two coordinates:
+<p>
+    With automatic allocation, the compiler will automatically allocates memory for the object (here from the stack), and call the <strong>constructor</strong>. When the object's goes out of scope, it will the automatically call the <strong>detstructor</strong>, and reclaim the memory. Quite simple.
+</p>
+<p>
+    Dynamic allocation, using the <code>new</code> operator, will allocate memory from the <strong>heap</strong>. The constructor will be called, obviously, but the compiler won't then manage the lifetime of the object, and you'll have to manually call the <code>delete</code>operator when you're done using the object. <code>delete</code> will call the destructor and free the memory.
+</p>
+<p>
+    Both allocation styles are useful. One is not better than the other. It just depend on the context.<br />
+    I won't extend here on this specific topic, as it's not the purpose of this tutorial.
+</p>
+<h3>2 - Automatic allocation rules</h3>
+<p>
+    Now let's concentrate on <strong>automatic allocation</strong>.  
+    In order to make a class fully compatible with automatic allocation, a few rules needs to be respected.
+</p>
+<p>
+    Let's take as an example a very basic <code>Point</code> class, representing two coordinates:
+</p>
 
     class Point
     {
