@@ -83,24 +83,31 @@
             {}
     };
 </pre>
-
-We first have a **parameter-less** constructor, allowing to declare an empty `Point`object. Members will be initialised to zero:
-
+<p>
+    We first have a <strong>parameter-less</strong> constructor, allowing to declare an empty <code>Point</code> object. Members will be initialised to zero:
+</p>
+<pre class="code-block language-cpp">
     Point p;
-    
-And also another constructor, allowing the initialisation of the object with some values:
-
+</pre>
+<p>
+    And also another constructor, allowing the initialisation of the object with some values:
+</p>
+<pre class="code-block language-cpp">
     Point p( 42, 42 );
-    
-Now with such a basic example, the compiler will generate all the necessary code to make this class compatible with automatic allocation.
-
-But let's pretend it won't, and see what we'll need to do.
-
-### 2.1 - Copy constructor
-
-First of all, we need a **copy constructor**. That is, a constructor taking as parameter an object of the same type, and which will initialise the values by copying the values from the other object.
-
-The copy constructor will be called by the compiler in the following situations:
+</pre>
+<p>
+    Now with such a basic example, the compiler will generate all the necessary code to make this class compatible with automatic allocation.
+</p>
+<p>
+    But let's pretend it won't, and see what we'll need to do.
+</p>
+<h4>2.1 - Copy constructor</h4>
+<p>
+    First of all, we need a <strong>copy constructor</strong>. That is, a constructor taking as parameter an object of the same type, and which will initialise the values by copying the values from the other object.
+</p>
+<p>
+    The copy constructor will be called by the compiler in the following situations:
+</p>
 
 **2.1.1 - Explicit call**
 
