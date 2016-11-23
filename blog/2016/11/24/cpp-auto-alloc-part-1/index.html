@@ -108,46 +108,55 @@
 <p>
     The copy constructor will be called by the compiler in the following situations:
 </p>
-
-**2.1.1 - Explicit call**
-
+<h5>2.1.1 - Explicit call</h5>
+<pre class="code-block language-cpp">
     Point p1( 42, 42 );
     Point p2( p1 );
-    
-Here, `p2` is constructed from `p1`. Both objects will have the same values.
-
-**2.1.2 - Passing parameters by value**
-
-Imagine the following function:
-
+</pre>
+<p>
+    Here, <code>p2</code> is constructed from <code>p1</code>. Both objects will have the same values.
+</p>
+<h5>2.1.2 - Passing parameters by value</h5>
+<p>
+    Imagine the following function:
+</p>
+<pre class="code-block language-cpp">
     void foo( Point p );
-    
-The `p` parameter is here passed by value.    
-So when calling that function, like:
-
+</pre>
+<p>
+    The <code>p</code> parameter is here passed by value.<br />
+    So when calling that function, like:
+</p>
+<pre class="code-block language-cpp">
     Point p( 42, 42 );
     
     foo( p );
-    
-The function will receive a **copy** of the `p` local variable.  
-The compiler automatically handles this by allocating the necessary memory and calling the copy constructor.
-
-This obviously won't be the case when using a reference type (note the `&`):
-
+</pre>
+<p>
+    The function will receive a <strong>copy</strong> of the <code>p</code> local variable.  
+    The compiler automatically handles this by allocating the necessary memory and calling the copy constructor.
+</p>
+<p>
+    This obviously won't be the case when using a reference type (note the <code>&</code>):
+</p>
+<pre class="code-block language-cpp">
     void foo( Point & p );
-    
-**2.1.3 - Returning values**
-
-Now let's imagine the following function:
-
+</pre>
+<h5>2.1.3 - Returning values</h5>
+<p>
+    Now let's imagine the following function:
+</p>
+<pre class="code-block language-cpp">
     Point bar( void )
     {
         Point p( 42, 42 );
         
         return p;
     }
-    
-Here, `p` is a local variable, belonging to the `bar` function. Memory is allocated from its stack frame, and will be reused by the compiler on return.
+</pre>
+<p>    
+    Here, <code>p</code> is a local variable, belonging to the <code>bar</code> function. Memory is allocated from its stack frame, and will be reused by the compiler on return.
+</p>
 
 So when returning `p`, a copy will be made by the compiler, using the copy constructor, so the object exists in the caller's stack frame.
 
