@@ -84,7 +84,7 @@
     };
 </pre>
 <p>
-    We first have a <strong>parameter-less</strong> constructor, allowing to declare an empty <code>Point</code> object. Members will be initialised to zero:
+    We first have a <strong>parameter-less</strong> constructor, allowing to declare an empty/default <code>Point</code> object. Members will be initialised to zero:
 </p>
 <pre class="code-block language-cpp">
     Point p;
@@ -157,42 +157,52 @@
 <p>    
     Here, <code>p</code> is a local variable, belonging to the <code>bar</code> function. Memory is allocated from its stack frame, and will be reused by the compiler on return.
 </p>
-
-So when returning `p`, a copy will be made by the compiler, using the copy constructor, so the object exists in the caller's stack frame.
-
-Now let's take a look at the implementation of the copy constructor, for the `Point` class:
-
+<p>
+    So when returning <code>p</code>, a copy will be made by the compiler, using the copy constructor, so the object exists in the caller's stack frame.
+</p>
+<p>
+    Now let's take a look at the implementation of the copy constructor, for the <code>Point</code> class:
+</p>
+<pre class="code-block language-cpp">
     Point( const Point & p ):
         x( p.x ),
         y( p.y )
     {}
-    
-Note this is the only valid signature for a copy constructor.  
-As you can see, it takes as a parameter a **reference** to another `Point` object. Can't take its parameter by value, as this will end up calling the copy constructor infinitely.
-
-The parameter is also `const`, meaning you **shall not modify any of its value**.  
-You goal here is simply to construct yourself by copying the object, and that's precisely what we do.
-
-### 2.2 - Assignment operator
-
-In order to make a class compatible with automatic allocation, we also need to declare an **assignment operator**.
-
-The assignment operator will be used, for instance, in the following case:
-
+</pre>
+<p>    
+    Note this is the only valid signature for a copy constructor.<br />
+    As you can see, it takes as a parameter a <strong>reference</strong> to another <code>Point</code> object. Can't take its parameter by value, as this will end up calling the copy constructor infinitely.
+</p>
+<p>
+    The parameter is also <code>const</code>, meaning you <strong>shall not modify any of its value</strong>.<br />  
+    You goal here is simply to construct yourself by copying the object, and that's precisely what we do.
+</p>
+<h3>2.2 - Assignment operator</h3>
+<p>
+    In order to make a class compatible with automatic allocation, we also need to declare an <strong>assignment operator</strong>.
+</p>
+<p>
+    The assignment operator will be used, for instance, in the following case:
+</p>
+<pre class="code-block language-cpp">
     Point p1;
     Point p2( 42, 42 );
     
     p1 = p2;
-    
-Here, `p1` and `p2` are valid, fully constructed objects.  
-In the last line, `p2` is assigned to `p1`.
-
-The assignment operator is in a way close to the copy constructor, as it also needs to set its members by copying from another object.  
-The main difference is that, when using the assignment operator, **the object is already constructed**, so it **may have to free its previous resources** prior to copying the other object's one.
-
-In our `Point` class example, nothing to worry about, as our only members are integers.  
-So our assignment operator can simply be:
-
+</pre>
+<p>    
+    Here, <code>p1</code> and <code>p2</code> are valid, fully constructed objects.<br />
+    In the last line, <code>p2</code> is assigned to <code>p1</code>.
+</p>
+<p>
+    The assignment operator is in a way close to the copy constructor, as it also needs to set its members by copying from another object.<br />
+    The main difference is that, when using the assignment operator, <strong>the object is already constructed</strong>, so it <strong>may have to free its previous resources</strong> prior to copying the other object's one.
+</p>
+<p>
+    In our <code>Point</code> class example, nothing to worry about, as our only members are integers.<br />
+    So our assignment operator can simply be:
+</p>
+<pre class="code-block language-cpp">
     Point & operator=( const Point & p )
     {
         this->x = p.x;
@@ -200,14 +210,17 @@ So our assignment operator can simply be:
         
         return *( this );
     }
-    
-We simply assign our member values by copying the member values from the object's reference passed as argument.
-
-Now as you can see, the assignment operator also needs to return a reference type.  In most situations, we simply return ourself, but keep in mind you could also return another object, if needed.
-
-Unlike the copy constructor, this is not the only possible signature for an assignment operator, but we'll cover this in the next tutorial.
-
-### 2.3 - C++11
+</pre>
+<p>    
+    We simply assign our member values by copying the member values from the object's reference passed as argument.
+</p>
+<p>
+    Now as you can see, the assignment operator also needs to return a reference type.  In most situations, we simply return ourself, but keep in mind you could also return another object, if needed.
+</p>
+<p>
+    Unlike the copy constructor, this is not the only possible signature for an assignment operator, but we'll cover this in the next tutorial.
+</p>
+<h3>2.3 - C++11</h3>
 
 C++11 introduced **rvalue references**, denoted by `&&`.  
 I won't cover here what they are, but if targeting C++11, you can also declare a **move constructor**, and a **move assignment** operator.
