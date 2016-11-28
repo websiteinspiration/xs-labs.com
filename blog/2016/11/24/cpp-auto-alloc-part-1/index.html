@@ -161,7 +161,7 @@
     Here, <code>p</code> is a local variable, belonging to the <code>bar</code> function. Memory is allocated from its stack frame, and might be reused by the compiler on return.
 </p>
 <p>
-    So when returning <code>p</code>, a copy will be made by the compiler, using the copy constructor, so the object exists in the caller's stack frame.
+    So when returning <code>p</code>, a copy will be made by the compiler, using the copy constructor, so the object will exist in the caller's stack frame.
 </p>
 <p>
     Now let's take a look at the implementation of the copy constructor, for the <code>Point</code> class:
