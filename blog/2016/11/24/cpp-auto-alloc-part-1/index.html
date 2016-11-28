@@ -22,7 +22,7 @@
         </ol>
     </li>
 </ol>
-<a name="toc-1" />
+<a name="toc-1"></a>
 <h3>1 - C++ allocation types</h3>
 <p>
     When using C++ classes, you can basically use <strong>automatic</strong> or <stong>dynamic</stong> allocation.
@@ -57,7 +57,7 @@
     Both allocation styles are useful. One is not better than the other. It just depend on the context.<br />
     I won't extend here on this specific topic, as it's not the purpose of this tutorial.
 </p>
-<a name="toc-2" />
+<a name="toc-2"></a>
 <h3>2 - Automatic allocation rules</h3>
 <p>
     Now let's concentrate on <strong>automatic allocation</strong>.  
@@ -103,7 +103,7 @@
 <p>
     But let's pretend it won't, and see what we'll need to do.
 </p>
-<a name="toc-2-1" />
+<a name="toc-2-1"></a>
 <h4>2.1 - Copy constructor</h4>
 <p>
     First of all, we need a <strong>copy constructor</strong>. That is, a constructor taking as parameter an object of the same type, and which will initialise the values by copying the values from the other object.
@@ -180,7 +180,7 @@
     The parameter is also <code>const</code>, meaning you <strong>shall not modify any of its value</strong>.<br />  
     You goal here is simply to construct yourself by copying the object, and that's precisely what we do.
 </p>
-<a name="toc-2-2" />
+<a name="toc-2-2"></a>
 <h4>2.2 - Assignment operator</h4>
 <p>
     In order to make a class compatible with automatic allocation, we also need to declare an <strong>assignment operator</strong>.
@@ -224,7 +224,7 @@
 <p>
     Unlike the copy constructor, this is not the only possible signature for an assignment operator, but we'll cover this in the next tutorial.
 </p>
-<a name="toc-2-3" />
+<a name="toc-2-3"></a>
 <h4>2.3 - C++11</h4>
 <p>
     C++11 introduced <strong>rvalue references</strong>, denoted by <code>&&</code>.<br />
