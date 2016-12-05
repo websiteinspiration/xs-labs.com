@@ -707,7 +707,7 @@ final class Blog
         $feed->id           = 'urn:uuid:' . ( string )( new \XS\UUID( 'XS-Labs Blog' ) );
         $link1              = $feed->link;
         $link1[ 'href' ]    = 'http://' . $_SERVER[ 'HTTP_HOST' ] . '/feed/atom.php';
-        $link1[ 'rel' ]     = self;
+        $link1[ 'rel' ]     = 'self';
         $link2              = $feed->link;
         $link2[ 'href' ]    = 'http://' . $_SERVER[ 'HTTP_HOST' ] . \XS\Menu::getInstance()->getPageURL( 'blog' );
         
