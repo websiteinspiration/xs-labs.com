@@ -251,7 +251,8 @@
 </p>
 <p>
     Note the function is declared as <code>friend</code>, so it can also access private members.<br />
-    The <code>using std::swap</code> line tells the compiler to use `std::swap`, if there's no overload matching the given arguments.<br />
+    The <code>using std::swap</code> line tells the compiler to use <code>std::swap</code> as fallback, if there's no overload matching the given arguments.<br />
+    This allows specialized swap functions to be used seamlessly, based on the type of the members.
 </p>
 <a name="toc-2-4"></a>
 <h4>2.4 - C++11</h4>
