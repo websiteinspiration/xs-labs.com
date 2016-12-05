@@ -82,154 +82,183 @@ class String
 <p>
     If you read <a href="/en/blog/2016/11/28/cpp-auto-alloc-part-1/">part one</a> of this tutorial, this should be quite clear.
 </p>
-
-Note that I already implemented the `GetCString` and `GetLength` member methods, are they are perfectly trivial, as well as the `swap` function as it is covered by the [previous tutorial]((http://www.xs-labs.com/en/blog/2016/11/28/cpp-auto-alloc-part-1/)).
-**Now let's take a look at the implementation for other members**.
-
-3 - String class implementation
--------------------------------
-
-### 3.1 - Parameter-less constructor
-
-First of all, we want a parameter-less constructor, so we can declare empty string objects:
-
+<p>
+    Note that I already implemented the <code>GetCString</code> and <code>GetLength</code> member methods, are they are perfectly trivial, as well as the <code>swap</code> function as it is covered by the <a href="/en/blog/2016/11/28/cpp-auto-alloc-part-1/">previous tutorial</a>.<br />
+    <strong>Now let's take a look at the implementation for other members</strong>.
+</p>
+<h3>String class implementation</h3>
+<h4>3.1 - Parameter-less constructor</h4>
+<p>
+    First of all, we want a <strong>parameter-less constructor</strong>, so we can declare empty string objects:
+</p>
+<pre class="code-block language-cpp">
+{
+    String s;
+}
+</pre>
+<p>
+    <strong>Such objects should be valid</strong>: the <code>GetCString</code> method should return an empty <code>char</code> pointer (<code>""</code>) rather than <code>nullptr</code> and <code>GetLength</code> should return <code>0</code>.
+</p>
+<p>
+    So we can simply <strong>rely on the second constructor</strong>, taking a <code>char *</code> as argument, and pass an empty string:
+</p>
+<pre class="code-block language-cpp">
+String::String( void ): String( "" )
+{}
+</pre>
+<h3>3.2 - Main constructor</h3>
+<p>
+    The main constructor takes a <code>const char *</code>c as argument.<br />
+    As we don't know where that argument comes from, we'll <strong>make a copy</strong> (using <code>strdup</code>), so we can ensure our instance will remain valid.<br />
+    We'll also check for a <code>NULL</code> value, and fall back to an empty string (<code>""</code>):
+</p>
+<pre class="code-block language-cpp">
+String::String( const char * s )
+{
+    if( s == nullptr )
     {
-        String s;
+        s = "";
     }
     
-**Such objects should be valid**: the `GetCString` method should return an empty `char` pointer (`""`) rather than `nullptr` and `GetLength` should return `0`.
-
-So we can simply **rely on the second constructor**, taking a `char *` as argument, and pass an empty string:
-
-    String::String( void ): String( "" )
-    {}
-
-### 3.2 - Main constructor
-
-The main constructor takes a `const char *` as argument.  
-As we don't know where that argument comes from, we'll **make a copy** (using `strdup`), so we can ensure our instance will remain valid.  
-We'll also check for a `NULL` value, and fall back to an empty string (`""`):
-
-    String::String( const char * s )
-    {
-        if( s == nullptr )
-        {
-            s = "";
-        }
-        
-        this->_cp  = strdup( s );
-        this->_len = strlen( s );
-    }
-
-### 3.3 - Destructor
-
-As we're copying the string passed to our main constructor, we need to `free` it in the destructor.
-
-    String::~String( void )
-    {
-        free( this->_cp );
-    }
-
-### 3.4 - Copy constructor
-
-Now let's implement the **copy constructor**.  
-As you can guess, we need here to **copy the C string from the other object**.
-
-We cannot simply assign the pointer value, as two objects would then share the same pointer.  
-**This would cause the destructor to crash, as we cannot free the same pointer twice**.
-
-So:
-
-    String::String( const String & o ):
-        _len( o._len )
-    {
-        this->_cp  = strdup( o._cp );
-    }
+    this->_cp  = strdup( s );
+    this->_len = strlen( s );
+}
+</pre>
+<h4>3.3 - Destructor</h4>
+<p>
+    As we're copying the string passed to our main constructor, we need to <code>free</code> it in the destructor.
+</p>
+<pre class="code-block language-cpp">
+String::~String( void )
+{
+    free( this->_cp );
+}
+</pre>
+<h4>3.4 - Copy constructor</h4>
+<p>
+    Now let's implement the <strong>copy constructor</strong>.<br />
+    As you can guess, we need here to <strong>copy the C string from the other object</strong>.
+</p>
+<p>
+    We cannot simply assign the pointer value, as two objects would then share the same pointer.  
+    <strong>This would cause the destructor to crash, as we cannot free the same pointer twice</strong>.
+</p>
+<p>
+    So:
+</p>
+<pre class="code-block language-cpp">
+String::String( const String & o ):
+    _len( o._len )
+{
+    this->_cp  = strdup( o._cp );
+}
+</pre>
+<p>
+    Note that we also copy the string length. No reason to recompute it.
+</p>
+<h4>3.5 - Move constructor</h4>
+<p>
+    As stated in <a href="/en/blog/2016/11/28/cpp-auto-alloc-part-1/">part one</a> of this tutorial, our move constructor will actually <strong>move/steal</strong> resources from the object passed as argument.
+</p>
+<p>
+    So no string copying here, we'll simply assign the string pointer to the other object's one.
+</p>
+<p>
+    But we cannot stop here, as then the two objects would again share the same pointer value, causing the destructor to crash (double free).
+</p>
+<p>
+    So we need to <strong>reset</strong> the members of the objects passed by reference.<br />
+    Here, will simply set the string pointer to <code>nullptr</code>.<br />
+    The destructor will be fine, as it's OK to call <code>free</code> on a <code>NULL</code> pointer.<br />
+    Also, we can safely assume the object passed as an <strong>rvalue reference</strong> won't be used after it has been moved.
+</p>
+<p>
+    In other words:
+</p>
+<pre class="code-block language-cpp">
+String::String( String && o ):
+    _cp(  o._cp )
+    _len( o._len )
+{
+    o._cp  = nullptr;
+    o._len = 0;
+}
+</pre>
+<p>
+    As you can see, we simply <strong>steal</strong> the resources from the passed object.<br />
+    Then we set its value to default ones, so it will be deallocated without any issue.
+</p>
+<h4>3.6 - Assignment operator</h4>
+<p>
+    Now let's take a look a the assignment operator.
+</p>
+<p>
+    As stated in <a href="/en/blog/2016/11/28/cpp-auto-alloc-part-1/">part one</a> of this tutorial, the assignment operator needs to copy the values from the object passed as parameter.  
+    <strong>But first of all, it will also need to free any acquired resources</strong>:
+</p>
+<pre class="code-block language-cpp">
+String & String::operator =( const String & o )
+{
+    free( this->_cp );
     
-Note that we also copy the string length. No reason to recompute it.
-
-### 3.5 - Move constructor
-
-As stated in [part one](http://www.xs-labs.com/en/blog/2016/11/28/cpp-auto-alloc-part-1/) of this tutorial, our move constructor will actually **move/steal** resources from the object passed as argument.
-
-So no string copying here, we'll simply assign the string pointer to the other object's one.
-
-But we cannot stop here, as then the two objects would again share the same pointer value, causing the destructor to crash (double free).
-
-So we need to **reset** the members of the objects passed by reference.  
-Here, will simply set the string pointer to `nullptr`.
-The destructor will be fine, as it's OK to call `free` on a `NULL` pointer.  
-Also, we can safely assume the object passed as an **rvalue reference** won't be used after it has been moved.
-
-In other words:
-
-    String::String( String && o ):
-        _cp(  o._cp )
-        _len( o._len )
-    {
-        o._cp  = nullptr;
-        o._len = 0;
-    }
+    this->_cp  = strdup( o._cp );
+    this->_len = o._len;
     
-As you can see, we simply **steal** the resources from the passed object.  
-Then we set its value to default ones, so it will be deallocated without any issue.
-
-### 3.6 - Assignment operator
-
-Now let's take a look a the assignment operator.
-
-As stated in [part one](http://www.xs-labs.com/en/blog/2016/11/28/cpp-auto-alloc-part-1/) of this tutorial, the assignment operator needs to copy the values from the object passed as parameter.  
-But first of all, it will also need to free any acquired resources:
-
-    String & String::operator =( const String & o )
-    {
-        free( this->_cp );
-        
-        this->_cp  = strdup( o._cp );
-        this->_len = o._len;
-        
-        return *( this );
-    }
+    return *( this );
+}
+</pre>
+<h3>Optimising the assignment operator</h3>
+<p>
+    We could actually stop here, as our implementation is perfectly valid.<br />
+    But maybe you noticed some <strong>redundant code with the copy constructor and the assignment operator</strong>.
+</p>
+<p>
+    Both need to copy the <code>char</code> pointer from another object.  
+    The only difference is that the assignment operator needs to free the previous resources before the copy can take place.
+</p>
+<p>
+    Not a big deal in our <code>String</code> class example, but depending on the type of resources managed by the object, this can lead to many lines of <strong>duplicate code</strong>.
+</p>
+<p>
+    <strong>We can actually avoid this in a very nice and clean way</strong>.
+</p>
+<p>
+    In the actual implementation of the assignment operator, the source object is passed as a <strong>constant reference</strong>.  
+    But unlike the copy constructor, this is not a requirement. <strong>The object can also be passed by value, if needed</strong>.
+</p>
+<p>
+    What would happend then?<br />
+    In <a href="/en/blog/2016/11/28/cpp-auto-alloc-part-1/">part one</a> of this tutorial, we saw that the compiler will use the <strong>copy constructor</strong> when passing objects by value.<br />
+    This is great, as our copy constructor already does all the required stuff.
+</p>
+<p>
+    But we also need, in the assignment operator, to free the previous resources.<br />
+    <strong>Well, we'll simply use here our <code>swap</code> function</strong>, to exchange our existing values with the one of the other object.
+</p>
+<p>
+    Take a look at this implementation:
+</p>
+<pre class="code-block language-cpp">
+String & String::operator =( String o )
+{
+    swap( *( this ), o );
     
-4 - Optimising the assignment operator
---------------------------------------
-
-We could actually stop here, as our implementation is perfectly valid.  
-But maybe you noticed some **redundant code with the copy constructor and the assignment operator**.
-
-Both need to copy the `char` pointer from another object.  
-The only difference is that the assignment operator needs to free the previous resources before the copy can take place.
-
-Not a big deal in our `String` class example, but depending on the type of resources managed by the object, this can lead to many lines of **duplicate code**.
-
-**We can actually avoid this in a very nice and clean way**.
-
-In the actual implementation of the assignment operator, the source object is passed as a **constant reference**.  
-But unlike the copy constructor, this is not a requirement. **The object can also be passed by value, if needed**.
-
-What would happend then?  
-In [part one](http://www.xs-labs.com/en/blog/2016/11/28/cpp-auto-alloc-part-1/) of this tutorial, we saw that the compiler will use the **copy constructor** when passing objects by value.  
-This is great, as our copy constructor already does all the required stuff.
-
-But we also need, in the assignment operator, to free the previous resources.  
-**Well, we'll simply use here our `swap` function**, to exchange our existing values with the one of the other object.
-
-Take a look at this implementation:
-
-    String & String::operator =( String o )
-    {
-        swap( *( this ), o );
-        
-        return *( this );
-    }
-    
-No more duplicate code! But what's actually happening?
-
-First of all, the assigned object is no longer passed as a reference. **It is now passed as a copy**.
-
-It means that the compiler will make a **temporary copy** before calling the assignment operator, using the **copy constructor**.  
-The lifetime of that temporary copy is determined by the scope of the assignment operator, meaning it will be **deallocated right after the assignment operator returns**.
-
-So by simply **swapping** ourself with the other object, as it is a temporary copy, not only are we acquiring its resources, but we'll also **have it free our own resources** for us.
-
-This optimisation is of course not required, but I highly recommend using it, as it keeps the assignment operator trivial, by simply relying on the **copy constructor** and the `swap` function.
+    return *( this );
+}
+</pre>
+<p>    
+    No more duplicate code! But what's actually happening?
+</p>
+<p>
+    First of all, the assigned object is no longer passed as a reference. <strong>It is now passed as a copy</strong>.
+</p>
+<p>
+    It means that the compiler will make a <strong>temporary copy</strong> before calling the assignment operator, using the <strong>copy constructor</strong>.<br />
+    The lifetime of that temporary copy is determined by the scope of the assignment operator, meaning it will be <strong>deallocated right after the assignment operator returns</strong>.
+</p>
+<p>
+    So by simply <strong>swapping</strong> ourself with the other object, as it is a temporary copy, not only are we acquiring its resources, but we'll also <strong>have it free our own resources</strong> for us.
+</p>
+<p>
+    This optimisation is of course not required, but I highly recommend using it, as it keeps the assignment operator trivial, by simply relying on the <strong>copy constructor</strong> and the <code>swap</code> function.
+</p>
