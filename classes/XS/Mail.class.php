@@ -35,10 +35,8 @@ namespace XS;
 
 class Mail
 {
-    protected $_parts   = array();
     protected $_to      = '';
     protected $_from    = '';
-    protected $_headers = '';
     protected $_subject = '';
     protected $_body    = '';
     
@@ -50,87 +48,9 @@ class Mail
         $this->_from    = ( string )$from;
     }
     
-    protected function _getMimeMail()
-    {
-        $mime = array();
-        
-        if( !empty( $this->_from ) )
-        {
-            $mime[] = 'From: ' . $this->_from;
-        }
-        
-        if( !empty( $this->_headers ) )
-        {
-            $mime[] = $this->_headers;
-        }
-        
-        if( !empty( $this->_body ) )
-        {
-            $this->addAttachement( $this->_body, '', 'text/plain' );
-        }
-        
-        $mime[] = 'MIME-Version: 1.0';
-        $mime[] = $this->_buildMultipart();
-        
-        return implode( chr( 10 ), $mime );
-    }
-    
-    protected function _buildMultipart()
-    {
-        $boundary    = 'b' . md5( uniqid( time() ) );
-        $multipart   = array();
-        $contentType = 'Content-Type: multipart/mixed; boundary = '
-                     . $boundary
-                     . chr( 10 )
-                     . chr( 10 )
-                     . 'This is a MIME encoded message.'
-                     . chr( 10 )
-                     . chr( 10 )
-                     . '--' . $boundary;
-        
-        $multipart[] = $contentType;
-        
-        for( $i = sizeof( $this->_parts ) - 1; $i >= 0; $i-- )
-        {
-            $multipart[] = $this->_buildMessage( $this->_parts[ $i ] ) . '--' . $boundary;
-        }
-        
-        return implode( chr( 10 ), $multipart ) . '--' . chr( 10 ) . chr( 10 );
-    }
-    
-    protected function _buildMessage( array $part )
-    {
-        $message     = chunk_split( base64_encode( $part[ 'message' ] ) );
-        $encoding    =  'base64';
-        $fullMessage = 'Content-Type: '
-                     . $part[ 'ctype' ]
-                     . ( ( $part[ 'name' ] ) ? '; name = \'' . $part[ 'name' ] . '\'' : '' )
-                     . chr( 10 )
-                     . 'Content-Transfer-Encoding:'
-                     . $encoding
-                     . chr( 10 )
-                     . chr( 10 )
-                     . $message
-                     . chr( 10 );
-        
-        return $fullMessage;
-    }
-    
     public function send()
     {
-        $mime = $this->_getMimeMail();
-        
-        mail( $this->_to, $this->_subject, '', $mime );
-    }
-    
-    public function addAttachement( $message, $name='', $ctype = 'application/octet-stream' )
-    {
-        $this->_parts[] = array
-        (
-            'ctype'   => $ctype,
-            'message' => $message,
-            'name'    => $name
-        );
+        mail( $this->_to, $this->_subject, $this->_body, 'From: ' . $this->_from );
     }
     
     public function getTo()
