@@ -715,7 +715,7 @@ final class Blog
         {
             $updated = $feed->updated;
             
-            $updated->addTextData( ( new \DateTime( $this->_posts->post[ 0 ]->date . ' ' .$this->_posts->post[ 0 ]->time ) )->format( DateTime::ATOM ) );
+            $updated->addTextData( ( new \DateTime( $this->_posts->post[ 0 ]->date . ' ' .$this->_posts->post[ 0 ]->time ) )->format( \DateTime::ATOM ) );
         }
         
         foreach( $this->_posts->post as $post )
@@ -803,7 +803,7 @@ final class Blog
         {
             $updated = $channel->pubDate;
             
-            $updated->addTextData( ( new \DateTime( $this->_posts->post[ 0 ]->date . ' ' .$this->_posts->post[ 0 ]->time ) )->format( DateTime::RSS ) );
+            $updated->addTextData( ( new \DateTime( $this->_posts->post[ 0 ]->date . ' ' .$this->_posts->post[ 0 ]->time ) )->format( \DateTime::RSS ) );
         }
         
         foreach( $this->_posts->post as $post )
