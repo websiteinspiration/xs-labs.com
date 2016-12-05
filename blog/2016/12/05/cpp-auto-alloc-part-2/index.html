@@ -55,7 +55,7 @@
     In such a case, the <a href="/en/blog/2016/11/28/cpp-auto-alloc-part-1/#toc-2-1">copy-constructor</a> and the <a href="/en/blog/2016/11/28/cpp-auto-alloc-part-1/#toc-2-2">assignment operator</a> implementations are trivial.
 </p>
 <p>
-    Things get a little more complicated when the instance of a class needs to <strong>manage resources</strong>.<br />
+    Things get a little more complicated when the class needs to <strong>manage resources</strong>.<br />
     Such resources can be dynamically allocated memory, file handles, database connections, etc.
 </p>
 <p>
@@ -144,8 +144,8 @@ String::String( void ): String( "" )
 <a name="toc-3-2"></a>
 <h3>3.2 - Main constructor</h3>
 <p>
-    The main constructor takes a <code>const char *</code>c as argument.<br />
-    As we don't know where that argument comes from, we'll <strong>make a copy</strong> (using <code>strdup</code>), so we can ensure our instance will remain valid.<br />
+    The main constructor takes a <code>const char *</code> as argument.<br />
+    As we don't know where that argument comes from, <strong>we'll make a copy</strong> (using <code>strdup</code>), so we can ensure our instance will remain valid.<br />
     We'll also check for a <code>NULL</code> value, and fall back to an empty string (<code>""</code>):
 </p>
 <pre class="code-block language-cpp">
@@ -178,7 +178,7 @@ String::~String( void )
     As you can guess, we need here to <strong>copy the C string from the other object</strong>.
 </p>
 <p>
-    We cannot simply assign the pointer value, as two objects would then share the same pointer.  
+    We cannot simply assign the pointer value, as the two objects would then share the same pointer.<br />
     <strong>This would cause the destructor to crash, as we cannot free the same pointer twice</strong>.
 </p>
 <p>
@@ -206,10 +206,10 @@ String::String( const String & o ):
     But we cannot stop here, as then the two objects would again share the same pointer value, causing the destructor to crash (double free).
 </p>
 <p>
-    So we need to <strong>reset</strong> the members of the objects passed by reference.<br />
+    So we need to <strong>reset</strong> the members of the object passed by reference.<br />
     Here, will simply set the string pointer to <code>nullptr</code>.<br />
     The destructor will be fine, as it's OK to call <code>free</code> on a <code>NULL</code> pointer.<br />
-    Also, we can safely assume the object passed as an <strong>rvalue reference</strong> won't be used after it has been moved.
+    Also, we can safely assume that the object passed as an <strong>rvalue reference</strong> won't be used after it has been moved.
 </p>
 <p>
     In other words:
@@ -225,12 +225,12 @@ String::String( String && o ):
 </pre>
 <p>
     As you can see, we simply <strong>steal</strong> the resources from the passed object.<br />
-    Then we set its value to default ones, so it will be deallocated without any issue.
+    Then we set its value to default ones, so it can later be deallocated without any issue.
 </p>
 <a name="toc-3-6"></a>
 <h4>3.6 - Assignment operator</h4>
 <p>
-    Now let's take a look a the assignment operator.
+    Now let's take a look at the assignment operator.
 </p>
 <p>
     As stated in <a href="/en/blog/2016/11/28/cpp-auto-alloc-part-1/">part one</a> of this tutorial, the assignment operator needs to copy the values from the object passed as parameter.  
@@ -248,7 +248,7 @@ String & String::operator =( const String & o )
 }
 </pre>
 <a name="toc-4"></a>
-<h3>Optimising the assignment operator</h3>
+<h3>4 - Optimising the assignment operator</h3>
 <p>
     We could actually stop here, as our implementation is perfectly valid.<br />
     But maybe you noticed some <strong>redundant code with the copy constructor and the assignment operator</strong>.
@@ -264,11 +264,14 @@ String & String::operator =( const String & o )
     <strong>We can actually avoid this in a very nice and clean way</strong>.
 </p>
 <p>
-    In the actual implementation of the assignment operator, the source object is passed as a <strong>constant reference</strong>.  
-    But unlike the copy constructor, this is not a requirement. <strong>The object can also be passed by value, if needed</strong>.
+    In the actual implementation of the assignment operator, the source object is passed as a <strong>constant reference</strong>.<br />
+    But unlike the copy constructor, this is not a requirement.<br />
+    <strong>The object can also be passed by value, if needed</strong>.
 </p>
 <p>
-    What would happend then?<br />
+    What would happend then?
+</p>
+<p>
     In <a href="/en/blog/2016/11/28/cpp-auto-alloc-part-1/">part one</a> of this tutorial, we saw that the compiler will use the <strong>copy constructor</strong> when passing objects by value.<br />
     This is great, as our copy constructor already does all the required stuff.
 </p>
