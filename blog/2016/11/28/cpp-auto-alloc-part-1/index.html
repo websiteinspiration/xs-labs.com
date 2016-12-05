@@ -18,7 +18,8 @@
         <ol>
             <li><a href="#toc-2-1">Copy constructor</a></li>
             <li><a href="#toc-2-2">Assignment operator</a></li>
-            <li><a href="#toc-2-3">C++11</a></li>
+            <li><a href="#toc-2-3">Swapping</a></li>
+            <li><a href="#toc-2-4">C++11</a></li>
         </ol>
     </li>
 </ol>
@@ -227,7 +228,33 @@
     Unlike the copy constructor, this is not the only possible signature for an assignment operator, but we'll cover this in the next tutorial.
 </p>
 <a name="toc-2-3"></a>
-<h4>2.3 - C++11</h4>
+<h4>2.3 - Swapping</h4>
+<p>
+    While not a requirement for automatic allocation, it's usually a good idea to provide a <code>swap</code> function.<br />
+    As we'll see in the next tutorials, it might also help us get rid of some redundant code.
+</p>
+<p>
+    The idea of the <code>swap</code> function is to <strong>exchange two objects</strong>.<br />
+    Here's an example implementation for our <code>Point</code> class:
+</p>
+<pre class="code-block language-cpp">
+    friend void swap( Point & p1, Point & p2 )
+    {
+        using std::swap;
+        
+        swap( p1.x, p2.x );
+        swap( p1.y, p2.y );
+    }
+</pre>
+<p>
+    Quite straightforward, we simply exchange all of the members of the objects passed by reference.
+</p>
+<p>
+    Note the function is declared as <code>friend</code>, so it can also access private members.<br />
+    The <code>using std::swap</code> line tells the compiler to use `std::swap`, if there's no overload matching the given arguments.<br />
+</p>
+<a name="toc-2-4"></a>
+<h4>2.4 - C++11</h4>
 <p>
     C++11 introduced <strong><code>rvalue</code> references</strong>, denoted by <code>&&</code>.<br />
     I won't cover here what they are, but if targeting C++11, you can also declare a <strong>move constructor</strong>, and a <strong>move assignment</strong> operator.
