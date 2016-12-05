@@ -757,7 +757,7 @@ final class Blog
             $link2[ 'rel' ]         = 'alternate';
             $link2[ 'type' ]        = 'text/html';
             $entry->id              = 'urn:uuid:' . ( string )( new \XS\UUID( $post->date . '-' . $post->name ) );
-            $entry->updated         = ( new \DateTime( $post->date . ' ' . $post->time ) )->format( DateTime::ATOM );
+            $entry->updated         = ( new \DateTime( $post->date . ' ' . $post->time ) )->format( \DateTime::ATOM );
             $summary                = $entry->summary;
             $summary[ 'type' ]      = 'html';
             $content                = $entry->content;
@@ -842,7 +842,7 @@ final class Blog
             $link                   = 'http://' . $_SERVER[ 'HTTP_HOST' ] . $this->_getPostUrl( $post );
             $guid                   = $item->guid;
             $guid[ 'isPermaLink' ]  = "false";
-            $item->pubDate          = ( new \DateTime( $post->date . ' ' . $post->time ) )->format( DateTime::RSS );
+            $item->pubDate          = ( new \DateTime( $post->date . ' ' . $post->time ) )->format( \DateTime::RSS );
             $item->link             = 'http://' . $_SERVER[ 'HTTP_HOST' ] . $this->_getPostUrl( $post );
             
             $guid->addTextData( ( string )( new \XS\UUID( $post->date . '-' . $post->name ) ) );
