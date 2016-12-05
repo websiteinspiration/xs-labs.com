@@ -32,17 +32,17 @@
     Let's take a look at the following code:
 </p>
 <pre class="code-block language-cpp">
-    #include &lt;string&gt;
+#include &lt;string&gt;
+
+int main( void )
+{
+    std::string   s1( "hello, world" );
+    std::string * s2 = new std::string( "hello, universe" );
     
-    int main( void )
-    {
-        std::string   s1( "hello, world" );
-        std::string * s2 = new std::string( "hello, universe" );
-        
-        delete s2;
-        
-        return 0;
-    }
+    delete s2;
+    
+    return 0;
+}
 </pre>
 <p>
     Here, <code>s1</code> uses <strong>automatic</strong> allocation, while <code>s2</code> uses <strong>dynamic</strong> allocation.<br />
@@ -68,35 +68,35 @@
     Let's take as an example a very basic <code>Point</code> class, representing two coordinates:
 </p>
 <pre class="code-block language-cpp">
-    class Point
-    {
-        public:
-            
-            int x;
-            int y;
-            
-            Point( void ):
-                x( 0 ),
-                y( 0 )
-            {}
-            
-            Point( int x_, int y_ ):
-                x( x_ ),
-                y( y_ )
-            {}
-    };
+class Point
+{
+    public:
+        
+        int x;
+        int y;
+        
+        Point( void ):
+            x( 0 ),
+            y( 0 )
+        {}
+        
+        Point( int x_, int y_ ):
+            x( x_ ),
+            y( y_ )
+        {}
+};
 </pre>
 <p>
     We first have a <strong>parameter-less</strong> constructor, allowing to declare an empty/default <code>Point</code> object. Members will be initialised to zero:
 </p>
 <pre class="code-block language-cpp">
-    Point p;
+Point p;
 </pre>
 <p>
     And also another constructor, allowing the initialisation of the object with some useful values:
 </p>
 <pre class="code-block language-cpp">
-    Point p( 42, 42 );
+Point p( 42, 42 );
 </pre>
 <p>
     Now with such a basic example, the compiler will generate all the necessary code to make this class compatible with automatic allocation.
@@ -114,8 +114,8 @@
 </p>
 <h5>2.1.1 - Explicit call</h5>
 <pre class="code-block language-cpp">
-    Point p1( 42, 42 );
-    Point p2( p1 );
+Point p1( 42, 42 );
+Point p2( p1 );
 </pre>
 <p>
     Here, <code>p2</code> is constructed from <code>p1</code>. Both objects will have the same values.
@@ -125,16 +125,16 @@
     Imagine the following function:
 </p>
 <pre class="code-block language-cpp">
-    void foo( Point p );
+void foo( Point p );
 </pre>
 <p>
     The <code>p</code> parameter is here passed by value.<br />
     So when calling that function, like:
 </p>
 <pre class="code-block language-cpp">
-    Point p( 42, 42 );
-    
-    foo( p );
+Point p( 42, 42 );
+
+foo( p );
 </pre>
 <p>
     The function will receive a <strong>copy</strong> of the <code>p</code> local variable.  
@@ -144,19 +144,19 @@
     This obviously won't be the case when using a reference type (note the <code>&</code>):
 </p>
 <pre class="code-block language-cpp">
-    void foo( Point & p );
+void foo( Point & p );
 </pre>
 <h5>2.1.3 - Returning values</h5>
 <p>
     Now let's imagine the following function:
 </p>
 <pre class="code-block language-cpp">
-    Point bar( void )
-    {
-        Point p( 42, 42 );
-        
-        return p;
-    }
+Point bar( void )
+{
+    Point p( 42, 42 );
+    
+    return p;
+}
 </pre>
 <p>    
     Here, <code>p</code> is a local variable, belonging to the <code>bar</code> function. Memory is allocated from its stack frame, and might be reused by the compiler on return.
@@ -168,10 +168,10 @@
     Now let's take a look at the implementation of the copy constructor, for the <code>Point</code> class:
 </p>
 <pre class="code-block language-cpp">
-    Point( const Point & p ):
-        x( p.x ),
-        y( p.y )
-    {}
+Point( const Point & p ):
+    x( p.x ),
+    y( p.y )
+{}
 </pre>
 <p>    
     <strong>Note this is the only valid signature for a copy constructor.</strong>
@@ -192,10 +192,10 @@
     The assignment operator will be used, for instance, in the following case:
 </p>
 <pre class="code-block language-cpp">
-    Point p1;
-    Point p2( 42, 42 );
-    
-    p1 = p2;
+Point p1;
+Point p2( 42, 42 );
+
+p1 = p2;
 </pre>
 <p>    
     Here, <code>p1</code> and <code>p2</code> are valid, fully constructed objects.<br />
@@ -210,13 +210,13 @@
     So our assignment operator can simply be:
 </p>
 <pre class="code-block language-cpp">
-    Point & operator=( const Point & p )
-    {
-        this->x = p.x;
-        this->y = p.y;
-        
-        return *( this );
-    }
+Point & operator=( const Point & p )
+{
+    this->x = p.x;
+    this->y = p.y;
+    
+    return *( this );
+}
 </pre>
 <p>    
     We simply assign our member values by copying the member values from the object's reference passed as argument.
@@ -238,13 +238,13 @@
     Here's an example implementation for our <code>Point</code> class:
 </p>
 <pre class="code-block language-cpp">
-    friend void swap( Point & p1, Point & p2 )
-    {
-        using std::swap;
-        
-        swap( p1.x, p2.x );
-        swap( p1.y, p2.y );
-    }
+friend void swap( Point & p1, Point & p2 )
+{
+    using std::swap;
+    
+    swap( p1.x, p2.x );
+    swap( p1.y, p2.y );
+}
 </pre>
 <p>
     Quite straightforward, we simply exchange all of the members of the objects passed by reference.
@@ -273,21 +273,21 @@
     Let's take a look at the following example:
 </p>
 <pre class="code-block language-cpp">
-    Point foo( void )
-    {
-        Point p( 42, 42 );
-        
-        return p;
-    }
+Point foo( void )
+{
+    Point p( 42, 42 );
     
-    int main( void )
-    {
-        Point p;
-        
-        p = foo();
-        
-        return 0;
-    }
+    return p;
+}
+
+int main( void )
+{
+    Point p;
+    
+    p = foo();
+    
+    return 0;
+}
 </pre>
 <p>    
     Without <code>rvalue</code> references, here's what a compiler might do (I'm not saying it will necessarily be the case, but this will illustrate the need of <code>rvalue</code> references):
@@ -323,22 +323,22 @@
     For reference, here's the signature of a move constructor for our <code>Point</code> class:
 </p>
 <pre class="code-block language-cpp">
-    Point( Point && p ):
-        x( p.x ),
-        y( p.y ),
-    {}
+Point( Point && p ):
+    x( p.x ),
+    y( p.y ),
+{}
 </pre>
 <p>    
     And here's the move assignment operator:
 </p>
 <pre class="code-block language-cpp">
-    Point & operator =( Point && p )
-    {
-        this->x = p.x;
-        this->y = p.y;
-        
-        return *( this );
-    }
+Point & operator =( Point && p )
+{
+    this->x = p.x;
+    this->y = p.y;
+    
+    return *( this );
+}
 </pre>
 <p>
     Again, this is clearly not the best example with such a simple class.<br />

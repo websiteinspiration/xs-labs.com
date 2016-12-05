@@ -15,67 +15,73 @@
     
 </ol>
 <h3>Forewords</h3>
+<p>
+    In the <a href="/en/blog/2016/11/28/cpp-auto-alloc-part-1/">first part</a> of this tutorial, we discussed the basic requirements for designing C++ classes with automatic allocation.
+</p>
+<p>
+    The given example was pretty simple. A class with only two integer values as members.<br />
+    In such a case, the <a href="/en/blog/2016/11/28/cpp-auto-alloc-part-1/#toc-2-1">copy-constructor</a> and the <a href="/en/blog/2016/11/28/cpp-auto-alloc-part-1/#toc-2-2">assignment operator</a> implementations are trivial.
+</p>
+<p>
+    Things get a little more complicated when the instance of a class needs to <strong>manage resources</strong>.<br />
+    Such resources can be dynamically allocated memory, file handles, database connections, etc.
+</p>
+<p>
+    This tutorial focuses on this specific case.  
+</p>
+<h3>2 - String class interface</h3>
+<p>
+    As an example, we'll be designing a class representing a <a href="https://en.wikipedia.org/wiki/String_(computer_science)">string</a>. Think of <code>std::string</code>.<br />
+    Keep in mind the following examples will obviously lack many possible optimisations.
+</p>
+<p>
+    We'll design the class as a wrapper for C-style strings (<code>const char *</code>).<br />
+    Here's our public interface:
+</p>
+<pre class="code-block language-cpp">
+#include &lt;cstring&gt;
+#include &lt;cstdlib&gt;
+#include &lt;algorithm&gt;
 
-In the [first part](http://www.xs-labs.com/en/blog/2016/11/28/cpp-auto-alloc-part-1/) of this tutorial, we discussed the basic requirements for designing C++ classes with automatic allocation.
-
-The given example was pretty simple. A class with only two integer values as members.  
-In such a case, the [copy-constructor](http://www.xs-labs.com/en/blog/2016/11/28/cpp-auto-alloc-part-1/#toc-2-1) and the [assignment operator](http://www.xs-labs.com/en/blog/2016/11/28/cpp-auto-alloc-part-1/#toc-2-2) implementations are trivial.
-
-Things get a little more complicated when the instance of a class needs to **manage resources**.  
-Such resources can be dynamically allocated memory, file handles, database connections, etc.
-
-This tutorial focuses on this specific case.  
-
-2 - String class interface
---------------------------
-
-As an example, we'll be designing a class representing a [string](https://en.wikipedia.org/wiki/String_(computer_science)). Think of `std::string`.  
-Keep in mind the following examples will obviously lack many possible optimisations.
-
-We'll design the class as a wrapper for C-style strings (`const char *`).  
-Here's our public interface:
-
-    #include <cstring>
-    #include <cstdlib>
-    #include <algorithm>
-    
-    class String
-    {
-        public:
+class String
+{
+    public:
+        
+        String( void );
+        String( const char * s );
+        String( const String & o );
+        String( String && o );
+        ~String( void );
+        
+        String & operator =( const String & o );
+        
+        const char * GetCString( void ) const
+        {
+            return this->_cp;
+        }
+        
+        size_t GetLength( void ) const
+        {
+            return this->_len;
+        }
+        
+        friend void swap( String & s1, String & s2 )
+        {
+            using std::swap;
             
-            String( void );
-            String( const char * s );
-            String( const String & o );
-            String( String && o );
-            ~String( void );
-            
-            String & operator =( const String & o );
-            
-            const char * GetCString( void ) const
-            {
-                return this->_cp;
-            }
-            
-            size_t GetLength( void ) const
-            {
-                return this->_len;
-            }
-            
-            friend void swap( String & s1, String & s2 )
-            {
-                using std::swap;
-                
-                swap( s1._cp,  s2._cp );
-                swap( s1._len, s2._len );
-            }
-            
-        private:
-            
-            char * _cp;
-            size_t _len;
-    };
-    
-If you read [part one](http://www.xs-labs.com/en/blog/2016/11/28/cpp-auto-alloc-part-1/) of this tutorial, this should be quite clear.
+            swap( s1._cp,  s2._cp );
+            swap( s1._len, s2._len );
+        }
+        
+    private:
+        
+        char * _cp;
+        size_t _len;
+};
+</pre>
+<p>
+    If you read <a href="/en/blog/2016/11/28/cpp-auto-alloc-part-1/">part one</a> of this tutorial, this should be quite clear.
+</p>
 
 Note that I already implemented the `GetCString` and `GetLength` member methods, are they are perfectly trivial, as well as the `swap` function as it is covered by the [previous tutorial]((http://www.xs-labs.com/en/blog/2016/11/28/cpp-auto-alloc-part-1/)).
 **Now let's take a look at the implementation for other members**.
