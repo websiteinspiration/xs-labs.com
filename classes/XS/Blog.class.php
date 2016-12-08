@@ -336,7 +336,7 @@ final class Blog
         $panelAuthorText->small     = ( isset( $post->author ) ) ? $post->author : '-';
         $panelDateText->small       = ( $time > 0 ) ? $dateTime : '-';
         $panelCategoryText->small   = $post->category;
-        $panelCommentsText->small   = '0';
+        $panelCommentsText->small   = $this->_getNumberOfPostComments( $post );
         
         $copyright = $details->div;
         
@@ -426,6 +426,11 @@ final class Blog
     
     protected function _getCommentForm( \SimpleXMLElement $post )
     {
+        if( !isset( $post->comments ) || ( string )( $post->comments ) != 'enabled' )
+        {
+            return new \XS\XHTML\Tag( 'div' );
+        }
+        
         \XS\Session::getInstance()->setData( 'xs-comment-time', time() );
         
         $div                = new \XS\XHTML\Tag( 'div' );
@@ -530,6 +535,41 @@ final class Blog
         $input[ 'value' ]       = $this->_lang->addComment;
         
         return $div;
+    }
+    
+    protected function _getNumberOfPostComments( \SimpleXMLElement $post )
+    {
+        $n          = 0;
+        $comments   = array();
+        $path       = __ROOTDIR__ . DIRECTORY_SEPARATOR . 'blog' . DIRECTORY_SEPARATOR . 'comments.xml';
+        
+        if( !file_exists( $path ) )
+        {
+            return NULL;
+        }
+        
+        if( !isset( $post->date ) )
+        {
+            return NULL;
+        }
+        
+        if( !isset( $post->name ) )
+        {
+            return NULL;
+        }
+        
+        $postID = $post->date . '/' . $post->name;
+        $xml    = simplexml_load_file( $path );
+        
+        foreach( $xml->comment as $comment )
+        {
+            if( $postID == $comment->post )
+            {
+                $n++;
+            }
+        }
+        
+        return $n;
     }
     
     protected function _getPostComments( \SimpleXMLElement $post )
@@ -856,6 +896,11 @@ final class Blog
         $comments   = array();
         $emails     = array();
         $path       = __ROOTDIR__ . DIRECTORY_SEPARATOR . 'blog' . DIRECTORY_SEPARATOR . 'comments.xml';
+        
+        if( !isset( $post->comments ) || ( string )( $post->comments ) != 'enabled' )
+        {
+            return;
+        }
         
         if( \XS\Session::getInstance()->getData( 'xs-comment-time' ) === false )
         {
