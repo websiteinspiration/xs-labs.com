@@ -1048,7 +1048,7 @@ final class Blog
         $message = str_replace
         (
             '{POST_URL}',
-            'http://' . $_SERVER[ 'HTTP_HOST' ] . '/en/blog/' . $post->date . '/' . $post->name . '/',
+            'http://' . $_SERVER[ 'HTTP_HOST' ] . '/' . \XS\Menu::getInstance()->getLanguage() . '/blog/' . $post->date . '/' . $post->name . '/',
             $message
         );
         
@@ -1079,7 +1079,7 @@ final class Blog
         $message = str_replace
         (
             '{POST_URL}',
-            'http://' . $_SERVER[ 'HTTP_HOST' ] . '/en/blog/' . $post->date . '/' . $post->name . '/',
+            'http://' . $_SERVER[ 'HTTP_HOST' ] . '/' . \XS\Menu::getInstance()->getLanguage() . '/blog/' . $post->date . '/' . $post->name . '/',
             $message
         );
         
