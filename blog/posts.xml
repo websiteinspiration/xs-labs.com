@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <blog>
     <post>
+        <date>2016/12/23</date>
+        <time>19:05</time>
+        <author>Jean-David Gadina</author>
+        <name>cpp-pimpl</name>
+        <title>C++ PIMPL idiom &amp; C++ automatic allocation</title>
+        <category>Development</category>
+        <comments>enabled</comments>
+    </post>
+    <post>
         <date>2016/12/05</date>
         <time>21:39</time>
         <author>Jean-David Gadina</author>
