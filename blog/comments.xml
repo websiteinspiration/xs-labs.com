@@ -1588,6 +1588,7 @@ u64 = (u64 << 56) | (u64 << 48) | (u64 << 40) | (u64 << 32) | (u64 << 24) | (u64
     <comment>
         <author><![CDATA[mac]]></author>
         <email><![CDATA[vV6w7hfJ/kicJF8Ezmog5hnTZ5lqKHTCo9gkqMHz9GuaZz/9DzhtUiy7+H8VCNRg]]></email>
+        <url><![CDATA[]]></url>
         <date><![CDATA[2014-09-28 01:46:09]]></date>
         <content><![CDATA[Hi Jean-David ,
 
@@ -1639,5 +1640,22 @@ Can you please explain how this line "A simple solution is to write 8 bytes whil
 Thanks
 ]]></content>
         <post><![CDATA[2013/08/06/optimising-memset]]></post>
+    </comment>
+    <comment>
+        <author><![CDATA[Vishal Oza]]></author>
+        <email><![CDATA[UJlRMM5yGcWjzMKvbJ31tR1fddfScaVJ2EjLk3m5frJba+TUZyvR1vsCCNIhRzwf]]></email>
+        <url><![CDATA[]]></url>
+        <date><![CDATA[2014-09-28 01:46:09]]></date>
+        <content><![CDATA[Could you substitute references for pointer or at least use smart pointer for ownership? Also how does auto fit in to this mess. I think auto might help with PIMPL. If not the future versions of C++ or maybe C++ 17 with class deduction of template code might help]]></content>
+        <post><![CDATA[2016/12/23/cpp-pimpl]]></post>
+    </comment>
+    <comment>
+        <author><![CDATA[Jean-David Gadina]]></author>
+        <email><![CDATA[E7STF4b3EueDjE9td/on26ia6NuSsDH7tMgD1bytt23OwJunMjMbmPqdWu/ZQXYg]]></email>
+        <date><![CDATA[2014-09-28 01:46:09]]></date>
+        <content><![CDATA[You can't really use a reference for the IMPL field, as, well, the reference has to point to something, but you can indeed use smart pointers if you find it easier.
+
+About auto, you can also use it, but I personally avoid it in such situations, as I like my code to be explicit.]]></content>
+        <post><![CDATA[2016/12/23/cpp-pimpl]]></post>
     </comment>
 </comments>
