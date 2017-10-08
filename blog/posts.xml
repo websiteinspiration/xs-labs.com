@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <blog>
     <post>
+        <date>2017/10/08</date>
+        <time>14:53</time>
+        <author>Jean-David Gadina</author>
+        <name>better-nsuserdefaults-with-swift</name>
+        <title>Better NSUserDefaults with Swift</title>
+        <category>Development</category>
+        <comments>enabled</comments>
+    </post>
+    <post>
         <date>2016/12/23</date>
         <time>19:05</time>
         <author>Jean-David Gadina</author>
