@@ -65,7 +65,8 @@ for c in m.children
     This will allow us to be notified of any change of a property.
 </p>
 <p>
-    Let's start by adding an observer for each property, using a <code>Mirror</code>.<br />
+    We'll start by reading the actual property value from <code>NSUserDefaults</code>.<br />
+    Then we'll add an observer for each property, using a <code>Mirror</code>.<br />
     We'll do this in the class' initialiser:
 </p>
 <pre class="code-block language-swift">
@@ -79,7 +80,8 @@ override init()
         {
             continue
         }
-    
+        
+        self.setValue( UserDefaults.standard.object( forKey: key ), forKey: key )
         self.addObserver( self, forKeyPath: key, options: .new, context: nil )
     }
 }
