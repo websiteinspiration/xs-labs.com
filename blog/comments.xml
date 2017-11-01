@@ -1658,4 +1658,22 @@ Thanks
 About auto, you can also use it, but I personally avoid it in such situations, as I like my code to be explicit.]]></content>
         <post><![CDATA[2016/12/23/cpp-pimpl]]></post>
     </comment>
+    <comment>
+        <author><![CDATA[Hm]]></author>
+        <email><![CDATA[]]>IL37go6nS1d2UOMYhevii+igTvcMGGXf9C96or6LJatOe5n1kGQgFn3Yu24qTxni</email>
+        <date><![CDATA[2017-10-13 05:43:00]]></date>
+        <content><![CDATA[That is the ugliest piece of swift code that I have ever seen.]]></content>
+        <post><![CDATA[2017/10/08/better-nsuserdefaults-with-swift]]></post>
+    </comment>
+    <comment>
+        <author><![CDATA[Nicolas Bouilleaud]]></author>
+        <email><![CDATA[]]>cjTq5chspqqVqzsUsGUkcdsCOgpaQ/L2pUDFU94HI+axy4CLjYwvzqSUtfbP6qeq</email>
+        <date><![CDATA[2017-10-13 11:30:00]]></date>
+        <content><![CDATA[Oh, that is really elegant. I wish I had seen this years ago in objc :D
+
+If I understand correctly, the Preferences class only reads from the userdefaults once, when created?
+
+I wonder if we could use an single “didSet” method for all the properties instead of relying on KVO (and the @objc dynamic dance)? Maybe by boxing the property types in some kind of generic proxy.]]></content>
+        <post><![CDATA[2017/10/08/better-nsuserdefaults-with-swift]]></post>
+    </comment>
 </comments>
