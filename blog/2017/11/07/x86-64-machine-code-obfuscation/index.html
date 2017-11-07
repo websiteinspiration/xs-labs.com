@@ -147,7 +147,7 @@ if( false )
 <p>
     When calling a function, using the <code>call</code> instruction, a few things happen before the target code is reached.<br />
     Mainly, the <strong>return</strong> address is pushed onto the stack. Later, from the called function, when the <code>ret</code> instruction is executed, the CPU will pop that return address, and jump back to the caller.<br />
-    This pattern is recognised by all disassembler. That's how they are able to generate complete call graphs.
+    This pattern is recognised by all disassemblers. That's how they are able to generate complete call graphs.
 </p>
 <p>
     Again, this is a nice opportunity for us.<br />
@@ -250,11 +250,11 @@ ret
     Let's try to fool the disassembler a little more.
 </p>
 <p>
-    Now what logically comes after the <code>ret</code> instruction of a function?
+    Now what logically comes after the <code>ret</code> instruction of a function?<br />
     <strong>The start of another function</strong>.
 </p>
 <p>
-    Let's do one.
+    Let's do one.<br />
     Remember this is completely dead code, that will never be executed.<br />
     We are just doing some stuff that will seem logical for a disassembler.
 </p>
@@ -473,6 +473,6 @@ done:
 </p>
 <p>
     But if you're looking into obfuscation, my only hope is that this article gave you some ideas… : )<br />
-    As alsways, you can find the code for the article on my <a href="https://github.com/macmade/Obfuscate">GitHub</a>.
+    As alsways, you can find the code for the article on my <a href="https://github.com/macmade/Obfuscate">GitHub</a>.<br />
     Cheers!
 </p>
