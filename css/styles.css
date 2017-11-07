@@ -11,6 +11,10 @@
 ##################################################
 */
 
+body, body .container {
+    font-family:            Helvetica, Arial, sans-serif;
+}
+
 .clearer {
     clear:                  both;
 }
