@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <blog>
     <post>
+        <date>2017/11/26</date>
+        <time>21:40</time>
+        <author>Jean-David Gadina</author>
+        <name>prevent-macos-root-access</name>
+        <title>Preventing macOS root access</title>
+        <category>Security</category>
+        <comments>enabled</comments>
+    </post>
+    <post>
         <date>2017/11/07</date>
         <time>22:18</time>
         <author>Jean-David Gadina</author>
