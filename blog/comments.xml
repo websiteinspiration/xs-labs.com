@@ -1652,6 +1652,7 @@ Thanks
     <comment>
         <author><![CDATA[Jean-David Gadina]]></author>
         <email><![CDATA[E7STF4b3EueDjE9td/on26ia6NuSsDH7tMgD1bytt23OwJunMjMbmPqdWu/ZQXYg]]></email>
+        <url><![CDATA[]]></url>
         <date><![CDATA[2014-09-28 01:46:09]]></date>
         <content><![CDATA[You can't really use a reference for the IMPL field, as, well, the reference has to point to something, but you can indeed use smart pointers if you find it easier.
 
@@ -1660,14 +1661,16 @@ About auto, you can also use it, but I personally avoid it in such situations, a
     </comment>
     <comment>
         <author><![CDATA[Hm]]></author>
-        <email><![CDATA[]]>IL37go6nS1d2UOMYhevii+igTvcMGGXf9C96or6LJatOe5n1kGQgFn3Yu24qTxni</email>
+        <email><![CDATA[IL37go6nS1d2UOMYhevii+igTvcMGGXf9C96or6LJatOe5n1kGQgFn3Yu24qTxni]]></email>
+        <url><![CDATA[]]></url>
         <date><![CDATA[2017-10-13 05:43:00]]></date>
         <content><![CDATA[That is the ugliest piece of swift code that I have ever seen.]]></content>
         <post><![CDATA[2017/10/08/better-nsuserdefaults-with-swift]]></post>
     </comment>
     <comment>
         <author><![CDATA[Nicolas Bouilleaud]]></author>
-        <email><![CDATA[]]>cjTq5chspqqVqzsUsGUkcdsCOgpaQ/L2pUDFU94HI+axy4CLjYwvzqSUtfbP6qeq</email>
+        <email><![CDATA[cjTq5chspqqVqzsUsGUkcdsCOgpaQ/L2pUDFU94HI+axy4CLjYwvzqSUtfbP6qeq]]></email>
+        <url><![CDATA[]]></url>
         <date><![CDATA[2017-10-13 11:30:00]]></date>
         <content><![CDATA[Oh, that is really elegant. I wish I had seen this years ago in objc :D
 
@@ -1675,5 +1678,14 @@ If I understand correctly, the Preferences class only reads from the userdefault
 
 I wonder if we could use an single “didSet” method for all the properties instead of relying on KVO (and the @objc dynamic dance)? Maybe by boxing the property types in some kind of generic proxy.]]></content>
         <post><![CDATA[2017/10/08/better-nsuserdefaults-with-swift]]></post>
+    </comment>
+    <comment>
+        <author><![CDATA[AOFerrari]]></author>
+        <email><![CDATA[aMg0lZLeWgst+l+42g5Le79yeWehsi9gBnKZV+4jmOFAIeMXRStM4IXxSeK+/53j]]></email>
+        <url><![CDATA[]]></url>
+        <date><![CDATA[2017-10-13 11:30:00]]></date>
+        <content><![CDATA[Thank you, needed to quickly lock up root access as per all exploits that were released in the last few weeks.
+now am calm. breathe in . . breathe out :)]]></content>
+        <post><![CDATA[2017/11/26/prevent-macos-root-access]]></post>
     </comment>
 </comments>
