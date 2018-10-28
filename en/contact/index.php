@@ -1,7 +1,7 @@
 <div class="panel panel-default pull-right">
     <div class="panel-body">
         <a href="https://stackexchange.com/users/61257">
-            <img src="https://stackexchange.com/users/flair/61257.png" width="208" height="58" alt="profile for Macmade on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for Macmade on Stack Exchange, a network of free, community-driven Q&amp;A sites" />
+            <img src="https://stackexchange.com/users/flair/61257.png?theme=clean" width="208" height="58" alt="profile for Macmade on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for Macmade on Stack Exchange, a network of free, community-driven Q&amp;A sites" />
         </a>
     </div>
 </div>
