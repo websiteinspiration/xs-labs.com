@@ -1,7 +1,7 @@
 <div class="panel panel-default pull-right">
     <div class="panel-body">
-        <a href="http://stackexchange.com/users/b7d69ad6d83f49ce8333c5673c5f9a16">
-            <img src="http://stackexchange.com/users/flair/b7d69ad6d83f49ce8333c5673c5f9a16.png?theme=clean" width="208" height="58" alt="profile for Macmade on Stack Exchange, a network of free, community-driven Q&A sites" title="profile for Macmade on Stack Exchange, a network of free, community-driven Q&A sites" />
+        <a href="https://stackexchange.com/users/61257">
+            <img src="https://stackexchange.com/users/flair/61257.png" width="208" height="58" alt="profile for Macmade on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for Macmade on Stack Exchange, a network of free, community-driven Q&amp;A sites" />
         </a>
     </div>
 </div>
